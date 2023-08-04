@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GraphMapper</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .top {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40vh;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(63, 72, 204);
+            color: white;
+            transition: transform 0.2s;
+            transform: translateX(0%);
+        }
+
+        h1 {
+            font-size: calc(6vw + 12px);
+            font-family: '华文新魏';
+            margin-bottom: 10px;
+            transition: transform 0.2s;
+            transform: translateX(0%);
+        }
+
+        h2 {
+            font-size: calc(1.5vw + 9px);
+            font-family: '华文新魏';
+            margin-bottom: 0;
+            transition: transform 0.2s;
+            transform: translateX(0%);
+        }
+        
+        .body {
+            /* margin-top: 80vh; */
+            background-color: white;
+            height: 260vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* position: relative; */
+        }
+
+        .buttons {
+            margin-top: 80vh;
+            background-color: white;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* position: relative; */
+        }
+
+
+        .upload-input {
+            display: none;
+        }
+
+        .message {
+            margin-top: calc(2vw + 10px);
+            font-size: calc(0.8vw + 8px);
+            font-weight: bold;
+            color: rgb(63, 72, 204);
+            text-align: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: calc(2vw + 10px);
+            cursor: pointer;
+        }
+
+        .custom-button {
+            padding: calc(1vw + 10px) calc(2vw + 20px);
+            margin: 0 calc(1vw + 10px);
+            border: 2px solid rgb(63, 72, 204);
+            font-size: calc(0.9vw + 9px);
+            color: rgb(63, 72, 204);
+            border-radius: calc(1vw + 10px);
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            cursor: pointer;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .image-container {
+            width: 80vw;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="top" class="top">
+        <h1 id="title">GraphMapper</h1>
+        <h2 id="subtitle">A Professional and Considerate Security Insurance Pricing System</h2>
+        
+    </div>
+    <div class="body">
+        <div class="buttons">
+            <!-- <div id="num0"></div> -->
+            <!-- <div id="num1"></div>
+            <div id="num2"></div>
+            <div>balabala</div> -->
+            <form id="upload-form" action="" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" id="file-input" class="upload-input">
+                <label for="file-input" class="custom-button" style="margin-top: 20vh;">Select and Submit File</label>
+            </form>
+            <div id="message" class="message"></div>
+            <div class="button-group">
+                <button id="button1" class="custom-button">Button 1</button>
+                <button id="button2" class="custom-button">Button 2</button>
+                <button id="button3" class="custom-button">Button 3</button>
+            </div>
+        </div>
+        <div id="image-container" class="image-container"></div> <!-- Add this line -->
+    </div>
+    
+
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script>
+        
+        function displayPDF(filename) {
+            document.getElementById('message').textContent = filename;
+            var container = document.getElementById('image-container');
+            container.innerHTML = ''; // Clear previous content
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/pdf', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var blob = new Blob([xhr.response], { type: 'application/pdf' });
+                    var url = URL.createObjectURL(blob);
+                    var iframe = document.createElement('iframe');
+                    iframe.src = url;
+                    iframe.className = 'pdf-iframe';
+                    // iframe.style.width = "400pt";
+                    // iframe.style.height = "1000pt";
+                    iframe.style.width = '100%'; // Adjust the width as desired
+                    iframe.style.height = '100%'; // Adjust the height as desired
+
+                    container.appendChild(iframe);
+                }
+            };
+            xhr.responseType = 'arraybuffer';
+            xhr.send('filename=' + encodeURIComponent(filename));
+        }
+        function displayPNG(imageFilename) {
+            var container = document.getElementById('image-container');
+            container.innerHTML = ''; // Clear previous content
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/get_image', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var img = document.createElement('img');
+                    img.src = URL.createObjectURL(xhr.response);
+                    img.className = 'image'; // You may apply any CSS class you need for the image
+                    container.appendChild(img);
+                }
+            };
+            xhr.responseType = 'blob';
+            xhr.send('filename=' + encodeURIComponent(imageFilename));
+        }
+
+
+        var button1 = document.querySelector('#button1');
+        var button2 = document.querySelector('#button2');
+        var button3 = document.querySelector('#button3');
+
+        button1.addEventListener('click', function() {
+            document.getElementById('message').textContent = 'click';
+            displayPDF('AttackGraph.pdf');
+        });
+        button2.addEventListener('click', function() {
+            document.getElementById('message').textContent = 'click';
+            displayPNG('graph1.dot');
+        });
+        button3.addEventListener('click', function() {
+            document.getElementById('message').textContent = 'click';
+            displayPNG('graph2.dot');
+        });
+
+        // button2.addEventListener('click', function() {
+        //     displayPDF('attack_cost.pdf');
+        // });
+
+        // button3.addEventListener('click', function() {
+        //     displayPDF('block_cost.pdf');
+        // });
+
+        document.getElementById('file-input').addEventListener('change', function () {
+            var form = document.getElementById('upload-form');
+            var formData = new FormData(form);
+
+            var request = new XMLHttpRequest();
+            request.open("POST", "/upload");
+            request.onreadystatechange = function () {
+                // if (request.readyState === 4 && request.status === 200) {
+                //     document.getElementById('message').textContent = "File uploaded successfully.";
+                // }
+                if (request.readyState === 4 && request.status === 200) {
+                    var response = JSON.parse(request.responseText);
+                    document.getElementById('message').textContent = "Successfully uploaded file \n\n" + response.file_name;
+                }
+            };
+            request.send(formData);
+        });
+
+        var item1 = document.querySelector('.top');
+        var itemPos1 = 0;
+        var minPos1 = -0.32 * window.innerHeight;
+        var maxPos1 = 0;
+        var item2 = document.getElementById('title');
+        var itemxPos2 = 0;
+        var minxPos2 = -0.4 * window.innerWidth;
+        var maxxPos2 = 0;
+        var itemyPos2 = 0;
+        var minyPos2 = 0;
+        var maxyPos2 = 0.16 * window.innerHeight;
+        var itemScal2 = 1;
+        var minScal2 = 0.3;
+        var maxScal2 = 1;
+        var item3 = document.getElementById('subtitle');
+        var itemPos3 = 0;
+        var minPos3 = 0;
+        var maxPos3 = 0.8 * window.innerWidth;
+        // item2.style.transform = 'translate(-500px, 110px) scale(0.3)';
+        function handleScroll(event) {
+            document.getElementById('message').textContent = "scrolling";
+            var delta = event.wheelDelta ;//|| -event.deltaY
+            // document.getElementById('num0').textContent = currentPos
+            // document.getElementById('num1').textContent = delta
+            // document.getElementById('num2').textContent = itemPos1
+            itemPos1 += delta * (maxPos1 - minPos1) / 400;
+            if (itemPos1 < minPos1) itemPos1 = minPos1;
+            if (itemPos1 > maxPos1) itemPos1 = maxPos1;
+            item1.style.transform = 'translateY(' + itemPos1 + 'px)';
+
+            itemxPos2 += delta * (maxxPos2 - minxPos2) / 400;
+            itemyPos2 -= delta * (maxyPos2 - minyPos2) / 400;
+            itemScal2 += delta * (maxScal2 - minScal2) / 400;
+            if (itemxPos2 < minxPos2) itemxPos2 = minxPos2;
+            if (itemxPos2 > maxxPos2) itemxPos2 = maxxPos2;
+            if (itemyPos2 < minyPos2) itemyPos2 = minyPos2;
+            if (itemyPos2 > maxyPos2) itemyPos2 = maxyPos2;
+            if (itemScal2 < minScal2) itemScal2 = minScal2;
+            if (itemScal2 > maxScal2) itemScal2 = maxScal2;
+            item2.style.transform = 'translate(' + itemxPos2 + 'px, ' + itemyPos2 + 'px) scale(' + itemScal2 + ')';
+
+            itemPos3 -= delta * (maxPos3 - minPos3) / 400;
+            if (itemPos3 < minPos3) itemPos3 = minPos3;
+            if (itemPos3 > maxPos3) itemPos3 = maxPos3;
+            item3.style.transform = 'translateX(' + itemPos3 + 'px)';
+
+            event.preventDefault();
+        }
+
+        window.addEventListener('wheel', handleScroll);
+
+        
+        
+    </script>
+</body>
+</html>

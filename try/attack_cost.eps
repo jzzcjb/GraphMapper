@@ -1,0 +1,5162 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.43.0 (0)
+%%Title: G
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 8229 4522
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 8193 4486 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% 0
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+6311 69.2965 100.3184 69.0935 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6268.5 103.0965 moveto 85 (Attack cost:) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6262.5 88.0965 moveto 97 (max =2556.4) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6264 73.0965 moveto 94 (min =1632.2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6257.5 58.0965 moveto 107 (aver =2097.55) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6248 43.0965 moveto 126 (var =53280.8975) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6253.5 28.0965 moveto 115 (32 ways in total) alignedtext
+grestore
+% 1
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 6311 211.5929 moveto
+6111.5857 193.5929 lineto
+6311 175.5929 lineto
+6510.4143 193.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6210.5 189.8929 moveto 201 (1:execCode\(n65Inter,root\):0) alignedtext
+grestore
+% 1->0
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6311 175.5881 moveto
+6311 168.1553 6311 158.8591 6311 148.8876 curveto
+stroke
+0 0 0 edgecolor
+newpath 6314.5001 148.735 moveto
+6311 138.735 lineto
+6307.5001 148.735 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6314.5001 148.735 moveto
+6311 138.735 lineto
+6307.5001 148.735 lineto
+closepath stroke
+grestore
+% 2
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+6311 280.5929 237.4581 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6136.5 276.8929 moveto 349 (2:RULE 2 \(remote exploit of a server program\):0) alignedtext
+grestore
+% 2->1
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6311 262.3919 moveto
+6311 250.7555 6311 235.1408 6311 221.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 6314.5001 221.7683 moveto
+6311 211.7684 lineto
+6307.5001 221.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6314.5001 221.7683 moveto
+6311 211.7684 lineto
+6307.5001 221.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+6311 233.3929 moveto 1874 ([1924.7, 2443.9, 1805.0, 1933.8, 2320.0, 1692.5, 1821.3, 2207.5, 2084.5, 2087.8, 2216.6, 2226.3, 1972.0, 1975.3, 2104.1, 2367.3, 2113.8, 1994.1, 2509.1, 2254.8, 1744.7, 1881.6, 2396.6, 1632.2, 2273.6, 2276.9, 2027.5, 2161.1, 2164.4, 2037.2, 1915.0, 2556.4]) alignedtext
+grestore
+% 3
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 4422 385.5929 moveto
+4205.1577 367.5929 lineto
+4422 349.5929 lineto
+4638.8423 367.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4312 363.8929 moveto 220 (3:netAccess\(n65Inter,tcp,80\):0) alignedtext
+grestore
+% 3->2
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4420.8095 349.4716 moveto
+4421.0572 338.2888 4423.5124 324.3667 4433 316.5929 curveto
+4464.0893 291.1193 5561.7087 284.1226 6064.2436 282.2524 curveto
+stroke
+0 0 0 edgecolor
+newpath 6064.5483 285.7514 moveto
+6074.5353 282.2145 lineto
+6064.5225 278.7514 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6064.5483 285.7514 moveto
+6074.5353 282.2145 lineto
+6064.5225 278.7514 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+4433 320.3929 moveto 1874 ([1792.1, 1664.9, 1542.7, 2184.1, 1552.4, 2071.6, 1432.7, 1561.5, 1947.7, 1320.2, 1449.0, 1835.2, 1712.2, 1715.5, 1844.3, 1854.0, 1599.7, 1603.0, 1731.8, 1995.0, 1741.5, 1621.8, 2136.8, 1882.5, 1372.4, 1509.3, 2024.3, 1259.9, 1901.3, 1904.6, 1655.2, 1788.8]) alignedtext
+grestore
+% 4
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3478 454.5929 151.3732 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3369.5 450.8929 moveto 217 (4:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 4->3
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3472.9967 436.4843 moveto
+3470.9574 425.5985 3470.7222 412.0135 3479 403.5929 curveto
+3504.3358 377.8201 3942.8927 370.9482 4212.8991 369.1659 curveto
+stroke
+0 0 0 edgecolor
+newpath 4213.2527 372.6638 moveto
+4223.23 369.0996 lineto
+4213.2077 365.6639 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4213.2527 372.6638 moveto
+4223.23 369.0996 lineto
+4213.2077 365.6639 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3479 407.3929 moveto 1874 ([1792.1, 1664.9, 1542.7, 2184.1, 1552.4, 2071.6, 1432.7, 1561.5, 1947.7, 1320.2, 1449.0, 1835.2, 1712.2, 1715.5, 1844.3, 1854.0, 1599.7, 1603.0, 1731.8, 1995.0, 1741.5, 1621.8, 2136.8, 1882.5, 1372.4, 1509.3, 2024.3, 1259.9, 1901.3, 1904.6, 1655.2, 1788.8]) alignedtext
+grestore
+% 5
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 5310.5 559.5929 moveto
+5051.5 559.5929 lineto
+5051.5 523.5929 lineto
+5310.5 523.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5059.5 537.8929 moveto 243 (5:hacl\(n37Inter,n65Inter,tcp,80\):1) alignedtext
+grestore
+% 5->4
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5181.0862 523.3734 moveto
+5180.1331 512.1468 5176.8331 498.2127 5167 490.5929 curveto
+5137.0597 467.3919 4055.0439 458.8419 3638.8559 456.4072 curveto
+stroke
+0 0 0 edgecolor
+newpath 3638.8679 452.9073 moveto
+3628.8477 456.3491 lineto
+3638.8271 459.9072 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3638.8679 452.9073 moveto
+3628.8477 456.3491 lineto
+3638.8271 459.9072 lineto
+closepath stroke
+grestore
+% 6
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3292 559.5929 moveto
+3092.5857 541.5929 lineto
+3292 523.5929 lineto
+3491.4143 541.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3191.5 537.8929 moveto 201 (6:execCode\(n37Inter,root\):0) alignedtext
+grestore
+% 6->4
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3287.4275 523.8772 moveto
+3285.5702 513.1574 3285.3759 499.6096 3293 490.5929 curveto
+3301.7407 480.2556 3324.1917 472.9437 3350.5661 467.7815 curveto
+stroke
+0 0 0 edgecolor
+newpath 3351.2352 471.2172 moveto
+3360.4424 465.9752 lineto
+3349.9759 464.3314 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3351.2352 471.2172 moveto
+3360.4424 465.9752 lineto
+3349.9759 464.3314 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3293 494.3929 moveto 1874 ([1792.1, 1664.9, 1542.7, 2184.1, 1552.4, 2071.6, 1432.7, 1561.5, 1947.7, 1320.2, 1449.0, 1835.2, 1712.2, 1715.5, 1844.3, 1854.0, 1599.7, 1603.0, 1731.8, 1995.0, 1741.5, 1621.8, 2136.8, 1882.5, 1372.4, 1509.3, 2024.3, 1259.9, 1901.3, 1904.6, 1655.2, 1788.8]) alignedtext
+grestore
+% 7
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3292 628.5929 237.4581 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3117.5 624.8929 moveto 349 (7:RULE 2 \(remote exploit of a server program\):0) alignedtext
+grestore
+% 7->6
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3292 610.3919 moveto
+3292 598.7555 3292 583.1408 3292 569.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3295.5001 569.7683 moveto
+3292 559.7684 lineto
+3288.5001 569.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3295.5001 569.7683 moveto
+3292 559.7684 lineto
+3288.5001 569.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3292 581.3929 moveto 1874 ([1792.1, 1664.9, 1542.7, 2184.1, 1552.4, 2071.6, 1432.7, 1561.5, 1947.7, 1320.2, 1449.0, 1835.2, 1712.2, 1715.5, 1844.3, 1854.0, 1599.7, 1603.0, 1731.8, 1995.0, 1741.5, 1621.8, 2136.8, 1882.5, 1372.4, 1509.3, 2024.3, 1259.9, 1901.3, 1904.6, 1655.2, 1788.8]) alignedtext
+grestore
+% 8
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3817 733.5929 moveto
+3600.1577 715.5929 lineto
+3817 697.5929 lineto
+4033.8423 715.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3707 711.8929 moveto 220 (8:netAccess\(n37Inter,tcp,80\):0) alignedtext
+grestore
+% 8->7
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3714.3191 706.0939 moveto
+3653.5008 700.3003 3575.0709 691.5062 3506 679.5929 curveto
+3458.1394 671.338 3404.9635 658.9299 3363.5921 648.5399 curveto
+stroke
+0 0 0 edgecolor
+newpath 3364.4314 645.142 moveto
+3353.8784 646.0831 lineto
+3362.7149 651.9283 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3364.4314 645.142 moveto
+3353.8784 646.0831 lineto
+3362.7149 651.9283 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3506 668.3929 moveto 1847 ([1019.1, 906.6, 1035.4, 1421.6, 1298.6, 1301.9, 1430.7, 1440.4, 1186.1, 1189.4, 1318.2, 1581.4, 1327.9, 1208.2, 1723.2, 1468.9, 958.8, 1095.7, 1610.7, 846.3, 1487.7, 1491.0, 1241.6, 1375.2, 1378.5, 1251.3, 1129.1, 1770.5, 1138.8, 1658.0, 1147.9, 1534.1]) alignedtext
+grestore
+% 9
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4495 1150.5929 151.3732 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4386.5 1146.8929 moveto 217 (9:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 9->8
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4495 1132.3365 moveto
+4495 1115.1633 4495 1088.0565 4495 1064.5929 curveto
+4495 1064.5929 4495 1064.5929 4495 801.5929 curveto
+4495 749.9343 4181.1165 729.2224 3980.4872 721.26 curveto
+stroke
+0 0 0 edgecolor
+newpath 3980.5539 717.76 moveto
+3970.4251 720.8676 lineto
+3980.281 724.7547 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3980.5539 717.76 moveto
+3970.4251 720.8676 lineto
+3980.281 724.7547 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+4495 929.3929 moveto 461 ([1378.5, 1189.4, 1095.7, 906.6, 1491.0, 1301.9, 1208.2, 1019.1]) alignedtext
+grestore
+% 10
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 4629 1255.5929 moveto
+4361 1255.5929 lineto
+4361 1219.5929 lineto
+4629 1219.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4369 1233.8929 moveto 252 (10:hacl\(n29Inter,n37Inter,tcp,80\):1) alignedtext
+grestore
+% 10->9
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4495 1219.3919 moveto
+4495 1207.7555 4495 1192.1408 4495 1178.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 4498.5001 1178.7683 moveto
+4495 1168.7684 lineto
+4491.5001 1178.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4498.5001 1178.7683 moveto
+4495 1168.7684 lineto
+4491.5001 1178.7684 lineto
+closepath stroke
+grestore
+% 11
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3331 1255.5929 moveto
+3123.0407 1237.5929 lineto
+3331 1219.5929 lineto
+3538.9593 1237.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3226 1233.8929 moveto 210 (11:execCode\(n29Inter,root\):0) alignedtext
+grestore
+% 11->9
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3437.6418 1228.8055 moveto
+3650.0071 1213.2977 4125.4102 1178.5819 4359.4967 1161.4879 curveto
+stroke
+0 0 0 edgecolor
+newpath 4360.0565 1164.9565 moveto
+4369.775 1160.7374 lineto
+4359.5466 1157.9751 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4360.0565 1164.9565 moveto
+4369.775 1160.7374 lineto
+4359.5466 1157.9751 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3983 1190.3929 moveto 461 ([1378.5, 1189.4, 1095.7, 906.6, 1491.0, 1301.9, 1208.2, 1019.1]) alignedtext
+grestore
+% 111
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+815 1150.5929 163.2712 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+697.5 1146.8929 moveto 235 (111:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 11->111
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3189.4302 1231.8102 moveto
+2754.8047 1217.1269 1441.1583 1172.7469 978.4354 1157.1144 curveto
+stroke
+0 0 0 edgecolor
+newpath 978.4453 1153.6128 moveto
+968.3328 1156.7731 lineto
+978.2089 1160.6088 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 978.4453 1153.6128 moveto
+968.3328 1156.7731 lineto
+978.2089 1160.6088 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2224 1190.3929 moveto 461 ([1378.5, 1189.4, 1095.7, 906.6, 1491.0, 1301.9, 1208.2, 1019.1]) alignedtext
+grestore
+% 122
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3807 1150.5929 163.2712 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3689.5 1146.8929 moveto 235 (122:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 11->122
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3329.9519 1219.6404 moveto
+3330.2631 1208.533 3332.7358 1194.6316 3342 1186.5929 curveto
+3364.3961 1167.1596 3513.4531 1158.5062 3636.8624 1154.659 curveto
+stroke
+0 0 0 edgecolor
+newpath 3637.3167 1158.1469 moveto
+3647.2062 1154.3458 lineto
+3637.1048 1151.1501 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3637.3167 1158.1469 moveto
+3647.2062 1154.3458 lineto
+3637.1048 1151.1501 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3342 1190.3929 moveto 461 ([1378.5, 1189.4, 1095.7, 906.6, 1491.0, 1301.9, 1208.2, 1019.1]) alignedtext
+grestore
+% 12
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3331 1324.5929 243.1569 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3152 1320.8929 moveto 358 (12:RULE 2 \(remote exploit of a server program\):0) alignedtext
+grestore
+% 12->11
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3331 1306.3919 moveto
+3331 1294.7555 3331 1279.1408 3331 1265.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3334.5001 1265.7683 moveto
+3331 1255.7684 lineto
+3327.5001 1265.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3334.5001 1265.7683 moveto
+3331 1255.7684 lineto
+3327.5001 1265.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3331 1277.3929 moveto 461 ([1378.5, 1189.4, 1095.7, 906.6, 1491.0, 1301.9, 1208.2, 1019.1]) alignedtext
+grestore
+% 13
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3331 1429.5929 moveto
+3105.6128 1411.5929 lineto
+3331 1393.5929 lineto
+3556.3872 1411.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3216.5 1407.8929 moveto 229 (13:netAccess\(n29Inter,tcp,80\):0) alignedtext
+grestore
+% 13->12
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3331 1393.3919 moveto
+3331 1381.7555 3331 1366.1408 3331 1352.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3334.5001 1352.7683 moveto
+3331 1342.7684 lineto
+3327.5001 1352.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3334.5001 1352.7683 moveto
+3331 1342.7684 lineto
+3327.5001 1352.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3331 1364.3929 moveto 425 ([896.9, 803.2, 614.1, 1198.5, 1009.4, 915.7, 726.6, 1086.0]) alignedtext
+grestore
+% 14
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3331 1498.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3218 1494.8929 moveto 226 (14:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 14->13
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3331 1480.3919 moveto
+3331 1468.7555 3331 1453.1408 3331 1439.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3334.5001 1439.7683 moveto
+3331 1429.7684 lineto
+3327.5001 1439.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3334.5001 1439.7683 moveto
+3331 1429.7684 lineto
+3327.5001 1439.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3331 1451.3929 moveto 425 ([896.9, 803.2, 614.1, 1198.5, 1009.4, 915.7, 726.6, 1086.0]) alignedtext
+grestore
+% 15
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3465 1603.5929 moveto
+3197 1603.5929 lineto
+3197 1567.5929 lineto
+3465 1567.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3205 1581.8929 moveto 252 (15:hacl\(n13Inter,n29Inter,tcp,80\):1) alignedtext
+grestore
+% 15->14
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3331 1567.3919 moveto
+3331 1555.7555 3331 1540.1408 3331 1526.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3334.5001 1526.7683 moveto
+3331 1516.7684 lineto
+3327.5001 1526.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3334.5001 1526.7683 moveto
+3331 1516.7684 lineto
+3327.5001 1526.7684 lineto
+closepath stroke
+grestore
+% 16
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2877 1603.5929 moveto
+2669.0407 1585.5929 lineto
+2877 1567.5929 lineto
+3084.9593 1585.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2772 1581.8929 moveto 210 (16:execCode\(n13Inter,root\):0) alignedtext
+grestore
+% 16->14
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2880.8129 1567.7843 moveto
+2884.3209 1556.4409 2890.7423 1542.2005 2902 1534.5929 curveto
+2924.5004 1519.3879 3059.7679 1510.1656 3172.4843 1505.0342 curveto
+stroke
+0 0 0 edgecolor
+newpath 3172.791 1508.5241 moveto
+3182.6247 1504.5807 lineto
+3172.4782 1501.5311 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3172.791 1508.5241 moveto
+3182.6247 1504.5807 lineto
+3172.4782 1501.5311 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2902 1538.3929 moveto 425 ([896.9, 803.2, 614.1, 1198.5, 1009.4, 915.7, 726.6, 1086.0]) alignedtext
+grestore
+% 109
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+719 1498.5929 163.2712 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+601.5 1494.8929 moveto 235 (109:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 16->109
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2742.0074 1579.2758 moveto
+2362.8242 1564.3404 1289.1315 1522.0495 880.0294 1505.9356 curveto
+stroke
+0 0 0 edgecolor
+newpath 880.0271 1502.4329 moveto
+869.897 1505.5365 lineto
+879.7515 1509.4275 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 880.0271 1502.4329 moveto
+869.897 1505.5365 lineto
+879.7515 1509.4275 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1928 1538.3929 moveto 425 ([896.9, 803.2, 614.1, 1198.5, 1009.4, 915.7, 726.6, 1086.0]) alignedtext
+grestore
+% 17
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2877 1672.5929 243.1569 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2698 1668.8929 moveto 358 (17:RULE 2 \(remote exploit of a server program\):0) alignedtext
+grestore
+% 17->16
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2877 1654.3919 moveto
+2877 1642.7555 2877 1627.1408 2877 1613.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 2880.5001 1613.7683 moveto
+2877 1603.7684 lineto
+2873.5001 1613.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2880.5001 1613.7683 moveto
+2877 1603.7684 lineto
+2873.5001 1613.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2877 1625.3929 moveto 425 ([896.9, 803.2, 614.1, 1198.5, 1009.4, 915.7, 726.6, 1086.0]) alignedtext
+grestore
+% 18
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2877 1777.5929 moveto
+2651.6128 1759.5929 lineto
+2877 1741.5929 lineto
+3102.3872 1759.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2762.5 1755.8929 moveto 229 (18:netAccess\(n13Inter,tcp,80\):0) alignedtext
+grestore
+% 18->17
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2877 1741.3919 moveto
+2877 1729.7555 2877 1714.1408 2877 1700.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 2880.5001 1700.7683 moveto
+2877 1690.7684 lineto
+2873.5001 1700.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2880.5001 1700.7683 moveto
+2877 1690.7684 lineto
+2873.5001 1700.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2877 1712.3929 moveto 398 ([743.0, 553.9, 460.2, 271.1, 855.5, 666.4, 572.7, 383.6]) alignedtext
+grestore
+% 19
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2877 1846.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2764 1842.8929 moveto 226 (19:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 19->18
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2877 1828.3919 moveto
+2877 1816.7555 2877 1801.1408 2877 1787.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 2880.5001 1787.7683 moveto
+2877 1777.7684 lineto
+2873.5001 1787.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2880.5001 1787.7683 moveto
+2877 1777.7684 lineto
+2873.5001 1787.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2877 1799.3929 moveto 200 ([460.2, 572.7, 855.5, 743.0]) alignedtext
+grestore
+% 20
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2991 1951.5929 moveto
+2723 1951.5929 lineto
+2723 1915.5929 lineto
+2991 1915.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2731 1929.8929 moveto 252 (20:hacl\(n11Inter,n13Inter,tcp,80\):1) alignedtext
+grestore
+% 20->19
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2861.0473 1915.3919 moveto
+2863.7853 1903.7555 2867.4593 1888.1408 2870.5913 1874.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 2874.0752 1875.3042 moveto
+2872.9587 1864.7684 lineto
+2867.2613 1873.7009 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2874.0752 1875.3042 moveto
+2872.9587 1864.7684 lineto
+2867.2613 1873.7009 lineto
+closepath stroke
+grestore
+% 21
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3217 1951.5929 moveto
+3009.0407 1933.5929 lineto
+3217 1915.5929 lineto
+3424.9593 1933.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3112 1929.8929 moveto 210 (21:execCode\(n11Inter,root\):0) alignedtext
+grestore
+% 21->19
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3166.4657 1919.9594 moveto
+3108.9285 1905.5751 3014.473 1881.9612 2949.1875 1865.6398 curveto
+stroke
+0 0 0 edgecolor
+newpath 2949.9232 1862.2161 moveto
+2939.3728 1863.1861 lineto
+2948.2254 1869.0071 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2949.9232 1862.2161 moveto
+2939.3728 1863.1861 lineto
+2948.2254 1869.0071 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3068 1886.3929 moveto 200 ([460.2, 572.7, 855.5, 743.0]) alignedtext
+grestore
+% 22
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3217 2020.5929 243.1569 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3038 2016.8929 moveto 358 (22:RULE 2 \(remote exploit of a server program\):0) alignedtext
+grestore
+% 22->21
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3217 2002.3919 moveto
+3217 1990.7555 3217 1975.1408 3217 1961.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3220.5001 1961.7683 moveto
+3217 1951.7684 lineto
+3213.5001 1961.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3220.5001 1961.7683 moveto
+3217 1951.7684 lineto
+3213.5001 1961.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3217 1973.3929 moveto 200 ([460.2, 572.7, 855.5, 743.0]) alignedtext
+grestore
+% 23
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3746 2125.5929 moveto
+3520.6128 2107.5929 lineto
+3746 2089.5929 lineto
+3971.3872 2107.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3631.5 2103.8929 moveto 229 (23:netAccess\(n11Inter,tcp,80\):0) alignedtext
+grestore
+% 23->22
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3675.2056 2095.2176 moveto
+3585.0649 2080.7338 3428.4817 2055.5739 3323.8028 2038.7541 curveto
+stroke
+0 0 0 edgecolor
+newpath 3324.2672 2035.2839 moveto
+3313.8386 2037.153 lineto
+3323.1567 2042.1952 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3324.2672 2035.2839 moveto
+3313.8386 2037.153 lineto
+3323.1567 2042.1952 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3514 2060.3929 moveto 200 ([553.9, 666.4, 383.6, 271.1]) alignedtext
+grestore
+% 24
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3526 2194.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3413 2190.8929 moveto 226 (24:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 24->23
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3568.4182 2177.2041 moveto
+3606.0583 2162.6613 3660.9352 2141.4589 3699.7035 2126.4802 curveto
+stroke
+0 0 0 edgecolor
+newpath 3701.1259 2129.6829 moveto
+3709.1924 2122.814 lineto
+3698.603 2123.1533 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3701.1259 2129.6829 moveto
+3709.1924 2122.814 lineto
+3698.603 2123.1533 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3650 2147.3929 moveto 200 ([553.9, 666.4, 383.6, 271.1]) alignedtext
+grestore
+% 25
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3655.5 2299.5929 moveto
+3396.5 2299.5929 lineto
+3396.5 2263.5929 lineto
+3655.5 2263.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3404.5 2277.8929 moveto 243 (25:hacl\(n3Inter,n11Inter,tcp,80\):1) alignedtext
+grestore
+% 25->24
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3526 2263.3919 moveto
+3526 2251.7555 3526 2236.1408 3526 2222.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3529.5001 2222.7683 moveto
+3526 2212.7684 lineto
+3522.5001 2222.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3529.5001 2222.7683 moveto
+3526 2212.7684 lineto
+3522.5001 2222.7684 lineto
+closepath stroke
+grestore
+% 26
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3017 2299.5929 moveto
+2817.5857 2281.5929 lineto
+3017 2263.5929 lineto
+3216.4143 2281.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2916.5 2277.8929 moveto 201 (26:execCode\(n3Inter,root\):0) alignedtext
+grestore
+% 26->24
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3083.2818 2269.5243 moveto
+3172.0011 2254.7087 3329.9069 2228.3393 3431.1911 2211.4255 curveto
+stroke
+0 0 0 edgecolor
+newpath 3431.8294 2214.8674 moveto
+3441.1163 2209.768 lineto
+3430.6764 2207.963 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3431.8294 2214.8674 moveto
+3441.1163 2209.768 lineto
+3430.6764 2207.963 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3302 2234.3929 moveto 200 ([553.9, 666.4, 383.6, 271.1]) alignedtext
+grestore
+% 94
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2611 2194.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2498 2190.8929 moveto 226 (94:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 26->94
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2960.1199 2268.6845 moveto
+2890.5327 2254.1158 2772.2132 2229.3445 2692.8499 2212.729 curveto
+stroke
+0 0 0 edgecolor
+newpath 2693.3925 2209.2668 moveto
+2682.8874 2210.6433 lineto
+2691.958 2216.1182 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2693.3925 2209.2668 moveto
+2682.8874 2210.6433 lineto
+2691.958 2216.1182 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2839 2234.3929 moveto 200 ([553.9, 666.4, 383.6, 271.1]) alignedtext
+grestore
+% 27
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3017 2368.5929 243.1569 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2838 2364.8929 moveto 358 (27:RULE 2 \(remote exploit of a server program\):0) alignedtext
+grestore
+% 27->26
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3017 2350.3919 moveto
+3017 2338.7555 3017 2323.1408 3017 2309.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3020.5001 2309.7683 moveto
+3017 2299.7684 lineto
+3013.5001 2309.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3020.5001 2309.7683 moveto
+3017 2299.7684 lineto
+3013.5001 2309.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3017 2321.3929 moveto 200 ([553.9, 666.4, 383.6, 271.1]) alignedtext
+grestore
+% 28
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3533 2473.5929 moveto
+3316.1577 2455.5929 lineto
+3533 2437.5929 lineto
+3749.8423 2455.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3423 2451.8929 moveto 220 (28:netAccess\(n3Inter,tcp,80\):0) alignedtext
+grestore
+% 28->27
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3464.2125 2443.2617 moveto
+3376.5841 2428.8267 3224.2739 2403.7369 3122.068 2386.9006 curveto
+stroke
+0 0 0 edgecolor
+newpath 3122.4645 2383.4189 moveto
+3112.0286 2385.2469 lineto
+3121.3267 2390.3258 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3122.4645 2383.4189 moveto
+3112.0286 2385.2469 lineto
+3121.3267 2390.3258 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3306 2408.3929 moveto 191 ([463.9, 68.6, 181.1, 351.4]) alignedtext
+grestore
+% 29
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3718 3238.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3605 3234.8929 moveto 226 (29:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 29->28
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3690.0238 3220.737 moveto
+3669.0683 3205.7576 3644 3181.7459 3644 3152.5929 curveto
+3644 3152.5929 3644 3152.5929 3644 2541.5929 curveto
+3644 2509.2879 3613.9966 2487.5983 3585.1876 2474.2183 curveto
+stroke
+0 0 0 edgecolor
+newpath 3586.4801 2470.9635 moveto
+3575.9155 2470.1632 lineto
+3583.6751 2477.377 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3586.4801 2470.9635 moveto
+3575.9155 2470.1632 lineto
+3583.6751 2477.377 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3644 2843.3929 moveto 92 ([68.6, 181.1]) alignedtext
+grestore
+% 30
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3843 3343.5929 moveto
+3593 3343.5929 lineto
+3593 3307.5929 lineto
+3843 3307.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3601 3321.8929 moveto 234 (30:hacl\(n0Inter,n3Inter,tcp,80\):1) alignedtext
+grestore
+% 30->29
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3718 3307.3919 moveto
+3718 3295.7555 3718 3280.1408 3718 3266.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3721.5001 3266.7683 moveto
+3718 3256.7684 lineto
+3714.5001 3266.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3721.5001 3266.7683 moveto
+3718 3256.7684 lineto
+3714.5001 3266.7684 lineto
+closepath stroke
+grestore
+% 31
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2652 3343.5929 moveto
+2452.5857 3325.5929 lineto
+2652 3307.5929 lineto
+2851.4143 3325.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2551.5 3321.8929 moveto 201 (31:execCode\(n0Inter,root\):0) alignedtext
+grestore
+% 31->29
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2752.2867 3316.5963 moveto
+2944.7576 3301.2492 3366.0571 3267.6559 3582.9926 3250.3581 curveto
+stroke
+0 0 0 edgecolor
+newpath 3583.4765 3253.8307 moveto
+3593.1666 3249.5468 lineto
+3582.92 3246.8528 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3583.4765 3253.8307 moveto
+3593.1666 3249.5468 lineto
+3582.92 3246.8528 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3249 3278.3929 moveto 92 ([68.6, 181.1]) alignedtext
+grestore
+% 76
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1292 3238.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1179 3234.8929 moveto 226 (76:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 31->76
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2540.7055 3317.637 moveto
+2295.7297 3302.326 1709.9648 3265.7157 1436.8224 3248.6443 curveto
+stroke
+0 0 0 edgecolor
+newpath 1436.6411 3245.1263 moveto
+1426.4422 3247.9956 lineto
+1436.2044 3252.1126 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1436.6411 3245.1263 moveto
+1426.4422 3247.9956 lineto
+1436.2044 3252.1126 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2054 3278.3929 moveto 92 ([68.6, 181.1]) alignedtext
+grestore
+% 32
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2752 3586.5929 243.1569 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2573 3582.8929 moveto 358 (32:RULE 2 \(remote exploit of a server program\):0) alignedtext
+grestore
+% 32->31
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2745.4387 3568.5992 moveto
+2728.3756 3524.4057 2682.521 3405.6423 2662.0771 3352.6925 curveto
+stroke
+0 0 0 edgecolor
+newpath 2665.3224 3351.3807 moveto
+2658.4554 3343.3125 lineto
+2658.7923 3353.902 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2665.3224 3351.3807 moveto
+2658.4554 3343.3125 lineto
+2658.7923 3353.902 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2705 3452.3929 moveto 52 ([181.1]) alignedtext
+grestore
+% 33
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3513 3691.5929 moveto
+3296.1577 3673.5929 lineto
+3513 3655.5929 lineto
+3729.8423 3673.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3403 3669.8929 moveto 220 (33:netAccess\(n0Inter,tcp,80\):0) alignedtext
+grestore
+% 33->32
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3425.3322 3662.8009 moveto
+3294.2533 3648.16 3045.9796 3620.429 2890.2933 3603.0396 curveto
+stroke
+0 0 0 edgecolor
+newpath 2890.5014 3599.5412 moveto
+2880.1746 3601.9094 lineto
+2889.7243 3606.4979 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2890.5014 3599.5412 moveto
+2880.1746 3601.9094 lineto
+2889.7243 3606.4979 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3179 3626.3929 moveto 43 ([68.6]) alignedtext
+grestore
+% 34
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3389 3760.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3276 3756.8929 moveto 226 (34:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 34->33
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3413.4984 3742.7997 moveto
+3433.2252 3729.2773 3461.0653 3710.1933 3482.2825 3695.6493 curveto
+stroke
+0 0 0 edgecolor
+newpath 3484.3672 3698.4636 moveto
+3490.6365 3689.9227 lineto
+3480.4094 3692.6899 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3484.3672 3698.4636 moveto
+3490.6365 3689.9227 lineto
+3480.4094 3692.6899 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3459 3713.3929 moveto 43 ([68.6]) alignedtext
+grestore
+% 35
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3522 3865.5929 moveto
+3256 3865.5929 lineto
+3256 3829.5929 lineto
+3522 3829.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3264 3843.8929 moveto 250 (35:hacl\(fileServer,n0Inter,tcp,80\):1) alignedtext
+grestore
+% 35->34
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3389 3829.3919 moveto
+3389 3817.7555 3389 3802.1408 3389 3788.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3392.5001 3788.7683 moveto
+3389 3778.7684 lineto
+3385.5001 3788.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3392.5001 3788.7683 moveto
+3389 3778.7684 lineto
+3385.5001 3788.7684 lineto
+closepath stroke
+grestore
+% 36
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2013 3865.5929 moveto
+1798.6726 3847.5929 lineto
+2013 3829.5929 lineto
+2227.3274 3847.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1904.5 3843.8929 moveto 217 (36:execCode\(fileServer,root\):0) alignedtext
+grestore
+% 36->34
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2129.7234 3839.3825 moveto
+2380.5135 3823.8904 2970.1946 3787.4639 3244.2621 3770.5339 curveto
+stroke
+0 0 0 edgecolor
+newpath 3244.5118 3774.0252 moveto
+3254.2769 3769.9152 lineto
+3244.0801 3767.0385 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3244.5118 3774.0252 moveto
+3254.2769 3769.9152 lineto
+3244.0801 3767.0385 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2784 3800.3929 moveto 43 ([68.6]) alignedtext
+grestore
+% 53
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1531 3760.5929 217.1615 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1372 3756.8929 moveto 318 (53:RULE 10 \(execCode implies file access\):0) alignedtext
+grestore
+% 36->53
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1911.4264 3838.0732 moveto
+1854.5391 3832.4094 1782.4845 3823.7506 1719 3811.5929 curveto
+1677.1583 3803.58 1630.906 3791.3241 1594.7484 3780.9521 curveto
+stroke
+0 0 0 edgecolor
+newpath 1595.4087 3777.4996 moveto
+1584.8299 3778.0817 lineto
+1593.4627 3784.2237 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1595.4087 3777.4996 moveto
+1584.8299 3778.0817 lineto
+1593.4627 3784.2237 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1719 3800.3929 moveto 43 ([68.6]) alignedtext
+grestore
+% 37
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2063 3934.5929 243.1569 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1884 3930.8929 moveto 358 (37:RULE 2 \(remote exploit of a server program\):0) alignedtext
+grestore
+% 37->36
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2052.8818 3916.3919 moveto
+2045.6944 3904.1734 2035.9269 3887.5686 2027.8572 3873.8501 curveto
+stroke
+0 0 0 edgecolor
+newpath 2030.6813 3871.748 moveto
+2022.5943 3864.9032 lineto
+2024.6477 3875.2971 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2030.6813 3871.748 moveto
+2022.5943 3864.9032 lineto
+2024.6477 3875.2971 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2041 3887.3929 moveto 43 ([68.6]) alignedtext
+grestore
+% 38
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2660 4039.5929 moveto
+2394.227 4021.5929 lineto
+2660 4003.5929 lineto
+2925.773 4021.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2523.5 4017.8929 moveto 273 (38:netAccess\(fileServer,rpc,100005\):0) alignedtext
+grestore
+% 38->37
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2578.8646 4009.041 moveto
+2475.8623 3994.3757 2297.4417 3968.9724 2179.7986 3952.2225 curveto
+stroke
+0 0 0 edgecolor
+newpath 2180.064 3948.7251 moveto
+2169.6704 3950.7805 lineto
+2179.0772 3955.6552 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2180.064 3948.7251 moveto
+2169.6704 3950.7805 lineto
+2179.0772 3955.6552 lineto
+closepath stroke
+grestore
+% 39
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2660 4094.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2547 4090.8929 moveto 226 (39:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 39->38
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2660 4076.4058 moveto
+2660 4068.3824 2660 4058.6404 2660 4049.6621 curveto
+stroke
+0 0 0 edgecolor
+newpath 2663.5001 4049.6217 moveto
+2660 4039.6218 lineto
+2656.5001 4049.6218 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2663.5001 4049.6217 moveto
+2660 4039.6218 lineto
+2656.5001 4049.6218 lineto
+closepath stroke
+grestore
+% 40
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2568.5 4185.5929 moveto
+2241.5 4185.5929 lineto
+2241.5 4149.5929 lineto
+2568.5 4149.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2249.5 4163.8929 moveto 311 (40:hacl\(webServer,fileServer,rpc,100005\):1) alignedtext
+grestore
+% 40->39
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2466.0789 4149.5867 moveto
+2504.3834 4138.9215 2553.7846 4125.1666 2593.1385 4114.2093 curveto
+stroke
+0 0 0 edgecolor
+newpath 2594.2197 4117.5414 moveto
+2602.9144 4111.4873 lineto
+2592.342 4110.798 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2594.2197 4117.5414 moveto
+2602.9144 4111.4873 lineto
+2592.342 4110.798 lineto
+closepath stroke
+grestore
+% 41
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3120 4185.5929 moveto
+2879.3615 4167.5929 lineto
+3120 4149.5929 lineto
+3360.6385 4167.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2997 4163.8929 moveto 246 (41:execCode\(webServer,apache\):0) alignedtext
+grestore
+% 41->39
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3045.5818 4155.1066 moveto
+2967.9236 4143.1203 2845.717 4124.258 2759.74 4110.9876 curveto
+stroke
+0 0 0 edgecolor
+newpath 2760.1198 4107.5048 moveto
+2749.7029 4109.4384 lineto
+2759.0519 4114.4229 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2760.1198 4107.5048 moveto
+2749.7029 4109.4384 lineto
+2759.0519 4114.4229 lineto
+closepath stroke
+grestore
+% 55
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1890 4094.5929 131.077 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1797 4090.8929 moveto 186 (55:RULE 17 \(NFS shell\):0) alignedtext
+grestore
+% 41->55
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3003.01 4158.3255 moveto
+2961.0661 4155.444 2913.4208 4152.2654 2870 4149.5929 curveto
+2566.0554 4130.8856 2208.8865 4111.9811 2020.9271 4102.2715 curveto
+stroke
+0 0 0 edgecolor
+newpath 2020.8928 4098.7652 moveto
+2010.7256 4101.745 lineto
+2020.5319 4105.7559 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2020.8928 4098.7652 moveto
+2010.7256 4101.745 lineto
+2020.5319 4105.7559 lineto
+closepath stroke
+grestore
+% 58
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2998 4094.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2885 4090.8929 moveto 226 (58:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 41->58
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3093.8279 4151.3616 moveto
+3076.904 4141.5125 3054.6013 4128.533 3035.7706 4117.5742 curveto
+stroke
+0 0 0 edgecolor
+newpath 3037.5237 4114.5449 moveto
+3027.1203 4112.54 lineto
+3034.0027 4120.595 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3037.5237 4114.5449 moveto
+3027.1203 4112.54 lineto
+3034.0027 4120.595 lineto
+closepath stroke
+grestore
+% 78
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1440 4094.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1327 4090.8929 moveto 226 (78:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 41->78
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3006.7989 4158.0562 moveto
+2963.9616 4155.0464 2914.7511 4151.853 2870 4149.5929 curveto
+2372.5846 4124.4722 2247.5694 4134.4521 1750 4112.5929 curveto
+1696.4882 4110.242 1637.8084 4107.1546 1586.0363 4104.2568 curveto
+stroke
+0 0 0 edgecolor
+newpath 1585.9583 4100.747 moveto
+1575.7776 4103.68 lineto
+1585.5653 4107.7359 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1585.9583 4100.747 moveto
+1575.7776 4103.68 lineto
+1585.5653 4107.7359 lineto
+closepath stroke
+grestore
+% 82
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1107 4094.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+994 4090.8929 moveto 226 (82:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 41->82
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3008.3669 4157.9306 moveto
+2965.1694 4154.8596 2915.3049 4151.6574 2870 4149.5929 curveto
+2161.2116 4117.2944 1982.1469 4156.7768 1274 4112.5929 curveto
+1257.9821 4111.5935 1241.1276 4110.2374 1224.5376 4108.7243 curveto
+stroke
+0 0 0 edgecolor
+newpath 1224.5343 4105.2088 moveto
+1214.2521 4107.7637 lineto
+1223.8833 4112.1785 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1224.5343 4105.2088 moveto
+1214.2521 4107.7637 lineto
+1223.8833 4112.1785 lineto
+closepath stroke
+grestore
+% 86
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3331 4094.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3218 4090.8929 moveto 226 (86:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 41->86
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3161.4351 4152.6503 moveto
+3193.3587 4141.9082 3237.8777 4126.9279 3273.289 4115.0123 curveto
+stroke
+0 0 0 edgecolor
+newpath 3274.6557 4118.2453 moveto
+3283.0172 4111.7388 lineto
+3272.4232 4111.6108 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3274.6557 4118.2453 moveto
+3283.0172 4111.7388 lineto
+3272.4232 4111.6108 lineto
+closepath stroke
+grestore
+% 90
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3664 4094.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3551 4090.8929 moveto 226 (90:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 41->90
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3202.9178 4155.7709 moveto
+3296.9008 4143.5048 3450.4928 4123.4588 3554.324 4109.9073 curveto
+stroke
+0 0 0 edgecolor
+newpath 3555.0641 4113.3404 moveto
+3564.527 4108.5756 lineto
+3554.1581 4106.3993 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3555.0641 4113.3404 moveto
+3564.527 4108.5756 lineto
+3554.1581 4106.3993 lineto
+closepath stroke
+grestore
+% 96
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3997 4094.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3884 4090.8929 moveto 226 (96:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 41->96
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3239.1053 4158.467 moveto
+3380.214 4148.6241 3622.3651 4131.0541 3830 4112.5929 curveto
+3844.7637 4111.2803 3860.2525 4109.8182 3875.5958 4108.3179 curveto
+stroke
+0 0 0 edgecolor
+newpath 3876.0397 4111.7912 moveto
+3885.6484 4107.3276 lineto
+3875.3534 4104.8249 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3876.0397 4111.7912 moveto
+3885.6484 4107.3276 lineto
+3875.3534 4104.8249 lineto
+closepath stroke
+grestore
+% 100
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4335 4094.5929 163.2712 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4217.5 4090.8929 moveto 235 (100:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 41->100
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3235.7213 4158.2088 moveto
+3277.9673 4155.284 3326.134 4152.1074 3370 4149.5929 curveto
+3722.2496 4129.4011 3811.1008 4138.1755 4163 4112.5929 curveto
+4178.7377 4111.4488 4195.2675 4110.0574 4211.5998 4108.5686 curveto
+stroke
+0 0 0 edgecolor
+newpath 4212.0999 4112.0374 moveto
+4221.7346 4107.6304 lineto
+4211.4545 4105.0672 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4212.0999 4112.0374 moveto
+4221.7346 4107.6304 lineto
+4211.4545 4105.0672 lineto
+closepath stroke
+grestore
+% 113
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+769 4094.5929 163.2712 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+651.5 4090.8929 moveto 235 (113:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 41->113
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3009.6166 4157.8249 moveto
+2966.136 4154.7015 2915.7476 4151.4907 2870 4149.5929 curveto
+2337.9531 4127.5218 2204.3926 4142.5111 1672 4131.5929 curveto
+1347.0697 4124.9293 1265.3691 4132.8115 941 4112.5929 curveto
+924.602 4111.5708 907.3503 4110.2082 890.3601 4108.6976 curveto
+stroke
+0 0 0 edgecolor
+newpath 890.6708 4105.2115 moveto
+880.3952 4107.7925 lineto
+890.0376 4112.1828 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 890.6708 4105.2115 moveto
+880.3952 4107.7925 lineto
+890.0376 4112.1828 lineto
+closepath stroke
+grestore
+% 124
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4679 4094.5929 163.2712 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4561.5 4090.8929 moveto 235 (124:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 41->124
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3233.2005 4158.0443 moveto
+3276.0377 4155.0332 3325.2484 4151.8419 3370 4149.5929 curveto
+3874.9636 4124.2159 4002.4841 4145.6981 4507 4112.5929 curveto
+4523.1173 4111.5353 4540.0612 4110.1709 4556.7716 4108.6754 curveto
+stroke
+0 0 0 edgecolor
+newpath 4557.4962 4112.1239 moveto
+4567.1364 4107.7289 lineto
+4556.8595 4105.1529 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4557.4962 4112.1239 moveto
+4567.1364 4107.7289 lineto
+4556.8595 4105.1529 lineto
+closepath stroke
+grestore
+% 128
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+5023 4094.5929 163.2712 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4905.5 4090.8929 moveto 235 (128:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 41->128
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3231.9449 4157.9296 moveto
+3275.0708 4154.8679 3324.8047 4151.6724 3370 4149.5929 curveto
+4027.7318 4119.3307 4193.8463 4153.5313 4851 4112.5929 curveto
+4867.398 4111.5714 4884.6498 4110.2092 4901.64 4108.6987 curveto
+stroke
+0 0 0 edgecolor
+newpath 4901.9625 4112.1839 moveto
+4911.6049 4107.7937 lineto
+4901.3293 4105.2126 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4901.9625 4112.1839 moveto
+4911.6049 4107.7937 lineto
+4901.3293 4105.2126 lineto
+closepath stroke
+grestore
+% 132
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+5367 4094.5929 163.2712 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5249.5 4090.8929 moveto 235 (132:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 41->132
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3230.6948 4157.8367 moveto
+3274.1049 4154.7247 3324.3625 4151.5188 3370 4149.5929 curveto
+4180.5564 4115.3885 4385.2937 4163.0637 5195 4112.5929 curveto
+5211.398 4111.5708 5228.6497 4110.2082 5245.6399 4108.6976 curveto
+stroke
+0 0 0 edgecolor
+newpath 5245.9624 4112.1828 moveto
+5255.6048 4107.7925 lineto
+5245.3292 4105.2115 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5245.9624 4112.1828 moveto
+5255.6048 4107.7925 lineto
+5245.3292 4105.2115 lineto
+closepath stroke
+grestore
+% 42
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3120 4240.5929 243.1569 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2941 4236.8929 moveto 358 (42:RULE 2 \(remote exploit of a server program\):0) alignedtext
+grestore
+% 42->41
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3120 4222.4058 moveto
+3120 4214.3824 3120 4204.6404 3120 4195.6621 curveto
+stroke
+0 0 0 edgecolor
+newpath 3123.5001 4195.6217 moveto
+3120 4185.6218 lineto
+3116.5001 4195.6218 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3123.5001 4195.6217 moveto
+3120 4185.6218 lineto
+3116.5001 4195.6218 lineto
+closepath stroke
+grestore
+% 43
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2650 4331.5929 moveto
+2411.0382 4313.5929 lineto
+2650 4295.5929 lineto
+2888.9618 4313.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2528 4309.8929 moveto 244 (43:netAccess\(webServer,tcp,80\):0) alignedtext
+grestore
+% 43->42
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2725.2529 4301.2249 moveto
+2801.6627 4289.6822 2920.8584 4271.676 3008.2904 4258.4682 curveto
+stroke
+0 0 0 edgecolor
+newpath 3008.8883 4261.9177 moveto
+3018.2533 4256.9632 lineto
+3007.8427 4254.9962 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3008.8883 4261.9177 moveto
+3018.2533 4256.9632 lineto
+3007.8427 4254.9962 lineto
+closepath stroke
+grestore
+% 44
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2650 4386.5929 181.168 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2518.5 4382.8929 moveto 263 (44:RULE 6 \(direct network access\):0) alignedtext
+grestore
+% 44->43
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2650 4368.4058 moveto
+2650 4360.3824 2650 4350.6404 2650 4341.6621 curveto
+stroke
+0 0 0 edgecolor
+newpath 2653.5001 4341.6217 moveto
+2650 4331.6218 lineto
+2646.5001 4341.6218 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2653.5001 4341.6217 moveto
+2650 4331.6218 lineto
+2646.5001 4341.6218 lineto
+closepath stroke
+grestore
+% 45
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2652 4477.5929 moveto
+2372 4477.5929 lineto
+2372 4441.5929 lineto
+2652 4441.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2380 4455.8929 moveto 264 (45:hacl\(internet,webServer,tcp,80\):1) alignedtext
+grestore
+% 45->44
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2545.0544 4441.5867 moveto
+2564.001 4431.8388 2587.9644 4419.5098 2608.2075 4409.0949 curveto
+stroke
+0 0 0 edgecolor
+newpath 2609.9244 4412.1477 moveto
+2617.2153 4404.4604 lineto
+2606.7219 4405.9232 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2609.9244 4412.1477 moveto
+2617.2153 4404.4604 lineto
+2606.7219 4405.9232 lineto
+closepath stroke
+grestore
+% 46
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2906 4477.5929 moveto
+2670 4477.5929 lineto
+2670 4441.5929 lineto
+2906 4441.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2678 4455.8929 moveto 220 (46:attackerLocated\(internet\):1) alignedtext
+grestore
+% 46->44
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2754.9456 4441.5867 moveto
+2735.999 4431.8388 2712.0356 4419.5098 2691.7925 4409.0949 curveto
+stroke
+0 0 0 edgecolor
+newpath 2693.2781 4405.9232 moveto
+2682.7847 4404.4604 lineto
+2690.0756 4412.1477 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2693.2781 4405.9232 moveto
+2682.7847 4404.4604 lineto
+2690.0756 4412.1477 lineto
+closepath stroke
+grestore
+% 47
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3333 4331.5929 moveto
+2907 4331.5929 lineto
+2907 4295.5929 lineto
+3333 4295.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2915 4309.8929 moveto 410 (47:networkServiceInfo\(webServer,httpd,tcp,80,apache\):1) alignedtext
+grestore
+% 47->42
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3114.1218 4295.4058 moveto
+3113.2824 4287.3824 3113.0491 4277.6404 3113.4221 4268.6621 curveto
+stroke
+0 0 0 edgecolor
+newpath 3116.9178 4268.8455 moveto
+3114.1384 4258.6218 lineto
+3109.9356 4268.3473 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3116.9178 4268.8455 moveto
+3114.1384 4258.6218 lineto
+3109.9356 4268.3473 lineto
+closepath stroke
+grestore
+% 47->42
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3125.8782 4295.4058 moveto
+3126.7176 4287.3824 3126.9509 4277.6404 3126.5779 4268.6621 curveto
+stroke
+0 0 0 edgecolor
+newpath 3130.0644 4268.3473 moveto
+3125.8616 4258.6218 lineto
+3123.0822 4268.8455 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3130.0644 4268.3473 moveto
+3125.8616 4258.6218 lineto
+3123.0822 4268.8455 lineto
+closepath stroke
+grestore
+% 49
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1764 4039.5929 moveto
+1314 4039.5929 lineto
+1314 4003.5929 lineto
+1764 4003.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1322 4017.8929 moveto 434 (49:networkServiceInfo\(fileServer,mountd,rpc,100005,root\):1) alignedtext
+grestore
+% 49->37
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1644.0942 4003.5452 moveto
+1734.9482 3988.8074 1865.6555 3967.6049 1956.824 3952.8161 curveto
+stroke
+0 0 0 edgecolor
+newpath 1957.5956 3956.2368 moveto
+1966.9061 3951.1807 lineto
+1956.4747 3949.3271 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1957.5956 3956.2368 moveto
+1966.9061 3951.1807 lineto
+1956.4747 3949.3271 lineto
+closepath stroke
+grestore
+% 50
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2376 4039.5929 moveto
+1782 4039.5929 lineto
+1782 4003.5929 lineto
+2376 4003.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1790 4017.8929 moveto 578 (50:vulExists\(fileServer,'CVE-2013-2093',mountd,remoteExploit,privEscalation\):1) alignedtext
+grestore
+% 50->37
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2075.7622 4003.3919 moveto
+2073.5718 3991.7555 2070.6325 3976.1408 2068.1269 3962.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 2071.5226 3961.9483 moveto
+2066.233 3952.7684 lineto
+2064.6434 3963.2433 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2071.5226 3961.9483 moveto
+2066.233 3952.7684 lineto
+2064.6434 3963.2433 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2072 3974.3929 moveto 43 ([68.6]) alignedtext
+grestore
+% 51
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1668 3586.5929 193.8658 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1527 3582.8929 moveto 282 (51:RULE 4 \(Trojan horse installation\):0) alignedtext
+grestore
+% 51->36
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1731.9728 3603.7835 moveto
+1742.8458 3608.572 1753.3885 3614.7209 1762 3622.5929 curveto
+1787.0902 3645.5285 1773.1161 3665.5804 1795 3691.5929 curveto
+1846.43 3752.7256 1927.1828 3801.6912 1974.624 3827.2359 curveto
+stroke
+0 0 0 edgecolor
+newpath 1973.1761 3830.4299 moveto
+1983.6495 3832.0293 lineto
+1976.4594 3824.2477 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1973.1761 3830.4299 moveto
+1983.6495 3832.0293 lineto
+1976.4594 3824.2477 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1826 3713.3929 moveto 43 ([68.6]) alignedtext
+grestore
+% 52
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1463 3691.5929 moveto
+1178.1225 3673.5929 lineto
+1463 3655.5929 lineto
+1747.8775 3673.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1316 3669.8929 moveto 294 (52:accessFile\(fileServer,write,'/export'\):0) alignedtext
+grestore
+% 52->51
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1489.7229 3657.1128 moveto
+1508.6645 3646.5309 1534.8952 3632.6549 1559 3622.5929 curveto
+1572.4867 3616.9632 1587.2185 3611.68 1601.3674 3607.0087 curveto
+stroke
+0 0 0 edgecolor
+newpath 1602.611 3610.2851 moveto
+1611.0473 3603.8758 lineto
+1600.4554 3603.6252 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1602.611 3610.2851 moveto
+1611.0473 3603.8758 lineto
+1600.4554 3603.6252 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1559 3626.3929 moveto 43 ([68.6]) alignedtext
+grestore
+% 64
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2051 3586.5929 155.9723 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1939 3582.8929 moveto 224 (64:RULE 16 \(NFS semantics\):0) alignedtext
+grestore
+% 52->64
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1545.0682 3660.7293 moveto
+1650.372 3645.5068 1833.0936 3619.093 1947.7363 3602.5205 curveto
+stroke
+0 0 0 edgecolor
+newpath 1948.53 3605.9422 moveto
+1957.9263 3601.0475 lineto
+1947.5284 3599.0143 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1948.53 3605.9422 moveto
+1957.9263 3601.0475 lineto
+1947.5284 3599.0143 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1793 3626.3929 moveto 43 ([68.6]) alignedtext
+grestore
+% 53->52
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1517.2392 3742.3919 moveto
+1507.2764 3729.9384 1493.6683 3712.9283 1482.5752 3699.0619 curveto
+stroke
+0 0 0 edgecolor
+newpath 1485.0282 3696.5255 moveto
+1476.0482 3690.9032 lineto
+1479.5621 3700.8983 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1485.0282 3696.5255 moveto
+1476.0482 3690.9032 lineto
+1479.5621 3700.8983 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1502 3713.3929 moveto 43 ([68.6]) alignedtext
+grestore
+% 54
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1716 3865.5929 moveto
+1346 3865.5929 lineto
+1346 3829.5929 lineto
+1716 3829.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1354 3843.8929 moveto 354 (54:canAccessFile\(fileServer,root,write,'/export'\):1) alignedtext
+grestore
+% 54->53
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1531 3829.3919 moveto
+1531 3817.7555 1531 3802.1408 1531 3788.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 1534.5001 3788.7683 moveto
+1531 3778.7684 lineto
+1527.5001 3788.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1534.5001 3788.7683 moveto
+1531 3778.7684 lineto
+1527.5001 3788.7684 lineto
+closepath stroke
+grestore
+% 55->52
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1771.7576 4086.6585 moveto
+1613.1788 4076.7492 1346.6081 4057.7253 1305 4039.5929 curveto
+1294.6124 4035.0661 1286 4033.9241 1286 4022.5929 curveto
+1286 4022.5929 1286 4022.5929 1286 3759.5929 curveto
+1286 3721.0179 1320.5844 3699.9374 1359.1784 3688.4223 curveto
+stroke
+0 0 0 edgecolor
+newpath 1360.3495 3691.73 moveto
+1369.0582 3685.696 lineto
+1358.4875 3684.9822 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1360.3495 3691.73 moveto
+1369.0582 3685.696 lineto
+1358.4875 3684.9822 lineto
+closepath stroke
+grestore
+% 56
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2223.5 4185.5929 moveto
+1840.5 4185.5929 lineto
+1840.5 4149.5929 lineto
+2223.5 4149.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1848.5 4163.8929 moveto 367 (56:hacl\(webServer,fileServer,nfsProtocol,nfsPort\):1) alignedtext
+grestore
+% 56->55
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1997.9875 4149.5867 moveto
+1978.2609 4139.7234 1953.2493 4127.2176 1932.2658 4116.7258 curveto
+stroke
+0 0 0 edgecolor
+newpath 1933.7546 4113.5572 moveto
+1923.2451 4112.2155 lineto
+1930.6241 4119.8181 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1933.7546 4113.5572 moveto
+1923.2451 4112.2155 lineto
+1930.6241 4119.8181 lineto
+closepath stroke
+grestore
+% 57
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1822 4185.5929 moveto
+1406 4185.5929 lineto
+1406 4149.5929 lineto
+1822 4149.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1414 4163.8929 moveto 400 (57:nfsExportInfo\(fileServer,'/export',write,webServer\):1) alignedtext
+grestore
+% 57->55
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1680.1089 4149.5867 moveto
+1722.7191 4138.6253 1778.0162 4124.4004 1821.155 4113.3031 curveto
+stroke
+0 0 0 edgecolor
+newpath 1822.19 4116.6508 moveto
+1831.0027 4110.7698 lineto
+1820.446 4109.8715 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1822.19 4116.6508 moveto
+1831.0027 4110.7698 lineto
+1820.446 4109.8715 lineto
+closepath stroke
+grestore
+% 58->33
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3013.6381 4076.625 moveto
+3024.4882 4063.0547 3037 4042.9851 3037 4022.5929 curveto
+3037 4022.5929 3037 4022.5929 3037 3759.5929 curveto
+3037 3723.01 3257.7006 3696.8366 3398.5414 3683.8584 curveto
+stroke
+0 0 0 edgecolor
+newpath 3398.8989 3687.3405 moveto
+3408.5398 3682.9469 lineto
+3398.2633 3680.3694 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3398.8989 3687.3405 moveto
+3408.5398 3682.9469 lineto
+3398.2633 3680.3694 lineto
+closepath stroke
+grestore
+% 59
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2861 4185.5929 moveto
+2587 4185.5929 lineto
+2587 4149.5929 lineto
+2861 4149.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2595 4163.8929 moveto 258 (59:hacl\(webServer,n0Inter,tcp,80\):1) alignedtext
+grestore
+% 59->58
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2789.6298 4149.5867 moveto
+2831.3438 4138.7776 2885.3052 4124.7949 2927.8625 4113.7672 curveto
+stroke
+0 0 0 edgecolor
+newpath 2928.7864 4117.1435 moveto
+2937.5887 4111.247 lineto
+2927.0304 4110.3673 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2928.7864 4117.1435 moveto
+2937.5887 4111.247 lineto
+2927.0304 4110.3673 lineto
+closepath stroke
+grestore
+% 60
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2697.5 3691.5929 moveto
+2316.5 3691.5929 lineto
+2316.5 3655.5929 lineto
+2697.5 3655.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2324.5 3669.8929 moveto 365 (60:networkServiceInfo\(n0Inter,httpd,tcp,80,root\):1) alignedtext
+grestore
+% 60->32
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2556.2847 3655.4942 moveto
+2596.0831 3641.6866 2652.1667 3622.229 2694.1019 3607.68 curveto
+stroke
+0 0 0 edgecolor
+newpath 2695.3293 3610.9589 moveto
+2703.6296 3604.3745 lineto
+2693.0348 3604.3456 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2695.3293 3610.9589 moveto
+2703.6296 3604.3745 lineto
+2693.0348 3604.3456 lineto
+closepath stroke
+grestore
+% 61
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3278 3691.5929 moveto
+2716 3691.5929 lineto
+2716 3655.5929 lineto
+3278 3655.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2724 3669.8929 moveto 546 (61:vulExists\(n0Inter,'CVE-2013-6648',httpd,remoteExploit,privEscalation\):1) alignedtext
+grestore
+% 61->32
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2947.7153 3655.4942 moveto
+2907.9169 3641.6866 2851.8333 3622.229 2809.8981 3607.68 curveto
+stroke
+0 0 0 edgecolor
+newpath 2810.9652 3604.3456 moveto
+2800.3704 3604.3745 lineto
+2808.6707 3610.9589 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2810.9652 3604.3456 moveto
+2800.3704 3604.3745 lineto
+2808.6707 3610.9589 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2890 3626.3929 moveto 52 ([112.5]) alignedtext
+grestore
+% 62
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2261 3412.5929 193.8658 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2120 3408.8929 moveto 282 (62:RULE 4 \(Trojan horse installation\):0) alignedtext
+grestore
+% 62->31
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2333.6278 3395.8043 moveto
+2406.1436 3380.04 2516.5893 3356.03 2586.4907 3340.8341 curveto
+stroke
+0 0 0 edgecolor
+newpath 2587.4723 3344.2025 moveto
+2596.5005 3338.658 lineto
+2585.9852 3337.3623 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2587.4723 3344.2025 moveto
+2596.5005 3338.658 lineto
+2585.9852 3337.3623 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2480 3365.3929 moveto 43 ([68.6]) alignedtext
+grestore
+% 63
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2126 3517.5929 moveto
+1802.4133 3499.5929 lineto
+2126 3481.5929 lineto
+2449.5867 3499.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1958 3495.8929 moveto 336 (63:accessFile\(n0Inter,write,'/usr/local/share'\):0) alignedtext
+grestore
+% 63->62
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2151.0761 3482.8043 moveto
+2172.0364 3469.607 2202.1749 3450.6309 2225.5948 3435.8851 curveto
+stroke
+0 0 0 edgecolor
+newpath 2227.6111 3438.7516 moveto
+2234.2086 3430.4616 lineto
+2223.8814 3432.828 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2227.6111 3438.7516 moveto
+2234.2086 3430.4616 lineto
+2223.8814 3432.828 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2202 3452.3929 moveto 43 ([68.6]) alignedtext
+grestore
+% 64->63
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2066.1774 3568.3919 moveto
+2077.2694 3555.8209 2092.4582 3538.607 2104.7553 3524.6703 curveto
+stroke
+0 0 0 edgecolor
+newpath 2107.6168 3526.7173 moveto
+2111.6086 3516.9032 lineto
+2102.3679 3522.0859 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2107.6168 3526.7173 moveto
+2111.6086 3516.9032 lineto
+2102.3679 3522.0859 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2093 3539.3929 moveto 43 ([68.6]) alignedtext
+grestore
+% 65
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2298 3691.5929 moveto
+1804 3691.5929 lineto
+1804 3655.5929 lineto
+2298 3655.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1812 3669.8929 moveto 478 (65:nfsMounted\(n0Inter,'/usr/local/share',fileServer,'/export',read\):1) alignedtext
+grestore
+% 65->64
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2051 3655.3919 moveto
+2051 3643.7555 2051 3628.1408 2051 3614.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 2054.5001 3614.7683 moveto
+2051 3604.7684 lineto
+2047.5001 3614.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2054.5001 3614.7683 moveto
+2051 3604.7684 lineto
+2047.5001 3614.7684 lineto
+closepath stroke
+grestore
+% 66
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2939 2542.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2826 2538.8929 moveto 226 (66:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 66->28
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3033.1211 2528.1244 moveto
+3147.165 2511.805 3337.6565 2484.5461 3447.6182 2468.8109 curveto
+stroke
+0 0 0 edgecolor
+newpath 3448.2732 2472.2529 moveto
+3457.6765 2467.3715 lineto
+3447.2815 2465.3235 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3448.2732 2472.2529 moveto
+3457.6765 2467.3715 lineto
+3447.2815 2465.3235 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3272 2495.3929 moveto 101 ([351.4, 463.9]) alignedtext
+grestore
+% 67
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2722 2647.5929 moveto
+2472 2647.5929 lineto
+2472 2611.5929 lineto
+2722 2611.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2480 2625.8929 moveto 234 (67:hacl\(n2Inter,n3Inter,tcp,80\):1) alignedtext
+grestore
+% 67->66
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2665.7974 2611.4942 moveto
+2723.9726 2597.0354 2807.0755 2576.3812 2866.3246 2561.6555 curveto
+stroke
+0 0 0 edgecolor
+newpath 2867.4981 2564.9704 moveto
+2876.3586 2559.1617 lineto
+2865.8096 2558.1771 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2867.4981 2564.9704 moveto
+2876.3586 2559.1617 lineto
+2865.8096 2558.1771 lineto
+closepath stroke
+grestore
+% 68
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2939 2647.5929 moveto
+2739.5857 2629.5929 lineto
+2939 2611.5929 lineto
+3138.4143 2629.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2838.5 2625.8929 moveto 201 (68:execCode\(n2Inter,root\):0) alignedtext
+grestore
+% 68->66
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2939 2611.3919 moveto
+2939 2599.7555 2939 2584.1408 2939 2570.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 2942.5001 2570.7683 moveto
+2939 2560.7684 lineto
+2935.5001 2570.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2942.5001 2570.7683 moveto
+2939 2560.7684 lineto
+2935.5001 2570.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2939 2582.3929 moveto 101 ([351.4, 463.9]) alignedtext
+grestore
+% 69
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2247 2716.5929 243.1569 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2068 2712.8929 moveto 358 (69:RULE 2 \(remote exploit of a server program\):0) alignedtext
+grestore
+% 69->68
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2366.7472 2700.8841 moveto
+2503.893 2684.0382 2725.4921 2656.8186 2848.8264 2641.6692 curveto
+stroke
+0 0 0 edgecolor
+newpath 2849.4924 2645.1138 moveto
+2858.9911 2640.4206 lineto
+2848.6389 2638.166 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2849.4924 2645.1138 moveto
+2858.9911 2640.4206 lineto
+2848.6389 2638.166 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2635 2669.3929 moveto 101 ([351.4, 463.9]) alignedtext
+grestore
+% 70
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1997 2821.5929 moveto
+1780.1577 2803.5929 lineto
+1997 2785.5929 lineto
+2213.8423 2803.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1887 2799.8929 moveto 220 (70:netAccess\(n2Inter,tcp,80\):0) alignedtext
+grestore
+% 70->69
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2037.4447 2788.8417 moveto
+2078.3431 2774.9363 2141.9762 2753.301 2188.3967 2737.518 curveto
+stroke
+0 0 0 edgecolor
+newpath 2189.6857 2740.7766 moveto
+2198.0268 2734.2438 lineto
+2187.4323 2734.1492 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2189.6857 2740.7766 moveto
+2198.0268 2734.2438 lineto
+2187.4323 2734.1492 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2137 2756.3929 moveto 101 ([323.6, 211.1]) alignedtext
+grestore
+% 71
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1997 2890.5929 157.0724 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1884 2886.8929 moveto 226 (71:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 71->70
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1997 2872.3919 moveto
+1997 2860.7555 1997 2845.1408 1997 2831.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 2000.5001 2831.7683 moveto
+1997 2821.7684 lineto
+1993.5001 2831.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2000.5001 2831.7683 moveto
+1997 2821.7684 lineto
+1993.5001 2831.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1997 2843.3929 moveto 101 ([323.6, 211.1]) alignedtext
+grestore
+% 72
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2282 2995.5929 moveto
+2032 2995.5929 lineto
+2032 2959.5929 lineto
+2282 2959.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2040 2973.8929 moveto 234 (72:hacl\(n1Inter,n2Inter,tcp,80\):1) alignedtext
+grestore
+% 72->71
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2124.6216 2959.3919 moveto
+2099.545 2946.07 2064.6533 2927.5338 2037.6899 2913.2094 curveto
+stroke
+0 0 0 edgecolor
+newpath 2038.9856 2909.9346 moveto
+2028.5124 2908.3339 lineto
+2035.7015 2916.1164 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2038.9856 2909.9346 moveto
+2028.5124 2908.3339 lineto
+2035.7015 2916.1164 lineto
+closepath stroke
+grestore
+% 73
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1815 2995.5929 moveto
+1615.5857 2977.5929 lineto
+1815 2959.5929 lineto
+2014.4143 2977.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1714.5 2973.8929 moveto 201 (73:execCode\(n1Inter,root\):0) alignedtext
+grestore
+% 73->71
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1845.8738 2962.1738 moveto
+1874.9499 2948.5943 1918.8495 2928.0918 1951.8544 2912.6774 curveto
+stroke
+0 0 0 edgecolor
+newpath 1953.7057 2915.6757 moveto
+1961.2852 2908.2729 lineto
+1950.7436 2909.3333 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1953.7057 2915.6757 moveto
+1961.2852 2908.2729 lineto
+1950.7436 2909.3333 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1917 2930.3929 moveto 101 ([323.6, 211.1]) alignedtext
+grestore
+% 74
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1815 3064.5929 243.1569 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1636 3060.8929 moveto 358 (74:RULE 2 \(remote exploit of a server program\):0) alignedtext
+grestore
+% 74->73
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1815 3046.3919 moveto
+1815 3034.7555 1815 3019.1408 1815 3005.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 1818.5001 3005.7683 moveto
+1815 2995.7684 lineto
+1811.5001 3005.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1818.5001 3005.7683 moveto
+1815 2995.7684 lineto
+1811.5001 3005.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1815 3017.3929 moveto 101 ([323.6, 211.1]) alignedtext
+grestore
+% 75
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2331 3169.5929 moveto
+2114.1577 3151.5929 lineto
+2331 3133.5929 lineto
+2547.8423 3151.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2221 3147.8929 moveto 220 (75:netAccess\(n1Inter,tcp,80\):0) alignedtext
+grestore
+% 75->74
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2262.2125 3139.2617 moveto
+2174.5841 3124.8267 2022.2739 3099.7369 1920.068 3082.9006 curveto
+stroke
+0 0 0 edgecolor
+newpath 1920.4645 3079.4189 moveto
+1910.0286 3081.2469 lineto
+1919.3267 3086.3258 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1920.4645 3079.4189 moveto
+1910.0286 3081.2469 lineto
+1919.3267 3086.3258 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2104 3104.3929 moveto 92 ([68.6, 181.1]) alignedtext
+grestore
+% 76->75
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1311.9234 3220.6568 moveto
+1327.0488 3208.9332 1348.9429 3194.2807 1371 3187.5929 curveto
+1449.0704 3163.9217 2023.5211 3173.6539 2105 3169.5929 curveto
+2142.5374 3167.7221 2183.5266 3164.8806 2220.1657 3162.0532 curveto
+stroke
+0 0 0 edgecolor
+newpath 2220.6803 3165.5238 moveto
+2230.378 3161.257 lineto
+2220.1361 3158.545 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2220.6803 3165.5238 moveto
+2230.378 3161.257 lineto
+2220.1361 3158.545 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1371 3191.3929 moveto 92 ([68.6, 181.1]) alignedtext
+grestore
+% 77
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1417 3343.5929 moveto
+1167 3343.5929 lineto
+1167 3307.5929 lineto
+1417 3307.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1175 3321.8929 moveto 234 (77:hacl\(n0Inter,n1Inter,tcp,80\):1) alignedtext
+grestore
+% 77->76
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1292 3307.3919 moveto
+1292 3295.7555 1292 3280.1408 1292 3266.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 1295.5001 3266.7683 moveto
+1292 3256.7684 lineto
+1288.5001 3266.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1295.5001 3266.7683 moveto
+1292 3256.7684 lineto
+1288.5001 3266.7684 lineto
+closepath stroke
+grestore
+% 78->75
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1348.6402 4079.9407 moveto
+1263.6355 4065.948 1150 4043.359 1150 4022.5929 curveto
+1150 4022.5929 1150 4022.5929 1150 3716.0929 curveto
+1150 3354.0427 1157.1003 3564.4394 1887 3274.5929 curveto
+2015.2347 3223.6704 2172.3799 3185.9565 2261.1616 3166.7878 curveto
+stroke
+0 0 0 edgecolor
+newpath 2262.0716 3170.1724 moveto
+2271.1162 3164.6545 lineto
+2260.6047 3163.3278 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2262.0716 3170.1724 moveto
+2271.1162 3164.6545 lineto
+2260.6047 3163.3278 lineto
+closepath stroke
+grestore
+% 79
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1388 4185.5929 moveto
+1114 4185.5929 lineto
+1114 4149.5929 lineto
+1388 4149.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1122 4163.8929 moveto 258 (79:hacl\(webServer,n1Inter,tcp,80\):1) alignedtext
+grestore
+% 79->78
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1296.2702 4149.5867 moveto
+1323.5464 4139.3401 1358.4142 4126.2415 1386.9761 4115.512 curveto
+stroke
+0 0 0 edgecolor
+newpath 1388.27 4118.7648 moveto
+1396.4004 4111.9716 lineto
+1385.8083 4112.2119 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1388.27 4118.7648 moveto
+1396.4004 4111.9716 lineto
+1385.8083 4112.2119 lineto
+closepath stroke
+grestore
+% 80
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1515.5 3169.5929 moveto
+1134.5 3169.5929 lineto
+1134.5 3133.5929 lineto
+1515.5 3133.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1142.5 3147.8929 moveto 365 (80:networkServiceInfo\(n1Inter,httpd,tcp,80,root\):1) alignedtext
+grestore
+% 80->74
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1423.2751 3133.5452 moveto
+1507.7931 3118.8839 1629.1927 3097.8248 1714.383 3083.0469 curveto
+stroke
+0 0 0 edgecolor
+newpath 1715.0726 3086.4796 moveto
+1724.3273 3081.3219 lineto
+1713.8762 3079.5826 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1715.0726 3086.4796 moveto
+1724.3273 3081.3219 lineto
+1713.8762 3079.5826 lineto
+closepath stroke
+grestore
+% 81
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2096 3169.5929 moveto
+1534 3169.5929 lineto
+1534 3133.5929 lineto
+2096 3133.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1542 3147.8929 moveto 546 (81:vulExists\(n1Inter,'CVE-2013-0291',httpd,remoteExploit,privEscalation\):1) alignedtext
+grestore
+% 81->74
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1815 3133.3919 moveto
+1815 3121.7555 1815 3106.1408 1815 3092.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 1818.5001 3092.7683 moveto
+1815 3082.7684 lineto
+1811.5001 3092.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1818.5001 3092.7683 moveto
+1815 3082.7684 lineto
+1811.5001 3092.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1815 3104.3929 moveto 52 ([142.5]) alignedtext
+grestore
+% 82->70
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1107 4076.3765 moveto
+1107 4061.998 1107 4040.9592 1107 4022.5929 curveto
+1107 4022.5929 1107 4022.5929 1107 2889.5929 curveto
+1107 2879.9456 1644.2172 2833.9815 1883.895 2813.9549 curveto
+stroke
+0 0 0 edgecolor
+newpath 1884.3622 2817.4281 moveto
+1894.0362 2813.1082 lineto
+1883.7797 2810.4524 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1884.3622 2817.4281 moveto
+1894.0362 2813.1082 lineto
+1883.7797 2810.4524 lineto
+closepath stroke
+grestore
+% 83
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1096 4185.5929 moveto
+822 4185.5929 lineto
+822 4149.5929 lineto
+1096 4149.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+830 4163.8929 moveto 258 (83:hacl\(webServer,n2Inter,tcp,80\):1) alignedtext
+grestore
+% 83->82
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 994.4497 4149.5867 moveto
+1015.1019 4139.6792 1041.3121 4127.1054 1063.2423 4116.5848 curveto
+stroke
+0 0 0 edgecolor
+newpath 1064.8479 4119.6965 moveto
+1072.3502 4112.2155 lineto
+1061.8201 4113.3852 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1064.8479 4119.6965 moveto
+1072.3502 4112.2155 lineto
+1061.8201 4113.3852 lineto
+closepath stroke
+grestore
+% 84
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2612.5 2821.5929 moveto
+2231.5 2821.5929 lineto
+2231.5 2785.5929 lineto
+2612.5 2785.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2239.5 2799.8929 moveto 365 (84:networkServiceInfo\(n2Inter,httpd,tcp,80,root\):1) alignedtext
+grestore
+% 84->69
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2386.5861 2785.3919 moveto
+2359.0092 2771.9974 2320.5797 2753.3316 2291.0234 2738.9757 curveto
+stroke
+0 0 0 edgecolor
+newpath 2292.2882 2735.6991 moveto
+2281.764 2734.4783 lineto
+2289.2299 2741.9957 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2292.2882 2735.6991 moveto
+2281.764 2734.4783 lineto
+2289.2299 2741.9957 lineto
+closepath stroke
+grestore
+% 85
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1762 2821.5929 moveto
+1200 2821.5929 lineto
+1200 2785.5929 lineto
+1762 2785.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1208 2799.8929 moveto 546 (85:vulExists\(n2Inter,'CVE-2013-4303',httpd,remoteExploit,privEscalation\):1) alignedtext
+grestore
+% 85->69
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1634.6301 2785.5452 moveto
+1772.8608 2770.2063 1974.2001 2747.8645 2107.8008 2733.0393 curveto
+stroke
+0 0 0 edgecolor
+newpath 2108.5494 2736.4778 moveto
+2118.1023 2731.8962 lineto
+2107.7773 2729.5205 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2108.5494 2736.4778 moveto
+2118.1023 2731.8962 lineto
+2107.7773 2729.5205 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1910 2756.3929 moveto 52 ([140.3]) alignedtext
+grestore
+% 86->28
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3436.2766 4081.201 moveto
+3562.7156 4065.5937 3758 4038.8558 3758 4022.5929 curveto
+3758 4022.5929 3758 4022.5929 3758 3716.0929 curveto
+3758 3464.2748 3533 3447.911 3533 3196.0929 curveto
+3533 3196.0929 3533 3196.0929 3533 2541.5929 curveto
+3533 2522.3455 3533 2500.6465 3533 2483.9902 curveto
+stroke
+0 0 0 edgecolor
+newpath 3536.5001 2483.8493 moveto
+3533 2473.8494 lineto
+3529.5001 2483.8494 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3536.5001 2483.8493 moveto
+3533 2473.8494 lineto
+3529.5001 2483.8494 lineto
+closepath stroke
+grestore
+% 87
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3653 4185.5929 moveto
+3379 4185.5929 lineto
+3379 4149.5929 lineto
+3653 4149.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3387 4163.8929 moveto 258 (87:hacl\(webServer,n3Inter,tcp,80\):1) alignedtext
+grestore
+% 87->86
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3471.6879 4149.5867 moveto
+3445.1051 4139.3846 3411.1557 4126.3554 3383.2667 4115.6521 curveto
+stroke
+0 0 0 edgecolor
+newpath 3384.267 4112.2871 moveto
+3373.6768 4111.9716 lineto
+3381.7588 4118.8223 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3384.267 4112.2871 moveto
+3373.6768 4111.9716 lineto
+3381.7588 4118.8223 lineto
+closepath stroke
+grestore
+% 88
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2717.5 2473.5929 moveto
+2336.5 2473.5929 lineto
+2336.5 2437.5929 lineto
+2717.5 2437.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2344.5 2451.8929 moveto 365 (88:networkServiceInfo\(n3Inter,httpd,tcp,80,root\):1) alignedtext
+grestore
+% 88->27
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2625.2751 2437.5452 moveto
+2709.7931 2422.8839 2831.1927 2401.8248 2916.383 2387.0469 curveto
+stroke
+0 0 0 edgecolor
+newpath 2917.0726 2390.4796 moveto
+2926.3273 2385.3219 lineto
+2915.8762 2383.5826 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2917.0726 2390.4796 moveto
+2926.3273 2385.3219 lineto
+2915.8762 2383.5826 lineto
+closepath stroke
+grestore
+% 89
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3298 2473.5929 moveto
+2736 2473.5929 lineto
+2736 2437.5929 lineto
+3298 2437.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2744 2451.8929 moveto 546 (89:vulExists\(n3Inter,'CVE-2013-1793',httpd,remoteExploit,privEscalation\):1) alignedtext
+grestore
+% 89->27
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3017 2437.3919 moveto
+3017 2425.7555 3017 2410.1408 3017 2396.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3020.5001 2396.7683 moveto
+3017 2386.7684 lineto
+3013.5001 2396.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3020.5001 2396.7683 moveto
+3017 2386.7684 lineto
+3013.5001 2396.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3017 2408.3929 moveto 52 ([202.5]) alignedtext
+grestore
+% 90->23
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3769.8726 4081.2242 moveto
+3833.8008 4070.6918 3903 4052.4057 3903 4022.5929 curveto
+3903 4022.5929 3903 4022.5929 3903 2193.5929 curveto
+3903 2155.3041 3866.4428 2134.1752 3828.6092 2122.5609 curveto
+stroke
+0 0 0 edgecolor
+newpath 3829.5615 2119.193 moveto
+3818.9845 2119.8085 lineto
+3827.6367 2125.9232 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3829.5615 2119.193 moveto
+3818.9845 2119.8085 lineto
+3827.6367 2125.9232 lineto
+closepath stroke
+grestore
+% 91
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3954.5 4185.5929 moveto
+3671.5 4185.5929 lineto
+3671.5 4149.5929 lineto
+3954.5 4149.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3679.5 4163.8929 moveto 267 (91:hacl\(webServer,n11Inter,tcp,80\):1) alignedtext
+grestore
+% 91->90
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3777.3108 4149.5867 moveto
+3756.519 4139.6792 3730.1318 4127.1054 3708.0534 4116.5848 curveto
+stroke
+0 0 0 edgecolor
+newpath 3709.417 4113.3576 moveto
+3698.8839 4112.2155 lineto
+3706.4058 4119.6768 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3709.417 4113.3576 moveto
+3698.8839 4112.2155 lineto
+3706.4058 4119.6768 lineto
+closepath stroke
+grestore
+% 92
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2913 2125.5929 moveto
+2523 2125.5929 lineto
+2523 2089.5929 lineto
+2913 2089.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2531 2103.8929 moveto 374 (92:networkServiceInfo\(n11Inter,httpd,tcp,80,root\):1) alignedtext
+grestore
+% 92->22
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2818.0802 2089.5452 moveto
+2904.2379 2074.869 3028.0309 2053.782 3114.7991 2039.0019 curveto
+stroke
+0 0 0 edgecolor
+newpath 3115.3916 2042.4515 moveto
+3124.6618 2037.3219 lineto
+3114.2161 2035.5509 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3115.3916 2042.4515 moveto
+3124.6618 2037.3219 lineto
+3114.2161 2035.5509 lineto
+closepath stroke
+grestore
+% 93
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3502.5 2125.5929 moveto
+2931.5 2125.5929 lineto
+2931.5 2089.5929 lineto
+3502.5 2089.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2939.5 2103.8929 moveto 555 (93:vulExists\(n11Inter,'CVE-2013-7370',httpd,remoteExploit,privEscalation\):1) alignedtext
+grestore
+% 93->22
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3217 2089.3919 moveto
+3217 2077.7555 3217 2062.1408 3217 2048.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3220.5001 2048.7683 moveto
+3217 2038.7684 lineto
+3213.5001 2048.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3220.5001 2048.7683 moveto
+3217 2038.7684 lineto
+3213.5001 2048.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3217 2060.3929 moveto 52 ([189.1]) alignedtext
+grestore
+% 94->18
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2558.7689 2177.5979 moveto
+2527.9794 2164.5755 2495 2142.6726 2495 2108.5929 curveto
+2495 2108.5929 2495 2108.5929 2495 1845.5929 curveto
+2495 1816.1623 2669.9979 1787.6319 2783.1032 1772.2656 curveto
+stroke
+0 0 0 edgecolor
+newpath 2783.7249 1775.7135 moveto
+2793.1685 1770.9105 lineto
+2782.7909 1768.7761 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2783.7249 1775.7135 moveto
+2793.1685 1770.9105 lineto
+2782.7909 1768.7761 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2495 1973.3929 moveto 200 ([553.9, 666.4, 383.6, 271.1]) alignedtext
+grestore
+% 95
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2740.5 2299.5929 moveto
+2481.5 2299.5929 lineto
+2481.5 2263.5929 lineto
+2740.5 2263.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2489.5 2277.8929 moveto 243 (95:hacl\(n3Inter,n13Inter,tcp,80\):1) alignedtext
+grestore
+% 95->94
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2611 2263.3919 moveto
+2611 2251.7555 2611 2236.1408 2611 2222.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 2614.5001 2222.7683 moveto
+2611 2212.7684 lineto
+2607.5001 2222.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2614.5001 2222.7683 moveto
+2611 2212.7684 lineto
+2607.5001 2222.7684 lineto
+closepath stroke
+grestore
+% 96->18
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3997.7561 4076.3804 moveto
+3998.3225 4062.0041 3999 4040.9665 3999 4022.5929 curveto
+3999 4022.5929 3999 4022.5929 3999 1845.5929 curveto
+3999 1842.4859 3289.4084 1790.5637 2998.8414 1769.4326 curveto
+stroke
+0 0 0 edgecolor
+newpath 2998.9111 1765.9285 moveto
+2988.6836 1768.694 lineto
+2998.4034 1772.9101 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2998.9111 1765.9285 moveto
+2988.6836 1768.694 lineto
+2998.4034 1772.9101 lineto
+closepath stroke
+grestore
+% 97
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 4255.5 4185.5929 moveto
+3972.5 4185.5929 lineto
+3972.5 4149.5929 lineto
+4255.5 4149.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3980.5 4163.8929 moveto 267 (97:hacl\(webServer,n13Inter,tcp,80\):1) alignedtext
+grestore
+% 97->96
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4085.9756 4149.5867 moveto
+4070.2016 4140.0144 4050.3262 4127.9533 4033.3635 4117.6597 curveto
+stroke
+0 0 0 edgecolor
+newpath 4035.1606 4114.6562 moveto
+4024.7957 4112.4604 lineto
+4031.529 4120.6405 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4035.1606 4114.6562 moveto
+4024.7957 4112.4604 lineto
+4031.529 4120.6405 lineto
+closepath stroke
+grestore
+% 98
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3510 1777.5929 moveto
+3120 1777.5929 lineto
+3120 1741.5929 lineto
+3510 1741.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3128 1755.8929 moveto 374 (98:networkServiceInfo\(n13Inter,httpd,tcp,80,root\):1) alignedtext
+grestore
+% 98->17
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3307.2849 1741.1655 moveto
+3301.2919 1729.8461 3291.8333 1715.8865 3279 1708.5929 curveto
+3250.2872 1692.2745 3188.1949 1683.2287 3121.2052 1678.3119 curveto
+stroke
+0 0 0 edgecolor
+newpath 3121.0738 1674.7942 moveto
+3110.8537 1677.587 lineto
+3120.5847 1681.7771 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3121.0738 1674.7942 moveto
+3110.8537 1677.587 lineto
+3120.5847 1681.7771 lineto
+closepath stroke
+grestore
+% 99
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2633.5 1777.5929 moveto
+2062.5 1777.5929 lineto
+2062.5 1741.5929 lineto
+2633.5 1741.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2070.5 1755.8929 moveto 555 (99:vulExists\(n13Inter,'CVE-2013-6362',httpd,remoteExploit,privEscalation\):1) alignedtext
+grestore
+% 99->17
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2454.097 1741.5452 moveto
+2545.9108 1726.7925 2678.0398 1705.562 2770.0905 1690.7712 curveto
+stroke
+0 0 0 edgecolor
+newpath 2770.6711 1694.2229 moveto
+2779.9892 1689.1807 lineto
+2769.5605 1687.3115 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2770.6711 1694.2229 moveto
+2779.9892 1689.1807 lineto
+2769.5605 1687.3115 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2645 1712.3929 moveto 52 ([343.0]) alignedtext
+grestore
+% 100->13
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4213.3203 4082.487 moveto
+4182.0313 4072.5018 4157 4054.5325 4157 4022.5929 curveto
+4157 4022.5929 4157 4022.5929 4157 1497.5929 curveto
+4157 1408.6738 3848.4447 1456.7659 3760 1447.5929 curveto
+3657.4017 1436.952 3540.7199 1427.6105 3454.9711 1421.2608 curveto
+stroke
+0 0 0 edgecolor
+newpath 3455.1643 1417.7657 moveto
+3444.934 1420.5208 lineto
+3454.6495 1424.7467 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3455.1643 1417.7657 moveto
+3444.934 1420.5208 lineto
+3454.6495 1424.7467 lineto
+closepath stroke
+grestore
+% 101
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 4566 4185.5929 moveto
+4274 4185.5929 lineto
+4274 4149.5929 lineto
+4566 4149.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4282 4163.8929 moveto 276 (101:hacl\(webServer,n29Inter,tcp,80\):1) alignedtext
+grestore
+% 101->100
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4399.4239 4149.4058 moveto
+4388.5655 4140.3359 4375.0779 4129.0698 4363.2539 4119.1933 curveto
+stroke
+0 0 0 edgecolor
+newpath 4365.3052 4116.3463 moveto
+4355.3866 4112.6218 lineto
+4360.8177 4121.7187 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4365.3052 4116.3463 moveto
+4355.3866 4112.6218 lineto
+4360.8177 4121.7187 lineto
+closepath stroke
+grestore
+% 102
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3973.5 1429.5929 moveto
+3574.5 1429.5929 lineto
+3574.5 1393.5929 lineto
+3973.5 1393.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3582.5 1407.8929 moveto 383 (102:networkServiceInfo\(n29Inter,httpd,tcp,80,root\):1) alignedtext
+grestore
+% 102->12
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3773.9359 1393.5613 moveto
+3772.9159 1382.4186 3769.5974 1368.5075 3760 1360.5929 curveto
+3743.2082 1346.7454 3652.8485 1338.2529 3559.3599 1333.1092 curveto
+stroke
+0 0 0 edgecolor
+newpath 3559.3046 1329.6013 moveto
+3549.1314 1332.5602 lineto
+3558.9294 1336.5913 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3559.3046 1329.6013 moveto
+3549.1314 1332.5602 lineto
+3558.9294 1336.5913 lineto
+closepath stroke
+grestore
+% 103
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3088 1429.5929 moveto
+2508 1429.5929 lineto
+2508 1393.5929 lineto
+3088 1393.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2516 1407.8929 moveto 564 (103:vulExists\(n29Inter,'CVE-2013-4105',httpd,remoteExploit,privEscalation\):1) alignedtext
+grestore
+% 103->12
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2904.8992 1393.5452 moveto
+2997.5539 1378.7691 3130.9575 1357.4946 3223.7227 1342.7009 curveto
+stroke
+0 0 0 edgecolor
+newpath 3224.3733 1346.1415 moveto
+3233.6973 1341.1102 lineto
+3223.2708 1339.2289 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3224.3733 1346.1415 moveto
+3233.6973 1341.1102 lineto
+3223.2708 1339.2289 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3097 1364.3929 moveto 52 ([292.5]) alignedtext
+grestore
+% 104
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2304 802.5929 163.2712 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2186.5 798.8929 moveto 235 (104:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 104->8
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2418.3511 789.7443 moveto
+2535.7943 778.0556 2723.9511 760.661 2887 751.5929 curveto
+3199.5082 734.2126 3278.4051 749.3364 3591 733.5929 curveto
+3628.4467 731.707 3669.3293 728.8696 3705.9015 726.0504 curveto
+stroke
+0 0 0 edgecolor
+newpath 3706.398 729.5224 moveto
+3716.096 725.2565 lineto
+3705.8544 722.5436 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3706.398 729.5224 moveto
+3716.096 725.2565 lineto
+3705.8544 722.5436 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2887 755.3929 moveto 920 ([1440.4, 1251.3, 1318.2, 1129.1, 1610.7, 1035.4, 1421.6, 846.3, 1327.9, 1138.8, 958.8, 1430.7, 1241.6, 1147.9, 1723.2, 1534.1]) alignedtext
+grestore
+% 105
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2069.5 907.5929 moveto
+1792.5 907.5929 lineto
+1792.5 871.5929 lineto
+2069.5 871.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1800.5 885.8929 moveto 261 (105:hacl\(n31Inter,n37Inter,tcp,80\):1) alignedtext
+grestore
+% 105->104
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2006.0334 871.4942 moveto
+2069.946 856.9296 2161.4448 836.0787 2226.151 821.3333 curveto
+stroke
+0 0 0 edgecolor
+newpath 2227.3252 824.6556 moveto
+2236.2975 819.0211 lineto
+2225.7698 817.8305 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2227.3252 824.6556 moveto
+2236.2975 819.0211 lineto
+2225.7698 817.8305 lineto
+closepath stroke
+grestore
+% 106
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2304 907.5929 moveto
+2087.9961 889.5929 lineto
+2304 871.5929 lineto
+2520.0039 889.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2194.5 885.8929 moveto 219 (106:execCode\(n31Inter,root\):0) alignedtext
+grestore
+% 106->104
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2304 871.3919 moveto
+2304 859.7555 2304 844.1408 2304 830.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 2307.5001 830.7683 moveto
+2304 820.7684 lineto
+2300.5001 830.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2307.5001 830.7683 moveto
+2304 820.7684 lineto
+2300.5001 830.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+2304 842.3929 moveto 920 ([1440.4, 1251.3, 1318.2, 1129.1, 1610.7, 1035.4, 1421.6, 846.3, 1327.9, 1138.8, 958.8, 1430.7, 1241.6, 1147.9, 1723.2, 1534.1]) alignedtext
+grestore
+% 107
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1281 976.5929 248.8558 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1097.5 972.8929 moveto 367 (107:RULE 2 \(remote exploit of a server program\):0) alignedtext
+grestore
+% 107->106
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1437.4853 962.5907 moveto
+1645.543 945.3034 2008.2371 915.1676 2191.361 899.952 curveto
+stroke
+0 0 0 edgecolor
+newpath 2191.8765 903.4213 moveto
+2201.5523 899.1052 lineto
+2191.2968 896.4453 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2191.8765 903.4213 moveto
+2201.5523 899.1052 lineto
+2191.2968 896.4453 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+1854 929.3929 moveto 920 ([1440.4, 1251.3, 1318.2, 1129.1, 1610.7, 1035.4, 1421.6, 846.3, 1327.9, 1138.8, 958.8, 1430.7, 1241.6, 1147.9, 1723.2, 1534.1]) alignedtext
+grestore
+% 108
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 831 1081.5929 moveto
+597.5681 1063.5929 lineto
+831 1045.5929 lineto
+1064.4319 1063.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+712 1059.8929 moveto 238 (108:netAccess\(n31Inter,tcp,80\):0) alignedtext
+grestore
+% 108->107
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 824.3444 1045.6546 moveto
+821.3146 1034.8408 819.9658 1021.2719 828 1012.5929 curveto
+843.3961 995.9614 936.2683 987.2088 1033.9496 982.6129 curveto
+stroke
+0 0 0 edgecolor
+newpath 1034.1975 986.1053 moveto
+1044.0279 982.1539 lineto
+1033.8789 979.1125 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1034.1975 986.1053 moveto
+1044.0279 982.1539 lineto
+1033.8789 979.1125 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+828 1016.3929 moveto 884 ([896.9, 1378.5, 803.2, 1189.4, 614.1, 1095.7, 906.6, 1198.5, 1009.4, 915.7, 1491.0, 1301.9, 726.6, 1208.2, 1019.1, 1086.0]) alignedtext
+grestore
+% 109->108
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 632.985 1483.2076 moveto
+595.5212 1471.5278 560 1450.4672 560 1412.5929 curveto
+560 1412.5929 560 1412.5929 560 1149.5929 curveto
+560 1124.3377 566.2861 1114.0415 587 1099.5929 curveto
+605.5982 1086.6201 650.6113 1078.3901 696.9828 1073.1992 curveto
+stroke
+0 0 0 edgecolor
+newpath 697.6319 1076.6498 moveto
+707.2024 1072.105 lineto
+696.8866 1069.6896 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 697.6319 1076.6498 moveto
+707.2024 1072.105 lineto
+696.8866 1069.6896 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+560 1277.3929 moveto 425 ([896.9, 803.2, 614.1, 1198.5, 1009.4, 915.7, 726.6, 1086.0]) alignedtext
+grestore
+% 110
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 857.5 1603.5929 moveto
+580.5 1603.5929 lineto
+580.5 1567.5929 lineto
+857.5 1567.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+588.5 1581.8929 moveto 261 (110:hacl\(n13Inter,n31Inter,tcp,80\):1) alignedtext
+grestore
+% 110->109
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 719 1567.3919 moveto
+719 1555.7555 719 1540.1408 719 1526.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 722.5001 1526.7683 moveto
+719 1516.7684 lineto
+715.5001 1526.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 722.5001 1526.7683 moveto
+719 1516.7684 lineto
+715.5001 1526.7684 lineto
+closepath stroke
+grestore
+% 111->108
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 673.4004 1141.6341 moveto
+637.4115 1136.5226 605.6053 1128.1808 594 1114.5929 curveto
+589.6703 1109.5236 589.6439 1104.6396 594 1099.5929 curveto
+606.2243 1085.4308 639.124 1076.8999 676.6585 1071.7915 curveto
+stroke
+0 0 0 edgecolor
+newpath 677.3405 1075.2331 moveto
+686.8205 1070.5024 lineto
+676.4595 1068.2888 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 677.3405 1075.2331 moveto
+686.8205 1070.5024 lineto
+676.4595 1068.2888 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+594 1103.3929 moveto 461 ([1378.5, 1189.4, 1095.7, 906.6, 1491.0, 1301.9, 1208.2, 1019.1]) alignedtext
+grestore
+% 112
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 953.5 1255.5929 moveto
+676.5 1255.5929 lineto
+676.5 1219.5929 lineto
+953.5 1219.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+684.5 1233.8929 moveto 261 (112:hacl\(n29Inter,n31Inter,tcp,80\):1) alignedtext
+grestore
+% 112->111
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 815 1219.3919 moveto
+815 1207.7555 815 1192.1408 815 1178.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 818.5001 1178.7683 moveto
+815 1168.7684 lineto
+811.5001 1178.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 818.5001 1178.7683 moveto
+815 1168.7684 lineto
+811.5001 1178.7684 lineto
+closepath stroke
+grestore
+% 113->108
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 865.1598 4079.9656 moveto
+952.9086 4066.1741 1069 4043.9014 1069 4022.5929 curveto
+1069 4022.5929 1069 4022.5929 1069 1149.5929 curveto
+1069 1126.516 1072.2517 1114.9201 1055 1099.5929 curveto
+1040.4535 1086.6692 1003.7309 1078.5075 964.1314 1073.3572 curveto
+stroke
+0 0 0 edgecolor
+newpath 964.3662 1069.8598 moveto
+954.0134 1072.1116 lineto
+963.5108 1076.8073 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 964.3662 1069.8598 moveto
+954.0134 1072.1116 lineto
+963.5108 1076.8073 lineto
+closepath stroke
+grestore
+% 114
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 804 4185.5929 moveto
+512 4185.5929 lineto
+512 4149.5929 lineto
+804 4149.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+520 4163.8929 moveto 276 (114:hacl\(webServer,n31Inter,tcp,80\):1) alignedtext
+grestore
+% 114->113
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 684.5873 4149.5867 moveto
+699.415 4140.1022 718.0628 4128.1744 734.0577 4117.9434 curveto
+stroke
+0 0 0 edgecolor
+newpath 736.0915 4120.7973 moveto
+742.6297 4112.4604 lineto
+732.3196 4114.9004 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 736.0915 4120.7973 moveto
+742.6297 4112.4604 lineto
+732.3196 4114.9004 lineto
+closepath stroke
+grestore
+% 115
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1929.5 1081.5929 moveto
+1530.5 1081.5929 lineto
+1530.5 1045.5929 lineto
+1929.5 1045.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1538.5 1059.8929 moveto 383 (115:networkServiceInfo\(n31Inter,httpd,tcp,80,root\):1) alignedtext
+grestore
+% 115->107
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1729.9388 1045.5579 moveto
+1728.9199 1034.4137 1725.6018 1020.5021 1716 1012.5929 curveto
+1699.091 998.6647 1608.6727 990.1777 1514.6173 985.0584 curveto
+stroke
+0 0 0 edgecolor
+newpath 1514.7926 981.5629 moveto
+1504.621 984.5274 lineto
+1514.4213 988.553 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1514.7926 981.5629 moveto
+1504.621 984.5274 lineto
+1514.4213 988.553 lineto
+closepath stroke
+grestore
+% 116
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 580 1081.5929 moveto
+0 1081.5929 lineto
+0 1045.5929 lineto
+580 1045.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+8 1059.8929 moveto 564 (116:vulExists\(n31Inter,'CVE-2013-0283',httpd,remoteExploit,privEscalation\):1) alignedtext
+grestore
+% 116->107
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 438.9182 1045.573 moveto
+532.9304 1035.178 656.9783 1022.102 767 1012.5929 curveto
+871.999 1003.518 989.2334 995.3822 1085.1956 989.2435 curveto
+stroke
+0 0 0 edgecolor
+newpath 1085.5452 992.7284 moveto
+1095.3022 988.5993 lineto
+1085.0998 985.7426 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1085.5452 992.7284 moveto
+1095.3022 988.5993 lineto
+1085.0998 985.7426 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+767 1016.3929 moveto 52 ([232.2]) alignedtext
+grestore
+% 117
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3806 802.5929 163.2712 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3688.5 798.8929 moveto 235 (117:RULE 5 \(multi-hop access\):0) alignedtext
+grestore
+% 117->8
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3808.226 784.3919 moveto
+3809.7418 772.679 3811.7792 756.9352 3813.5092 743.5673 curveto
+stroke
+0 0 0 edgecolor
+newpath 3817.0024 743.8448 moveto
+3814.8148 733.4783 lineto
+3810.0603 742.9464 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3817.0024 743.8448 moveto
+3814.8148 733.4783 lineto
+3810.0603 742.9464 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3813 755.3929 moveto 470 ([1186.1, 1770.5, 1581.4, 1487.7, 1298.6, 1658.0, 1468.9, 1375.2]) alignedtext
+grestore
+% 118
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3571.5 907.5929 moveto
+3294.5 907.5929 lineto
+3294.5 871.5929 lineto
+3571.5 871.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3302.5 885.8929 moveto 261 (118:hacl\(n36Inter,n37Inter,tcp,80\):1) alignedtext
+grestore
+% 118->117
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3508.0334 871.4942 moveto
+3571.946 856.9296 3663.4448 836.0787 3728.151 821.3333 curveto
+stroke
+0 0 0 edgecolor
+newpath 3729.3252 824.6556 moveto
+3738.2975 819.0211 lineto
+3727.7698 817.8305 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3729.3252 824.6556 moveto
+3738.2975 819.0211 lineto
+3727.7698 817.8305 lineto
+closepath stroke
+grestore
+% 119
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3806 907.5929 moveto
+3589.9961 889.5929 lineto
+3806 871.5929 lineto
+4022.0039 889.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3696.5 885.8929 moveto 219 (119:execCode\(n36Inter,root\):0) alignedtext
+grestore
+% 119->117
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3806 871.3919 moveto
+3806 859.7555 3806 844.1408 3806 830.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3809.5001 830.7683 moveto
+3806 820.7684 lineto
+3802.5001 830.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3809.5001 830.7683 moveto
+3806 820.7684 lineto
+3802.5001 830.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3806 842.3929 moveto 470 ([1186.1, 1770.5, 1581.4, 1487.7, 1298.6, 1658.0, 1468.9, 1375.2]) alignedtext
+grestore
+% 120
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3793 976.5929 248.8558 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3609.5 972.8929 moveto 367 (120:RULE 2 \(remote exploit of a server program\):0) alignedtext
+grestore
+% 120->119
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3795.6307 958.3919 moveto
+3797.4221 946.679 3799.83 930.9352 3801.8745 917.5673 curveto
+stroke
+0 0 0 edgecolor
+newpath 3805.3654 917.8925 moveto
+3803.4175 907.4783 lineto
+3798.4458 916.8342 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3805.3654 917.8925 moveto
+3803.4175 907.4783 lineto
+3798.4458 916.8342 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3801 929.3929 moveto 470 ([1186.1, 1770.5, 1581.4, 1487.7, 1298.6, 1658.0, 1468.9, 1375.2]) alignedtext
+grestore
+% 121
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3814 1081.5929 moveto
+3580.5681 1063.5929 lineto
+3814 1045.5929 lineto
+4047.4319 1063.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3695 1059.8929 moveto 238 (121:netAccess\(n36Inter,tcp,80\):0) alignedtext
+grestore
+% 121->120
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3801.7725 1046.3499 moveto
+3798.223 1040.7097 3794.8159 1034.1489 3793 1027.5929 curveto
+3791.0156 1020.4286 3790.3589 1012.462 3790.3636 1005.0318 curveto
+stroke
+0 0 0 edgecolor
+newpath 3793.8616 1005.1493 moveto
+3790.7413 995.0244 lineto
+3786.8666 1004.8852 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3793.8616 1005.1493 moveto
+3790.7413 995.0244 lineto
+3786.8666 1004.8852 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3793 1016.3929 moveto 461 ([1378.5, 1189.4, 1095.7, 906.6, 1491.0, 1301.9, 1208.2, 1019.1]) alignedtext
+grestore
+% 122->121
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3808.4166 1132.3919 moveto
+3809.3748 1120.7555 3810.6608 1105.1408 3811.757 1091.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3815.2529 1092.0219 moveto
+3812.5856 1081.7684 lineto
+3808.2765 1091.4473 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3815.2529 1092.0219 moveto
+3812.5856 1081.7684 lineto
+3808.2765 1091.4473 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3811 1103.3929 moveto 461 ([1378.5, 1189.4, 1095.7, 906.6, 1491.0, 1301.9, 1208.2, 1019.1]) alignedtext
+grestore
+% 123
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3945.5 1255.5929 moveto
+3668.5 1255.5929 lineto
+3668.5 1219.5929 lineto
+3945.5 1219.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3676.5 1233.8929 moveto 261 (123:hacl\(n29Inter,n36Inter,tcp,80\):1) alignedtext
+grestore
+% 123->122
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3807 1219.3919 moveto
+3807 1207.7555 3807 1192.1408 3807 1178.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3810.5001 1178.7683 moveto
+3807 1168.7684 lineto
+3803.5001 1178.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3810.5001 1178.7683 moveto
+3807 1168.7684 lineto
+3803.5001 1178.7684 lineto
+closepath stroke
+grestore
+% 124->121
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4563.1465 4081.8481 moveto
+4456.912 4069.4586 4316 4048.1987 4316 4022.5929 curveto
+4316 4022.5929 4316 4022.5929 4316 1149.5929 curveto
+4316 1121.1346 4301.1653 1112.8814 4276 1099.5929 curveto
+4272.2674 1097.6219 4074.6478 1083.1773 3939.1068 1073.4712 curveto
+stroke
+0 0 0 edgecolor
+newpath 3939.276 1069.9745 moveto
+3929.0517 1072.7517 lineto
+3938.7764 1076.9566 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3939.276 1069.9745 moveto
+3929.0517 1072.7517 lineto
+3938.7764 1076.9566 lineto
+closepath stroke
+grestore
+% 125
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 4876 4185.5929 moveto
+4584 4185.5929 lineto
+4584 4149.5929 lineto
+4876 4149.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4592 4163.8929 moveto 276 (125:hacl\(webServer,n36Inter,tcp,80\):1) alignedtext
+grestore
+% 125->124
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4717.6543 4149.4058 moveto
+4711.5152 4140.8592 4703.9753 4130.3624 4697.1897 4120.9159 curveto
+stroke
+0 0 0 edgecolor
+newpath 4699.9087 4118.7017 moveto
+4691.232 4112.6218 lineto
+4694.2234 4122.7856 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4699.9087 4118.7017 moveto
+4691.232 4112.6218 lineto
+4694.2234 4122.7856 lineto
+closepath stroke
+grestore
+% 126
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 4467.5 1081.5929 moveto
+4068.5 1081.5929 lineto
+4068.5 1045.5929 lineto
+4467.5 1045.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4076.5 1059.8929 moveto 383 (126:networkServiceInfo\(n36Inter,httpd,tcp,80,root\):1) alignedtext
+grestore
+% 126->120
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4267.9501 1045.5441 moveto
+4266.9363 1034.3937 4263.6196 1020.4805 4254 1012.5929 curveto
+4235.623 997.5249 4135.5863 988.9078 4033.3781 983.9978 curveto
+stroke
+0 0 0 edgecolor
+newpath 4033.3161 980.4911 moveto
+4023.1634 983.5195 lineto
+4032.9887 987.4835 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4033.3161 980.4911 moveto
+4023.1634 983.5195 lineto
+4032.9887 987.4835 lineto
+closepath stroke
+grestore
+% 127
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3563 1081.5929 moveto
+2983 1081.5929 lineto
+2983 1045.5929 lineto
+3563 1045.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2991 1059.8929 moveto 564 (127:vulExists\(n36Inter,'CVE-2013-7449',httpd,remoteExploit,privEscalation\):1) alignedtext
+grestore
+% 127->120
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3377.292 1045.5452 moveto
+3467.3095 1030.8308 3596.7509 1009.6721 3687.2041 994.8865 curveto
+stroke
+0 0 0 edgecolor
+newpath 3687.9037 998.3187 moveto
+3697.2081 993.2512 lineto
+3686.7744 991.4104 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3687.9037 998.3187 moveto
+3697.2081 993.2512 lineto
+3686.7744 991.4104 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3565 1016.3929 moveto 52 ([279.5]) alignedtext
+grestore
+% 128->8
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5009.1671 4076.6454 moveto
+4999.384 4062.9289 4988 4042.6573 4988 4022.5929 curveto
+4988 4022.5929 4988 4022.5929 4988 801.5929 curveto
+4988 752.1185 4314.299 728.7944 3988.9004 720.4143 curveto
+stroke
+0 0 0 edgecolor
+newpath 3988.9863 716.9155 moveto
+3978.9001 720.1587 lineto
+3988.8074 723.9132 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3988.9863 716.9155 moveto
+3978.9001 720.1587 lineto
+3988.8074 723.9132 lineto
+closepath stroke
+grestore
+% 129
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 5186 4185.5929 moveto
+4894 4185.5929 lineto
+4894 4149.5929 lineto
+5186 4149.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4902 4163.8929 moveto 276 (129:hacl\(webServer,n37Inter,tcp,80\):1) alignedtext
+grestore
+% 129->128
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5035.8848 4149.4058 moveto
+5033.9428 4141.2952 5031.5803 4131.4284 5029.4113 4122.3696 curveto
+stroke
+0 0 0 edgecolor
+newpath 5032.8097 4121.5319 moveto
+5027.0773 4112.6218 lineto
+5026.0022 4123.1619 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5032.8097 4121.5319 moveto
+5027.0773 4112.6218 lineto
+5026.0022 4123.1619 lineto
+closepath stroke
+grestore
+% 130
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 2983.5 733.5929 moveto
+2584.5 733.5929 lineto
+2584.5 697.5929 lineto
+2983.5 697.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2592.5 711.8929 moveto 383 (130:networkServiceInfo\(n37Inter,httpd,tcp,80,root\):1) alignedtext
+grestore
+% 130->7
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2885.8852 697.5452 moveto
+2973.8758 682.8224 3100.4245 661.6479 3188.7972 646.8611 curveto
+stroke
+0 0 0 edgecolor
+newpath 3189.555 650.2831 moveto
+3198.8403 645.1807 lineto
+3188.3998 643.379 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3189.555 650.2831 moveto
+3198.8403 645.1807 lineto
+3188.3998 643.379 lineto
+closepath stroke
+grestore
+% 131
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 3582 733.5929 moveto
+3002 733.5929 lineto
+3002 697.5929 lineto
+3582 697.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3010 711.8929 moveto 564 (131:vulExists\(n37Inter,'CVE-2013-1598',httpd,remoteExploit,privEscalation\):1) alignedtext
+grestore
+% 131->7
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3292 697.3919 moveto
+3292 685.7555 3292 670.1408 3292 656.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 3295.5001 656.7683 moveto
+3292 646.7684 lineto
+3288.5001 656.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3295.5001 656.7683 moveto
+3292 646.7684 lineto
+3288.5001 656.7684 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+3292 668.3929 moveto 52 ([413.6]) alignedtext
+grestore
+% 132->3
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5367 4076.3765 moveto
+5367 4061.998 5367 4040.9592 5367 4022.5929 curveto
+5367 4022.5929 5367 4022.5929 5367 453.5929 curveto
+5367 430.516 5371.1213 417.8814 5353 403.5929 curveto
+5324.7066 381.2839 4884.649 373.074 4619.8182 370.1444 curveto
+stroke
+0 0 0 edgecolor
+newpath 4619.728 366.6433 moveto
+4609.6904 370.034 lineto
+4619.6516 373.6429 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4619.728 366.6433 moveto
+4609.6904 370.034 lineto
+4619.6516 373.6429 lineto
+closepath stroke
+grestore
+% 133
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 5513 4185.5929 moveto
+5221 4185.5929 lineto
+5221 4149.5929 lineto
+5513 4149.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5229 4163.8929 moveto 276 (133:hacl\(webServer,n65Inter,tcp,80\):1) alignedtext
+grestore
+% 133->132
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5367 4149.4058 moveto
+5367 4141.3824 5367 4131.6404 5367 4122.6621 curveto
+stroke
+0 0 0 edgecolor
+newpath 5370.5001 4122.6217 moveto
+5367 4112.6218 lineto
+5363.5001 4122.6218 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5370.5001 4122.6217 moveto
+5367 4112.6218 lineto
+5363.5001 4122.6218 lineto
+closepath stroke
+grestore
+% 134
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 6510.5 385.5929 moveto
+6111.5 385.5929 lineto
+6111.5 349.5929 lineto
+6510.5 349.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6119.5 363.8929 moveto 383 (134:networkServiceInfo\(n65Inter,httpd,tcp,80,root\):1) alignedtext
+grestore
+% 134->2
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6311 349.3919 moveto
+6311 337.7555 6311 322.1408 6311 308.8297 curveto
+stroke
+0 0 0 edgecolor
+newpath 6314.5001 308.7683 moveto
+6311 298.7684 lineto
+6307.5001 308.7684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6314.5001 308.7683 moveto
+6311 298.7684 lineto
+6307.5001 308.7684 lineto
+closepath stroke
+grestore
+% 135
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 7109 385.5929 moveto
+6529 385.5929 lineto
+6529 349.5929 lineto
+7109 349.5929 lineto
+closepath stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6537 363.8929 moveto 564 (135:vulExists\(n65Inter,'CVE-2013-4035',httpd,remoteExploit,privEscalation\):1) alignedtext
+grestore
+% 135->2
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6717.1148 349.5452 moveto
+6629.1242 334.8224 6502.5755 313.6479 6414.2028 298.8611 curveto
+stroke
+0 0 0 edgecolor
+newpath 6414.6002 295.379 moveto
+6404.1597 297.1807 lineto
+6413.445 302.2831 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6414.6002 295.379 moveto
+6404.1597 297.1807 lineto
+6413.445 302.2831 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+6595 320.3929 moveto 52 ([372.3]) alignedtext
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 36 36 8229 4522
+end
+restore
+%%EOF

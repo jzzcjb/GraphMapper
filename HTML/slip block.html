@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            height: 2000px;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .block {
+            position: fixed;
+            top: 50%;
+            left: 0%;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: transform 0.1s;
+            transform: translateX(0%);
+        }
+    </style>
+</head>
+<body>
+    <div class="block"></div>
+    <div id="num1"></div>
+    <div id="num2"></div>
+    <script>
+        var block = document.querySelector('.block');
+        var prevScrollPos = 0;
+        var itemPos = 0;
+        var left_side = 0;
+        var right_side = 1180;
+        function handleScroll(event) {
+            var delta = event.wheelDelta;//|| -event.deltaY
+            document.getElementById('num1').textContent = delta
+            document.getElementById('num2').textContent = itemPos
+            itemPos+=delta*600/(right_side-left_side);
+            if(itemPos<left_side) itemPos = left_side;
+            if(itemPos>right_side) itemPos = right_side;
+            block.style.transform = 'translateX(' + itemPos + 'px)';
+
+            event.preventDefault();
+        }
+
+        window.addEventListener('wheel', handleScroll);
+    </script>
+</body>
+</html>
