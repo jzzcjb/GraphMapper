@@ -36,12 +36,10 @@ def get_image():
     if image_filename:
         image_dot_path = os.path.join('./upload', image_filename)
         image_png_path = os.path.join('./upload', 'graph.png')
-
         if os.path.exists(image_dot_path):
             # Execute the 'dot' command
             dot_command = f'dot -Tpng -Nfontname=Arial -Nfontcolor=#483FCC -Ncolor=#483FCC -Ecolor=#483FCC -Npenwidth=2 -Epenwidth=1.5 -o {image_png_path} {image_dot_path}'
             subprocess.run(dot_command, shell=True, check=True)
-
             return send_file(image_png_path, mimetype='image/png')
 
     return 'Image not found', 404

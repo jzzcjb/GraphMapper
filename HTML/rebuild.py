@@ -4,9 +4,11 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import csv
 import db
+import pymysql
 inputpath = './upload/'
 outputpath = './upload/'
 # inputpath = '../testcases/3host/'
+passwd = ''
 class Node(object):
     def __init__(self, id = -1, data = "",shape = "", type = None, depth = 0, childnum = 0):
         self.id = id
@@ -209,13 +211,31 @@ def write_block_cost2dot():
     f.write(S)
     f.close()
     print("Write to file done!")
-def load_CVEs():
-    t = open(inputpath+"cvss.csv", "r")
-    lines = csv.reader(t)
-    for line in lines:
-        CVE_scores[line[0]]=line[1]
-    t.close()
 
+def load_CVEs():
+    # t = open(inputpath+"cvss.csv", "r")
+    # lines = csv.reader(t)
+    # for line in lines:
+    #     CVE_scores[line[0]]=line[1]
+    # t.close()
+    conn = pymysql.connect(
+        host = 'winhost',
+        user = 'root',
+        passwd = passwd,
+        port = 3306,
+        db = 'iscomp',
+        charset = 'utf8'
+    )
+    cur = conn.cursor()
+    sql = "select * from `cve` "
+    cur.execute(sql)
+    data = cur.fetchall()
+    CVE_scores = {}
+    for i in data:
+        CVE_scores[i[0]]=i[1]
+    # print(CVE_scores)
+    cur.close()
+    conn.close()
 
 def load_vertices():
     f = open(inputpath+"VERTICES.CSV", "r")
