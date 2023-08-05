@@ -1,11 +1,24 @@
-from flask import Flask, request, render_template, jsonify, send_file
+from flask import Flask, request, render_template, jsonify, send_file, redirect
 import os
 import subprocess
 
 app = Flask(__name__)
 
 @app.route('/')
-def home():
+def index():
+    return redirect('/login')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        # 在这里进行用户名和密码的验证，验证通过则跳转到主界面
+        return redirect('/main')
+    return render_template('login.html')
+
+@app.route('/main')
+def main():
     return render_template('fronter.html')
 
 @app.route('/upload', methods=['POST'])
@@ -36,10 +49,12 @@ def get_image():
     if image_filename:
         image_dot_path = os.path.join('./upload', image_filename)
         image_png_path = os.path.join('./upload', 'graph.png')
+
         if os.path.exists(image_dot_path):
             # Execute the 'dot' command
             dot_command = f'dot -Tpng -Nfontname=Arial -Nfontcolor=#483FCC -Ncolor=#483FCC -Ecolor=#483FCC -Npenwidth=2 -Epenwidth=1.5 -o {image_png_path} {image_dot_path}'
             subprocess.run(dot_command, shell=True, check=True)
+
             return send_file(image_png_path, mimetype='image/png')
 
     return 'Image not found', 404
