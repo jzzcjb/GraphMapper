@@ -59,6 +59,14 @@ def get_image():
 
     return 'Image not found', 404
 
+@app.route('/png', methods=['POST'])
+def get_png():
+    image_filename = request.form.get('filename')
+    image_filepath = os.path.join('./src', image_filename)
+    if os.path.exists(image_filepath):
+        return send_file(image_filepath, mimetype='png')
+    return 'Image not found', 404
+
 def process_file(file_path):
     # Read the saved file and write to a directory
     with open(file_path, 'rb') as file:

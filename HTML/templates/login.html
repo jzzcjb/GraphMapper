@@ -1,53 +1,131 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Login Page</title>
-    <style>
+<head> 
+	<style>
         body {
-            height: 100vh;
-			  background: rgb(63, 72, 204);
-			  display: flex;
-			  flex-direction: column;
-			  justify-content: center;
-			  align-items: center;
+            
+			background: white;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
         }
 
         .container {
+            width: 100vw;
+            height: 100vh;
+        }
+        .left-section {
+            background: linear-gradient(to right, rgb(63, 72, 204, 1), rgb(63, 72, 204, 0.8));
+			height:100vh;
+			width:48vw;
+			float:left;
+			color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+		h1 {
+            font-size: 6vw;
+            font-family: '华文新魏';
+            margin-bottom: 10px;
+			left: 30px;
+            transition: transform 0.2s;
+            transform: translateX(0%);
+        }
+        h2 {
+            font-size: 1.5vw;
+        }
+        .image-container {
+            position: absolute;
+            width: 48vw;
+            height: auto;
+        }
+        .image {
+            position: absolute;
+            width: 48vw;
+            height: auto;
+            transform: translate(0,-45%);
+            opacity: 0.7;
+        }
+        .right-section {
+            background: linear-gradient(to right, rgb(63, 72, 204, 0.8), white);
+			height:100vh;
+			width:48vw;
+			float:left;
+        }
+		.box {
             max-width: 400px;
             margin: 0 auto;
             background-color: #fff;
             border: 3px solid rgb(63, 72, 204);
-            padding: 20px;
+            padding: 1vw;
             text-align: center;
             position: absolute;
-			border-radius: 10px;
-            top: 50%;
-            left: 50%;
+			border-radius: 0.5vw;
+			top: 55%;
+            left: 65%;
 			transform: translate(0,-50%);
         }
-
         input[type="text"], input[type="password"], input[type="submit"] {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
+            font-size: 1vw;
+            padding: 0.5vw;
+            margin-bottom: 0.5vw;
             box-sizing: border-box;
         }
 
         input[type="submit"] {
+            font-size: 1vw;
             background-color: rgb(63, 72, 204);
             color: #fff;
             cursor: pointer;
         }
     </style>
+<meta charset="utf-8"> 
 </head>
 <body>
-    <div class="container">
-        <h2>Login</h2>
-        <form action="/login" method="POST">
-            <input type="text" name="username" placeholder="Username" required><br>
-            <input type="password" name="password" placeholder="Password" required><br>
-            <input type="submit" value="Login">
-        </form>
+<div id="container" class="container">
+	<div class="left-section">
+        <div id="image-container" class="image-container"></div>
+        <h1>Graph</h1>
+        <h1>Mapper</h1>
+        
     </div>
+	<div class="right-section">
+        <div class="box">
+            <h2>Login</h2>
+                <form action="/login" style="background-color: #fff;" method="POST">
+                    <input type="text" name="username" placeholder="Username" required><br>
+                    <input type="password" name="password" placeholder="Password" required><br>
+                    <input type="submit" value="Login">
+                </form>
+            
+        </div>
+	</div>
+	
+</div>	
 </body>
+<script>
+    displayPNG('loginbg.png');
+    function displayPNG(imageFilename) {
+            var container = document.getElementById('image-container');
+            container.innerHTML = ''; // Clear previous content
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/png', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var img = document.createElement('img');
+                    img.src = URL.createObjectURL(xhr.response);
+                    img.className = 'image'; // You may apply any CSS class you need for the image
+                    container.appendChild(img);
+                }
+            };
+            xhr.responseType = 'blob';
+            xhr.send('filename=' + encodeURIComponent(imageFilename));
+        }
+</script>
+</html>
