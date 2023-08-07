@@ -21,6 +21,14 @@ def login():
 def main():
     return render_template('fronter.html')
 
+@app.route('/result', methods=['GET'])
+def result():
+    return render_template('result.html')
+
+@app.route('/analyse', methods=['GET'])
+def analyse():
+    return render_template('analyse.html')
+
 @app.route('/upload', methods=['POST'])
 def upload():
     uploaded_file = request.files['file']

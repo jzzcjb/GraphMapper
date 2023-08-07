@@ -1,0 +1,275 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(63, 72, 204);
+    color: white;
+    transition: transform 0.2s;
+    transform: translateX(0%);
+}
+.bottom {
+    height: auto;
+    width: 100vw;
+    display: flex;
+}
+.sidebar {
+    width: 18vw;
+    background-color: #ffffff;
+    float:left;
+    border-width:1px;
+    border-right-style: solid;
+    border-color:  rgb(173, 173, 173);
+}
+.sidebar-key-item {
+    width: 18vw;
+    height: 5vh;
+    background-color: rgb(63, 72, 224, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    color: #ffffff;
+}
+h1 {
+    font-size: calc(6vw + 12px);
+    font-family: '华文新魏';
+    margin-bottom: 10px;
+    transition: transform 0.2s;
+    transform: translateX(0%);
+}
+
+h2 {
+    font-size: calc(1.5vw + 9px);
+    font-family: '华文新魏';
+    margin-bottom: 0;
+    transition: transform 0.2s;
+    transform: translateX(0%);
+}
+
+.main-body {
+    /* margin-top: 50vh; */
+    background-color: rgb(250, 250, 250);
+    height: auto;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    float:left;
+    /* position: relative; */
+}
+
+.image {
+    /* position: absolute; */
+    width: 100vw;
+    height: auto;
+    transform: translate(0,-100%);
+    opacity: 0.7;
+}
+.upload-input {
+    display: none;
+}
+
+.message {
+    margin-top: calc(2vw + 10px);
+    font-size: calc(0.8vw + 8px);
+    font-weight: bold;
+    color: rgb(63, 72, 204);
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.upload-button {
+    padding: 1.7vw 3.5vw;
+    border: 2px solid rgb(63, 72, 204);
+    font-size: 1.7vw;
+    /* margin-top: 1vw; */
+    color: rgb(63, 72, 204);
+    border-radius: calc(1vw + 10px);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* 整体盒子 */
+.drop-main {
+    width: 40vw;
+    height: calc(40vh+2px);
+    overflow: hidden;
+    /* position: relative; */
+    margin: 5vh auto;
+    background: #f7f6f6;
+    
+}
+/* 文件上传盒子 */
+.drop-box {
+    width: calc(40vw-2px);
+    height: 40vh;
+    border: 1px dashed #a89b9b;
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*滚动条样式*/
+.drop-box::-webkit-scrollbar {
+    width: 4px;    
+}
+.drop-box::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+.drop-box::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+/* 单个文件 */
+.drop-box > div {
+    width: 144px;
+    height: 170px;
+    margin: 1px 3px;
+    display: inline-block;
+    position: relative;
+}
+/* 缩略图 */
+.drop-box > div > img {
+    width: 100%;
+    height: 145px;
+}
+/* 删除按钮 */
+.drop-box > div > div {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: #347aa5;
+    color: red;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    /* font-weight: bold; */
+    font-size: 25px;
+    cursor: pointer;
+}
+/* 文件名 */
+.drop-box > div > p {
+    text-align: center;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* 提示文字 */
+.drop-text {
+    /* position: absolute; */
+    width: 450px;
+    height: 50px;
+    top: 200px;
+    text-align: center;
+    line-height: 50px;
+    opacity: 0.3;
+}
+/* 点击上传字体 */
+.drop-text > span {
+    color: #347aa5;
+    cursor: pointer;
+}
+
+
+
+
+.pdf-block {
+    margin-top: 10vh;
+}
+
+.pdf-container {
+    float:left;
+    width: 45vw;
+    height: 60vh;
+    background-color: #eeeeee;
+}
+.pdf-iframe {
+    width: 45vw;
+    height: 60vh;
+}
+.pdf-other {
+    float:left;
+    width: 20vw;
+    height: 60vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.pdf-analyze {
+    width: 18vw;
+    height: 52vh;
+    margin-top: 1vh;
+    background-color: rgba(250, 235, 215, 0.655);
+}
+
+.png-block {
+    float:left;
+    width:30vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    min-height: 50vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.png-container {
+    width: 30vw;
+    min-height: 40vh;
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image-frame{
+    max-height: 60vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    padding: 1.5vw 3vw;
+    border: 2px solid rgb(63, 72, 204);
+    font-size: 1.5vw;
+    margin-top: 1vw;
+    color: rgb(63, 72, 204);
+    border-radius: 1.3vw;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

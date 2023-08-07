@@ -88,7 +88,9 @@
 <body>
 <div id="container" class="container">
 	<div class="left-section">
-        <div id="image-container" class="image-container"></div>
+        <div id="image-container" class="image-container">
+            <img src="static/loginbg.png" class="image" alt="error">
+        </div>
         <h1>Graph</h1>
         <h1>Mapper</h1>
         
@@ -108,24 +110,24 @@
 </div>	
 </body>
 <script>
-    displayPNG('loginbg.png');
-    function displayPNG(imageFilename) {
-            var container = document.getElementById('image-container');
-            container.innerHTML = ''; // Clear previous content
+    // displayPNG('loginbg.png');
+    // function displayPNG(imageFilename) {
+    //         var container = document.getElementById('image-container');
+    //         container.innerHTML = ''; // Clear previous content
 
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', '/png', true);
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var img = document.createElement('img');
-                    img.src = URL.createObjectURL(xhr.response);
-                    img.className = 'image'; // You may apply any CSS class you need for the image
-                    container.appendChild(img);
-                }
-            };
-            xhr.responseType = 'blob';
-            xhr.send('filename=' + encodeURIComponent(imageFilename));
-        }
+    //         var xhr = new XMLHttpRequest();
+    //         xhr.open('POST', '/png', true);
+    //         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    //         xhr.onreadystatechange = function() {
+    //             if (xhr.readyState === 4 && xhr.status === 200) {
+    //                 var img = document.createElement('img');
+    //                 img.src = URL.createObjectURL(xhr.response);
+    //                 img.className = 'image'; // You may apply any CSS class you need for the image
+    //                 container.appendChild(img);
+    //             }
+    //         };
+    //         xhr.responseType = 'blob';
+    //         xhr.send('filename=' + encodeURIComponent(imageFilename));
+    //     }
 </script>
 </html>

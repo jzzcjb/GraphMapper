@@ -1,162 +1,227 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- <link rel="stylesheet" href="/HTML/static/css/fronter.css"/> -->
     <meta charset="UTF-8">
     <title>GraphMapper</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-        .top {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 40vh;
-            position: fixed;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(63, 72, 204);
-            color: white;
-            transition: transform 0.2s;
-            transform: translateX(0%);
-        }
+.top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(63, 72, 204);
+    color: white;
+    transition: transform 0.2s;
+    transform: translateX(0%);
+}
+.bottom {
+    height: auto;
+    width: 100vw;
+    display: flex;
+}
+.sidebar {
+    width: 18vw;
+    background-color: #ffffff;
+    float:left;
+    border-width:1px;
+    border-right-style: solid;
+    border-color:  rgb(173, 173, 173);
+}
+.sidebar-key-item {
+    width: 18vw;
+    height: 5vh;
+    background-color: rgb(63, 72, 224, 0.75);
+    display: flex;
+    margin-top: 1px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    color: #ffffff;
+    text-decoration: none;
+}
+.sidebar-item {
+    width: 18vw;
+    height: 5vh;
+    background-color: rgba(144, 148, 216, 0.75);
+    display: flex;
+    margin-top: 1px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    color: #ffffff;
+    text-decoration: none;
+}
+h1 {
+    font-size: calc(6vw + 12px);
+    font-family: '华文新魏';
+    margin-bottom: 10px;
+    transition: transform 0.2s;
+    transform: translateX(0%);
+}
 
-        h1 {
-            font-size: calc(6vw + 12px);
-            font-family: '华文新魏';
-            margin-bottom: 10px;
-            transition: transform 0.2s;
-            transform: translateX(0%);
-        }
+h2 {
+    font-size: calc(1.5vw + 9px);
+    font-family: '华文新魏';
+    margin-bottom: 0;
+    transition: transform 0.2s;
+    transform: translateX(0%);
+}
 
-        h2 {
-            font-size: calc(1.5vw + 9px);
-            font-family: '华文新魏';
-            margin-bottom: 0;
-            transition: transform 0.2s;
-            transform: translateX(0%);
-        }
-        
-        .bottom {
-            margin-top: 50vh;
-            background-color: rgb(250, 250, 250);
-            height: auto;
-            width: 80vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            /* position: relative; */
-        }
+.main-body {
+    /* margin-top: 50vh; */
+    background-color: rgb(250, 250, 250);
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    float:left;
+    /* position: relative; */
+}
+
+.image {
+    /* position: absolute; */
+    width: 100vw;
+    height: auto;
+    transform: translate(0,-100%);
+    opacity: 0.7;
+}
+.upload-input {
+    display: none;
+}
+
+.message {
+    margin-top: calc(2vw + 10px);
+    font-size: calc(0.8vw + 8px);
+    font-weight: bold;
+    color: rgb(63, 72, 204);
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.upload-button {
+    padding: 1.7vw 3.5vw;
+    border: 2px solid rgb(63, 72, 204);
+    font-size: 1.7vw;
+    /* margin-top: 1vw; */
+    color: rgb(63, 72, 204);
+    border-radius: calc(1vw + 10px);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* 整体盒子 */
+.drop-main {
+    width: 40vw;
+    height: calc(40vh+2px);
+    overflow: hidden;
+    /* position: relative; */
+    margin: 5vh auto;
+    background: #f7f6f6;
+    
+}
+/* 文件上传盒子 */
+.drop-box {
+    width: calc(40vw-2px);
+    height: 40vh;
+    border: 1px dashed #a89b9b;
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*滚动条样式*/
+.drop-box::-webkit-scrollbar {
+    width: 4px;    
+}
+.drop-box::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+.drop-box::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+/* 单个文件 */
+.drop-box > div {
+    width: 144px;
+    height: 170px;
+    margin: 1px 3px;
+    display: inline-block;
+    position: relative;
+}
+/* 缩略图 */
+.drop-box > div > img {
+    width: 100%;
+    height: 145px;
+}
+/* 删除按钮 */
+.drop-box > div > div {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: #347aa5;
+    color: red;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    /* font-weight: bold; */
+    font-size: 25px;
+    cursor: pointer;
+}
+/* 文件名 */
+.drop-box > div > p {
+    text-align: center;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* 提示文字 */
+.drop-text {
+    /* position: absolute; */
+    width: 450px;
+    height: 50px;
+    top: 200px;
+    text-align: center;
+    line-height: 50px;
+    opacity: 0.3;
+}
+/* 点击上传字体 */
+.drop-text > span {
+    color: #347aa5;
+    cursor: pointer;
+}
 
 
-        .upload-input {
-            display: none;
-        }
 
-        .message {
-            margin-top: calc(2vw + 10px);
-            font-size: calc(0.8vw + 8px);
-            font-weight: bold;
-            color: rgb(63, 72, 204);
-            text-align: center;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-        }
-
-        .upload-button {
-            padding: 1.7vw 3.5vw;
-            border: 2px solid rgb(63, 72, 204);
-            font-size: 1.7vw;
-            margin-top: 1vw;
-            color: rgb(63, 72, 204);
-            border-radius: calc(1vw + 10px);
-            background-color: rgb(255, 255, 255);
-            text-align: center;
-            cursor: pointer;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-
-        
-
-        
-		
-		.pdf-block {
-            margin-top: 10vh;
-        }
-
-        .pdf-container {
-            float:left;
-            width: 60vw;
-            height: 60vh;
-            background-color: #eeeeee;
-        }
-        .pdf-iframe {
-            width: 60vw;
-            height: 60vh;
-        }
-        .pdf-button {
-            float:left;
-            padding: 1.5vw 3vw;
-            border: 2px solid rgb(63, 72, 204);
-            font-size: 1.5vw;
-            margin-left: 1vw;
-            color: rgb(63, 72, 204);
-            border-radius: calc(1vw + 10px);
-            background-color: rgb(255, 255, 255);
-            text-align: center;
-            cursor: pointer;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-
-        .png-block {
-            float:left;
-            width:30vw;
-            margin-left: 2vw;
-            margin-right: 2vw;
-            min-height: 50vh;
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .png-container {
-            width: 30vw;
-            min-height: 40vh;
-            background-color: #eeeeee;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .image-frame{
-            max-height: 60vh;
-            width: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .png-button {
-            padding: 1.5vw 3vw;
-            border: 2px solid rgb(63, 72, 204);
-            font-size: 1.5vw;
-            margin-top: 1vw;
-            color: rgb(63, 72, 204);
-            border-radius: calc(1vw + 10px);
-            background-color: rgb(255, 255, 255);
-            text-align: center;
-            cursor: pointer;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
     </style>
 </head>
 <body>
@@ -165,131 +230,214 @@
         <h2 id="subtitle">A Professional and Considerate Security Insurance Pricing System</h2>
         
     </div>
+    <div style="height: 40vh;"></div>
     <div class="bottom">
-		<form id="upload-form" action="" method="POST" enctype="multipart/form-data">
-             <input type="file" name="file" id="file-input" class="upload-input">
-             <label for="file-input" class="upload-button" style="margin-top: 10vh;">Select and Submit File</label>
-        </form>
-        <div id="message" class="message"></div>
-        <div class="pdf-block">
-            <div id = "pdf-container" class="pdf-container"></div>
-            <button id="button1" class="pdf-button">Show AttackGraph</button>
-        </div>
-        <div style="margin-top: 10vh;">
-            <div class="png-block">
-                <div id = "png-container" class="png-container">
-                    <div id="image1-container" class="image-container"></div>
-                </div>
-                <button id="button2" class="png-button">Minnimal Attack Path</button>
+        <div class="sidebar">
+            <div style="height: 5vh;"></div>
+            <div>
+                <a href="{{ url_for('main') }}" class="sidebar-key-item ">
+                    <p>首    页</p>
+                </a>
             </div>
-            <div class="png-block">
-                <div id = "png-container" class="png-container">
-                    <div id="image2-container" class="image-container"></div>
-                </div>
-                <button id="button3" class="png-button">Minnimal Block Scheme</button>
+            <div>
+                <a href="{{ url_for('result') }}" class="sidebar-item ">
+                    <p>攻击图</p>
+                </a>
+            </div>
+            <div>
+                <a href="{{ url_for('analyse') }}" class="sidebar-item ">
+                    <p>成本分析</p>
+                </a>
             </div>
         </div>
-            <!-- <div class="button-group">
-                <button id="button1" class="custom-button">Button 1</button>
-                <button id="button2" class="custom-button">Button 2</button>
-                <button id="button3" class="custom-button">Button 3</button>
-            </div> -->
-        <!-- <div id="image-container" class="image-container"></div> -->
+        <div class="main-body">
+            <div class="drop-main">
+                
+                <div id="drop" class="drop-box">
+                    <p class="drop-text">Drag and drop files here/
+                        <span id="fileInput" onclick="upload()">Click to upload file</span>
+                    </p>
+                </div>
+            </div>
+            <!-- <img src="/HTML/static/infig.png" class="image"> -->
+            <form id="upload-form" action="" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" id="file-input" class="upload-input">
+                <label for="file-input" class="upload-button" style="margin-top: 10vh;">Select and Submit File</label>
+            </form>
+            <div id="message" class="message"></div>
+            
+                <!-- <div class="button-group">
+                    <button id="button1" class="custom-button">Button 1</button>
+                    <button id="button2" class="custom-button">Button 2</button>
+                    <button id="button3" class="custom-button">Button 3</button>
+                </div> -->
+            <!-- <div id="image-container" class="image-container"></div> -->
+        </div>
     </div>
-    
     
 
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
     <script>
+        // 获取dom元素
+        let droptarget = document.getElementById("drop")
+        // 文件流数组
+        let fileBlodArr = []
+        // 文件数组
+        let fileArr = []
+        // 拖拽上传事件
+        function handleEvent(event) {
+            
+            // 阻止事件的默认行为
+            event.preventDefault();
+            if (event.type === 'drop') {
+            // 文件进入并松开鼠标,文件边框恢复正常
+            droptarget.style.borderColor = '#a89b9b'
+            for (let file of event.dataTransfer.files) {
+                // 把文件保存到文件数组中
+                fileArr.push(file)
+                // 初始化文件
+                filesToBlod(file)
+            }
+            } else if (event.type === 'dragleave') {
+            // 离开时边框恢复
+            droptarget.style.borderColor = '#a89b9b'
+            } else {
+            // 进入边框变为红色
+            droptarget.style.borderColor = 'red'
+            }
+        }
+        // 拖拽事件绑定
+        droptarget.addEventListener("dragenter", handleEvent);
+        droptarget.addEventListener("dragover", handleEvent);
+        droptarget.addEventListener("drop", handleEvent);
+        droptarget.addEventListener("dragleave", handleEvent);
+
+        // 获取input元素
+        let fileInput = document.getElementById('fileInput')
+        // 通过input框上传文件
+        fileInput.addEventListener("change", (event) => {
+            // 上传的文件都会保存到文件数组中
+            document.getElementById('message').textContent = "dropping";
+            fileArr.push(event.target.files[0])
+            filesToBlod(event.target.files[0])
+        })
+        // 点击上传-单击事件-通过js触发input事件
+        function upload() {
+            fileInput.click()
+        }
+
+        // 文件处理函数
+        function filesToBlod(file) {
+            // 创建文件对象
+            reader = new FileReader()
+            // 文件转为文件流
+            reader.readAsDataURL(file)
+            // 文件读取完成，根据类型不同显示不同的图标
+            reader.onload = e => {
+            // 把文件流放入文件流数组中
+            fileBlodArr.push(e.target.result)
+            // 创建单个文件预览
+            let fileDiv = document.createElement('div')
+            // 删除按钮
+            let removeDiv = document.createElement('div')
+            removeDiv.id = 'file' + '-' + fileBlodArr.length
+            removeDiv.innerHTML = '×'
+            // 文件名
+            let fileName = document.createElement('p')
+            fileName.innerHTML = file.name
+            fileName.title = file.name
+            // 缩略图-图片直接展示,其他文件根据文件类型展示不同的缩略图
+            let img = document.createElement('img')
+            if (/image/.test(file.type)) {
+                img.src = e.target.result
+            } else {
+                switch(file.type) {
+                case 'application/msword' :
+                    img.src = './static/image/word.png'
+                    break
+                case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' :
+                    img.src = './static/image/word.png'
+                    break
+                case 'application/vnd.ms-powerpoint': 
+                    img.src = './static/image/ppt.png'
+                    break
+                case 'application/vnd.openxmlformats-officedocument.presentationml.presentation': 
+                    img.src = './static/image/ppt.png'
+                    break
+                case 'application/vnd.ms-excel': 
+                    img.src = './static/image/excel.png'
+                    break
+                case 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': 
+                    img.src = './static/image/excel.png'
+                    break
+                case 'application/pdf':
+                    img.src = './static/image/pdf.png'
+                    break
+                case 'text/plain':
+                    img.src = './static/image/txt.png'
+                    break
+                case 'text/javascript':
+                    img.src = './static/image/js.png'
+                    break
+                case 'text/html':
+                    img.src = './static/image/html.png'
+                case 'text/css':
+                    img.src = './static/image/css.png'
+                    break
+                default: 
+                    img.src = './static/image/other.png'
+                }
+            }
+            // 组合单个文件并放入dom中
+            fileDiv.appendChild(img)
+            fileDiv.appendChild(removeDiv)
+            fileDiv.appendChild(fileName)
+            droptarget.appendChild(fileDiv)
+            }
+            // 文件读取失败的提示
+            reader.onerror = () => {
+            switch(reader.error.code) {
+                case '1':
+                alert('未找到文件')
+                break
+                case '2':
+                alert('安全错误')
+                break
+                case '3':
+                alert('读取被中断')
+                break
+                case '4':
+                alert('文件不可读')
+                break
+                case '5':
+                alert('编码错误')
+                break
+                default: 
+                alert('文件读取失败')
+            }
+            }
+            // 文件读取的进度，因为是本地读取所以进度很快，基本看不出来，所以选择打印查看
+            reader.onprogress = event => {
+            console.log(`${event.loaded}/${event.total}`)
+            }
+        }
+
+        // 删除文件操作
+        droptarget.addEventListener('click', event => {
+            if (event.target.id.indexOf('file-') > -1) {
+            // 清空整个文件上传盒子
+            droptarget.innerHTML = ''
+            // 删除文件数组中对应的数据
+            fileArr.splice(event.target.id.split('-')[1] - 1, 1)
+            // 清空文件流数组
+            fileBlodArr = []
+            // 重新生成文件上传盒子
+            fileArr.map(item => {
+                filesToBlod(item)
+            })
+            }
+        })
         
-        function displayPDF(filename) {
-            document.getElementById('message').textContent = filename;
-            var container = document.getElementById('pdf-container');
-            container.innerHTML = ''; // Clear previous content
-
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', '/pdf', true);
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var blob = new Blob([xhr.response], { type: 'application/pdf' });
-                    var url = URL.createObjectURL(blob);
-                    var iframe = document.createElement('iframe');
-                    iframe.src = url;
-                    iframe.className = 'pdf-iframe';
-                    // iframe.style.width = "400pt";
-                    // iframe.style.height = "1000pt";
-                    iframe.style.width = '100%'; // Adjust the width as desired
-                    iframe.style.height = '100%'; // Adjust the height as desired
-
-                    container.appendChild(iframe);
-                }
-            };
-            xhr.responseType = 'arraybuffer';
-            xhr.send('filename=' + encodeURIComponent(filename));
-        }
-        function displayPNG(imageContainer, imageFilename) {
-            var container = document.getElementById(imageContainer);
-            container.innerHTML = ''; // Clear previous content
-
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', '/get_image', true);
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var img = document.createElement('img');
-                    img.src = URL.createObjectURL(xhr.response);
-                    img.className = 'image-frame'; // You may apply any CSS class you need for the image
-                    container.appendChild(img);
-                }
-            };
-            xhr.responseType = 'blob';
-            xhr.send('filename=' + encodeURIComponent(imageFilename));
-        }
-
-
-        var button1 = document.querySelector('#button1');
-        var button2 = document.querySelector('#button2');
-        var button3 = document.querySelector('#button3');
-
-        button1.addEventListener('click', function() {
-            document.getElementById('message').textContent = 'click';
-            displayPDF('AttackGraph.pdf');
-        });
-        button2.addEventListener('click', function() {
-            document.getElementById('message').textContent = 'click';
-            displayPNG('image1-container','graph1.dot');
-        });
-        button3.addEventListener('click', function() {
-            document.getElementById('message').textContent = 'click';
-            displayPNG('image2-container','graph2.dot');
-        });
-
-        // button2.addEventListener('click', function() {
-        //     displayPDF('attack_cost.pdf');
-        // });
-
-        // button3.addEventListener('click', function() {
-        //     displayPDF('block_cost.pdf');
-        // });
-
-        document.getElementById('file-input').addEventListener('change', function () {
-            var form = document.getElementById('upload-form');
-            var formData = new FormData(form);
-
-            var request = new XMLHttpRequest();
-            request.open("POST", "/upload");
-            request.onreadystatechange = function () {
-                // if (request.readyState === 4 && request.status === 200) {
-                //     document.getElementById('message').textContent = "File uploaded successfully.";
-                // }
-                if (request.readyState === 4 && request.status === 200) {
-                    var response = JSON.parse(request.responseText);
-                    document.getElementById('message').textContent = "Successfully uploaded file \n\n" + response.file_name;
-                }
-            };
-            request.send(formData);
-        });
 
         var item1 = document.querySelector('.top');
         var itemPos1 = 0;
