@@ -29,8 +29,8 @@ def result():
 def analyse():
     return render_template('analyse.html')
 
-@app.route('/upload', methods=['POST'])
-def upload():
+@app.route('/myupload', methods=['POST'])
+def myupload():
     uploaded_file = request.files['file']
     if uploaded_file:
         file_name = uploaded_file.filename
