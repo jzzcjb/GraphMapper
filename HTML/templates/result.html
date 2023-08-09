@@ -33,42 +33,76 @@ body {
     height: auto;
     width: 100vw;
     display: flex;
+    padding-bottom: 10vh;
 }
 .sidebar {
     width: 18vw;
     background-color: #ffffff;
     float:left;
-    border-width:1px;
+    border-width:1.5px;
     border-right-style: solid;
-    border-color:  rgb(173, 173, 173);
+    border-color:  rgba(173, 173, 173, 0.508);
 }
 .sidebar-key-item {
     width: 18vw;
-    height: 5vh;
-    background-color: rgb(63, 72, 224, 0.75);
+    height: 20vh;
+    background-color: rgba(255, 255, 255, 0.75);
     display: flex;
     margin-top: 1px;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 2vw;
-    color: #ffffff;
+    font-size: 1.5vw;
+    color: rgb(63, 72, 224, 0.75);
     text-decoration: none;
 }
 .sidebar-item {
     width: 18vw;
-    height: 5vh;
-    background-color: rgba(144, 148, 216, 0.75);
+    height: 20vh;
+    background-color: rgba(255, 255, 255, 0.75);
     display: flex;
     margin-top: 1px;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    color: rgba(144, 148, 216, 0.75);
+    text-decoration: none;
+}
+.step-key-index {
+    width: 6vw;
+    height: 4vh;
+    border: 3px solid rgb(63, 72, 224, 0.75);
+    border-radius: 999px;
+    float:left;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     font-size: 2vw;
-    color: #ffffff;
-    text-decoration: none;
+    margin-right: 1vw;
 }
-h1 {
+.step-index {
+    width: 6vw;
+    height: 4vh;
+    border: 3px solid rgba(144, 148, 216, 0.75);
+    border-radius: 999px;
+    float:left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    margin-right: 1vw;
+}
+.step-connection {
+    height: 15.3vh; 
+    width: 3px; 
+    background-color: rgba(144, 148, 216, 0.75); 
+    margin-left: 6.5vw; 
+    margin-top: -27.8vh;
+}
+.top > h1 {
     font-size: calc(6vw + 12px);
     font-family: '华文新魏';
     margin-bottom: 10px;
@@ -76,7 +110,7 @@ h1 {
     transform: translateX(0%);
 }
 
-h2 {
+.top > h2 {
     font-size: calc(1.5vw + 9px);
     font-family: '华文新魏';
     margin-bottom: 0;
@@ -93,7 +127,7 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    float:left;
+    /* float:left; */
     /* position: relative; */
 }
 
@@ -132,48 +166,80 @@ h2 {
 
 
 
-.pdf-block {
-    margin-top: 10vh;
+.row {
+    margin-top: 2vh;
 }
 
 .pdf-container {
-    float:left;
-    width: 45vw;
-    height: 60vh;
+    /* float:left; */
+    width: 50vw;
+    height: 45vh;
+    margin-top: 2vh;
     background-color: #eeeeee;
+}
+.pdf-container > h1 {
+    color: rgb(12, 12, 12);
+    text-align:center;
+    font-size: 18px;
+    /* position:sticky; */
 }
 .pdf-iframe {
     width: 45vw;
-    height: 60vh;
+    height: 45vh;
 }
-.pdf-other {
-    float:left;
-    width: 20vw;
-    height: 60vh;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.result-analyze {
+    max-width: 45vw;
+    /* height: 52vh; */
+    background-color: rgba(215, 241, 250, 0.396);
+    padding: 5%;
+    font-size: 12px;
+    border: 2px dashed rgba(160, 219, 235, 0.655);
 }
-.pdf-analyze {
-    width: 18vw;
-    height: 52vh;
-    margin-top: 1vh;
-    background-color: rgba(250, 235, 215, 0.655);
+.result-analyze > h1 {
+    color: rgb(47, 148, 170);
+    text-align:center;
+    font-size: 18px;
+    /* position:sticky; */
+}
+.result-analyze > p {
+    color: rgba(0, 0, 0, 0.873);
 }
 
-.png-block {
+.little-block {
     float:left;
-    width:30vw;
-    margin-left: 2vw;
-    margin-right: 2vw;
-    min-height: 50vh;
-    background-color: #ffffff;
+    /* width:12vw; */
+    margin:2vh;
+    /* height: 20vh; */
+    /* background-color: #9c9c9c; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 1vw;
+}
+.little-block-red {
+    color:rgb(195, 29, 29);
+    /* width:12vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:3.5vw;
+    margin-top: 0vh;
+    margin-bottom: -3vh;
+}
+.little-block-blue {
+    color:blue;
+    /* width:12vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:3.5vw;
+    margin-top: 0vh;
+    margin-bottom: -3vh;
 }
 
 .png-container {
@@ -193,7 +259,7 @@ h2 {
     align-items: center;
 }
 .button {
-    padding: 1.5vw 3vw;
+    padding: 1vw 2vw;
     border: 2px solid rgb(63, 72, 204);
     font-size: 1.5vw;
     margin-top: 1vw;
@@ -216,44 +282,69 @@ h2 {
     <div class="bottom">
         <div class="sidebar">
             <div style="height: 10vh;"></div>
-            <div>
-                <a href="{{ url_for('main') }}" class="sidebar-item ">
-                    <p>首    页</p>
-                </a>
-            </div>
-            <div>
-                <a href="{{ url_for('result') }}" class="sidebar-key-item ">
-                    <p>攻击图</p>
-                </a>
-            </div>
-            <div>
-                <a href="{{ url_for('analyse') }}" class="sidebar-item ">
-                    <p>成本分析</p>
-                </a>
-            </div>
+            <a href="{{ url_for('main') }}" class="sidebar-item ">
+                <div class="step-index">step1</div>
+                <div style="float:left">
+                    <p>首 页</p>
+                </div>
+            </a>
+            <a href="{{ url_for('result') }}" class="sidebar-key-item ">
+                <div class="step-key-index">step2</div>
+                <div style="float:left">
+                    <p>结 果</p>
+                </div>
+            </a>
+            <!-- <div class="step-connection"></div> -->
+            <a href="{{ url_for('analyse') }}" class="sidebar-item ">
+                <div class="step-index">step3</div>
+                <div style="float:left">
+                    <p>详 情</p>
+                </div>
+            </a>
+            <!-- <div class="step-connection"></div> -->
         </div>
         <div class="main-body">
             <div id="message" class="message"></div>
-            <div class="pdf-block">
-                <div id = "pdf-container" class="pdf-container"></div>
-                <div class="pdf-other">
-                    <button id="button1" class="button">Show AttackGraph</button>
-                    <div class="pdf-analyze"></div>
+            <div class="row">
+                <div class="result-analyze">
+                    <H1>分析结果</H1>
+                    <p>用户 123 的系统危险系数为：<span>1077.6</span> </p>
+                    <p>评级：<span>高</span>。您的系统受到泄漏威胁的可能性较高。</p>
+                    <!-- <p>（危险系数评级： < 100 低； 100-1000 中；>100 高）</p> -->
+                    <p>投保数据现金价值为：￥<span>1400000</span></p>
+                    <p>综合历史赔付信息，推荐标准年度保险费为：￥<span>184700</span></p>
+                    <p>当发生非自然不可抗因素导致的恶意信息泄露事件并造成经济损失的情况下，赔付额为：￥<span>980000</span>。</p>
+                    <p>当发生恶意事件后，应当尽快修复漏洞避免损失扩大和二次泄漏。并且重新进行安全性能评估以获得最新的安全指标。</p>
+                    <p>下方查看完整攻击图</p>
+                </div>
+                <!-- <button id="button1" class="button">Show AttackGraph</button> -->
+                <!-- <p class="pdf-container">查看攻击图原图</p> -->
+                
+            </div>
+            <div class="row">
+                <div class="little-block">
+                    <img src="/static/1.jpeg" alt="No img" style="width: 8vw; height: auto; opacity: 70%;">
+                    <p class="little-block-red">1391.3</p>
+                    <p style="font-size:1.6vw;">最小攻击代价</p>
+                </div>
+                <div class="little-block">
+                    <img src="/static/2.jpeg" alt="No img" style="width: 8vw; height: auto; opacity: 70%;">
+                    <p class="little-block-blue">2578.6</p>
+                    <p style="font-size:1.6vw;">最大攻击代价</p>
+                </div>
+                <div class="little-block">
+                    <img src="/static/3.jpeg" alt="No img" style="width: 8vw; height: auto; opacity: 70%;">
+                    <p class="little-block-red">286.7</p>
+                    <p style="font-size:1.6vw;">最小防御成本</p>
+                </div>
+                <div class="little-block">
+                    <img src="/static/4.jpeg" alt="No img" style="width: 8vw; height: auto; opacity: 70%;">
+                    <p class="little-block-blue">2788.6</p>
+                    <p style="font-size:1.6vw;">线性量化成本</p>
                 </div>
             </div>
-            <div style="margin-top: 10vh;">
-                <div class="png-block">
-                    <div id = "png-container" class="png-container">
-                        <div id="image1-container" class="image-container"></div>
-                    </div>
-                    <button id="button2" class="button">Minnimal Attack Path</button>
-                </div>
-                <div class="png-block">
-                    <div id = "png-container" class="png-container">
-                        <div id="image2-container" class="image-container"></div>
-                    </div>
-                    <button id="button3" class="button">Minnimal Block Scheme</button>
-                </div>
+            <div id = "pdf-container" class="pdf-container">
+                    
             </div>
         </div>
     </div>
@@ -261,9 +352,9 @@ h2 {
 
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
     <script>
-        
+        displayPDF('AttackGraph.pdf');
         function displayPDF(filename) {
-            document.getElementById('message').textContent = filename;
+            // document.getElementById('message').textContent = filename;
             var container = document.getElementById('pdf-container');
             container.innerHTML = ''; // Clear previous content
 
@@ -276,11 +367,11 @@ h2 {
                     var url = URL.createObjectURL(blob);
                     var iframe = document.createElement('iframe');
                     iframe.src = url;
-                    iframe.className = 'pdf-iframe';
+                    iframe.className = 'pdf-container';
                     // iframe.style.width = "400pt";
                     // iframe.style.height = "1000pt";
-                    iframe.style.width = '100%'; // Adjust the width as desired
-                    iframe.style.height = '100%'; // Adjust the height as desired
+                    // iframe.style.width = '100%'; // Adjust the width as desired
+                    // iframe.style.height = '100%'; // Adjust the height as desired
 
                     container.appendChild(iframe);
                 }
@@ -308,76 +399,24 @@ h2 {
         }
 
 
-        var button1 = document.querySelector('#button1');
-        var button2 = document.querySelector('#button2');
-        var button3 = document.querySelector('#button3');
+        // var button1 = document.querySelector('#button1');
+        // var button2 = document.querySelector('#button2');
+        // var button3 = document.querySelector('#button3');
 
-        button1.addEventListener('click', function() {
-            document.getElementById('message').textContent = 'click';
-            displayPDF('AttackGraph.pdf');
-        });
-        button2.addEventListener('click', function() {
-            document.getElementById('message').textContent = 'click';
-            displayPNG('image1-container','graph1.dot');
-        });
-        button3.addEventListener('click', function() {
-            document.getElementById('message').textContent = 'click';
-            displayPNG('image2-container','graph2.dot');
-        });
-
-        var item1 = document.querySelector('.top');
-        var itemPos1 = 0;
-        var minPos1 = -0.32 * window.innerHeight;
-        var maxPos1 = 0;
-        var item2 = document.getElementById('title');
-        var itemxPos2 = 0;
-        var minxPos2 = -0.4 * window.innerWidth;
-        var maxxPos2 = 0;
-        var itemyPos2 = 0;
-        var minyPos2 = 0;
-        var maxyPos2 = 0.16 * window.innerHeight;
-        var itemScal2 = 1;
-        var minScal2 = 0.3;
-        var maxScal2 = 1;
-        var item3 = document.getElementById('subtitle');
-        var itemPos3 = 0;
-        var minPos3 = 0;
-        var maxPos3 = 0.8 * window.innerWidth;
-        // item2.style.transform = 'translate(-500px, 110px) scale(0.3)';
-        function handleScroll(event) {
-            document.getElementById('message').textContent = "scrolling";
-            var delta = event.wheelDelta ;//|| -event.deltaY
-            // document.getElementById('num0').textContent = currentPos
-            // document.getElementById('num1').textContent = delta
-            // document.getElementById('num2').textContent = itemPos1
-            itemPos1 += delta * (maxPos1 - minPos1) / 400;
-            if (itemPos1 < minPos1) itemPos1 = minPos1;
-            if (itemPos1 > maxPos1) itemPos1 = maxPos1;
-            item1.style.transform = 'translateY(' + itemPos1 + 'px)';
-
-            itemxPos2 += delta * (maxxPos2 - minxPos2) / 400;
-            itemyPos2 -= delta * (maxyPos2 - minyPos2) / 400;
-            itemScal2 += delta * (maxScal2 - minScal2) / 400;
-            if (itemxPos2 < minxPos2) itemxPos2 = minxPos2;
-            if (itemxPos2 > maxxPos2) itemxPos2 = maxxPos2;
-            if (itemyPos2 < minyPos2) itemyPos2 = minyPos2;
-            if (itemyPos2 > maxyPos2) itemyPos2 = maxyPos2;
-            if (itemScal2 < minScal2) itemScal2 = minScal2;
-            if (itemScal2 > maxScal2) itemScal2 = maxScal2;
-            item2.style.transform = 'translate(' + itemxPos2 + 'px, ' + itemyPos2 + 'px) scale(' + itemScal2 + ')';
-
-            itemPos3 -= delta * (maxPos3 - minPos3) / 400;
-            if (itemPos3 < minPos3) itemPos3 = minPos3;
-            if (itemPos3 > maxPos3) itemPos3 = maxPos3;
-            item3.style.transform = 'translateX(' + itemPos3 + 'px)';
-
-            event.preventDefault();
-        }
-
-        window.addEventListener('wheel', handleScroll);
-
-        
-        
+        // button1.addEventListener('click', function() {
+        //     document.getElementById('message').textContent = 'click';
+        //     displayPDF('AttackGraph.pdf');
+        // });
+        // button2.addEventListener('click', function() {
+        //     document.getElementById('message').textContent = 'click';
+        //     displayPNG('image1-container','graph1.dot');
+        // });
+        // button3.addEventListener('click', function() {
+        //     document.getElementById('message').textContent = 'click';
+        //     displayPNG('image2-container','graph2.dot');
+        // });                
     </script>
+    <script src="static/js/scrolling.js"></script>
+    <script src="/HTML/static/js/scrolling.js"></script>
 </body>
 </html>

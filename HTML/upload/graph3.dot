@@ -1,0 +1,30 @@
+digraph G {
+	0 [label="Block cost:253.8",shape=ellipse];
+	1 [label="1:execCode(n65Inter,root):0",shape=diamond];
+	2 [label="2:RULE 2 (remote exploit of a server program):0",shape=ellipse];
+	3 [label="3:netAccess(n65Inter,tcp,80):0",shape=diamond];
+	4 [label="4:RULE 5 (multi-hop access):0",shape=ellipse];
+	5 [label="5:hacl(n37Inter,n65Inter,tcp,80):1",shape=box];
+	6 [label="6:execCode(n37Inter,root):0",shape=diamond];
+	7 [label="7:RULE 2 (remote exploit of a server program):0",shape=ellipse];
+	8 [label="8:netAccess(n37Inter,tcp,80)\nOR",shape=diamond];
+	130 [label="130:networkServiceInfo(n37Inter,httpd,tcp,80,root)\nLEAF",shape=box];
+	132 [label="132:RULE 5 (multi-hop access)\nAND",shape=ellipse];
+	131 [label="131:vulExists(n37Inter,'CVE-2013-0283',httpd,remoteExploit,privEscalation):1",shape=box];
+	134 [label="134:networkServiceInfo(n65Inter,httpd,tcp,80,root)\nLEAF",shape=box];
+	135 [label="135:vulExists(n65Inter,'CVE-2013-7446',httpd,remoteExploit,privEscalation)\nLEAF",shape=box];
+	
+	1 -> 0 ;
+	2 -> 1 [label="253.8"];
+	3 -> 2 [label="253.8"];
+	134 -> 2;
+	135 -> 2 [label="270.3"];
+	4 -> 3 [label="253.8"];
+	132 -> 3;
+	5 -> 4;
+	6 -> 4 [label="253.8"];
+	7 -> 6 [label="253.8"];
+	8 -> 7 [label="812.5"];
+	130 -> 7;
+	131 -> 7 [label="253.8"];
+}

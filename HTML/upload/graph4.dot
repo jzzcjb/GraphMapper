@@ -1,0 +1,28 @@
+digraph G {
+    graph[rankdir=LR];
+    0 [label="Block cost:2788.6",shape=ellipse];
+	50 [label="50:vulExists(fileServer,'CVE-2013-3542',mountd,remoteExploit,privEscalation)\nLEAF",shape=box];
+	61 [label="61:vulExists(n0Inter,'CVE-2013-4621',httpd,remoteExploit,privEscalation)\nLEAF",shape=box];
+	81 [label="81:vulExists(n1Inter,'CVE-2013-6239',httpd,remoteExploit,privEscalation)\nLEAF",shape=box];
+	85 [label="85:vulExists(n2Inter,'CVE-2013-2227',httpd,remoteExploit,privEscalation)\nLEAF",shape=box];
+	89 [label="89:vulExists(n3Inter,'CVE-2013-4280',httpd,remoteExploit,privEscalation)\nLEAF",shape=box];
+	93 [label="93:vulExists(n11Inter,'CVE-2013-2095',httpd,remoteExploit,privEscalation)\nLEAF",shape=box];
+	99 [label="99:vulExists(n13Inter,'CVE-2013-4751',httpd,remoteExploit,privEscalation)\nLEAF",shape=box];
+	103 [label="103:vulExists(n29Inter,'CVE-2013-6739',httpd,remoteExploit,privEscalation)\nLEAF",shape=box];
+	116 [label="116:vulExists(n31Inter,'CVE-2013-5654',httpd,remoteExploit,privEscalation)\nLEAF",shape=box];
+	127 [label="127:vulExists(n36Inter,'CVE-2013-4521',httpd,remoteExploit,privEscalation)\nLEAF",shape=box];
+	131 [label="131:vulExists(n37Inter,'CVE-2013-0283',httpd,remoteExploit,privEscalation)\nLEAF",shape=box];
+	135 [label="135:vulExists(n65Inter,'CVE-2013-7446',httpd,remoteExploit,privEscalation)\nLEAF",shape=box];
+    50 -> 37 [label="70.0"];
+    61 -> 32 [label="147.0"];
+    81 -> 74 [label="115.9"];
+    85 -> 69 [label="172.5"];
+    89 -> 27 [label="148.5"];
+    93 -> 22 [label="303.8"];
+    99 -> 17 [label="283.5"];
+    103 -> 12 [label="210.6"];
+    116 -> 107 [label="391.3"];
+	127 -> 120 [label="421.4"];
+	131 -> 7 [label="253.8"];
+	135 -> 2 [label="270.3"];
+}

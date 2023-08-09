@@ -10,11 +10,11 @@ def index():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        # 在这里进行用户名和密码的验证，验证通过则跳转到主界面
-        return redirect('/main')
+    # if request.method == 'POST':
+    #     username = request.form['username']
+    #     password = request.form['password']
+    #     # 在这里进行用户名和密码的验证，验证通过则跳转到主界面
+    #     return redirect('/main')
     return render_template('login.html')
 
 @app.route('/main')
@@ -56,11 +56,27 @@ def get_image():
     image_filename = request.form.get('filename')
     if image_filename:
         image_dot_path = os.path.join('./upload', image_filename)
-        image_png_path = os.path.join('./upload', 'graph.png')
+        image_png_path = os.path.join('./upload', image_filename+'.png')
 
         if os.path.exists(image_dot_path):
             # Execute the 'dot' command
             dot_command = f'dot -Tpng -Nfontname=Arial -Nfontcolor=#483FCC -Ncolor=#483FCC -Ecolor=#483FCC -Npenwidth=2 -Epenwidth=1.5 -o {image_png_path} {image_dot_path}'
+            subprocess.run(dot_command, shell=True, check=True)
+
+            return send_file(image_png_path, mimetype='image/png')
+
+    return 'Image not found', 404
+
+@app.route('/get_pdf', methods=['POST'])
+def get_pdf():
+    image_filename = request.form.get('filename')
+    if image_filename:
+        image_dot_path = os.path.join('./upload', image_filename)
+        image_png_path = os.path.join('./upload', image_filename+'.pdf')
+
+        if os.path.exists(image_dot_path):
+            # Execute the 'dot' command
+            dot_command = f'dot -Tpdf -Nfontname=Arial -Nfontcolor=#483FCC -Ncolor=#483FCC -Ecolor=#483FCC -Npenwidth=2 -Epenwidth=1.5 -o {image_png_path} {image_dot_path}'
             subprocess.run(dot_command, shell=True, check=True)
 
             return send_file(image_png_path, mimetype='image/png')
