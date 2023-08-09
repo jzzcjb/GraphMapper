@@ -407,6 +407,8 @@ h2 {
                 let fileName = document.createElement('p')
                 fileName.innerHTML = file.name
                 fileName.title = file.name
+                fileName.style.padding = 0;
+                fileName.style.margin = 0;
                 // 缩略图-图片直接展示,其他文件根据文件类型展示不同的缩略图
                 let img = document.createElement('img')
                 if (/image/.test(file.type)) {
