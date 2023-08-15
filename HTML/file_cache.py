@@ -15,7 +15,8 @@ def login():
     #     password = request.form['password']
     #     # 在这里进行用户名和密码的验证，验证通过则跳转到主界面
     #     return redirect('/main')
-    return render_template('login.html')
+    # return render_template('login.html')
+    return render_template('start.html')
 
 @app.route('/main')
 def main():

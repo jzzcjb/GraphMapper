@@ -29,13 +29,13 @@ meta(cvss,2).
 meta(attackGoal,1).
 meta(advances,2).
 
-attack(execCode(n65Inter,root)).
+attack(execCode(n192Dialt,root)).
 
 possible_duplicate_trace_step(because(6,rule_desc('direct network access',1.0),netAccess(webServer,tcp,80),[hacl(internet,webServer,tcp,80),attackerLocated(internet)])).
 
 possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(webServer,apache),[netAccess(webServer,tcp,80),networkServiceInfo(webServer,httpd,tcp,80,apache),vulExists(webServer,'CAN-2002-0392',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n65Inter,tcp,80),[hacl(webServer,n65Inter,tcp,80),advances(webServer,n65Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n192Dialt,tcp,80),[hacl(webServer,n192Dialt,tcp,80),advances(webServer,n192Dialt),execCode(webServer,apache)])).
 
 possible_duplicate_trace_step(because(17,rule_desc('NFS shell',0.80000000000000004),accessFile(fileServer,write,'/export'),[hacl(webServer,fileServer,nfsProtocol,nfsPort),nfsExportInfo(fileServer,'/export',write,webServer),execCode(webServer,apache)])).
 
@@ -43,473 +43,1123 @@ possible_duplicate_trace_step(because(17,rule_desc('NFS shell',0.800000000000000
 
 possible_duplicate_trace_step(because(17,rule_desc('NFS shell',0.80000000000000004),accessFile(fileServer,write,'/export'),[hacl(webServer,fileServer,nfsProtocol,nfsPort),nfsExportInfo(fileServer,'/export',write,webServer),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n51Inter,tcp,80),[hacl(webServer,n51Inter,tcp,80),advances(webServer,n51Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n81Dialt,tcp,80),[hacl(webServer,n81Dialt,tcp,80),advances(webServer,n81Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n31Inter,tcp,80),[hacl(webServer,n31Inter,tcp,80),advances(webServer,n31Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n126Dialt,tcp,80),[hacl(webServer,n126Dialt,tcp,80),advances(webServer,n126Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n25Inter,tcp,80),[hacl(webServer,n25Inter,tcp,80),advances(webServer,n25Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n92Dialt,tcp,80),[hacl(webServer,n92Dialt,tcp,80),advances(webServer,n92Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n18Inter,tcp,80),[hacl(webServer,n18Inter,tcp,80),advances(webServer,n18Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n59Dialt,tcp,80),[hacl(webServer,n59Dialt,tcp,80),advances(webServer,n59Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n4Inter,tcp,80),[hacl(webServer,n4Inter,tcp,80),advances(webServer,n4Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n68Dialt,tcp,80),[hacl(webServer,n68Dialt,tcp,80),advances(webServer,n68Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n56Inter,tcp,80),[hacl(webServer,n56Inter,tcp,80),advances(webServer,n56Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n143Dialt,tcp,80),[hacl(webServer,n143Dialt,tcp,80),advances(webServer,n143Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n44Inter,tcp,80),[hacl(webServer,n44Inter,tcp,80),advances(webServer,n44Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n181Dialt,tcp,80),[hacl(webServer,n181Dialt,tcp,80),advances(webServer,n181Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n11Inter,tcp,80),[hacl(webServer,n11Inter,tcp,80),advances(webServer,n11Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n48Dialt,tcp,80),[hacl(webServer,n48Dialt,tcp,80),advances(webServer,n48Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n32Inter,tcp,80),[hacl(webServer,n32Inter,tcp,80),advances(webServer,n32Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n123Dialt,tcp,80),[hacl(webServer,n123Dialt,tcp,80),advances(webServer,n123Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n28Inter,tcp,80),[hacl(webServer,n28Inter,tcp,80),advances(webServer,n28Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n101Dialt,tcp,80),[hacl(webServer,n101Dialt,tcp,80),advances(webServer,n101Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n61Inter,tcp,80),[hacl(webServer,n61Inter,tcp,80),advances(webServer,n61Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n163Dialt,tcp,80),[hacl(webServer,n163Dialt,tcp,80),advances(webServer,n163Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(webServer,tcp,80),[hacl(webServer,webServer,tcp,80),advances(webServer,webServer),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n0Dialt,tcp,80),[hacl(webServer,n0Dialt,tcp,80),advances(webServer,n0Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n2Inter,tcp,80),[hacl(webServer,n2Inter,tcp,80),advances(webServer,n2Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n184Dialt,tcp,80),[hacl(webServer,n184Dialt,tcp,80),advances(webServer,n184Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n50Inter,tcp,80),[hacl(webServer,n50Inter,tcp,80),advances(webServer,n50Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n122Dialt,tcp,80),[hacl(webServer,n122Dialt,tcp,80),advances(webServer,n122Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n30Inter,tcp,80),[hacl(webServer,n30Inter,tcp,80),advances(webServer,n30Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n37Dialt,tcp,80),[hacl(webServer,n37Dialt,tcp,80),advances(webServer,n37Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n24Inter,tcp,80),[hacl(webServer,n24Inter,tcp,80),advances(webServer,n24Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n185Dialt,tcp,80),[hacl(webServer,n185Dialt,tcp,80),advances(webServer,n185Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n3Inter,tcp,80),[hacl(webServer,n3Inter,tcp,80),advances(webServer,n3Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n186Dialt,tcp,80),[hacl(webServer,n186Dialt,tcp,80),advances(webServer,n186Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n1Inter,tcp,80),[hacl(webServer,n1Inter,tcp,80),advances(webServer,n1Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n55Dialt,tcp,80),[hacl(webServer,n55Dialt,tcp,80),advances(webServer,n55Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n55Inter,tcp,80),[hacl(webServer,n55Inter,tcp,80),advances(webServer,n55Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n136Dialt,tcp,80),[hacl(webServer,n136Dialt,tcp,80),advances(webServer,n136Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n45Inter,tcp,80),[hacl(webServer,n45Inter,tcp,80),advances(webServer,n45Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n75Dialt,tcp,80),[hacl(webServer,n75Dialt,tcp,80),advances(webServer,n75Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n10Inter,tcp,80),[hacl(webServer,n10Inter,tcp,80),advances(webServer,n10Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n147Dialt,tcp,80),[hacl(webServer,n147Dialt,tcp,80),advances(webServer,n147Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n27Inter,tcp,80),[hacl(webServer,n27Inter,tcp,80),advances(webServer,n27Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n125Dialt,tcp,80),[hacl(webServer,n125Dialt,tcp,80),advances(webServer,n125Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n60Inter,tcp,80),[hacl(webServer,n60Inter,tcp,80),advances(webServer,n60Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n142Dialt,tcp,80),[hacl(webServer,n142Dialt,tcp,80),advances(webServer,n142Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n17Inter,tcp,80),[hacl(webServer,n17Inter,tcp,80),advances(webServer,n17Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n191Dialt,tcp,80),[hacl(webServer,n191Dialt,tcp,80),advances(webServer,n191Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n8Inter,tcp,80),[hacl(webServer,n8Inter,tcp,80),advances(webServer,n8Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n102Dialt,tcp,80),[hacl(webServer,n102Dialt,tcp,80),advances(webServer,n102Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n64Inter,tcp,80),[hacl(webServer,n64Inter,tcp,80),advances(webServer,n64Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n180Dialt,tcp,80),[hacl(webServer,n180Dialt,tcp,80),advances(webServer,n180Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n49Inter,tcp,80),[hacl(webServer,n49Inter,tcp,80),advances(webServer,n49Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n99Dialt,tcp,80),[hacl(webServer,n99Dialt,tcp,80),advances(webServer,n99Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n29Inter,tcp,80),[hacl(webServer,n29Inter,tcp,80),advances(webServer,n29Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n47Dialt,tcp,80),[hacl(webServer,n47Dialt,tcp,80),advances(webServer,n47Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n21Inter,tcp,80),[hacl(webServer,n21Inter,tcp,80),advances(webServer,n21Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n52Dialt,tcp,80),[hacl(webServer,n52Dialt,tcp,80),advances(webServer,n52Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n43Inter,tcp,80),[hacl(webServer,n43Inter,tcp,80),advances(webServer,n43Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n162Dialt,tcp,80),[hacl(webServer,n162Dialt,tcp,80),advances(webServer,n162Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n54Inter,tcp,80),[hacl(webServer,n54Inter,tcp,80),advances(webServer,n54Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n178Dialt,tcp,80),[hacl(webServer,n178Dialt,tcp,80),advances(webServer,n178Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n37Inter,tcp,80),[hacl(webServer,n37Inter,tcp,80),advances(webServer,n37Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n112Dialt,tcp,80),[hacl(webServer,n112Dialt,tcp,80),advances(webServer,n112Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n20Inter,tcp,80),[hacl(webServer,n20Inter,tcp,80),advances(webServer,n20Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n88Dialt,tcp,80),[hacl(webServer,n88Dialt,tcp,80),advances(webServer,n88Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n9Inter,tcp,80),[hacl(webServer,n9Inter,tcp,80),advances(webServer,n9Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n169Dialt,tcp,80),[hacl(webServer,n169Dialt,tcp,80),advances(webServer,n169Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n39Inter,tcp,80),[hacl(webServer,n39Inter,tcp,80),advances(webServer,n39Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n14Dialt,tcp,80),[hacl(webServer,n14Dialt,tcp,80),advances(webServer,n14Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n26Inter,tcp,80),[hacl(webServer,n26Inter,tcp,80),advances(webServer,n26Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n87Dialt,tcp,80),[hacl(webServer,n87Dialt,tcp,80),advances(webServer,n87Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n59Inter,tcp,80),[hacl(webServer,n59Inter,tcp,80),advances(webServer,n59Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n32Dialt,tcp,80),[hacl(webServer,n32Dialt,tcp,80),advances(webServer,n32Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n48Inter,tcp,80),[hacl(webServer,n48Inter,tcp,80),advances(webServer,n48Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n36Dialt,tcp,80),[hacl(webServer,n36Dialt,tcp,80),advances(webServer,n36Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n35Inter,tcp,80),[hacl(webServer,n35Inter,tcp,80),advances(webServer,n35Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n53Dialt,tcp,80),[hacl(webServer,n53Dialt,tcp,80),advances(webServer,n53Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n15Inter,tcp,80),[hacl(webServer,n15Inter,tcp,80),advances(webServer,n15Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n135Dialt,tcp,80),[hacl(webServer,n135Dialt,tcp,80),advances(webServer,n135Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n42Inter,tcp,80),[hacl(webServer,n42Inter,tcp,80),advances(webServer,n42Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n77Dialt,tcp,80),[hacl(webServer,n77Dialt,tcp,80),advances(webServer,n77Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n53Inter,tcp,80),[hacl(webServer,n53Inter,tcp,80),advances(webServer,n53Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n155Dialt,tcp,80),[hacl(webServer,n155Dialt,tcp,80),advances(webServer,n155Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n36Inter,tcp,80),[hacl(webServer,n36Inter,tcp,80),advances(webServer,n36Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n90Dialt,tcp,80),[hacl(webServer,n90Dialt,tcp,80),advances(webServer,n90Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n19Inter,tcp,80),[hacl(webServer,n19Inter,tcp,80),advances(webServer,n19Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n67Dialt,tcp,80),[hacl(webServer,n67Dialt,tcp,80),advances(webServer,n67Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n14Inter,tcp,80),[hacl(webServer,n14Inter,tcp,80),advances(webServer,n14Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n141Dialt,tcp,80),[hacl(webServer,n141Dialt,tcp,80),advances(webServer,n141Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n40Inter,tcp,80),[hacl(webServer,n40Inter,tcp,80),advances(webServer,n40Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n152Dialt,tcp,80),[hacl(webServer,n152Dialt,tcp,80),advances(webServer,n152Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n7Inter,tcp,80),[hacl(webServer,n7Inter,tcp,80),advances(webServer,n7Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n97Dialt,tcp,80),[hacl(webServer,n97Dialt,tcp,80),advances(webServer,n97Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n62Inter,tcp,80),[hacl(webServer,n62Inter,tcp,80),advances(webServer,n62Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n49Dialt,tcp,80),[hacl(webServer,n49Dialt,tcp,80),advances(webServer,n49Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n58Inter,tcp,80),[hacl(webServer,n58Inter,tcp,80),advances(webServer,n58Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n179Dialt,tcp,80),[hacl(webServer,n179Dialt,tcp,80),advances(webServer,n179Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n38Inter,tcp,80),[hacl(webServer,n38Inter,tcp,80),advances(webServer,n38Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n118Dialt,tcp,80),[hacl(webServer,n118Dialt,tcp,80),advances(webServer,n118Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n12Inter,tcp,80),[hacl(webServer,n12Inter,tcp,80),advances(webServer,n12Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n13Dialt,tcp,80),[hacl(webServer,n13Dialt,tcp,80),advances(webServer,n13Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n24Dialt,tcp,80),[hacl(webServer,n24Dialt,tcp,80),advances(webServer,n24Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n30Dialt,tcp,80),[hacl(webServer,n30Dialt,tcp,80),advances(webServer,n30Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n168Dialt,tcp,80),[hacl(webServer,n168Dialt,tcp,80),advances(webServer,n168Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n134Dialt,tcp,80),[hacl(webServer,n134Dialt,tcp,80),advances(webServer,n134Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n78Dialt,tcp,80),[hacl(webServer,n78Dialt,tcp,80),advances(webServer,n78Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n140Dialt,tcp,80),[hacl(webServer,n140Dialt,tcp,80),advances(webServer,n140Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n161Dialt,tcp,80),[hacl(webServer,n161Dialt,tcp,80),advances(webServer,n161Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n190Dialt,tcp,80),[hacl(webServer,n190Dialt,tcp,80),advances(webServer,n190Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n100Dialt,tcp,80),[hacl(webServer,n100Dialt,tcp,80),advances(webServer,n100Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n98Dialt,tcp,80),[hacl(webServer,n98Dialt,tcp,80),advances(webServer,n98Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n45Dialt,tcp,80),[hacl(webServer,n45Dialt,tcp,80),advances(webServer,n45Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n46Dialt,tcp,80),[hacl(webServer,n46Dialt,tcp,80),advances(webServer,n46Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n139Dialt,tcp,80),[hacl(webServer,n139Dialt,tcp,80),advances(webServer,n139Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n159Dialt,tcp,80),[hacl(webServer,n159Dialt,tcp,80),advances(webServer,n159Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n12Dialt,tcp,80),[hacl(webServer,n12Dialt,tcp,80),advances(webServer,n12Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n86Dialt,tcp,80),[hacl(webServer,n86Dialt,tcp,80),advances(webServer,n86Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n2Dialt,tcp,80),[hacl(webServer,n2Dialt,tcp,80),advances(webServer,n2Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n28Dialt,tcp,80),[hacl(webServer,n28Dialt,tcp,80),advances(webServer,n28Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n189Dialt,tcp,80),[hacl(webServer,n189Dialt,tcp,80),advances(webServer,n189Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n73Dialt,tcp,80),[hacl(webServer,n73Dialt,tcp,80),advances(webServer,n73Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n154Dialt,tcp,80),[hacl(webServer,n154Dialt,tcp,80),advances(webServer,n154Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n172Dialt,tcp,80),[hacl(webServer,n172Dialt,tcp,80),advances(webServer,n172Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n111Dialt,tcp,80),[hacl(webServer,n111Dialt,tcp,80),advances(webServer,n111Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n66Dialt,tcp,80),[hacl(webServer,n66Dialt,tcp,80),advances(webServer,n66Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n149Dialt,tcp,80),[hacl(webServer,n149Dialt,tcp,80),advances(webServer,n149Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n121Dialt,tcp,80),[hacl(webServer,n121Dialt,tcp,80),advances(webServer,n121Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n42Dialt,tcp,80),[hacl(webServer,n42Dialt,tcp,80),advances(webServer,n42Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n144Dialt,tcp,80),[hacl(webServer,n144Dialt,tcp,80),advances(webServer,n144Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n158Dialt,tcp,80),[hacl(webServer,n158Dialt,tcp,80),advances(webServer,n158Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n44Dialt,tcp,80),[hacl(webServer,n44Dialt,tcp,80),advances(webServer,n44Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n117Dialt,tcp,80),[hacl(webServer,n117Dialt,tcp,80),advances(webServer,n117Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n85Dialt,tcp,80),[hacl(webServer,n85Dialt,tcp,80),advances(webServer,n85Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n27Dialt,tcp,80),[hacl(webServer,n27Dialt,tcp,80),advances(webServer,n27Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n1Dialt,tcp,80),[hacl(webServer,n1Dialt,tcp,80),advances(webServer,n1Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n74Dialt,tcp,80),[hacl(webServer,n74Dialt,tcp,80),advances(webServer,n74Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n76Dialt,tcp,80),[hacl(webServer,n76Dialt,tcp,80),advances(webServer,n76Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n54Dialt,tcp,80),[hacl(webServer,n54Dialt,tcp,80),advances(webServer,n54Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n171Dialt,tcp,80),[hacl(webServer,n171Dialt,tcp,80),advances(webServer,n171Dialt),execCode(webServer,apache)])).
 
 possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(fileServer,rpc,100005),[hacl(webServer,fileServer,rpc,100005),advances(webServer,fileServer),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n6Inter,tcp,80),[hacl(webServer,n6Inter,tcp,80),advances(webServer,n6Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n25Dialt,tcp,80),[hacl(webServer,n25Dialt,tcp,80),advances(webServer,n25Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n47Inter,tcp,80),[hacl(webServer,n47Inter,tcp,80),advances(webServer,n47Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n108Dialt,tcp,80),[hacl(webServer,n108Dialt,tcp,80),advances(webServer,n108Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n34Inter,tcp,80),[hacl(webServer,n34Inter,tcp,80),advances(webServer,n34Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n96Dialt,tcp,80),[hacl(webServer,n96Dialt,tcp,80),advances(webServer,n96Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n41Inter,tcp,80),[hacl(webServer,n41Inter,tcp,80),advances(webServer,n41Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n65Dialt,tcp,80),[hacl(webServer,n65Dialt,tcp,80),advances(webServer,n65Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n52Inter,tcp,80),[hacl(webServer,n52Inter,tcp,80),advances(webServer,n52Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n150Dialt,tcp,80),[hacl(webServer,n150Dialt,tcp,80),advances(webServer,n150Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n23Inter,tcp,80),[hacl(webServer,n23Inter,tcp,80),advances(webServer,n23Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n170Dialt,tcp,80),[hacl(webServer,n170Dialt,tcp,80),advances(webServer,n170Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n22Inter,tcp,80),[hacl(webServer,n22Inter,tcp,80),advances(webServer,n22Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n21Dialt,tcp,80),[hacl(webServer,n21Dialt,tcp,80),advances(webServer,n21Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n16Inter,tcp,80),[hacl(webServer,n16Inter,tcp,80),advances(webServer,n16Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n176Dialt,tcp,80),[hacl(webServer,n176Dialt,tcp,80),advances(webServer,n176Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n5Inter,tcp,80),[hacl(webServer,n5Inter,tcp,80),advances(webServer,n5Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n133Dialt,tcp,80),[hacl(webServer,n133Dialt,tcp,80),advances(webServer,n133Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n0Inter,tcp,80),[hacl(webServer,n0Inter,tcp,80),advances(webServer,n0Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n95Dialt,tcp,80),[hacl(webServer,n95Dialt,tcp,80),advances(webServer,n95Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n63Inter,tcp,80),[hacl(webServer,n63Inter,tcp,80),advances(webServer,n63Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n41Dialt,tcp,80),[hacl(webServer,n41Dialt,tcp,80),advances(webServer,n41Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n57Inter,tcp,80),[hacl(webServer,n57Inter,tcp,80),advances(webServer,n57Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n188Dialt,tcp,80),[hacl(webServer,n188Dialt,tcp,80),advances(webServer,n188Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n46Inter,tcp,80),[hacl(webServer,n46Inter,tcp,80),advances(webServer,n46Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n10Dialt,tcp,80),[hacl(webServer,n10Dialt,tcp,80),advances(webServer,n10Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n13Inter,tcp,80),[hacl(webServer,n13Inter,tcp,80),advances(webServer,n13Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n43Dialt,tcp,80),[hacl(webServer,n43Dialt,tcp,80),advances(webServer,n43Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n33Inter,tcp,80),[hacl(webServer,n33Inter,tcp,80),advances(webServer,n33Inter),execCode(webServer,apache)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n183Dialt,tcp,80),[hacl(webServer,n183Dialt,tcp,80),advances(webServer,n183Dialt),execCode(webServer,apache)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n65Inter,root),[netAccess(n65Inter,tcp,80),networkServiceInfo(n65Inter,httpd,tcp,80,root),vulExists(n65Inter,'CVE-2013-4035',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n89Dialt,tcp,80),[hacl(webServer,n89Dialt,tcp,80),advances(webServer,n89Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n26Dialt,tcp,80),[hacl(webServer,n26Dialt,tcp,80),advances(webServer,n26Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n131Dialt,tcp,80),[hacl(webServer,n131Dialt,tcp,80),advances(webServer,n131Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n71Dialt,tcp,80),[hacl(webServer,n71Dialt,tcp,80),advances(webServer,n71Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n109Dialt,tcp,80),[hacl(webServer,n109Dialt,tcp,80),advances(webServer,n109Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n64Dialt,tcp,80),[hacl(webServer,n64Dialt,tcp,80),advances(webServer,n64Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n146Dialt,tcp,80),[hacl(webServer,n146Dialt,tcp,80),advances(webServer,n146Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n132Dialt,tcp,80),[hacl(webServer,n132Dialt,tcp,80),advances(webServer,n132Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n4Dialt,tcp,80),[hacl(webServer,n4Dialt,tcp,80),advances(webServer,n4Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n175Dialt,tcp,80),[hacl(webServer,n175Dialt,tcp,80),advances(webServer,n175Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n9Dialt,tcp,80),[hacl(webServer,n9Dialt,tcp,80),advances(webServer,n9Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n20Dialt,tcp,80),[hacl(webServer,n20Dialt,tcp,80),advances(webServer,n20Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n31Dialt,tcp,80),[hacl(webServer,n31Dialt,tcp,80),advances(webServer,n31Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n63Dialt,tcp,80),[hacl(webServer,n63Dialt,tcp,80),advances(webServer,n63Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n119Dialt,tcp,80),[hacl(webServer,n119Dialt,tcp,80),advances(webServer,n119Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n83Dialt,tcp,80),[hacl(webServer,n83Dialt,tcp,80),advances(webServer,n83Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n80Dialt,tcp,80),[hacl(webServer,n80Dialt,tcp,80),advances(webServer,n80Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n130Dialt,tcp,80),[hacl(webServer,n130Dialt,tcp,80),advances(webServer,n130Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n167Dialt,tcp,80),[hacl(webServer,n167Dialt,tcp,80),advances(webServer,n167Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n19Dialt,tcp,80),[hacl(webServer,n19Dialt,tcp,80),advances(webServer,n19Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n107Dialt,tcp,80),[hacl(webServer,n107Dialt,tcp,80),advances(webServer,n107Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n40Dialt,tcp,80),[hacl(webServer,n40Dialt,tcp,80),advances(webServer,n40Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n58Dialt,tcp,80),[hacl(webServer,n58Dialt,tcp,80),advances(webServer,n58Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n145Dialt,tcp,80),[hacl(webServer,n145Dialt,tcp,80),advances(webServer,n145Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n157Dialt,tcp,80),[hacl(webServer,n157Dialt,tcp,80),advances(webServer,n157Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n187Dialt,tcp,80),[hacl(webServer,n187Dialt,tcp,80),advances(webServer,n187Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n129Dialt,tcp,80),[hacl(webServer,n129Dialt,tcp,80),advances(webServer,n129Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n116Dialt,tcp,80),[hacl(webServer,n116Dialt,tcp,80),advances(webServer,n116Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n93Dialt,tcp,80),[hacl(webServer,n93Dialt,tcp,80),advances(webServer,n93Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n39Dialt,tcp,80),[hacl(webServer,n39Dialt,tcp,80),advances(webServer,n39Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n3Dialt,tcp,80),[hacl(webServer,n3Dialt,tcp,80),advances(webServer,n3Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(webServer,tcp,80),[hacl(webServer,webServer,tcp,80),advances(webServer,webServer),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n8Dialt,tcp,80),[hacl(webServer,n8Dialt,tcp,80),advances(webServer,n8Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n62Dialt,tcp,80),[hacl(webServer,n62Dialt,tcp,80),advances(webServer,n62Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n120Dialt,tcp,80),[hacl(webServer,n120Dialt,tcp,80),advances(webServer,n120Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n82Dialt,tcp,80),[hacl(webServer,n82Dialt,tcp,80),advances(webServer,n82Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n84Dialt,tcp,80),[hacl(webServer,n84Dialt,tcp,80),advances(webServer,n84Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n51Dialt,tcp,80),[hacl(webServer,n51Dialt,tcp,80),advances(webServer,n51Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n70Dialt,tcp,80),[hacl(webServer,n70Dialt,tcp,80),advances(webServer,n70Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n105Dialt,tcp,80),[hacl(webServer,n105Dialt,tcp,80),advances(webServer,n105Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n69Dialt,tcp,80),[hacl(webServer,n69Dialt,tcp,80),advances(webServer,n69Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n166Dialt,tcp,80),[hacl(webServer,n166Dialt,tcp,80),advances(webServer,n166Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n23Dialt,tcp,80),[hacl(webServer,n23Dialt,tcp,80),advances(webServer,n23Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n57Dialt,tcp,80),[hacl(webServer,n57Dialt,tcp,80),advances(webServer,n57Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n127Dialt,tcp,80),[hacl(webServer,n127Dialt,tcp,80),advances(webServer,n127Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n114Dialt,tcp,80),[hacl(webServer,n114Dialt,tcp,80),advances(webServer,n114Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n91Dialt,tcp,80),[hacl(webServer,n91Dialt,tcp,80),advances(webServer,n91Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n35Dialt,tcp,80),[hacl(webServer,n35Dialt,tcp,80),advances(webServer,n35Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n173Dialt,tcp,80),[hacl(webServer,n173Dialt,tcp,80),advances(webServer,n173Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n110Dialt,tcp,80),[hacl(webServer,n110Dialt,tcp,80),advances(webServer,n110Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n18Dialt,tcp,80),[hacl(webServer,n18Dialt,tcp,80),advances(webServer,n18Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n29Dialt,tcp,80),[hacl(webServer,n29Dialt,tcp,80),advances(webServer,n29Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n79Dialt,tcp,80),[hacl(webServer,n79Dialt,tcp,80),advances(webServer,n79Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n22Dialt,tcp,80),[hacl(webServer,n22Dialt,tcp,80),advances(webServer,n22Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n61Dialt,tcp,80),[hacl(webServer,n61Dialt,tcp,80),advances(webServer,n61Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n72Dialt,tcp,80),[hacl(webServer,n72Dialt,tcp,80),advances(webServer,n72Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n50Dialt,tcp,80),[hacl(webServer,n50Dialt,tcp,80),advances(webServer,n50Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n104Dialt,tcp,80),[hacl(webServer,n104Dialt,tcp,80),advances(webServer,n104Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n151Dialt,tcp,80),[hacl(webServer,n151Dialt,tcp,80),advances(webServer,n151Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n165Dialt,tcp,80),[hacl(webServer,n165Dialt,tcp,80),advances(webServer,n165Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n177Dialt,tcp,80),[hacl(webServer,n177Dialt,tcp,80),advances(webServer,n177Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n17Dialt,tcp,80),[hacl(webServer,n17Dialt,tcp,80),advances(webServer,n17Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n5Dialt,tcp,80),[hacl(webServer,n5Dialt,tcp,80),advances(webServer,n5Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n56Dialt,tcp,80),[hacl(webServer,n56Dialt,tcp,80),advances(webServer,n56Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n138Dialt,tcp,80),[hacl(webServer,n138Dialt,tcp,80),advances(webServer,n138Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n124Dialt,tcp,80),[hacl(webServer,n124Dialt,tcp,80),advances(webServer,n124Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n115Dialt,tcp,80),[hacl(webServer,n115Dialt,tcp,80),advances(webServer,n115Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n106Dialt,tcp,80),[hacl(webServer,n106Dialt,tcp,80),advances(webServer,n106Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n94Dialt,tcp,80),[hacl(webServer,n94Dialt,tcp,80),advances(webServer,n94Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n34Dialt,tcp,80),[hacl(webServer,n34Dialt,tcp,80),advances(webServer,n34Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n7Dialt,tcp,80),[hacl(webServer,n7Dialt,tcp,80),advances(webServer,n7Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n60Dialt,tcp,80),[hacl(webServer,n60Dialt,tcp,80),advances(webServer,n60Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n182Dialt,tcp,80),[hacl(webServer,n182Dialt,tcp,80),advances(webServer,n182Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n174Dialt,tcp,80),[hacl(webServer,n174Dialt,tcp,80),advances(webServer,n174Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n160Dialt,tcp,80),[hacl(webServer,n160Dialt,tcp,80),advances(webServer,n160Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n103Dialt,tcp,80),[hacl(webServer,n103Dialt,tcp,80),advances(webServer,n103Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n153Dialt,tcp,80),[hacl(webServer,n153Dialt,tcp,80),advances(webServer,n153Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n164Dialt,tcp,80),[hacl(webServer,n164Dialt,tcp,80),advances(webServer,n164Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n16Dialt,tcp,80),[hacl(webServer,n16Dialt,tcp,80),advances(webServer,n16Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n15Dialt,tcp,80),[hacl(webServer,n15Dialt,tcp,80),advances(webServer,n15Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n38Dialt,tcp,80),[hacl(webServer,n38Dialt,tcp,80),advances(webServer,n38Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n128Dialt,tcp,80),[hacl(webServer,n128Dialt,tcp,80),advances(webServer,n128Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n113Dialt,tcp,80),[hacl(webServer,n113Dialt,tcp,80),advances(webServer,n113Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n33Dialt,tcp,80),[hacl(webServer,n33Dialt,tcp,80),advances(webServer,n33Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n137Dialt,tcp,80),[hacl(webServer,n137Dialt,tcp,80),advances(webServer,n137Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n156Dialt,tcp,80),[hacl(webServer,n156Dialt,tcp,80),advances(webServer,n156Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n6Dialt,tcp,80),[hacl(webServer,n6Dialt,tcp,80),advances(webServer,n6Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n11Dialt,tcp,80),[hacl(webServer,n11Dialt,tcp,80),advances(webServer,n11Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n148Dialt,tcp,80),[hacl(webServer,n148Dialt,tcp,80),advances(webServer,n148Dialt),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n192Dialt,root),[netAccess(n192Dialt,tcp,80),networkServiceInfo(n192Dialt,httpd,tcp,80,root),vulExists(n192Dialt,'CVE-2013-1602',httpd,remoteExploit,privEscalation)])).
 
 possible_duplicate_trace_step(because(4,rule_desc('Trojan horse installation',0.80000000000000004),execCode(fileServer,root),[accessFile(fileServer,write,'/export')])).
 
-possible_duplicate_trace_step(because(16,rule_desc('NFS semantics',1),accessFile(n0Inter,write,'/usr/local/share'),[accessFile(fileServer,write,'/export'),nfsMounted(n0Inter,'/usr/local/share',fileServer,'/export',read)])).
+possible_duplicate_trace_step(because(16,rule_desc('NFS semantics',1),accessFile(n0Dialt,write,'/usr/local/share'),[accessFile(fileServer,write,'/export'),nfsMounted(n0Dialt,'/usr/local/share',fileServer,'/export',read)])).
 
 possible_duplicate_trace_step(because(4,rule_desc('Trojan horse installation',0.80000000000000004),execCode(fileServer,root),[accessFile(fileServer,write,'/export')])).
 
-possible_duplicate_trace_step(because(4,rule_desc('Trojan horse installation',0.80000000000000004),execCode(n0Inter,root),[accessFile(n0Inter,write,'/usr/local/share')])).
+possible_duplicate_trace_step(because(4,rule_desc('Trojan horse installation',0.80000000000000004),execCode(n0Dialt,root),[accessFile(n0Dialt,write,'/usr/local/share')])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n51Inter,root),[netAccess(n51Inter,tcp,80),networkServiceInfo(n51Inter,httpd,tcp,80,root),vulExists(n51Inter,'CVE-2013-1426',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n81Dialt,root),[netAccess(n81Dialt,tcp,80),networkServiceInfo(n81Dialt,httpd,tcp,80,root),vulExists(n81Dialt,'CVE-2013-6358',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n31Inter,root),[netAccess(n31Inter,tcp,80),networkServiceInfo(n31Inter,httpd,tcp,80,root),vulExists(n31Inter,'CVE-2013-0283',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n126Dialt,root),[netAccess(n126Dialt,tcp,80),networkServiceInfo(n126Dialt,httpd,tcp,80,root),vulExists(n126Dialt,'CVE-2013-1400',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n25Inter,root),[netAccess(n25Inter,tcp,80),networkServiceInfo(n25Inter,httpd,tcp,80,root),vulExists(n25Inter,'CVE-2013-2516',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n92Dialt,root),[netAccess(n92Dialt,tcp,80),networkServiceInfo(n92Dialt,httpd,tcp,80,root),vulExists(n92Dialt,'CVE-2013-4201',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n18Inter,root),[netAccess(n18Inter,tcp,80),networkServiceInfo(n18Inter,httpd,tcp,80,root),vulExists(n18Inter,'CVE-2013-6681',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n59Dialt,root),[netAccess(n59Dialt,tcp,80),networkServiceInfo(n59Dialt,httpd,tcp,80,root),vulExists(n59Dialt,'CVE-2013-1410',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n4Inter,root),[netAccess(n4Inter,tcp,80),networkServiceInfo(n4Inter,httpd,tcp,80,root),vulExists(n4Inter,'CVE-2013-4982',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n68Dialt,root),[netAccess(n68Dialt,tcp,80),networkServiceInfo(n68Dialt,httpd,tcp,80,root),vulExists(n68Dialt,'CVE-2013-0507',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n56Inter,root),[netAccess(n56Inter,tcp,80),networkServiceInfo(n56Inter,httpd,tcp,80,root),vulExists(n56Inter,'CVE-2013-2057',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n143Dialt,root),[netAccess(n143Dialt,tcp,80),networkServiceInfo(n143Dialt,httpd,tcp,80,root),vulExists(n143Dialt,'CVE-2013-0517',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n44Inter,root),[netAccess(n44Inter,tcp,80),networkServiceInfo(n44Inter,httpd,tcp,80,root),vulExists(n44Inter,'CVE-2013-6647',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n181Dialt,root),[netAccess(n181Dialt,tcp,80),networkServiceInfo(n181Dialt,httpd,tcp,80,root),vulExists(n181Dialt,'CVE-2013-7202',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n11Inter,root),[netAccess(n11Inter,tcp,80),networkServiceInfo(n11Inter,httpd,tcp,80,root),vulExists(n11Inter,'CVE-2013-7370',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n48Dialt,root),[netAccess(n48Dialt,tcp,80),networkServiceInfo(n48Dialt,httpd,tcp,80,root),vulExists(n48Dialt,'CVE-2013-6773',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n32Inter,root),[netAccess(n32Inter,tcp,80),networkServiceInfo(n32Inter,httpd,tcp,80,root),vulExists(n32Inter,'CVE-2013-4410',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n123Dialt,root),[netAccess(n123Dialt,tcp,80),networkServiceInfo(n123Dialt,httpd,tcp,80,root),vulExists(n123Dialt,'CVE-2013-2097',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n28Inter,root),[netAccess(n28Inter,tcp,80),networkServiceInfo(n28Inter,httpd,tcp,80,root),vulExists(n28Inter,'CVE-2013-0517',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n101Dialt,root),[netAccess(n101Dialt,tcp,80),networkServiceInfo(n101Dialt,httpd,tcp,80,root),vulExists(n101Dialt,'CVE-2013-7446',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n61Inter,root),[netAccess(n61Inter,tcp,80),networkServiceInfo(n61Inter,httpd,tcp,80,root),vulExists(n61Inter,'CVE-2013-4692',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n163Dialt,root),[netAccess(n163Dialt,tcp,80),networkServiceInfo(n163Dialt,httpd,tcp,80,root),vulExists(n163Dialt,'CVE-2013-1751',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n0Dialt,root),[netAccess(n0Dialt,tcp,80),networkServiceInfo(n0Dialt,httpd,tcp,80,root),vulExists(n0Dialt,'CVE-2013-4105',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n184Dialt,root),[netAccess(n184Dialt,tcp,80),networkServiceInfo(n184Dialt,httpd,tcp,80,root),vulExists(n184Dialt,'CVE-2013-4109',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n122Dialt,root),[netAccess(n122Dialt,tcp,80),networkServiceInfo(n122Dialt,httpd,tcp,80,root),vulExists(n122Dialt,'CVE-2013-4691',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n37Dialt,root),[netAccess(n37Dialt,tcp,80),networkServiceInfo(n37Dialt,httpd,tcp,80,root),vulExists(n37Dialt,'CVE-2013-1400',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n185Dialt,root),[netAccess(n185Dialt,tcp,80),networkServiceInfo(n185Dialt,httpd,tcp,80,root),vulExists(n185Dialt,'CVE-2013-3942',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n186Dialt,root),[netAccess(n186Dialt,tcp,80),networkServiceInfo(n186Dialt,httpd,tcp,80,root),vulExists(n186Dialt,'CVE-2013-6739',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n55Dialt,root),[netAccess(n55Dialt,tcp,80),networkServiceInfo(n55Dialt,httpd,tcp,80,root),vulExists(n55Dialt,'CVE-2013-2773',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n136Dialt,root),[netAccess(n136Dialt,tcp,80),networkServiceInfo(n136Dialt,httpd,tcp,80,root),vulExists(n136Dialt,'CVE-2013-7371',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n75Dialt,root),[netAccess(n75Dialt,tcp,80),networkServiceInfo(n75Dialt,httpd,tcp,80,root),vulExists(n75Dialt,'CVE-2013-2682',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n147Dialt,root),[netAccess(n147Dialt,tcp,80),networkServiceInfo(n147Dialt,httpd,tcp,80,root),vulExists(n147Dialt,'CVE-2013-3366',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n125Dialt,root),[netAccess(n125Dialt,tcp,80),networkServiceInfo(n125Dialt,httpd,tcp,80,root),vulExists(n125Dialt,'CVE-2013-7380',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n142Dialt,root),[netAccess(n142Dialt,tcp,80),networkServiceInfo(n142Dialt,httpd,tcp,80,root),vulExists(n142Dialt,'CVE-2013-5638',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n191Dialt,root),[netAccess(n191Dialt,tcp,80),networkServiceInfo(n191Dialt,httpd,tcp,80,root),vulExists(n191Dialt,'CVE-2013-6049',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n102Dialt,root),[netAccess(n102Dialt,tcp,80),networkServiceInfo(n102Dialt,httpd,tcp,80,root),vulExists(n102Dialt,'CVE-2013-7433',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n180Dialt,root),[netAccess(n180Dialt,tcp,80),networkServiceInfo(n180Dialt,httpd,tcp,80,root),vulExists(n180Dialt,'CVE-2013-3024',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n99Dialt,root),[netAccess(n99Dialt,tcp,80),networkServiceInfo(n99Dialt,httpd,tcp,80,root),vulExists(n99Dialt,'CVE-2013-5212',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n47Dialt,root),[netAccess(n47Dialt,tcp,80),networkServiceInfo(n47Dialt,httpd,tcp,80,root),vulExists(n47Dialt,'CVE-2013-7377',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n52Dialt,root),[netAccess(n52Dialt,tcp,80),networkServiceInfo(n52Dialt,httpd,tcp,80,root),vulExists(n52Dialt,'CVE-2013-3629',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n162Dialt,root),[netAccess(n162Dialt,tcp,80),networkServiceInfo(n162Dialt,httpd,tcp,80,root),vulExists(n162Dialt,'CVE-2013-4621',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n178Dialt,root),[netAccess(n178Dialt,tcp,80),networkServiceInfo(n178Dialt,httpd,tcp,80,root),vulExists(n178Dialt,'CVE-2013-3629',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n112Dialt,root),[netAccess(n112Dialt,tcp,80),networkServiceInfo(n112Dialt,httpd,tcp,80,root),vulExists(n112Dialt,'CVE-2013-4335',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n88Dialt,root),[netAccess(n88Dialt,tcp,80),networkServiceInfo(n88Dialt,httpd,tcp,80,root),vulExists(n88Dialt,'CVE-2013-2631',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n169Dialt,root),[netAccess(n169Dialt,tcp,80),networkServiceInfo(n169Dialt,httpd,tcp,80,root),vulExists(n169Dialt,'CVE-2013-2738',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n14Dialt,root),[netAccess(n14Dialt,tcp,80),networkServiceInfo(n14Dialt,httpd,tcp,80,root),vulExists(n14Dialt,'CVE-2013-7173',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n87Dialt,root),[netAccess(n87Dialt,tcp,80),networkServiceInfo(n87Dialt,httpd,tcp,80,root),vulExists(n87Dialt,'CVE-2013-2972',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n32Dialt,root),[netAccess(n32Dialt,tcp,80),networkServiceInfo(n32Dialt,httpd,tcp,80,root),vulExists(n32Dialt,'CVE-2013-5106',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n36Dialt,root),[netAccess(n36Dialt,tcp,80),networkServiceInfo(n36Dialt,httpd,tcp,80,root),vulExists(n36Dialt,'CVE-2013-4335',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n53Dialt,root),[netAccess(n53Dialt,tcp,80),networkServiceInfo(n53Dialt,httpd,tcp,80,root),vulExists(n53Dialt,'CVE-2013-4103',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n135Dialt,root),[netAccess(n135Dialt,tcp,80),networkServiceInfo(n135Dialt,httpd,tcp,80,root),vulExists(n135Dialt,'CVE-2013-1053',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n77Dialt,root),[netAccess(n77Dialt,tcp,80),networkServiceInfo(n77Dialt,httpd,tcp,80,root),vulExists(n77Dialt,'CVE-2013-2262',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n155Dialt,root),[netAccess(n155Dialt,tcp,80),networkServiceInfo(n155Dialt,httpd,tcp,80,root),vulExists(n155Dialt,'CVE-2013-4583',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n90Dialt,root),[netAccess(n90Dialt,tcp,80),networkServiceInfo(n90Dialt,httpd,tcp,80,root),vulExists(n90Dialt,'CVE-2013-0243',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n67Dialt,root),[netAccess(n67Dialt,tcp,80),networkServiceInfo(n67Dialt,httpd,tcp,80,root),vulExists(n67Dialt,'CVE-2013-7471',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n141Dialt,root),[netAccess(n141Dialt,tcp,80),networkServiceInfo(n141Dialt,httpd,tcp,80,root),vulExists(n141Dialt,'CVE-2013-7088',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n152Dialt,root),[netAccess(n152Dialt,tcp,80),networkServiceInfo(n152Dialt,httpd,tcp,80,root),vulExists(n152Dialt,'CVE-2013-1934',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n97Dialt,root),[netAccess(n97Dialt,tcp,80),networkServiceInfo(n97Dialt,httpd,tcp,80,root),vulExists(n97Dialt,'CVE-2013-5978',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n49Dialt,root),[netAccess(n49Dialt,tcp,80),networkServiceInfo(n49Dialt,httpd,tcp,80,root),vulExists(n49Dialt,'CVE-2013-4411',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n179Dialt,root),[netAccess(n179Dialt,tcp,80),networkServiceInfo(n179Dialt,httpd,tcp,80,root),vulExists(n179Dialt,'CVE-2013-6231',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n118Dialt,root),[netAccess(n118Dialt,tcp,80),networkServiceInfo(n118Dialt,httpd,tcp,80,root),vulExists(n118Dialt,'CVE-2013-3072',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n13Dialt,root),[netAccess(n13Dialt,tcp,80),networkServiceInfo(n13Dialt,httpd,tcp,80,root),vulExists(n13Dialt,'CVE-2013-0163',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n24Dialt,root),[netAccess(n24Dialt,tcp,80),networkServiceInfo(n24Dialt,httpd,tcp,80,root),vulExists(n24Dialt,'CVE-2013-4225',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n30Dialt,root),[netAccess(n30Dialt,tcp,80),networkServiceInfo(n30Dialt,httpd,tcp,80,root),vulExists(n30Dialt,'CVE-2013-6880',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n168Dialt,root),[netAccess(n168Dialt,tcp,80),networkServiceInfo(n168Dialt,httpd,tcp,80,root),vulExists(n168Dialt,'CVE-2013-4366',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n134Dialt,root),[netAccess(n134Dialt,tcp,80),networkServiceInfo(n134Dialt,httpd,tcp,80,root),vulExists(n134Dialt,'CVE-2013-1932',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n78Dialt,root),[netAccess(n78Dialt,tcp,80),networkServiceInfo(n78Dialt,httpd,tcp,80,root),vulExists(n78Dialt,'CVE-2013-1809',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n140Dialt,root),[netAccess(n140Dialt,tcp,80),networkServiceInfo(n140Dialt,httpd,tcp,80,root),vulExists(n140Dialt,'CVE-2013-7202',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n161Dialt,root),[netAccess(n161Dialt,tcp,80),networkServiceInfo(n161Dialt,httpd,tcp,80,root),vulExists(n161Dialt,'CVE-2013-3722',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n190Dialt,root),[netAccess(n190Dialt,tcp,80),networkServiceInfo(n190Dialt,httpd,tcp,80,root),vulExists(n190Dialt,'CVE-2013-1425',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n100Dialt,root),[netAccess(n100Dialt,tcp,80),networkServiceInfo(n100Dialt,httpd,tcp,80,root),vulExists(n100Dialt,'CVE-2013-7491',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n98Dialt,root),[netAccess(n98Dialt,tcp,80),networkServiceInfo(n98Dialt,httpd,tcp,80,root),vulExists(n98Dialt,'CVE-2013-3096',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n45Dialt,root),[netAccess(n45Dialt,tcp,80),networkServiceInfo(n45Dialt,httpd,tcp,80,root),vulExists(n45Dialt,'CVE-2013-1054',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n46Dialt,root),[netAccess(n46Dialt,tcp,80),networkServiceInfo(n46Dialt,httpd,tcp,80,root),vulExists(n46Dialt,'CVE-2013-4518',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n139Dialt,root),[netAccess(n139Dialt,tcp,80),networkServiceInfo(n139Dialt,httpd,tcp,80,root),vulExists(n139Dialt,'CVE-2013-3316',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n159Dialt,root),[netAccess(n159Dialt,tcp,80),networkServiceInfo(n159Dialt,httpd,tcp,80,root),vulExists(n159Dialt,'CVE-2013-4521',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n12Dialt,root),[netAccess(n12Dialt,tcp,80),networkServiceInfo(n12Dialt,httpd,tcp,80,root),vulExists(n12Dialt,'CVE-2013-4118',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n86Dialt,root),[netAccess(n86Dialt,tcp,80),networkServiceInfo(n86Dialt,httpd,tcp,80,root),vulExists(n86Dialt,'CVE-2013-6671',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n2Dialt,root),[netAccess(n2Dialt,tcp,80),networkServiceInfo(n2Dialt,httpd,tcp,80,root),vulExists(n2Dialt,'CVE-2013-2624',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n28Dialt,root),[netAccess(n28Dialt,tcp,80),networkServiceInfo(n28Dialt,httpd,tcp,80,root),vulExists(n28Dialt,'CVE-2013-0870',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n189Dialt,root),[netAccess(n189Dialt,tcp,80),networkServiceInfo(n189Dialt,httpd,tcp,80,root),vulExists(n189Dialt,'CVE-2013-4968',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n73Dialt,root),[netAccess(n73Dialt,tcp,80),networkServiceInfo(n73Dialt,httpd,tcp,80,root),vulExists(n73Dialt,'CVE-2013-4118',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n154Dialt,root),[netAccess(n154Dialt,tcp,80),networkServiceInfo(n154Dialt,httpd,tcp,80,root),vulExists(n154Dialt,'CVE-2013-4225',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n172Dialt,root),[netAccess(n172Dialt,tcp,80),networkServiceInfo(n172Dialt,httpd,tcp,80,root),vulExists(n172Dialt,'CVE-2013-7490',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n111Dialt,root),[netAccess(n111Dialt,tcp,80),networkServiceInfo(n111Dialt,httpd,tcp,80,root),vulExists(n111Dialt,'CVE-2013-7486',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n66Dialt,root),[netAccess(n66Dialt,tcp,80),networkServiceInfo(n66Dialt,httpd,tcp,80,root),vulExists(n66Dialt,'CVE-2013-2972',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n149Dialt,root),[netAccess(n149Dialt,tcp,80),networkServiceInfo(n149Dialt,httpd,tcp,80,root),vulExists(n149Dialt,'CVE-2013-7070',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n121Dialt,root),[netAccess(n121Dialt,tcp,80),networkServiceInfo(n121Dialt,httpd,tcp,80,root),vulExists(n121Dialt,'CVE-2013-4410',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n42Dialt,root),[netAccess(n42Dialt,tcp,80),networkServiceInfo(n42Dialt,httpd,tcp,80,root),vulExists(n42Dialt,'CVE-2013-0803',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n144Dialt,root),[netAccess(n144Dialt,tcp,80),networkServiceInfo(n144Dialt,httpd,tcp,80,root),vulExists(n144Dialt,'CVE-2013-2262',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n158Dialt,root),[netAccess(n158Dialt,tcp,80),networkServiceInfo(n158Dialt,httpd,tcp,80,root),vulExists(n158Dialt,'CVE-2013-4763',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n44Dialt,root),[netAccess(n44Dialt,tcp,80),networkServiceInfo(n44Dialt,httpd,tcp,80,root),vulExists(n44Dialt,'CVE-2013-5594',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n117Dialt,root),[netAccess(n117Dialt,tcp,80),networkServiceInfo(n117Dialt,httpd,tcp,80,root),vulExists(n117Dialt,'CVE-2013-3070',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n85Dialt,root),[netAccess(n85Dialt,tcp,80),networkServiceInfo(n85Dialt,httpd,tcp,80,root),vulExists(n85Dialt,'CVE-2013-5391',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n27Dialt,root),[netAccess(n27Dialt,tcp,80),networkServiceInfo(n27Dialt,httpd,tcp,80,root),vulExists(n27Dialt,'CVE-2013-7466',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n1Dialt,root),[netAccess(n1Dialt,tcp,80),networkServiceInfo(n1Dialt,httpd,tcp,80,root),vulExists(n1Dialt,'CVE-2013-4593',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n74Dialt,root),[netAccess(n74Dialt,tcp,80),networkServiceInfo(n74Dialt,httpd,tcp,80,root),vulExists(n74Dialt,'CVE-2013-7053',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n76Dialt,root),[netAccess(n76Dialt,tcp,80),networkServiceInfo(n76Dialt,httpd,tcp,80,root),vulExists(n76Dialt,'CVE-2013-1603',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n54Dialt,root),[netAccess(n54Dialt,tcp,80),networkServiceInfo(n54Dialt,httpd,tcp,80,root),vulExists(n54Dialt,'CVE-2013-2233',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n171Dialt,root),[netAccess(n171Dialt,tcp,80),networkServiceInfo(n171Dialt,httpd,tcp,80,root),vulExists(n171Dialt,'CVE-2013-5594',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(fileServer,root),[netAccess(fileServer,rpc,100005),networkServiceInfo(fileServer,mountd,rpc,100005,root),vulExists(fileServer,'CVE-2013-3932',mountd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(fileServer,root),[netAccess(fileServer,rpc,100005),networkServiceInfo(fileServer,mountd,rpc,100005,root),vulExists(fileServer,'CVE-2013-3932',mountd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n25Dialt,root),[netAccess(n25Dialt,tcp,80),networkServiceInfo(n25Dialt,httpd,tcp,80,root),vulExists(n25Dialt,'CVE-2013-1793',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n108Dialt,root),[netAccess(n108Dialt,tcp,80),networkServiceInfo(n108Dialt,httpd,tcp,80,root),vulExists(n108Dialt,'CVE-2013-4752',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n96Dialt,root),[netAccess(n96Dialt,tcp,80),networkServiceInfo(n96Dialt,httpd,tcp,80,root),vulExists(n96Dialt,'CVE-2013-7202',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n65Dialt,root),[netAccess(n65Dialt,tcp,80),networkServiceInfo(n65Dialt,httpd,tcp,80,root),vulExists(n65Dialt,'CVE-2013-7490',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n150Dialt,root),[netAccess(n150Dialt,tcp,80),networkServiceInfo(n150Dialt,httpd,tcp,80,root),vulExists(n150Dialt,'CVE-2013-4225',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n170Dialt,root),[netAccess(n170Dialt,tcp,80),networkServiceInfo(n170Dialt,httpd,tcp,80,root),vulExists(n170Dialt,'CVE-2013-0293',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n21Dialt,root),[netAccess(n21Dialt,tcp,80),networkServiceInfo(n21Dialt,httpd,tcp,80,root),vulExists(n21Dialt,'CVE-2013-4166',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n176Dialt,root),[netAccess(n176Dialt,tcp,80),networkServiceInfo(n176Dialt,httpd,tcp,80,root),vulExists(n176Dialt,'CVE-2013-7370',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n133Dialt,root),[netAccess(n133Dialt,tcp,80),networkServiceInfo(n133Dialt,httpd,tcp,80,root),vulExists(n133Dialt,'CVE-2013-2128',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n95Dialt,root),[netAccess(n95Dialt,tcp,80),networkServiceInfo(n95Dialt,httpd,tcp,80,root),vulExists(n95Dialt,'CVE-2013-7055',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n41Dialt,root),[netAccess(n41Dialt,tcp,80),networkServiceInfo(n41Dialt,httpd,tcp,80,root),vulExists(n41Dialt,'CVE-2013-0725',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n188Dialt,root),[netAccess(n188Dialt,tcp,80),networkServiceInfo(n188Dialt,httpd,tcp,80,root),vulExists(n188Dialt,'CVE-2013-0507',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n10Dialt,root),[netAccess(n10Dialt,tcp,80),networkServiceInfo(n10Dialt,httpd,tcp,80,root),vulExists(n10Dialt,'CVE-2013-4665',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n43Dialt,root),[netAccess(n43Dialt,tcp,80),networkServiceInfo(n43Dialt,httpd,tcp,80,root),vulExists(n43Dialt,'CVE-2013-6276',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n183Dialt,root),[netAccess(n183Dialt,tcp,80),networkServiceInfo(n183Dialt,httpd,tcp,80,root),vulExists(n183Dialt,'CVE-2013-3488',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n89Dialt,root),[netAccess(n89Dialt,tcp,80),networkServiceInfo(n89Dialt,httpd,tcp,80,root),vulExists(n89Dialt,'CVE-2013-7456',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n26Dialt,root),[netAccess(n26Dialt,tcp,80),networkServiceInfo(n26Dialt,httpd,tcp,80,root),vulExists(n26Dialt,'CVE-2013-3636',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n131Dialt,root),[netAccess(n131Dialt,tcp,80),networkServiceInfo(n131Dialt,httpd,tcp,80,root),vulExists(n131Dialt,'CVE-2013-3937',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n71Dialt,root),[netAccess(n71Dialt,tcp,80),networkServiceInfo(n71Dialt,httpd,tcp,80,root),vulExists(n71Dialt,'CVE-2013-4863',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n109Dialt,root),[netAccess(n109Dialt,tcp,80),networkServiceInfo(n109Dialt,httpd,tcp,80,root),vulExists(n109Dialt,'CVE-2013-5116',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n64Dialt,root),[netAccess(n64Dialt,tcp,80),networkServiceInfo(n64Dialt,httpd,tcp,80,root),vulExists(n64Dialt,'CVE-2013-2573',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n146Dialt,root),[netAccess(n146Dialt,tcp,80),networkServiceInfo(n146Dialt,httpd,tcp,80,root),vulExists(n146Dialt,'CVE-2013-3017',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n132Dialt,root),[netAccess(n132Dialt,tcp,80),networkServiceInfo(n132Dialt,httpd,tcp,80,root),vulExists(n132Dialt,'CVE-2013-6647',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n4Dialt,root),[netAccess(n4Dialt,tcp,80),networkServiceInfo(n4Dialt,httpd,tcp,80,root),vulExists(n4Dialt,'CVE-2013-3542',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n175Dialt,root),[netAccess(n175Dialt,tcp,80),networkServiceInfo(n175Dialt,httpd,tcp,80,root),vulExists(n175Dialt,'CVE-2013-6927',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n9Dialt,root),[netAccess(n9Dialt,tcp,80),networkServiceInfo(n9Dialt,httpd,tcp,80,root),vulExists(n9Dialt,'CVE-2013-6364',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n20Dialt,root),[netAccess(n20Dialt,tcp,80),networkServiceInfo(n20Dialt,httpd,tcp,80,root),vulExists(n20Dialt,'CVE-2013-7464',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n31Dialt,root),[netAccess(n31Dialt,tcp,80),networkServiceInfo(n31Dialt,httpd,tcp,80,root),vulExists(n31Dialt,'CVE-2013-2167',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n63Dialt,root),[netAccess(n63Dialt,tcp,80),networkServiceInfo(n63Dialt,httpd,tcp,80,root),vulExists(n63Dialt,'CVE-2013-4246',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n119Dialt,root),[netAccess(n119Dialt,tcp,80),networkServiceInfo(n119Dialt,httpd,tcp,80,root),vulExists(n119Dialt,'CVE-2013-0192',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n83Dialt,root),[netAccess(n83Dialt,tcp,80),networkServiceInfo(n83Dialt,httpd,tcp,80,root),vulExists(n83Dialt,'CVE-2013-2103',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n80Dialt,root),[netAccess(n80Dialt,tcp,80),networkServiceInfo(n80Dialt,httpd,tcp,80,root),vulExists(n80Dialt,'CVE-2013-7203',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n130Dialt,root),[netAccess(n130Dialt,tcp,80),networkServiceInfo(n130Dialt,httpd,tcp,80,root),vulExists(n130Dialt,'CVE-2013-1866',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n167Dialt,root),[netAccess(n167Dialt,tcp,80),networkServiceInfo(n167Dialt,httpd,tcp,80,root),vulExists(n167Dialt,'CVE-2013-7472',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n19Dialt,root),[netAccess(n19Dialt,tcp,80),networkServiceInfo(n19Dialt,httpd,tcp,80,root),vulExists(n19Dialt,'CVE-2013-4318',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n107Dialt,root),[netAccess(n107Dialt,tcp,80),networkServiceInfo(n107Dialt,httpd,tcp,80,root),vulExists(n107Dialt,'CVE-2013-5657',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n40Dialt,root),[netAccess(n40Dialt,tcp,80),networkServiceInfo(n40Dialt,httpd,tcp,80,root),vulExists(n40Dialt,'CVE-2013-2678',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n58Dialt,root),[netAccess(n58Dialt,tcp,80),networkServiceInfo(n58Dialt,httpd,tcp,80,root),vulExists(n58Dialt,'CVE-2013-7371',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n145Dialt,root),[netAccess(n145Dialt,tcp,80),networkServiceInfo(n145Dialt,httpd,tcp,80,root),vulExists(n145Dialt,'CVE-2013-1430',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n157Dialt,root),[netAccess(n157Dialt,tcp,80),networkServiceInfo(n157Dialt,httpd,tcp,80,root),vulExists(n157Dialt,'CVE-2013-4225',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n187Dialt,root),[netAccess(n187Dialt,tcp,80),networkServiceInfo(n187Dialt,httpd,tcp,80,root),vulExists(n187Dialt,'CVE-2013-4367',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n129Dialt,root),[netAccess(n129Dialt,tcp,80),networkServiceInfo(n129Dialt,httpd,tcp,80,root),vulExists(n129Dialt,'CVE-2013-6225',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n116Dialt,root),[netAccess(n116Dialt,tcp,80),networkServiceInfo(n116Dialt,httpd,tcp,80,root),vulExists(n116Dialt,'CVE-2013-1924',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n93Dialt,root),[netAccess(n93Dialt,tcp,80),networkServiceInfo(n93Dialt,httpd,tcp,80,root),vulExists(n93Dialt,'CVE-2013-5017',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n39Dialt,root),[netAccess(n39Dialt,tcp,80),networkServiceInfo(n39Dialt,httpd,tcp,80,root),vulExists(n39Dialt,'CVE-2013-2198',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n3Dialt,root),[netAccess(n3Dialt,tcp,80),networkServiceInfo(n3Dialt,httpd,tcp,80,root),vulExists(n3Dialt,'CVE-2013-7469',httpd,remoteExploit,privEscalation)])).
 
 possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(webServer,apache),[netAccess(webServer,tcp,80),networkServiceInfo(webServer,httpd,tcp,80,apache),vulExists(webServer,'CAN-2002-0392',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n2Inter,root),[netAccess(n2Inter,tcp,80),networkServiceInfo(n2Inter,httpd,tcp,80,root),vulExists(n2Inter,'CVE-2013-4303',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n8Dialt,root),[netAccess(n8Dialt,tcp,80),networkServiceInfo(n8Dialt,httpd,tcp,80,root),vulExists(n8Dialt,'CVE-2013-4796',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n50Inter,root),[netAccess(n50Inter,tcp,80),networkServiceInfo(n50Inter,httpd,tcp,80,root),vulExists(n50Inter,'CVE-2013-2109',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n62Dialt,root),[netAccess(n62Dialt,tcp,80),networkServiceInfo(n62Dialt,httpd,tcp,80,root),vulExists(n62Dialt,'CVE-2013-7087',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n30Inter,root),[netAccess(n30Inter,tcp,80),networkServiceInfo(n30Inter,httpd,tcp,80,root),vulExists(n30Inter,'CVE-2013-2259',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n120Dialt,root),[netAccess(n120Dialt,tcp,80),networkServiceInfo(n120Dialt,httpd,tcp,80,root),vulExists(n120Dialt,'CVE-2013-3314',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n24Inter,root),[netAccess(n24Inter,tcp,80),networkServiceInfo(n24Inter,httpd,tcp,80,root),vulExists(n24Inter,'CVE-2013-4857',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n82Dialt,root),[netAccess(n82Dialt,tcp,80),networkServiceInfo(n82Dialt,httpd,tcp,80,root),vulExists(n82Dialt,'CVE-2013-2049',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n3Inter,root),[netAccess(n3Inter,tcp,80),networkServiceInfo(n3Inter,httpd,tcp,80,root),vulExists(n3Inter,'CVE-2013-1793',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n84Dialt,root),[netAccess(n84Dialt,tcp,80),networkServiceInfo(n84Dialt,httpd,tcp,80,root),vulExists(n84Dialt,'CVE-2013-2106',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n1Inter,root),[netAccess(n1Inter,tcp,80),networkServiceInfo(n1Inter,httpd,tcp,80,root),vulExists(n1Inter,'CVE-2013-0291',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n51Dialt,root),[netAccess(n51Dialt,tcp,80),networkServiceInfo(n51Dialt,httpd,tcp,80,root),vulExists(n51Dialt,'CVE-2013-2675',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n55Inter,root),[netAccess(n55Inter,tcp,80),networkServiceInfo(n55Inter,httpd,tcp,80,root),vulExists(n55Inter,'CVE-2013-4187',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n70Dialt,root),[netAccess(n70Dialt,tcp,80),networkServiceInfo(n70Dialt,httpd,tcp,80,root),vulExists(n70Dialt,'CVE-2013-0161',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n45Inter,root),[netAccess(n45Inter,tcp,80),networkServiceInfo(n45Inter,httpd,tcp,80,root),vulExists(n45Inter,'CVE-2013-6460',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n105Dialt,root),[netAccess(n105Dialt,tcp,80),networkServiceInfo(n105Dialt,httpd,tcp,80,root),vulExists(n105Dialt,'CVE-2013-3517',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n10Inter,root),[netAccess(n10Inter,tcp,80),networkServiceInfo(n10Inter,httpd,tcp,80,root),vulExists(n10Inter,'CVE-2013-7426',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n69Dialt,root),[netAccess(n69Dialt,tcp,80),networkServiceInfo(n69Dialt,httpd,tcp,80,root),vulExists(n69Dialt,'CVE-2013-5106',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n27Inter,root),[netAccess(n27Inter,tcp,80),networkServiceInfo(n27Inter,httpd,tcp,80,root),vulExists(n27Inter,'CVE-2013-4975',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n166Dialt,root),[netAccess(n166Dialt,tcp,80),networkServiceInfo(n166Dialt,httpd,tcp,80,root),vulExists(n166Dialt,'CVE-2013-5637',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n60Inter,root),[netAccess(n60Inter,tcp,80),networkServiceInfo(n60Inter,httpd,tcp,80,root),vulExists(n60Inter,'CVE-2013-4868',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n23Dialt,root),[netAccess(n23Dialt,tcp,80),networkServiceInfo(n23Dialt,httpd,tcp,80,root),vulExists(n23Dialt,'CVE-2013-3551',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n17Inter,root),[netAccess(n17Inter,tcp,80),networkServiceInfo(n17Inter,httpd,tcp,80,root),vulExists(n17Inter,'CVE-2013-1943',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n57Dialt,root),[netAccess(n57Dialt,tcp,80),networkServiceInfo(n57Dialt,httpd,tcp,80,root),vulExists(n57Dialt,'CVE-2013-20002',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n8Inter,root),[netAccess(n8Inter,tcp,80),networkServiceInfo(n8Inter,httpd,tcp,80,root),vulExists(n8Inter,'CVE-2013-1420',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n127Dialt,root),[netAccess(n127Dialt,tcp,80),networkServiceInfo(n127Dialt,httpd,tcp,80,root),vulExists(n127Dialt,'CVE-2013-4848',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n64Inter,root),[netAccess(n64Inter,tcp,80),networkServiceInfo(n64Inter,httpd,tcp,80,root),vulExists(n64Inter,'CVE-2013-7351',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n114Dialt,root),[netAccess(n114Dialt,tcp,80),networkServiceInfo(n114Dialt,httpd,tcp,80,root),vulExists(n114Dialt,'CVE-2013-2259',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n49Inter,root),[netAccess(n49Inter,tcp,80),networkServiceInfo(n49Inter,httpd,tcp,80,root),vulExists(n49Inter,'CVE-2013-3685',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n91Dialt,root),[netAccess(n91Dialt,tcp,80),networkServiceInfo(n91Dialt,httpd,tcp,80,root),vulExists(n91Dialt,'CVE-2013-20002',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n29Inter,root),[netAccess(n29Inter,tcp,80),networkServiceInfo(n29Inter,httpd,tcp,80,root),vulExists(n29Inter,'CVE-2013-4105',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n35Dialt,root),[netAccess(n35Dialt,tcp,80),networkServiceInfo(n35Dialt,httpd,tcp,80,root),vulExists(n35Dialt,'CVE-2013-3568',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n21Inter,root),[netAccess(n21Inter,tcp,80),networkServiceInfo(n21Inter,httpd,tcp,80,root),vulExists(n21Inter,'CVE-2013-2623',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n173Dialt,root),[netAccess(n173Dialt,tcp,80),networkServiceInfo(n173Dialt,httpd,tcp,80,root),vulExists(n173Dialt,'CVE-2013-1599',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n43Inter,root),[netAccess(n43Inter,tcp,80),networkServiceInfo(n43Inter,httpd,tcp,80,root),vulExists(n43Inter,'CVE-2013-1437',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n110Dialt,root),[netAccess(n110Dialt,tcp,80),networkServiceInfo(n110Dialt,httpd,tcp,80,root),vulExists(n110Dialt,'CVE-2013-3312',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n54Inter,root),[netAccess(n54Inter,tcp,80),networkServiceInfo(n54Inter,httpd,tcp,80,root),vulExists(n54Inter,'CVE-2013-7202',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n18Dialt,root),[netAccess(n18Dialt,tcp,80),networkServiceInfo(n18Dialt,httpd,tcp,80,root),vulExists(n18Dialt,'CVE-2013-4441',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n37Inter,root),[netAccess(n37Inter,tcp,80),networkServiceInfo(n37Inter,httpd,tcp,80,root),vulExists(n37Inter,'CVE-2013-1598',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n29Dialt,root),[netAccess(n29Dialt,tcp,80),networkServiceInfo(n29Dialt,httpd,tcp,80,root),vulExists(n29Dialt,'CVE-2013-2972',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n20Inter,root),[netAccess(n20Inter,tcp,80),networkServiceInfo(n20Inter,httpd,tcp,80,root),vulExists(n20Inter,'CVE-2013-5945',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n79Dialt,root),[netAccess(n79Dialt,tcp,80),networkServiceInfo(n79Dialt,httpd,tcp,80,root),vulExists(n79Dialt,'CVE-2013-4454',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n9Inter,root),[netAccess(n9Inter,tcp,80),networkServiceInfo(n9Inter,httpd,tcp,80,root),vulExists(n9Inter,'CVE-2013-6878',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n22Dialt,root),[netAccess(n22Dialt,tcp,80),networkServiceInfo(n22Dialt,httpd,tcp,80,root),vulExists(n22Dialt,'CVE-2013-4454',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n39Inter,root),[netAccess(n39Inter,tcp,80),networkServiceInfo(n39Inter,httpd,tcp,80,root),vulExists(n39Inter,'CVE-2013-2115',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n61Dialt,root),[netAccess(n61Dialt,tcp,80),networkServiceInfo(n61Dialt,httpd,tcp,80,root),vulExists(n61Dialt,'CVE-2013-3542',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n26Inter,root),[netAccess(n26Inter,tcp,80),networkServiceInfo(n26Inter,httpd,tcp,80,root),vulExists(n26Inter,'CVE-2013-0738',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n72Dialt,root),[netAccess(n72Dialt,tcp,80),networkServiceInfo(n72Dialt,httpd,tcp,80,root),vulExists(n72Dialt,'CVE-2013-0342',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n59Inter,root),[netAccess(n59Inter,tcp,80),networkServiceInfo(n59Inter,httpd,tcp,80,root),vulExists(n59Inter,'CVE-2013-1631',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n50Dialt,root),[netAccess(n50Dialt,tcp,80),networkServiceInfo(n50Dialt,httpd,tcp,80,root),vulExists(n50Dialt,'CVE-2013-3017',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n48Inter,root),[netAccess(n48Inter,tcp,80),networkServiceInfo(n48Inter,httpd,tcp,80,root),vulExists(n48Inter,'CVE-2013-3946',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n104Dialt,root),[netAccess(n104Dialt,tcp,80),networkServiceInfo(n104Dialt,httpd,tcp,80,root),vulExists(n104Dialt,'CVE-2013-7449',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n35Inter,root),[netAccess(n35Inter,tcp,80),networkServiceInfo(n35Inter,httpd,tcp,80,root),vulExists(n35Inter,'CVE-2013-5661',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n151Dialt,root),[netAccess(n151Dialt,tcp,80),networkServiceInfo(n151Dialt,httpd,tcp,80,root),vulExists(n151Dialt,'CVE-2013-7370',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n15Inter,root),[netAccess(n15Inter,tcp,80),networkServiceInfo(n15Inter,httpd,tcp,80,root),vulExists(n15Inter,'CVE-2013-2101',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n165Dialt,root),[netAccess(n165Dialt,tcp,80),networkServiceInfo(n165Dialt,httpd,tcp,80,root),vulExists(n165Dialt,'CVE-2013-3591',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n42Inter,root),[netAccess(n42Inter,tcp,80),networkServiceInfo(n42Inter,httpd,tcp,80,root),vulExists(n42Inter,'CVE-2013-4412',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n177Dialt,root),[netAccess(n177Dialt,tcp,80),networkServiceInfo(n177Dialt,httpd,tcp,80,root),vulExists(n177Dialt,'CVE-2013-7482',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n53Inter,root),[netAccess(n53Inter,tcp,80),networkServiceInfo(n53Inter,httpd,tcp,80,root),vulExists(n53Inter,'CVE-2013-0185',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n17Dialt,root),[netAccess(n17Dialt,tcp,80),networkServiceInfo(n17Dialt,httpd,tcp,80,root),vulExists(n17Dialt,'CVE-2013-1607',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n36Inter,root),[netAccess(n36Inter,tcp,80),networkServiceInfo(n36Inter,httpd,tcp,80,root),vulExists(n36Inter,'CVE-2013-7449',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n5Dialt,root),[netAccess(n5Dialt,tcp,80),networkServiceInfo(n5Dialt,httpd,tcp,80,root),vulExists(n5Dialt,'CVE-2013-2093',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n19Inter,root),[netAccess(n19Inter,tcp,80),networkServiceInfo(n19Inter,httpd,tcp,80,root),vulExists(n19Inter,'CVE-2013-6880',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n56Dialt,root),[netAccess(n56Dialt,tcp,80),networkServiceInfo(n56Dialt,httpd,tcp,80,root),vulExists(n56Dialt,'CVE-2013-7381',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n14Inter,root),[netAccess(n14Inter,tcp,80),networkServiceInfo(n14Inter,httpd,tcp,80,root),vulExists(n14Inter,'CVE-2013-4791',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n138Dialt,root),[netAccess(n138Dialt,tcp,80),networkServiceInfo(n138Dialt,httpd,tcp,80,root),vulExists(n138Dialt,'CVE-2013-4861',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n40Inter,root),[netAccess(n40Inter,tcp,80),networkServiceInfo(n40Inter,httpd,tcp,80,root),vulExists(n40Inter,'CVE-2013-3718',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n124Dialt,root),[netAccess(n124Dialt,tcp,80),networkServiceInfo(n124Dialt,httpd,tcp,80,root),vulExists(n124Dialt,'CVE-2013-3942',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n7Inter,root),[netAccess(n7Inter,tcp,80),networkServiceInfo(n7Inter,httpd,tcp,80,root),vulExists(n7Inter,'CVE-2013-7470',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n115Dialt,root),[netAccess(n115Dialt,tcp,80),networkServiceInfo(n115Dialt,httpd,tcp,80,root),vulExists(n115Dialt,'CVE-2013-5653',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n62Inter,root),[netAccess(n62Inter,tcp,80),networkServiceInfo(n62Inter,httpd,tcp,80,root),vulExists(n62Inter,'CVE-2013-3568',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n106Dialt,root),[netAccess(n106Dialt,tcp,80),networkServiceInfo(n106Dialt,httpd,tcp,80,root),vulExists(n106Dialt,'CVE-2013-4535',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n58Inter,root),[netAccess(n58Inter,tcp,80),networkServiceInfo(n58Inter,httpd,tcp,80,root),vulExists(n58Inter,'CVE-2013-1400',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n94Dialt,root),[netAccess(n94Dialt,tcp,80),networkServiceInfo(n94Dialt,httpd,tcp,80,root),vulExists(n94Dialt,'CVE-2013-1816',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n38Inter,root),[netAccess(n38Inter,tcp,80),networkServiceInfo(n38Inter,httpd,tcp,80,root),vulExists(n38Inter,'CVE-2013-3703',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n34Dialt,root),[netAccess(n34Dialt,tcp,80),networkServiceInfo(n34Dialt,httpd,tcp,80,root),vulExists(n34Dialt,'CVE-2013-6876',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n12Inter,root),[netAccess(n12Inter,tcp,80),networkServiceInfo(n12Inter,httpd,tcp,80,root),vulExists(n12Inter,'CVE-2013-1592',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n7Dialt,root),[netAccess(n7Dialt,tcp,80),networkServiceInfo(n7Dialt,httpd,tcp,80,root),vulExists(n7Dialt,'CVE-2013-4241',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(fileServer,root),[netAccess(fileServer,rpc,100005),networkServiceInfo(fileServer,mountd,rpc,100005,root),vulExists(fileServer,'CVE-2013-2093',mountd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n60Dialt,root),[netAccess(n60Dialt,tcp,80),networkServiceInfo(n60Dialt,httpd,tcp,80,root),vulExists(n60Dialt,'CVE-2013-3636',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(fileServer,root),[netAccess(fileServer,rpc,100005),networkServiceInfo(fileServer,mountd,rpc,100005,root),vulExists(fileServer,'CVE-2013-2093',mountd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n182Dialt,root),[netAccess(n182Dialt,tcp,80),networkServiceInfo(n182Dialt,httpd,tcp,80,root),vulExists(n182Dialt,'CVE-2013-7459',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n6Inter,root),[netAccess(n6Inter,tcp,80),networkServiceInfo(n6Inter,httpd,tcp,80,root),vulExists(n6Inter,'CVE-2013-0738',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n174Dialt,root),[netAccess(n174Dialt,tcp,80),networkServiceInfo(n174Dialt,httpd,tcp,80,root),vulExists(n174Dialt,'CVE-2013-7476',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n47Inter,root),[netAccess(n47Inter,tcp,80),networkServiceInfo(n47Inter,httpd,tcp,80,root),vulExists(n47Inter,'CVE-2013-6014',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n160Dialt,root),[netAccess(n160Dialt,tcp,80),networkServiceInfo(n160Dialt,httpd,tcp,80,root),vulExists(n160Dialt,'CVE-2013-4187',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n34Inter,root),[netAccess(n34Inter,tcp,80),networkServiceInfo(n34Inter,httpd,tcp,80,root),vulExists(n34Inter,'CVE-2013-1425',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n103Dialt,root),[netAccess(n103Dialt,tcp,80),networkServiceInfo(n103Dialt,httpd,tcp,80,root),vulExists(n103Dialt,'CVE-2013-7053',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n41Inter,root),[netAccess(n41Inter,tcp,80),networkServiceInfo(n41Inter,httpd,tcp,80,root),vulExists(n41Inter,'CVE-2013-2681',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n153Dialt,root),[netAccess(n153Dialt,tcp,80),networkServiceInfo(n153Dialt,httpd,tcp,80,root),vulExists(n153Dialt,'CVE-2013-3314',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n52Inter,root),[netAccess(n52Inter,tcp,80),networkServiceInfo(n52Inter,httpd,tcp,80,root),vulExists(n52Inter,'CVE-2013-2682',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n164Dialt,root),[netAccess(n164Dialt,tcp,80),networkServiceInfo(n164Dialt,httpd,tcp,80,root),vulExists(n164Dialt,'CVE-2013-6022',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n23Inter,root),[netAccess(n23Inter,tcp,80),networkServiceInfo(n23Inter,httpd,tcp,80,root),vulExists(n23Inter,'CVE-2013-1938',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n16Dialt,root),[netAccess(n16Dialt,tcp,80),networkServiceInfo(n16Dialt,httpd,tcp,80,root),vulExists(n16Dialt,'CVE-2013-7370',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n22Inter,root),[netAccess(n22Inter,tcp,80),networkServiceInfo(n22Inter,httpd,tcp,80,root),vulExists(n22Inter,'CVE-2013-5654',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n15Dialt,root),[netAccess(n15Dialt,tcp,80),networkServiceInfo(n15Dialt,httpd,tcp,80,root),vulExists(n15Dialt,'CVE-2013-4583',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n16Inter,root),[netAccess(n16Inter,tcp,80),networkServiceInfo(n16Inter,httpd,tcp,80,root),vulExists(n16Inter,'CVE-2013-4235',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n38Dialt,root),[netAccess(n38Dialt,tcp,80),networkServiceInfo(n38Dialt,httpd,tcp,80,root),vulExists(n38Dialt,'CVE-2013-4318',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n5Inter,root),[netAccess(n5Inter,tcp,80),networkServiceInfo(n5Inter,httpd,tcp,80,root),vulExists(n5Inter,'CVE-2013-7173',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n128Dialt,root),[netAccess(n128Dialt,tcp,80),networkServiceInfo(n128Dialt,httpd,tcp,80,root),vulExists(n128Dialt,'CVE-2013-1430',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n0Inter,root),[netAccess(n0Inter,tcp,80),networkServiceInfo(n0Inter,httpd,tcp,80,root),vulExists(n0Inter,'CVE-2013-6648',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n113Dialt,root),[netAccess(n113Dialt,tcp,80),networkServiceInfo(n113Dialt,httpd,tcp,80,root),vulExists(n113Dialt,'CVE-2013-3093',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n63Inter,root),[netAccess(n63Inter,tcp,80),networkServiceInfo(n63Inter,httpd,tcp,80,root),vulExists(n63Inter,'CVE-2013-5653',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n33Dialt,root),[netAccess(n33Dialt,tcp,80),networkServiceInfo(n33Dialt,httpd,tcp,80,root),vulExists(n33Dialt,'CVE-2013-4110',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n57Inter,root),[netAccess(n57Inter,tcp,80),networkServiceInfo(n57Inter,httpd,tcp,80,root),vulExists(n57Inter,'CVE-2013-6430',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n137Dialt,root),[netAccess(n137Dialt,tcp,80),networkServiceInfo(n137Dialt,httpd,tcp,80,root),vulExists(n137Dialt,'CVE-2013-7371',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n46Inter,root),[netAccess(n46Inter,tcp,80),networkServiceInfo(n46Inter,httpd,tcp,80,root),vulExists(n46Inter,'CVE-2013-0161',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n156Dialt,root),[netAccess(n156Dialt,tcp,80),networkServiceInfo(n156Dialt,httpd,tcp,80,root),vulExists(n156Dialt,'CVE-2013-4462',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n13Inter,root),[netAccess(n13Inter,tcp,80),networkServiceInfo(n13Inter,httpd,tcp,80,root),vulExists(n13Inter,'CVE-2013-6362',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n6Dialt,root),[netAccess(n6Dialt,tcp,80),networkServiceInfo(n6Dialt,httpd,tcp,80,root),vulExists(n6Dialt,'CVE-2013-5582',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n33Inter,root),[netAccess(n33Inter,tcp,80),networkServiceInfo(n33Inter,httpd,tcp,80,root),vulExists(n33Inter,'CVE-2013-3018',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n11Dialt,root),[netAccess(n11Dialt,tcp,80),networkServiceInfo(n11Dialt,httpd,tcp,80,root),vulExists(n11Dialt,'CVE-2013-4791',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n65Inter,tcp,80),[hacl(n37Inter,n65Inter,tcp,80),advances(n37Inter,n65Inter),execCode(n37Inter,root)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n148Dialt,root),[netAccess(n148Dialt,tcp,80),networkServiceInfo(n148Dialt,httpd,tcp,80,root),vulExists(n148Dialt,'CVE-2013-4441',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,_h8382),[canAccessFile(fileServer,root,write,_h8382),execCode(fileServer,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n192Dialt,tcp,80),[hacl(n111Dialt,n192Dialt,tcp,80),advances(n111Dialt,n192Dialt),execCode(n111Dialt,root)])).
 
-possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,_h8382),[canAccessFile(fileServer,root,write,_h8382),execCode(fileServer,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n192Dialt,tcp,80),[hacl(n10Dialt,n192Dialt,tcp,80),advances(n10Dialt,n192Dialt),execCode(n10Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n51Inter,tcp,80),[hacl(n31Inter,n51Inter,tcp,80),advances(n31Inter,n51Inter),execCode(n31Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n192Dialt,tcp,80),[hacl(n8Dialt,n192Dialt,tcp,80),advances(n8Dialt,n192Dialt),execCode(n8Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n31Inter,tcp,80),[hacl(n29Inter,n31Inter,tcp,80),advances(n29Inter,n31Inter),execCode(n29Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n192Dialt,tcp,80),[hacl(n110Dialt,n192Dialt,tcp,80),advances(n110Dialt,n192Dialt),execCode(n110Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n31Inter,tcp,80),[hacl(n13Inter,n31Inter,tcp,80),advances(n13Inter,n31Inter),execCode(n13Inter,root)])).
+possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,_h16129),[canAccessFile(fileServer,root,write,_h16129),execCode(fileServer,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n25Inter,tcp,80),[hacl(n18Inter,n25Inter,tcp,80),advances(n18Inter,n25Inter),execCode(n18Inter,root)])).
+possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,_h16129),[canAccessFile(fileServer,root,write,_h16129),execCode(fileServer,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n18Inter,tcp,80),[hacl(n11Inter,n18Inter,tcp,80),advances(n11Inter,n18Inter),execCode(n11Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n143Dialt,tcp,80),[hacl(n142Dialt,n143Dialt,tcp,80),advances(n142Dialt,n143Dialt),execCode(n142Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n18Inter,tcp,80),[hacl(n14Inter,n18Inter,tcp,80),advances(n14Inter,n18Inter),execCode(n14Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n143Dialt,tcp,80),[hacl(n141Dialt,n143Dialt,tcp,80),advances(n141Dialt,n143Dialt),execCode(n141Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n4Inter,tcp,80),[hacl(n2Inter,n4Inter,tcp,80),advances(n2Inter,n4Inter),execCode(n2Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n123Dialt,tcp,80),[hacl(n52Dialt,n123Dialt,tcp,80),advances(n52Dialt,n123Dialt),execCode(n52Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n56Inter,tcp,80),[hacl(n29Inter,n56Inter,tcp,80),advances(n29Inter,n56Inter),execCode(n29Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n101Dialt,tcp,80),[hacl(n98Dialt,n101Dialt,tcp,80),advances(n98Dialt,n101Dialt),execCode(n98Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n44Inter,tcp,80),[hacl(n32Inter,n44Inter,tcp,80),advances(n32Inter,n44Inter),execCode(n32Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n163Dialt,tcp,80),[hacl(n162Dialt,n163Dialt,tcp,80),advances(n162Dialt,n163Dialt),execCode(n162Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n11Inter,tcp,80),[hacl(n3Inter,n11Inter,tcp,80),advances(n3Inter,n11Inter),execCode(n3Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n0Dialt,tcp,80),[hacl(fileServer,n0Dialt,tcp,80),advances(fileServer,n0Dialt),execCode(fileServer,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n32Inter,tcp,80),[hacl(n31Inter,n32Inter,tcp,80),advances(n31Inter,n32Inter),execCode(n31Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n0Dialt,tcp,80),[hacl(fileServer,n0Dialt,tcp,80),advances(fileServer,n0Dialt),execCode(fileServer,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n32Inter,tcp,80),[hacl(n13Inter,n32Inter,tcp,80),advances(n13Inter,n32Inter),execCode(n13Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n184Dialt,tcp,80),[hacl(n14Dialt,n184Dialt,tcp,80),advances(n14Dialt,n184Dialt),execCode(n14Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n28Inter,tcp,80),[hacl(n14Inter,n28Inter,tcp,80),advances(n14Inter,n28Inter),execCode(n14Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n184Dialt,tcp,80),[hacl(n26Dialt,n184Dialt,tcp,80),advances(n26Dialt,n184Dialt),execCode(n26Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n61Inter,tcp,80),[hacl(n29Inter,n61Inter,tcp,80),advances(n29Inter,n61Inter),execCode(n29Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n184Dialt,tcp,80),[hacl(n19Dialt,n184Dialt,tcp,80),advances(n19Dialt,n184Dialt),execCode(n19Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n122Dialt,tcp,80),[hacl(n121Dialt,n122Dialt,tcp,80),advances(n121Dialt,n122Dialt),execCode(n121Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n185Dialt,tcp,80),[hacl(n30Dialt,n185Dialt,tcp,80),advances(n30Dialt,n185Dialt),execCode(n30Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n185Dialt,tcp,80),[hacl(n39Dialt,n185Dialt,tcp,80),advances(n39Dialt,n185Dialt),execCode(n39Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n185Dialt,tcp,80),[hacl(n34Dialt,n185Dialt,tcp,80),advances(n34Dialt,n185Dialt),execCode(n34Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n186Dialt,tcp,80),[hacl(n75Dialt,n186Dialt,tcp,80),advances(n75Dialt,n186Dialt),execCode(n75Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n186Dialt,tcp,80),[hacl(n178Dialt,n186Dialt,tcp,80),advances(n178Dialt,n186Dialt),execCode(n178Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n186Dialt,tcp,80),[hacl(n77Dialt,n186Dialt,tcp,80),advances(n77Dialt,n186Dialt),execCode(n77Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n55Dialt,tcp,80),[hacl(n2Dialt,n55Dialt,tcp,80),advances(n2Dialt,n55Dialt),execCode(n2Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n142Dialt,tcp,80),[hacl(n141Dialt,n142Dialt,tcp,80),advances(n141Dialt,n142Dialt),execCode(n141Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n191Dialt,tcp,80),[hacl(n155Dialt,n191Dialt,tcp,80),advances(n155Dialt,n191Dialt),execCode(n155Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n191Dialt,tcp,80),[hacl(n150Dialt,n191Dialt,tcp,80),advances(n150Dialt,n191Dialt),execCode(n150Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n191Dialt,tcp,80),[hacl(n153Dialt,n191Dialt,tcp,80),advances(n153Dialt,n191Dialt),execCode(n153Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n99Dialt,tcp,80),[hacl(n98Dialt,n99Dialt,tcp,80),advances(n98Dialt,n99Dialt),execCode(n98Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n52Dialt,tcp,80),[hacl(n49Dialt,n52Dialt,tcp,80),advances(n49Dialt,n52Dialt),execCode(n49Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n162Dialt,tcp,80),[hacl(n161Dialt,n162Dialt,tcp,80),advances(n161Dialt,n162Dialt),execCode(n161Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n178Dialt,tcp,80),[hacl(n177Dialt,n178Dialt,tcp,80),advances(n177Dialt,n178Dialt),execCode(n177Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n112Dialt,tcp,80),[hacl(n111Dialt,n112Dialt,tcp,80),advances(n111Dialt,n112Dialt),execCode(n111Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n88Dialt,tcp,80),[hacl(n87Dialt,n88Dialt,tcp,80),advances(n87Dialt,n88Dialt),execCode(n87Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n14Dialt,tcp,80),[hacl(n13Dialt,n14Dialt,tcp,80),advances(n13Dialt,n14Dialt),execCode(n13Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n32Dialt,tcp,80),[hacl(n30Dialt,n32Dialt,tcp,80),advances(n30Dialt,n32Dialt),execCode(n30Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n53Dialt,tcp,80),[hacl(n52Dialt,n53Dialt,tcp,80),advances(n52Dialt,n53Dialt),execCode(n52Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n53Dialt,tcp,80),[hacl(n2Dialt,n53Dialt,tcp,80),advances(n2Dialt,n53Dialt),execCode(n2Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n77Dialt,tcp,80),[hacl(n74Dialt,n77Dialt,tcp,80),advances(n74Dialt,n77Dialt),execCode(n74Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n155Dialt,tcp,80),[hacl(n68Dialt,n155Dialt,tcp,80),advances(n68Dialt,n155Dialt),execCode(n68Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n155Dialt,tcp,80),[hacl(n88Dialt,n155Dialt,tcp,80),advances(n88Dialt,n155Dialt),execCode(n88Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n155Dialt,tcp,80),[hacl(n67Dialt,n155Dialt,tcp,80),advances(n67Dialt,n155Dialt),execCode(n67Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n141Dialt,tcp,80),[hacl(n139Dialt,n141Dialt,tcp,80),advances(n139Dialt,n141Dialt),execCode(n139Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n152Dialt,tcp,80),[hacl(n150Dialt,n152Dialt,tcp,80),advances(n150Dialt,n152Dialt),execCode(n150Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n152Dialt,tcp,80),[hacl(n151Dialt,n152Dialt,tcp,80),advances(n151Dialt,n152Dialt),execCode(n151Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n49Dialt,tcp,80),[hacl(n46Dialt,n49Dialt,tcp,80),advances(n46Dialt,n49Dialt),execCode(n46Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n13Dialt,tcp,80),[hacl(n12Dialt,n13Dialt,tcp,80),advances(n12Dialt,n13Dialt),execCode(n12Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n30Dialt,tcp,80),[hacl(n26Dialt,n30Dialt,tcp,80),advances(n26Dialt,n30Dialt),execCode(n26Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n168Dialt,tcp,80),[hacl(n86Dialt,n168Dialt,tcp,80),advances(n86Dialt,n168Dialt),execCode(n86Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n168Dialt,tcp,80),[hacl(n167Dialt,n168Dialt,tcp,80),advances(n167Dialt,n168Dialt),execCode(n167Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n140Dialt,tcp,80),[hacl(n139Dialt,n140Dialt,tcp,80),advances(n139Dialt,n140Dialt),execCode(n139Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n161Dialt,tcp,80),[hacl(n159Dialt,n161Dialt,tcp,80),advances(n159Dialt,n161Dialt),execCode(n159Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n190Dialt,tcp,80),[hacl(n68Dialt,n190Dialt,tcp,80),advances(n68Dialt,n190Dialt),execCode(n68Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n190Dialt,tcp,80),[hacl(n67Dialt,n190Dialt,tcp,80),advances(n67Dialt,n190Dialt),execCode(n67Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n190Dialt,tcp,80),[hacl(n66Dialt,n190Dialt,tcp,80),advances(n66Dialt,n190Dialt),execCode(n66Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n98Dialt,tcp,80),[hacl(n96Dialt,n98Dialt,tcp,80),advances(n96Dialt,n98Dialt),execCode(n96Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n46Dialt,tcp,80),[hacl(n42Dialt,n46Dialt,tcp,80),advances(n42Dialt,n46Dialt),execCode(n42Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n12Dialt,tcp,80),[hacl(n10Dialt,n12Dialt,tcp,80),advances(n10Dialt,n12Dialt),execCode(n10Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n86Dialt,tcp,80),[hacl(n85Dialt,n86Dialt,tcp,80),advances(n85Dialt,n86Dialt),execCode(n85Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n2Dialt,tcp,80),[hacl(n1Dialt,n2Dialt,tcp,80),advances(n1Dialt,n2Dialt),execCode(n1Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n28Dialt,tcp,80),[hacl(n26Dialt,n28Dialt,tcp,80),advances(n26Dialt,n28Dialt),execCode(n26Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n189Dialt,tcp,80),[hacl(n75Dialt,n189Dialt,tcp,80),advances(n75Dialt,n189Dialt),execCode(n75Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n189Dialt,tcp,80),[hacl(n73Dialt,n189Dialt,tcp,80),advances(n73Dialt,n189Dialt),execCode(n73Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n189Dialt,tcp,80),[hacl(n172Dialt,n189Dialt,tcp,80),advances(n172Dialt,n189Dialt),execCode(n172Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n189Dialt,tcp,80),[hacl(n74Dialt,n189Dialt,tcp,80),advances(n74Dialt,n189Dialt),execCode(n74Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n154Dialt,tcp,80),[hacl(n149Dialt,n154Dialt,tcp,80),advances(n149Dialt,n154Dialt),execCode(n149Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n172Dialt,tcp,80),[hacl(n170Dialt,n172Dialt,tcp,80),advances(n170Dialt,n172Dialt),execCode(n170Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n111Dialt,tcp,80),[hacl(n109Dialt,n111Dialt,tcp,80),advances(n109Dialt,n111Dialt),execCode(n109Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n111Dialt,tcp,80),[hacl(n110Dialt,n111Dialt,tcp,80),advances(n110Dialt,n111Dialt),execCode(n110Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n66Dialt,tcp,80),[hacl(n65Dialt,n66Dialt,tcp,80),advances(n65Dialt,n66Dialt),execCode(n65Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n121Dialt,tcp,80),[hacl(n117Dialt,n121Dialt,tcp,80),advances(n117Dialt,n121Dialt),execCode(n117Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n42Dialt,tcp,80),[hacl(n40Dialt,n42Dialt,tcp,80),advances(n40Dialt,n42Dialt),execCode(n40Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n144Dialt,tcp,80),[hacl(n143Dialt,n144Dialt,tcp,80),advances(n143Dialt,n144Dialt),execCode(n143Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n144Dialt,tcp,80),[hacl(n133Dialt,n144Dialt,tcp,80),advances(n133Dialt,n144Dialt),execCode(n133Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n85Dialt,tcp,80),[hacl(n83Dialt,n85Dialt,tcp,80),advances(n83Dialt,n85Dialt),execCode(n83Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n27Dialt,tcp,80),[hacl(n26Dialt,n27Dialt,tcp,80),advances(n26Dialt,n27Dialt),execCode(n26Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n74Dialt,tcp,80),[hacl(n71Dialt,n74Dialt,tcp,80),advances(n71Dialt,n74Dialt),execCode(n71Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n171Dialt,tcp,80),[hacl(n170Dialt,n171Dialt,tcp,80),advances(n170Dialt,n171Dialt),execCode(n170Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n25Dialt,tcp,80),[hacl(n21Dialt,n25Dialt,tcp,80),advances(n21Dialt,n25Dialt),execCode(n21Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n96Dialt,tcp,80),[hacl(n95Dialt,n96Dialt,tcp,80),advances(n95Dialt,n96Dialt),execCode(n95Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n65Dialt,tcp,80),[hacl(n64Dialt,n65Dialt,tcp,80),advances(n64Dialt,n65Dialt),execCode(n64Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n150Dialt,tcp,80),[hacl(n149Dialt,n150Dialt,tcp,80),advances(n149Dialt,n150Dialt),execCode(n149Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n150Dialt,tcp,80),[hacl(n145Dialt,n150Dialt,tcp,80),advances(n145Dialt,n150Dialt),execCode(n145Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n133Dialt,tcp,80),[hacl(n132Dialt,n133Dialt,tcp,80),advances(n132Dialt,n133Dialt),execCode(n132Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n41Dialt,tcp,80),[hacl(n40Dialt,n41Dialt,tcp,80),advances(n40Dialt,n41Dialt),execCode(n40Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n188Dialt,tcp,80),[hacl(n159Dialt,n188Dialt,tcp,80),advances(n159Dialt,n188Dialt),execCode(n159Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n188Dialt,tcp,80),[hacl(n158Dialt,n188Dialt,tcp,80),advances(n158Dialt,n188Dialt),execCode(n158Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n188Dialt,tcp,80),[hacl(n157Dialt,n188Dialt,tcp,80),advances(n157Dialt,n188Dialt),execCode(n157Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n10Dialt,tcp,80),[hacl(n9Dialt,n10Dialt,tcp,80),advances(n9Dialt,n10Dialt),execCode(n9Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n183Dialt,tcp,80),[hacl(n118Dialt,n183Dialt,tcp,80),advances(n118Dialt,n183Dialt),execCode(n118Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n183Dialt,tcp,80),[hacl(n117Dialt,n183Dialt,tcp,80),advances(n117Dialt,n183Dialt),execCode(n117Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n183Dialt,tcp,80),[hacl(n116Dialt,n183Dialt,tcp,80),advances(n116Dialt,n183Dialt),execCode(n116Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n89Dialt,tcp,80),[hacl(n83Dialt,n89Dialt,tcp,80),advances(n83Dialt,n89Dialt),execCode(n83Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n71Dialt,tcp,80),[hacl(n70Dialt,n71Dialt,tcp,80),advances(n70Dialt,n71Dialt),execCode(n70Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n109Dialt,tcp,80),[hacl(n106Dialt,n109Dialt,tcp,80),advances(n106Dialt,n109Dialt),execCode(n106Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n64Dialt,tcp,80),[hacl(n58Dialt,n64Dialt,tcp,80),advances(n58Dialt,n64Dialt),execCode(n58Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n146Dialt,tcp,80),[hacl(n145Dialt,n146Dialt,tcp,80),advances(n145Dialt,n146Dialt),execCode(n145Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n132Dialt,tcp,80),[hacl(n128Dialt,n132Dialt,tcp,80),advances(n128Dialt,n132Dialt),execCode(n128Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n9Dialt,tcp,80),[hacl(n8Dialt,n9Dialt,tcp,80),advances(n8Dialt,n9Dialt),execCode(n8Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n119Dialt,tcp,80),[hacl(n118Dialt,n119Dialt,tcp,80),advances(n118Dialt,n119Dialt),execCode(n118Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n119Dialt,tcp,80),[hacl(n23Dialt,n119Dialt,tcp,80),advances(n23Dialt,n119Dialt),execCode(n23Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n83Dialt,tcp,80),[hacl(n82Dialt,n83Dialt,tcp,80),advances(n82Dialt,n83Dialt),execCode(n82Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n80Dialt,tcp,80),[hacl(n70Dialt,n80Dialt,tcp,80),advances(n70Dialt,n80Dialt),execCode(n70Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n80Dialt,tcp,80),[hacl(n79Dialt,n80Dialt,tcp,80),advances(n79Dialt,n80Dialt),execCode(n79Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n167Dialt,tcp,80),[hacl(n166Dialt,n167Dialt,tcp,80),advances(n166Dialt,n167Dialt),execCode(n166Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n19Dialt,tcp,80),[hacl(n17Dialt,n19Dialt,tcp,80),advances(n17Dialt,n19Dialt),execCode(n17Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n40Dialt,tcp,80),[hacl(n39Dialt,n40Dialt,tcp,80),advances(n39Dialt,n40Dialt),execCode(n39Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n58Dialt,tcp,80),[hacl(n57Dialt,n58Dialt,tcp,80),advances(n57Dialt,n58Dialt),execCode(n57Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n145Dialt,tcp,80),[hacl(n143Dialt,n145Dialt,tcp,80),advances(n143Dialt,n145Dialt),execCode(n143Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n157Dialt,tcp,80),[hacl(n155Dialt,n157Dialt,tcp,80),advances(n155Dialt,n157Dialt),execCode(n155Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n187Dialt,tcp,80),[hacl(n97Dialt,n187Dialt,tcp,80),advances(n97Dialt,n187Dialt),execCode(n97Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n187Dialt,tcp,80),[hacl(n95Dialt,n187Dialt,tcp,80),advances(n95Dialt,n187Dialt),execCode(n95Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n187Dialt,tcp,80),[hacl(n93Dialt,n187Dialt,tcp,80),advances(n93Dialt,n187Dialt),execCode(n93Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n129Dialt,tcp,80),[hacl(n128Dialt,n129Dialt,tcp,80),advances(n128Dialt,n129Dialt),execCode(n128Dialt,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n116Dialt,tcp,80),[hacl(n114Dialt,n116Dialt,tcp,80),advances(n114Dialt,n116Dialt),execCode(n114Dialt,root)])).
 
 possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(webServer,tcp,80),[hacl(fileServer,webServer,tcp,80),advances(fileServer,webServer),execCode(fileServer,root)])).
 
 possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(webServer,tcp,80),[hacl(fileServer,webServer,tcp,80),advances(fileServer,webServer),execCode(fileServer,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n2Inter,tcp,80),[hacl(n1Inter,n2Inter,tcp,80),advances(n1Inter,n2Inter),execCode(n1Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n120Dialt,tcp,80),[hacl(n116Dialt,n120Dialt,tcp,80),advances(n116Dialt,n120Dialt),execCode(n116Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n50Inter,tcp,80),[hacl(n31Inter,n50Inter,tcp,80),advances(n31Inter,n50Inter),execCode(n31Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n120Dialt,tcp,80),[hacl(n22Dialt,n120Dialt,tcp,80),advances(n22Dialt,n120Dialt),execCode(n22Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n30Inter,tcp,80),[hacl(n13Inter,n30Inter,tcp,80),advances(n13Inter,n30Inter),execCode(n13Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n82Dialt,tcp,80),[hacl(n79Dialt,n82Dialt,tcp,80),advances(n79Dialt,n82Dialt),execCode(n79Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n24Inter,tcp,80),[hacl(n18Inter,n24Inter,tcp,80),advances(n18Inter,n24Inter),execCode(n18Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n70Dialt,tcp,80),[hacl(n69Dialt,n70Dialt,tcp,80),advances(n69Dialt,n70Dialt),execCode(n69Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n3Inter,tcp,80),[hacl(n0Inter,n3Inter,tcp,80),advances(n0Inter,n3Inter),execCode(n0Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n105Dialt,tcp,80),[hacl(n104Dialt,n105Dialt,tcp,80),advances(n104Dialt,n105Dialt),execCode(n104Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n3Inter,tcp,80),[hacl(n2Inter,n3Inter,tcp,80),advances(n2Inter,n3Inter),execCode(n2Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n166Dialt,tcp,80),[hacl(n165Dialt,n166Dialt,tcp,80),advances(n165Dialt,n166Dialt),execCode(n165Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n3Inter,tcp,80),[hacl(n0Inter,n3Inter,tcp,80),advances(n0Inter,n3Inter),execCode(n0Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n23Dialt,tcp,80),[hacl(n16Dialt,n23Dialt,tcp,80),advances(n16Dialt,n23Dialt),execCode(n16Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n1Inter,tcp,80),[hacl(n0Inter,n1Inter,tcp,80),advances(n0Inter,n1Inter),execCode(n0Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n57Dialt,tcp,80),[hacl(n56Dialt,n57Dialt,tcp,80),advances(n56Dialt,n57Dialt),execCode(n56Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n1Inter,tcp,80),[hacl(n0Inter,n1Inter,tcp,80),advances(n0Inter,n1Inter),execCode(n0Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n35Dialt,tcp,80),[hacl(n34Dialt,n35Dialt,tcp,80),advances(n34Dialt,n35Dialt),execCode(n34Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n55Inter,tcp,80),[hacl(n29Inter,n55Inter,tcp,80),advances(n29Inter,n55Inter),execCode(n29Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n110Dialt,tcp,80),[hacl(n108Dialt,n110Dialt,tcp,80),advances(n108Dialt,n110Dialt),execCode(n108Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n45Inter,tcp,80),[hacl(n32Inter,n45Inter,tcp,80),advances(n32Inter,n45Inter),execCode(n32Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n110Dialt,tcp,80),[hacl(n7Dialt,n110Dialt,tcp,80),advances(n7Dialt,n110Dialt),execCode(n7Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n10Inter,tcp,80),[hacl(n3Inter,n10Inter,tcp,80),advances(n3Inter,n10Inter),execCode(n3Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n22Dialt,tcp,80),[hacl(n21Dialt,n22Dialt,tcp,80),advances(n21Dialt,n22Dialt),execCode(n21Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n27Inter,tcp,80),[hacl(n14Inter,n27Inter,tcp,80),advances(n14Inter,n27Inter),execCode(n14Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n104Dialt,tcp,80),[hacl(n103Dialt,n104Dialt,tcp,80),advances(n103Dialt,n104Dialt),execCode(n103Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n60Inter,tcp,80),[hacl(n29Inter,n60Inter,tcp,80),advances(n29Inter,n60Inter),execCode(n29Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n151Dialt,tcp,80),[hacl(n68Dialt,n151Dialt,tcp,80),advances(n68Dialt,n151Dialt),execCode(n68Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n17Inter,tcp,80),[hacl(n11Inter,n17Inter,tcp,80),advances(n11Inter,n17Inter),execCode(n11Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n165Dialt,tcp,80),[hacl(n163Dialt,n165Dialt,tcp,80),advances(n163Dialt,n165Dialt),execCode(n163Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n17Inter,tcp,80),[hacl(n11Inter,n17Inter,tcp,80),advances(n11Inter,n17Inter),execCode(n11Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n177Dialt,tcp,80),[hacl(n154Dialt,n177Dialt,tcp,80),advances(n154Dialt,n177Dialt),execCode(n154Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n8Inter,tcp,80),[hacl(n1Inter,n8Inter,tcp,80),advances(n1Inter,n8Inter),execCode(n1Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n17Dialt,tcp,80),[hacl(n16Dialt,n17Dialt,tcp,80),advances(n16Dialt,n17Dialt),execCode(n16Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n64Inter,tcp,80),[hacl(n37Inter,n64Inter,tcp,80),advances(n37Inter,n64Inter),execCode(n37Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n5Dialt,tcp,80),[hacl(n2Dialt,n5Dialt,tcp,80),advances(n2Dialt,n5Dialt),execCode(n2Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n49Inter,tcp,80),[hacl(n31Inter,n49Inter,tcp,80),advances(n31Inter,n49Inter),execCode(n31Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n56Dialt,tcp,80),[hacl(n55Dialt,n56Dialt,tcp,80),advances(n55Dialt,n56Dialt),execCode(n55Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n29Inter,tcp,80),[hacl(n13Inter,n29Inter,tcp,80),advances(n13Inter,n29Inter),execCode(n13Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n124Dialt,tcp,80),[hacl(n123Dialt,n124Dialt,tcp,80),advances(n123Dialt,n124Dialt),execCode(n123Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n21Inter,tcp,80),[hacl(n17Inter,n21Inter,tcp,80),advances(n17Inter,n21Inter),execCode(n17Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n115Dialt,tcp,80),[hacl(n112Dialt,n115Dialt,tcp,80),advances(n112Dialt,n115Dialt),execCode(n112Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n43Inter,tcp,80),[hacl(n30Inter,n43Inter,tcp,80),advances(n30Inter,n43Inter),execCode(n30Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n115Dialt,tcp,80),[hacl(n114Dialt,n115Dialt,tcp,80),advances(n114Dialt,n115Dialt),execCode(n114Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n54Inter,tcp,80),[hacl(n31Inter,n54Inter,tcp,80),advances(n31Inter,n54Inter),execCode(n31Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n106Dialt,tcp,80),[hacl(n1Dialt,n106Dialt,tcp,80),advances(n1Dialt,n106Dialt),execCode(n1Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n37Inter,tcp,80),[hacl(n31Inter,n37Inter,tcp,80),advances(n31Inter,n37Inter),execCode(n31Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n106Dialt,tcp,80),[hacl(n105Dialt,n106Dialt,tcp,80),advances(n105Dialt,n106Dialt),execCode(n105Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n37Inter,tcp,80),[hacl(n29Inter,n37Inter,tcp,80),advances(n29Inter,n37Inter),execCode(n29Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n94Dialt,tcp,80),[hacl(n89Dialt,n94Dialt,tcp,80),advances(n89Dialt,n94Dialt),execCode(n89Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n37Inter,tcp,80),[hacl(n36Inter,n37Inter,tcp,80),advances(n36Inter,n37Inter),execCode(n36Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n94Dialt,tcp,80),[hacl(n93Dialt,n94Dialt,tcp,80),advances(n93Dialt,n94Dialt),execCode(n93Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n20Inter,tcp,80),[hacl(n12Inter,n20Inter,tcp,80),advances(n12Inter,n20Inter),execCode(n12Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n94Dialt,tcp,80),[hacl(n91Dialt,n94Dialt,tcp,80),advances(n91Dialt,n94Dialt),execCode(n91Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n9Inter,tcp,80),[hacl(n3Inter,n9Inter,tcp,80),advances(n3Inter,n9Inter),execCode(n3Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n7Dialt,tcp,80),[hacl(n6Dialt,n7Dialt,tcp,80),advances(n6Dialt,n7Dialt),execCode(n6Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n39Inter,tcp,80),[hacl(n38Inter,n39Inter,tcp,80),advances(n38Inter,n39Inter),execCode(n38Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n174Dialt,tcp,80),[hacl(n142Dialt,n174Dialt,tcp,80),advances(n142Dialt,n174Dialt),execCode(n142Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n26Inter,tcp,80),[hacl(n14Inter,n26Inter,tcp,80),advances(n14Inter,n26Inter),execCode(n14Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n174Dialt,tcp,80),[hacl(n171Dialt,n174Dialt,tcp,80),advances(n171Dialt,n174Dialt),execCode(n171Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n59Inter,tcp,80),[hacl(n29Inter,n59Inter,tcp,80),advances(n29Inter,n59Inter),execCode(n29Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n103Dialt,tcp,80),[hacl(n101Dialt,n103Dialt,tcp,80),advances(n101Dialt,n103Dialt),execCode(n101Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n48Inter,tcp,80),[hacl(n31Inter,n48Inter,tcp,80),advances(n31Inter,n48Inter),execCode(n31Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n164Dialt,tcp,80),[hacl(n163Dialt,n164Dialt,tcp,80),advances(n163Dialt,n164Dialt),execCode(n163Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n35Inter,tcp,80),[hacl(n16Inter,n35Inter,tcp,80),advances(n16Inter,n35Inter),execCode(n16Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n16Dialt,tcp,80),[hacl(n15Dialt,n16Dialt,tcp,80),advances(n15Dialt,n16Dialt),execCode(n15Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n15Inter,tcp,80),[hacl(n13Inter,n15Inter,tcp,80),advances(n13Inter,n15Inter),execCode(n13Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n128Dialt,tcp,80),[hacl(n123Dialt,n128Dialt,tcp,80),advances(n123Dialt,n128Dialt),execCode(n123Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n42Inter,tcp,80),[hacl(n30Inter,n42Inter,tcp,80),advances(n30Inter,n42Inter),execCode(n30Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n128Dialt,tcp,80),[hacl(n127Dialt,n128Dialt,tcp,80),advances(n127Dialt,n128Dialt),execCode(n127Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n53Inter,tcp,80),[hacl(n31Inter,n53Inter,tcp,80),advances(n31Inter,n53Inter),execCode(n31Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n113Dialt,tcp,80),[hacl(n112Dialt,n113Dialt,tcp,80),advances(n112Dialt,n113Dialt),execCode(n112Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n36Inter,tcp,80),[hacl(n29Inter,n36Inter,tcp,80),advances(n29Inter,n36Inter),execCode(n29Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n33Dialt,tcp,80),[hacl(n32Dialt,n33Dialt,tcp,80),advances(n32Dialt,n33Dialt),execCode(n32Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n19Inter,tcp,80),[hacl(n12Inter,n19Inter,tcp,80),advances(n12Inter,n19Inter),execCode(n12Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n156Dialt,tcp,80),[hacl(n88Dialt,n156Dialt,tcp,80),advances(n88Dialt,n156Dialt),execCode(n88Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n14Inter,tcp,80),[hacl(n2Inter,n14Inter,tcp,80),advances(n2Inter,n14Inter),execCode(n2Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n156Dialt,tcp,80),[hacl(n155Dialt,n156Dialt,tcp,80),advances(n155Dialt,n156Dialt),execCode(n155Dialt,root)])).
 
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n14Inter,tcp,80),[hacl(n12Inter,n14Inter,tcp,80),advances(n12Inter,n14Inter),execCode(n12Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n14Inter,tcp,80),[hacl(n13Inter,n14Inter,tcp,80),advances(n13Inter,n14Inter),execCode(n13Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n40Inter,tcp,80),[hacl(n38Inter,n40Inter,tcp,80),advances(n38Inter,n40Inter),execCode(n38Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n7Inter,tcp,80),[hacl(n1Inter,n7Inter,tcp,80),advances(n1Inter,n7Inter),execCode(n1Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n62Inter,tcp,80),[hacl(n36Inter,n62Inter,tcp,80),advances(n36Inter,n62Inter),execCode(n36Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n58Inter,tcp,80),[hacl(n29Inter,n58Inter,tcp,80),advances(n29Inter,n58Inter),execCode(n29Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n38Inter,tcp,80),[hacl(n30Inter,n38Inter,tcp,80),advances(n30Inter,n38Inter),execCode(n30Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n38Inter,tcp,80),[hacl(n1Inter,n38Inter,tcp,80),advances(n1Inter,n38Inter),execCode(n1Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n38Inter,tcp,80),[hacl(n37Inter,n38Inter,tcp,80),advances(n37Inter,n38Inter),execCode(n37Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n12Inter,tcp,80),[hacl(n11Inter,n12Inter,tcp,80),advances(n11Inter,n12Inter),execCode(n11Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n6Inter,tcp,80),[hacl(n1Inter,n6Inter,tcp,80),advances(n1Inter,n6Inter),execCode(n1Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n47Inter,tcp,80),[hacl(n31Inter,n47Inter,tcp,80),advances(n31Inter,n47Inter),execCode(n31Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n34Inter,tcp,80),[hacl(n16Inter,n34Inter,tcp,80),advances(n16Inter,n34Inter),execCode(n16Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n41Inter,tcp,80),[hacl(n30Inter,n41Inter,tcp,80),advances(n30Inter,n41Inter),execCode(n30Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n52Inter,tcp,80),[hacl(n31Inter,n52Inter,tcp,80),advances(n31Inter,n52Inter),execCode(n31Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n23Inter,tcp,80),[hacl(n18Inter,n23Inter,tcp,80),advances(n18Inter,n23Inter),execCode(n18Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n22Inter,tcp,80),[hacl(n11Inter,n22Inter,tcp,80),advances(n11Inter,n22Inter),execCode(n11Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n16Inter,tcp,80),[hacl(n15Inter,n16Inter,tcp,80),advances(n15Inter,n16Inter),execCode(n15Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n16Inter,tcp,80),[hacl(n14Inter,n16Inter,tcp,80),advances(n14Inter,n16Inter),execCode(n14Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n5Inter,tcp,80),[hacl(n2Inter,n5Inter,tcp,80),advances(n2Inter,n5Inter),execCode(n2Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n0Inter,tcp,80),[hacl(fileServer,n0Inter,tcp,80),advances(fileServer,n0Inter),execCode(fileServer,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n0Inter,tcp,80),[hacl(fileServer,n0Inter,tcp,80),advances(fileServer,n0Inter),execCode(fileServer,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n63Inter,tcp,80),[hacl(n37Inter,n63Inter,tcp,80),advances(n37Inter,n63Inter),execCode(n37Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n57Inter,tcp,80),[hacl(n29Inter,n57Inter,tcp,80),advances(n29Inter,n57Inter),execCode(n29Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n46Inter,tcp,80),[hacl(n32Inter,n46Inter,tcp,80),advances(n32Inter,n46Inter),execCode(n32Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n13Inter,tcp,80),[hacl(n11Inter,n13Inter,tcp,80),advances(n11Inter,n13Inter),execCode(n11Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n13Inter,tcp,80),[hacl(n3Inter,n13Inter,tcp,80),advances(n3Inter,n13Inter),execCode(n3Inter,root)])).
-
-possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n33Inter,tcp,80),[hacl(n13Inter,n33Inter,tcp,80),advances(n13Inter,n33Inter),execCode(n13Inter,root)])).
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(n6Dialt,tcp,80),[hacl(n5Dialt,n6Dialt,tcp,80),advances(n5Dialt,n6Dialt),execCode(n5Dialt,root)])).
 
 possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,'/export'),[canAccessFile(fileServer,root,write,'/export'),execCode(fileServer,root)])).
 
 possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,'/export'),[canAccessFile(fileServer,root,write,'/export'),execCode(fileServer,root)])).
 
-possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,_h8674),[canAccessFile(fileServer,root,write,_h8674),execCode(fileServer,root)])).
+possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,_h16421),[canAccessFile(fileServer,root,write,_h16421),execCode(fileServer,root)])).
 
-possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,_h8674),[canAccessFile(fileServer,root,write,_h8674),execCode(fileServer,root)])).
+possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,_h16421),[canAccessFile(fileServer,root,write,_h16421),execCode(fileServer,root)])).
 
-possible_duplicate_trace_step(because(4,rule_desc('Trojan horse installation',0.80000000000000004),execCode(fileServer,root),[accessFile(fileServer,write,_h8382)])).
+possible_duplicate_trace_step(because(4,rule_desc('Trojan horse installation',0.80000000000000004),execCode(fileServer,root),[accessFile(fileServer,write,_h16129)])).
 
-possible_duplicate_trace_step(because(4,rule_desc('Trojan horse installation',0.80000000000000004),execCode(fileServer,root),[accessFile(fileServer,write,_h8674)])).
+possible_duplicate_trace_step(because(4,rule_desc('Trojan horse installation',0.80000000000000004),execCode(fileServer,root),[accessFile(fileServer,write,_h16421)])).
 
-possible_duplicate_trace_step(because(16,rule_desc('NFS semantics',1),accessFile(n0Inter,write,'/usr/local/share'),[accessFile(fileServer,write,'/export'),nfsMounted(n0Inter,'/usr/local/share',fileServer,'/export',read)])).
+possible_duplicate_trace_step(because(16,rule_desc('NFS semantics',1),accessFile(n0Dialt,write,'/usr/local/share'),[accessFile(fileServer,write,'/export'),nfsMounted(n0Dialt,'/usr/local/share',fileServer,'/export',read)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n65Inter,root),[netAccess(n65Inter,tcp,80),networkServiceInfo(n65Inter,httpd,tcp,80,root),vulExists(n65Inter,'CVE-2013-4035',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n192Dialt,root),[netAccess(n192Dialt,tcp,80),networkServiceInfo(n192Dialt,httpd,tcp,80,root),vulExists(n192Dialt,'CVE-2013-1602',httpd,remoteExploit,privEscalation)])).
 
-possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n65Inter,root),[netAccess(n65Inter,tcp,80),networkServiceInfo(n65Inter,httpd,tcp,80,root),vulExists(n65Inter,'CVE-2013-4035',httpd,remoteExploit,privEscalation)])).
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(n192Dialt,root),[netAccess(n192Dialt,tcp,80),networkServiceInfo(n192Dialt,httpd,tcp,80,root),vulExists(n192Dialt,'CVE-2013-1602',httpd,remoteExploit,privEscalation)])).
 

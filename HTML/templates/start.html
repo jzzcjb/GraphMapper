@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<style>
+        body {
+            
+			background: white;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .container1 {
+            width: 100vw;
+            height: 100vh;
+            display:flex;
+            justify-content:center;
+			align-items: center;
+            background-color: #fdfdfd;
+            background-image: linear-gradient(to top, rgba(253, 253, 253, 0.3) 0%, rgba(193, 218, 255, 0.3) 100%);
+        }
+        .container3 {
+            width: 100vw;
+            /* height: 70vh; */
+            display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+            background-color: #ffffff;
+        }
+        .container4 {
+            width: 100vw;
+            height: 100vh;
+            /* background-color: #eaf3f9; */
+            display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+            background-image: linear-gradient(to bottom, rgba(253, 253, 253, 0.3) 0%, rgba(193, 218, 255, 0.3) 100%);
+        }
+        .left-section {
+            background: linear-gradient(to right, rgb(63, 72, 204, 1), rgb(63, 72, 204, 0.8));
+			height:100vh;
+			width:48vw;
+			float:left;
+			color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+		h1 {
+            font-size: 6vw;
+            font-family: '华文新魏';
+            margin-bottom: 10px;
+			left: 30px;
+            transition: transform 0.2s;
+            transform: translateX(0%);
+        }
+        h2 {
+            font-size: 1.5vw;
+        }
+        .image {
+            position: absolute;
+            width: 60vw;
+            height: auto;
+            transform: translate(-50%,-10%);
+            opacity: 0.5;
+        }
+        .right-section {
+            background: linear-gradient(to right, rgb(63, 72, 204, 0.8), white);
+			height:100vh;
+			width:48vw;
+			float:left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+		.box {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 3px solid rgb(63, 72, 204);
+            padding: 1vw;
+            text-align: center;
+            position: absolute;
+			border-radius: 0.5vw;
+			top: 55%;
+            left: 65%;
+			transform: translate(0,-50%);
+        }
+        .intro {
+            width: auto;
+            margin: 5vh 0vh 0vh 0vh;
+            /* background-color: #2c2c2c80; */
+            /* border: 3px solid rgb(63, 72, 204); */
+            color: #d2d2d2;
+            padding-left: 2vw;
+            padding-right: 2vw;
+            /* text-align: center; */
+            /* position: absolute; */
+			border-radius: 1vw;
+        }
+        .title {
+            width: 35vw;
+            color: #5f9bf1;
+            padding-left: 2vw;
+            padding-right: 2vw;
+            text-align: center;
+            /* position: absolute; */
+			border-radius: 1vw;
+            /* background-image: url("/static/loginbg.png");
+            background-attachment: fixed */
+        }
+        .title > h1 {
+            font-size: 60px;
+            font-family: '华文新魏';
+            margin-bottom: 10px;
+			left: 30px;
+            transition: transform 0.2s;
+            transform: translateX(0%);
+        }
+        input[type="text"], input[type="password"], input[type="submit"] {
+            width: 100%;
+            font-size: 1vw;
+            padding: 0.5vw;
+            margin-bottom: 0.5vw;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            font-size: 1vw;
+            background-color: rgb(63, 72, 204);
+            color: #fff;
+            cursor: pointer;
+        }
+        .side-sec {
+            width: 20vw;
+            height: 100vh;
+            background-color: #071a71;
+            float: left;
+        }
+        .words-sec {
+            width: 40%;
+            max-width: 480px;
+            height: 100vh;
+            /* background-color: #3f49cc; */
+            float: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .fig-sec {
+            width: 60%;
+            max-width: 720px;
+            height: 100vh;
+            /* background-color: #3f49cc; */
+            float: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            font-size: 16px;
+            margin-top: 16px;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* border-radius: 1.3vw; */
+            /* background-color: rgba(9, 3, 55, 0.769); */
+            padding-left: 32px;
+            padding-right: 32px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 999px;
+            box-shadow: 0 13px 24px rgba(95, 155, 241, 0.45);
+            background-image: linear-gradient(to right bottom, #82b5ff 0%, #3c89f6 0%);
+        }
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 26px rgba(95, 155, 241, 0.4);
+        }
+        .feature8-blocks {
+            /* margin: 100px; */
+            padding-left: 10px;
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+			/* flex-direction: column; */
+			justify-content: center;
+			align-items: center;
+        }
+        .feature8-block-child {
+            float: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 36px 24px 24px;
+            border-radius: 6px;
+            height: 100%;
+            width: 20%;
+            max-width: 200px;
+            transition: box-shadow 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+            /* background 0.45s cubic-bezier(0.645, 0.045, 0.355, 1); */
+        }
+        .feature8-block-child:hover {
+        background-color: #f6f9ff;
+        box-shadow: 0 12px 36px rgba(100, 100, 136, 0.15);
+        }
+        .feature8-block-child:hover .feature8-block-content {
+        opacity: 1;
+        }
+        .feature8-block-image {
+        display: inline-block;
+        }
+        .feature8-block-title {
+        font-size: 16px;
+        font-weight: 400;
+        color: #314659;
+        margin-top: 16px;
+        }
+        .feature8-block-content {
+        opacity: 1;
+        font-size: 14px;
+        line-height: 22px;
+        color: rgba(49, 70, 89, 0.65);
+        margin-top: 36px;
+        text-align: left;
+        transition: opacity 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        .feature8-block-arrow {
+            width: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sub-title-wrapper {
+        text-align: center;
+        margin-bottom: 40px;
+        }
+        .sub-title-h1 {
+        font-size: 32px;
+        color: #314659;
+        }
+        .sub-title-content {
+        font-size: 16px;
+        color: #58626a;
+        }
+        /* .feature8-button {
+        text-align: center;
+        }
+        .feature8-button-wrapper {
+        margin-top: 16px;
+        }
+        .feature8-button .ant-btn {
+        padding: 8px 40px;
+        border-radius: 20px;
+        line-height: 1.5;
+        height: 40px;
+        border: none;
+        color: #fff;
+        background-color: #3c89f6;
+        background-image: linear-gradient(135deg, #82b5ff 0%, #3c89f6 100%);
+        box-shadow: 0 9px 22px rgba(95, 155, 241, 0.35);
+        transition: color 0.45s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 0.45s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+        will-change: transform, box-shadow;
+        }
+        .feature8-button .ant-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 26px rgba(95, 155, 241, 0.4);
+        } */
+    </style>
+<meta charset="utf-8"> 
+</head>
+<body>
+<div id="container" class="container1">
+	<!-- <div class="left-section">
+        <div id="image-container" class="image-container">
+            <img src="static/loginbg.png" class="image" alt="error">
+        </div>
+        <h1>Graph</h1>
+        <h1>Mapper</h1>
+    </div>
+	<div class="right-section">
+        <div class="box">
+            <h2>Login</h2>
+                <form action="/login" style="background-color: #fff;" method="POST">
+                    <input type="text" name="username" placeholder="Username" required><br>
+                    <input type="password" name="password" placeholder="Password" required><br>
+                    <input type="submit" value="Login">
+                </form>
+            
+        </div>
+
+	</div> -->
+    <div class="words-sec">
+        <div class="title">
+            <!-- <img src="/static/loginbg.png" class="image" alt="error"> -->
+            <h1>Graph Mapper</h1>
+        </div>
+        <div class="intro">
+            <p style="font-size: large; color: #333;">基于异构攻击图对抗分析的数据安全保险定价系统</p>
+            <!-- <p style="font-size: small;">国家高度重视数据安全保险，2020年国家指导意见将数据列为了第五大生产要素，开启了中国数据市场的快速发展，数据市场潜力巨大。</p> -->
+            <p style="font-size: small; color: #666;">数据安全保险作为承保数据安全风险的新险种、数据安全服务的新模式，有利于行业企业提升数据安全风险应对能力。
+            </p>
+        </div>
+        <a href="{{ url_for('main') }}" class="button">
+                <b><p>START</p></b>
+        </a>
+    </div>
+    <div class="fig-sec" style="width: 40%">
+        <img src="/static/pricing.png" alt="No image" style="width: 100%">
+    </div>
+</div>
+<div class="container3">
+    <div class="sub-title-wrapper" data-edit="titleWrapper">
+        <h1 class="sub-title-h1"><span>整体模型框架</span></h1>
+        <div class="sub-title-content"><span>金字塔结构，由下至上，分为四个部分</span></div>
+    </div>
+    <img src="/static/layer.png" alt="No image" style="width:80%; max-width: 1085px;">
+</div>
+<div class="container4">
+    <div class="sub-title-wrapper" data-edit="titleWrapper">
+        <h1 class="sub-title-h1"><span>使用流程</span></h1>
+        <div class="sub-title-content"><span>流程简单清晰，快速响应需求</span></div>
+    </div>
+    <div class="feature8-blocks">
+        <div class="feature8-block-child">
+            <img src="/static/process-icon1.png" alt="img" style="max-width: 40%">
+            <h1 name="title" class="feature8-block-title"><span>上传信息</span></h1>
+            <div name="content" class="feature8-block-content"><span>上传用户系统系统信息配置以及网络拓扑结构</span></div>
+        </div>
+        <div class="feature8-block-arrow">
+            <img src="https://gw.alipayobjects.com/zos/basement_prod/167bee48-fbc0-436a-ba9e-c116b4044293.svg" alt="img">
+        </div>
+        <div class="feature8-block-child">
+            <img src="/static/process-icon2.png" alt="img" style="max-width: 40%">
+            <h1 name="title" class="feature8-block-title"><span>查看结果</span></h1>
+            <div name="content" class="feature8-block-content"><span>基于防御优化决策成本分析，计算保费结果</span></div>
+        </div>
+        <div class="feature8-block-arrow">
+            <img src="https://gw.alipayobjects.com/zos/basement_prod/167bee48-fbc0-436a-ba9e-c116b4044293.svg" alt="img">
+        </div>
+        <div class="feature8-block-child">
+            <img src="/static/process-icon3.png" alt="img" style="max-width: 40%">
+            <h1 name="title" class="feature8-block-title"><span>详情分析</span></h1>
+            <div name="content" class="feature8-block-content"><span>网络特征的详细特性以及脆弱点建议</span></div>
+        </div>
+        <!-- <div class="feature8-block-arrow">
+            <img src="https://gw.alipayobjects.com/zos/basement_prod/167bee48-fbc0-436a-ba9e-c116b4044293.svg" alt="img">
+        </div>
+        <div class="feature8-block-child">
+            <div name="image" class="feature8-block-image"><img src="https://gw.alipayobjects.com/zos/basement_prod/d8933673-1463-438a-ac43-1a8f193ebf34.svg" alt="img"></div>
+            <h1 name="title" class="feature8-block-title"><span>需求沟通</span></h1>
+            <div name="content" class="feature8-block-content"><span>沟通业务需求，对接人：诚凡、芸彩</span></div>
+        </div> -->
+    </div>
+    <a href="{{ url_for('main') }}" class="button">
+        <b><p>开始体验</p></b>
+    </a>
+</div>
+</div>
+</body>
+<script>
+</script>
+</html>

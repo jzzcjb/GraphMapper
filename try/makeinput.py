@@ -30,7 +30,7 @@ H = os.walk("../dataset/graph_topologyzoo/sources")
 Nodes = []
 G = nx.DiGraph()
 for path, dir_list, file_list in H:
-    for file_name in file_list[1:2]:   ##################
+    for file_name in file_list[15:16]:   ##################
         Graph = nx.read_graphml(path+'/'+file_name)
         for i in Graph.nodes:
             Nodes.append(i+file_name[0:5])
@@ -54,7 +54,7 @@ for path, dir_list, file_list in H:
     f.write("hacl(webServer, _,  _, _).\n")
     f.write("hacl(fileServer, webServer, _, _).\n")
     f.write("hacl(fileServer, "+attackerLocated+", _, _).\n")
-    for file_name in file_list[1:2]:   ##################
+    for file_name in file_list[15:16]:   ##################
         Graph = nx.read_graphml(path+'/'+file_name)
         for j in Graph.edges:
             G.add_edge(j[0], j[1])

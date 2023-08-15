@@ -1,362 +1,943 @@
 attackerLocated(internet).
-attackGoal(execCode(n65Inter,_)).
+attackGoal(execCode(n192Dialt,_)).
 
 networkServiceInfo(fileServer, mountd, rpc, 100005, root).
-nfsExportInfo(fileServer, '/export', _anyAccess, n0Inter).
+nfsExportInfo(fileServer, '/export', _anyAccess, n0Dialt).
 nfsExportInfo(fileServer, '/export', _anyAccess, webServer).
-vulExists(fileServer, 'CVE-2013-2093', mountd).
-vulProperty('CVE-2013-2093', remoteExploit, privEscalation).
+vulExists(fileServer, 'CVE-2013-3932', mountd).
+vulProperty('CVE-2013-3932', remoteExploit, privEscalation).
 localFileProtection(fileServer, root, _, _).
 
 vulExists(webServer, 'CAN-2002-0392', httpd).
 vulProperty('CAN-2002-0392', remoteExploit, privEscalation).
 networkServiceInfo(webServer , httpd, tcp , 80 , apache).
 
-nfsMounted(n0Inter, '/usr/local/share', fileServer, '/export', read).
+nfsMounted(n0Dialt, '/usr/local/share', fileServer, '/export', read).
 
 hacl(internet, webServer, tcp, 80).
 hacl(webServer, _,  _, _).
 hacl(fileServer, webServer, _, _).
-hacl(fileServer, n0Inter, _, _).
-hacl(n0Inter,n1Inter,tcp,80).
-hacl(n0Inter,n3Inter,tcp,80).
-hacl(n1Inter,n2Inter,tcp,80).
-hacl(n1Inter,n6Inter,tcp,80).
-hacl(n1Inter,n38Inter,tcp,80).
-hacl(n1Inter,n7Inter,tcp,80).
-hacl(n1Inter,n8Inter,tcp,80).
-hacl(n2Inter,n3Inter,tcp,80).
-hacl(n2Inter,n4Inter,tcp,80).
-hacl(n2Inter,n5Inter,tcp,80).
-hacl(n2Inter,n14Inter,tcp,80).
-hacl(n3Inter,n9Inter,tcp,80).
-hacl(n3Inter,n10Inter,tcp,80).
-hacl(n3Inter,n11Inter,tcp,80).
-hacl(n3Inter,n13Inter,tcp,80).
-hacl(n11Inter,n12Inter,tcp,80).
-hacl(n11Inter,n13Inter,tcp,80).
-hacl(n11Inter,n17Inter,tcp,80).
-hacl(n11Inter,n17Inter,tcp,80).
-hacl(n11Inter,n18Inter,tcp,80).
-hacl(n11Inter,n22Inter,tcp,80).
-hacl(n12Inter,n19Inter,tcp,80).
-hacl(n12Inter,n20Inter,tcp,80).
-hacl(n12Inter,n14Inter,tcp,80).
-hacl(n13Inter,n32Inter,tcp,80).
-hacl(n13Inter,n33Inter,tcp,80).
-hacl(n13Inter,n14Inter,tcp,80).
-hacl(n13Inter,n15Inter,tcp,80).
-hacl(n13Inter,n29Inter,tcp,80).
-hacl(n13Inter,n30Inter,tcp,80).
-hacl(n13Inter,n31Inter,tcp,80).
-hacl(n14Inter,n16Inter,tcp,80).
-hacl(n14Inter,n18Inter,tcp,80).
-hacl(n14Inter,n26Inter,tcp,80).
-hacl(n14Inter,n27Inter,tcp,80).
-hacl(n14Inter,n28Inter,tcp,80).
-hacl(n15Inter,n16Inter,tcp,80).
-hacl(n16Inter,n34Inter,tcp,80).
-hacl(n16Inter,n35Inter,tcp,80).
-hacl(n17Inter,n21Inter,tcp,80).
-hacl(n18Inter,n24Inter,tcp,80).
-hacl(n18Inter,n25Inter,tcp,80).
-hacl(n18Inter,n23Inter,tcp,80).
-hacl(n29Inter,n36Inter,tcp,80).
-hacl(n29Inter,n37Inter,tcp,80).
-hacl(n29Inter,n55Inter,tcp,80).
-hacl(n29Inter,n56Inter,tcp,80).
-hacl(n29Inter,n57Inter,tcp,80).
-hacl(n29Inter,n58Inter,tcp,80).
-hacl(n29Inter,n59Inter,tcp,80).
-hacl(n29Inter,n60Inter,tcp,80).
-hacl(n29Inter,n61Inter,tcp,80).
-hacl(n29Inter,n31Inter,tcp,80).
-hacl(n30Inter,n41Inter,tcp,80).
-hacl(n30Inter,n42Inter,tcp,80).
-hacl(n30Inter,n43Inter,tcp,80).
-hacl(n30Inter,n38Inter,tcp,80).
-hacl(n31Inter,n32Inter,tcp,80).
-hacl(n31Inter,n37Inter,tcp,80).
-hacl(n31Inter,n47Inter,tcp,80).
-hacl(n31Inter,n48Inter,tcp,80).
-hacl(n31Inter,n49Inter,tcp,80).
-hacl(n31Inter,n50Inter,tcp,80).
-hacl(n31Inter,n51Inter,tcp,80).
-hacl(n31Inter,n52Inter,tcp,80).
-hacl(n31Inter,n53Inter,tcp,80).
-hacl(n31Inter,n54Inter,tcp,80).
-hacl(n32Inter,n45Inter,tcp,80).
-hacl(n32Inter,n44Inter,tcp,80).
-hacl(n32Inter,n46Inter,tcp,80).
-hacl(n36Inter,n62Inter,tcp,80).
-hacl(n36Inter,n37Inter,tcp,80).
-hacl(n37Inter,n64Inter,tcp,80).
-hacl(n37Inter,n65Inter,tcp,80).
-hacl(n37Inter,n38Inter,tcp,80).
-hacl(n37Inter,n63Inter,tcp,80).
-hacl(n38Inter,n40Inter,tcp,80).
-hacl(n38Inter,n39Inter,tcp,80).
-networkServiceInfo(n0Inter,httpd,tcp,80,root).
-networkServiceInfo(n1Inter,httpd,tcp,80,root).
-networkServiceInfo(n2Inter,httpd,tcp,80,root).
-networkServiceInfo(n3Inter,httpd,tcp,80,root).
-networkServiceInfo(n4Inter,httpd,tcp,80,root).
-networkServiceInfo(n5Inter,httpd,tcp,80,root).
-networkServiceInfo(n6Inter,httpd,tcp,80,root).
-networkServiceInfo(n7Inter,httpd,tcp,80,root).
-networkServiceInfo(n8Inter,httpd,tcp,80,root).
-networkServiceInfo(n9Inter,httpd,tcp,80,root).
-networkServiceInfo(n10Inter,httpd,tcp,80,root).
-networkServiceInfo(n11Inter,httpd,tcp,80,root).
-networkServiceInfo(n12Inter,httpd,tcp,80,root).
-networkServiceInfo(n13Inter,httpd,tcp,80,root).
-networkServiceInfo(n14Inter,httpd,tcp,80,root).
-networkServiceInfo(n15Inter,httpd,tcp,80,root).
-networkServiceInfo(n16Inter,httpd,tcp,80,root).
-networkServiceInfo(n17Inter,httpd,tcp,80,root).
-networkServiceInfo(n18Inter,httpd,tcp,80,root).
-networkServiceInfo(n19Inter,httpd,tcp,80,root).
-networkServiceInfo(n20Inter,httpd,tcp,80,root).
-networkServiceInfo(n21Inter,httpd,tcp,80,root).
-networkServiceInfo(n22Inter,httpd,tcp,80,root).
-networkServiceInfo(n23Inter,httpd,tcp,80,root).
-networkServiceInfo(n24Inter,httpd,tcp,80,root).
-networkServiceInfo(n25Inter,httpd,tcp,80,root).
-networkServiceInfo(n26Inter,httpd,tcp,80,root).
-networkServiceInfo(n27Inter,httpd,tcp,80,root).
-networkServiceInfo(n28Inter,httpd,tcp,80,root).
-networkServiceInfo(n29Inter,httpd,tcp,80,root).
-networkServiceInfo(n30Inter,httpd,tcp,80,root).
-networkServiceInfo(n31Inter,httpd,tcp,80,root).
-networkServiceInfo(n32Inter,httpd,tcp,80,root).
-networkServiceInfo(n33Inter,httpd,tcp,80,root).
-networkServiceInfo(n34Inter,httpd,tcp,80,root).
-networkServiceInfo(n35Inter,httpd,tcp,80,root).
-networkServiceInfo(n36Inter,httpd,tcp,80,root).
-networkServiceInfo(n37Inter,httpd,tcp,80,root).
-networkServiceInfo(n38Inter,httpd,tcp,80,root).
-networkServiceInfo(n39Inter,httpd,tcp,80,root).
-networkServiceInfo(n40Inter,httpd,tcp,80,root).
-networkServiceInfo(n41Inter,httpd,tcp,80,root).
-networkServiceInfo(n42Inter,httpd,tcp,80,root).
-networkServiceInfo(n43Inter,httpd,tcp,80,root).
-networkServiceInfo(n44Inter,httpd,tcp,80,root).
-networkServiceInfo(n45Inter,httpd,tcp,80,root).
-networkServiceInfo(n46Inter,httpd,tcp,80,root).
-networkServiceInfo(n47Inter,httpd,tcp,80,root).
-networkServiceInfo(n48Inter,httpd,tcp,80,root).
-networkServiceInfo(n49Inter,httpd,tcp,80,root).
-networkServiceInfo(n50Inter,httpd,tcp,80,root).
-networkServiceInfo(n51Inter,httpd,tcp,80,root).
-networkServiceInfo(n52Inter,httpd,tcp,80,root).
-networkServiceInfo(n53Inter,httpd,tcp,80,root).
-networkServiceInfo(n54Inter,httpd,tcp,80,root).
-networkServiceInfo(n55Inter,httpd,tcp,80,root).
-networkServiceInfo(n56Inter,httpd,tcp,80,root).
-networkServiceInfo(n57Inter,httpd,tcp,80,root).
-networkServiceInfo(n58Inter,httpd,tcp,80,root).
-networkServiceInfo(n59Inter,httpd,tcp,80,root).
-networkServiceInfo(n60Inter,httpd,tcp,80,root).
-networkServiceInfo(n61Inter,httpd,tcp,80,root).
-networkServiceInfo(n62Inter,httpd,tcp,80,root).
-networkServiceInfo(n63Inter,httpd,tcp,80,root).
-networkServiceInfo(n64Inter,httpd,tcp,80,root).
-networkServiceInfo(n65Inter,httpd,tcp,80,root).
-
-vulProperty('CVE-2013-6648', remoteExploit, privEscalation).
-vulExists(n0Inter, 'CVE-2013-6648', _).
-
-vulProperty('CVE-2013-0291', remoteExploit, privEscalation).
-vulExists(n1Inter, 'CVE-2013-0291', _).
-
-vulProperty('CVE-2013-4303', remoteExploit, privEscalation).
-vulExists(n2Inter, 'CVE-2013-4303', _).
-
-vulProperty('CVE-2013-1793', remoteExploit, privEscalation).
-vulExists(n3Inter, 'CVE-2013-1793', _).
-
-vulProperty('CVE-2013-4982', remoteExploit, privEscalation).
-vulExists(n4Inter, 'CVE-2013-4982', _).
-
-vulProperty('CVE-2013-7173', remoteExploit, privEscalation).
-vulExists(n5Inter, 'CVE-2013-7173', _).
-
-vulProperty('CVE-2013-0738', remoteExploit, privEscalation).
-vulExists(n6Inter, 'CVE-2013-0738', _).
-
-vulProperty('CVE-2013-7470', remoteExploit, privEscalation).
-vulExists(n7Inter, 'CVE-2013-7470', _).
-
-vulProperty('CVE-2013-1420', remoteExploit, privEscalation).
-vulExists(n8Inter, 'CVE-2013-1420', _).
-
-vulProperty('CVE-2013-6878', remoteExploit, privEscalation).
-vulExists(n9Inter, 'CVE-2013-6878', _).
-
-vulProperty('CVE-2013-7426', remoteExploit, privEscalation).
-vulExists(n10Inter, 'CVE-2013-7426', _).
-
-vulProperty('CVE-2013-7370', remoteExploit, privEscalation).
-vulExists(n11Inter, 'CVE-2013-7370', _).
-
-vulProperty('CVE-2013-1592', remoteExploit, privEscalation).
-vulExists(n12Inter, 'CVE-2013-1592', _).
-
-vulProperty('CVE-2013-6362', remoteExploit, privEscalation).
-vulExists(n13Inter, 'CVE-2013-6362', _).
-
-vulProperty('CVE-2013-4791', remoteExploit, privEscalation).
-vulExists(n14Inter, 'CVE-2013-4791', _).
-
-vulProperty('CVE-2013-2101', remoteExploit, privEscalation).
-vulExists(n15Inter, 'CVE-2013-2101', _).
-
-vulProperty('CVE-2013-4235', remoteExploit, privEscalation).
-vulExists(n16Inter, 'CVE-2013-4235', _).
-
-vulProperty('CVE-2013-1943', remoteExploit, privEscalation).
-vulExists(n17Inter, 'CVE-2013-1943', _).
-
-vulProperty('CVE-2013-6681', remoteExploit, privEscalation).
-vulExists(n18Inter, 'CVE-2013-6681', _).
-
-vulProperty('CVE-2013-6880', remoteExploit, privEscalation).
-vulExists(n19Inter, 'CVE-2013-6880', _).
-
-vulProperty('CVE-2013-5945', remoteExploit, privEscalation).
-vulExists(n20Inter, 'CVE-2013-5945', _).
-
-vulProperty('CVE-2013-2623', remoteExploit, privEscalation).
-vulExists(n21Inter, 'CVE-2013-2623', _).
-
-vulProperty('CVE-2013-5654', remoteExploit, privEscalation).
-vulExists(n22Inter, 'CVE-2013-5654', _).
-
-vulProperty('CVE-2013-1938', remoteExploit, privEscalation).
-vulExists(n23Inter, 'CVE-2013-1938', _).
-
-vulProperty('CVE-2013-4857', remoteExploit, privEscalation).
-vulExists(n24Inter, 'CVE-2013-4857', _).
-
-vulProperty('CVE-2013-2516', remoteExploit, privEscalation).
-vulExists(n25Inter, 'CVE-2013-2516', _).
-
-vulProperty('CVE-2013-0738', remoteExploit, privEscalation).
-vulExists(n26Inter, 'CVE-2013-0738', _).
-
-vulProperty('CVE-2013-4975', remoteExploit, privEscalation).
-vulExists(n27Inter, 'CVE-2013-4975', _).
-
-vulProperty('CVE-2013-0517', remoteExploit, privEscalation).
-vulExists(n28Inter, 'CVE-2013-0517', _).
+hacl(fileServer, n0Dialt, _, _).
+hacl(n1Dialt,n2Dialt,tcp,80).
+hacl(n1Dialt,n106Dialt,tcp,80).
+hacl(n2Dialt,n5Dialt,tcp,80).
+hacl(n2Dialt,n53Dialt,tcp,80).
+hacl(n2Dialt,n55Dialt,tcp,80).
+hacl(n5Dialt,n6Dialt,tcp,80).
+hacl(n6Dialt,n7Dialt,tcp,80).
+hacl(n7Dialt,n110Dialt,tcp,80).
+hacl(n8Dialt,n192Dialt,tcp,80).
+hacl(n8Dialt,n9Dialt,tcp,80).
+hacl(n9Dialt,n10Dialt,tcp,80).
+hacl(n10Dialt,n192Dialt,tcp,80).
+hacl(n10Dialt,n12Dialt,tcp,80).
+hacl(n12Dialt,n13Dialt,tcp,80).
+hacl(n13Dialt,n14Dialt,tcp,80).
+hacl(n14Dialt,n184Dialt,tcp,80).
+hacl(n15Dialt,n16Dialt,tcp,80).
+hacl(n16Dialt,n17Dialt,tcp,80).
+hacl(n16Dialt,n23Dialt,tcp,80).
+hacl(n17Dialt,n19Dialt,tcp,80).
+hacl(n19Dialt,n184Dialt,tcp,80).
+hacl(n21Dialt,n25Dialt,tcp,80).
+hacl(n21Dialt,n22Dialt,tcp,80).
+hacl(n22Dialt,n120Dialt,tcp,80).
+hacl(n23Dialt,n119Dialt,tcp,80).
+hacl(n26Dialt,n184Dialt,tcp,80).
+hacl(n26Dialt,n27Dialt,tcp,80).
+hacl(n26Dialt,n28Dialt,tcp,80).
+hacl(n26Dialt,n30Dialt,tcp,80).
+hacl(n30Dialt,n32Dialt,tcp,80).
+hacl(n30Dialt,n185Dialt,tcp,80).
+hacl(n32Dialt,n33Dialt,tcp,80).
+hacl(n34Dialt,n185Dialt,tcp,80).
+hacl(n34Dialt,n35Dialt,tcp,80).
+hacl(n39Dialt,n40Dialt,tcp,80).
+hacl(n39Dialt,n185Dialt,tcp,80).
+hacl(n40Dialt,n41Dialt,tcp,80).
+hacl(n40Dialt,n42Dialt,tcp,80).
+hacl(n42Dialt,n46Dialt,tcp,80).
+hacl(n46Dialt,n49Dialt,tcp,80).
+hacl(n49Dialt,n52Dialt,tcp,80).
+hacl(n52Dialt,n123Dialt,tcp,80).
+hacl(n52Dialt,n53Dialt,tcp,80).
+hacl(n55Dialt,n56Dialt,tcp,80).
+hacl(n56Dialt,n57Dialt,tcp,80).
+hacl(n57Dialt,n58Dialt,tcp,80).
+hacl(n58Dialt,n64Dialt,tcp,80).
+hacl(n64Dialt,n65Dialt,tcp,80).
+hacl(n65Dialt,n66Dialt,tcp,80).
+hacl(n66Dialt,n190Dialt,tcp,80).
+hacl(n67Dialt,n155Dialt,tcp,80).
+hacl(n67Dialt,n190Dialt,tcp,80).
+hacl(n68Dialt,n155Dialt,tcp,80).
+hacl(n68Dialt,n190Dialt,tcp,80).
+hacl(n68Dialt,n151Dialt,tcp,80).
+hacl(n69Dialt,n70Dialt,tcp,80).
+hacl(n70Dialt,n80Dialt,tcp,80).
+hacl(n70Dialt,n71Dialt,tcp,80).
+hacl(n71Dialt,n74Dialt,tcp,80).
+hacl(n73Dialt,n189Dialt,tcp,80).
+hacl(n74Dialt,n189Dialt,tcp,80).
+hacl(n74Dialt,n77Dialt,tcp,80).
+hacl(n75Dialt,n186Dialt,tcp,80).
+hacl(n75Dialt,n189Dialt,tcp,80).
+hacl(n77Dialt,n186Dialt,tcp,80).
+hacl(n79Dialt,n80Dialt,tcp,80).
+hacl(n79Dialt,n82Dialt,tcp,80).
+hacl(n82Dialt,n83Dialt,tcp,80).
+hacl(n83Dialt,n89Dialt,tcp,80).
+hacl(n83Dialt,n85Dialt,tcp,80).
+hacl(n85Dialt,n86Dialt,tcp,80).
+hacl(n86Dialt,n168Dialt,tcp,80).
+hacl(n87Dialt,n88Dialt,tcp,80).
+hacl(n88Dialt,n155Dialt,tcp,80).
+hacl(n88Dialt,n156Dialt,tcp,80).
+hacl(n89Dialt,n94Dialt,tcp,80).
+hacl(n91Dialt,n94Dialt,tcp,80).
+hacl(n93Dialt,n187Dialt,tcp,80).
+hacl(n93Dialt,n94Dialt,tcp,80).
+hacl(n95Dialt,n96Dialt,tcp,80).
+hacl(n95Dialt,n187Dialt,tcp,80).
+hacl(n96Dialt,n98Dialt,tcp,80).
+hacl(n97Dialt,n187Dialt,tcp,80).
+hacl(n98Dialt,n99Dialt,tcp,80).
+hacl(n98Dialt,n101Dialt,tcp,80).
+hacl(n101Dialt,n103Dialt,tcp,80).
+hacl(n103Dialt,n104Dialt,tcp,80).
+hacl(n104Dialt,n105Dialt,tcp,80).
+hacl(n105Dialt,n106Dialt,tcp,80).
+hacl(n106Dialt,n109Dialt,tcp,80).
+hacl(n108Dialt,n110Dialt,tcp,80).
+hacl(n109Dialt,n111Dialt,tcp,80).
+hacl(n110Dialt,n192Dialt,tcp,80).
+hacl(n110Dialt,n111Dialt,tcp,80).
+hacl(n111Dialt,n112Dialt,tcp,80).
+hacl(n111Dialt,n192Dialt,tcp,80).
+hacl(n112Dialt,n113Dialt,tcp,80).
+hacl(n112Dialt,n115Dialt,tcp,80).
+hacl(n114Dialt,n115Dialt,tcp,80).
+hacl(n114Dialt,n116Dialt,tcp,80).
+hacl(n116Dialt,n120Dialt,tcp,80).
+hacl(n116Dialt,n183Dialt,tcp,80).
+hacl(n117Dialt,n121Dialt,tcp,80).
+hacl(n117Dialt,n183Dialt,tcp,80).
+hacl(n118Dialt,n119Dialt,tcp,80).
+hacl(n118Dialt,n183Dialt,tcp,80).
+hacl(n121Dialt,n122Dialt,tcp,80).
+hacl(n123Dialt,n128Dialt,tcp,80).
+hacl(n123Dialt,n124Dialt,tcp,80).
+hacl(n127Dialt,n128Dialt,tcp,80).
+hacl(n128Dialt,n129Dialt,tcp,80).
+hacl(n128Dialt,n132Dialt,tcp,80).
+hacl(n132Dialt,n133Dialt,tcp,80).
+hacl(n133Dialt,n144Dialt,tcp,80).
+hacl(n139Dialt,n140Dialt,tcp,80).
+hacl(n139Dialt,n141Dialt,tcp,80).
+hacl(n141Dialt,n142Dialt,tcp,80).
+hacl(n141Dialt,n143Dialt,tcp,80).
+hacl(n142Dialt,n174Dialt,tcp,80).
+hacl(n142Dialt,n143Dialt,tcp,80).
+hacl(n143Dialt,n144Dialt,tcp,80).
+hacl(n143Dialt,n145Dialt,tcp,80).
+hacl(n145Dialt,n146Dialt,tcp,80).
+hacl(n145Dialt,n150Dialt,tcp,80).
+hacl(n149Dialt,n154Dialt,tcp,80).
+hacl(n149Dialt,n150Dialt,tcp,80).
+hacl(n150Dialt,n152Dialt,tcp,80).
+hacl(n150Dialt,n191Dialt,tcp,80).
+hacl(n151Dialt,n152Dialt,tcp,80).
+hacl(n153Dialt,n191Dialt,tcp,80).
+hacl(n154Dialt,n177Dialt,tcp,80).
+hacl(n155Dialt,n156Dialt,tcp,80).
+hacl(n155Dialt,n157Dialt,tcp,80).
+hacl(n155Dialt,n191Dialt,tcp,80).
+hacl(n157Dialt,n188Dialt,tcp,80).
+hacl(n158Dialt,n188Dialt,tcp,80).
+hacl(n159Dialt,n161Dialt,tcp,80).
+hacl(n159Dialt,n188Dialt,tcp,80).
+hacl(n161Dialt,n162Dialt,tcp,80).
+hacl(n162Dialt,n163Dialt,tcp,80).
+hacl(n163Dialt,n164Dialt,tcp,80).
+hacl(n163Dialt,n165Dialt,tcp,80).
+hacl(n165Dialt,n166Dialt,tcp,80).
+hacl(n166Dialt,n167Dialt,tcp,80).
+hacl(n167Dialt,n168Dialt,tcp,80).
+hacl(n170Dialt,n171Dialt,tcp,80).
+hacl(n170Dialt,n172Dialt,tcp,80).
+hacl(n171Dialt,n174Dialt,tcp,80).
+hacl(n172Dialt,n189Dialt,tcp,80).
+hacl(n177Dialt,n178Dialt,tcp,80).
+hacl(n178Dialt,n186Dialt,tcp,80).
+networkServiceInfo(n0Dialt,httpd,tcp,80,root).
+networkServiceInfo(n1Dialt,httpd,tcp,80,root).
+networkServiceInfo(n2Dialt,httpd,tcp,80,root).
+networkServiceInfo(n3Dialt,httpd,tcp,80,root).
+networkServiceInfo(n4Dialt,httpd,tcp,80,root).
+networkServiceInfo(n5Dialt,httpd,tcp,80,root).
+networkServiceInfo(n6Dialt,httpd,tcp,80,root).
+networkServiceInfo(n7Dialt,httpd,tcp,80,root).
+networkServiceInfo(n8Dialt,httpd,tcp,80,root).
+networkServiceInfo(n9Dialt,httpd,tcp,80,root).
+networkServiceInfo(n10Dialt,httpd,tcp,80,root).
+networkServiceInfo(n11Dialt,httpd,tcp,80,root).
+networkServiceInfo(n12Dialt,httpd,tcp,80,root).
+networkServiceInfo(n13Dialt,httpd,tcp,80,root).
+networkServiceInfo(n14Dialt,httpd,tcp,80,root).
+networkServiceInfo(n15Dialt,httpd,tcp,80,root).
+networkServiceInfo(n16Dialt,httpd,tcp,80,root).
+networkServiceInfo(n17Dialt,httpd,tcp,80,root).
+networkServiceInfo(n18Dialt,httpd,tcp,80,root).
+networkServiceInfo(n19Dialt,httpd,tcp,80,root).
+networkServiceInfo(n20Dialt,httpd,tcp,80,root).
+networkServiceInfo(n21Dialt,httpd,tcp,80,root).
+networkServiceInfo(n22Dialt,httpd,tcp,80,root).
+networkServiceInfo(n23Dialt,httpd,tcp,80,root).
+networkServiceInfo(n24Dialt,httpd,tcp,80,root).
+networkServiceInfo(n25Dialt,httpd,tcp,80,root).
+networkServiceInfo(n26Dialt,httpd,tcp,80,root).
+networkServiceInfo(n27Dialt,httpd,tcp,80,root).
+networkServiceInfo(n28Dialt,httpd,tcp,80,root).
+networkServiceInfo(n29Dialt,httpd,tcp,80,root).
+networkServiceInfo(n30Dialt,httpd,tcp,80,root).
+networkServiceInfo(n31Dialt,httpd,tcp,80,root).
+networkServiceInfo(n32Dialt,httpd,tcp,80,root).
+networkServiceInfo(n33Dialt,httpd,tcp,80,root).
+networkServiceInfo(n34Dialt,httpd,tcp,80,root).
+networkServiceInfo(n35Dialt,httpd,tcp,80,root).
+networkServiceInfo(n36Dialt,httpd,tcp,80,root).
+networkServiceInfo(n37Dialt,httpd,tcp,80,root).
+networkServiceInfo(n38Dialt,httpd,tcp,80,root).
+networkServiceInfo(n39Dialt,httpd,tcp,80,root).
+networkServiceInfo(n40Dialt,httpd,tcp,80,root).
+networkServiceInfo(n41Dialt,httpd,tcp,80,root).
+networkServiceInfo(n42Dialt,httpd,tcp,80,root).
+networkServiceInfo(n43Dialt,httpd,tcp,80,root).
+networkServiceInfo(n44Dialt,httpd,tcp,80,root).
+networkServiceInfo(n45Dialt,httpd,tcp,80,root).
+networkServiceInfo(n46Dialt,httpd,tcp,80,root).
+networkServiceInfo(n47Dialt,httpd,tcp,80,root).
+networkServiceInfo(n48Dialt,httpd,tcp,80,root).
+networkServiceInfo(n49Dialt,httpd,tcp,80,root).
+networkServiceInfo(n50Dialt,httpd,tcp,80,root).
+networkServiceInfo(n51Dialt,httpd,tcp,80,root).
+networkServiceInfo(n52Dialt,httpd,tcp,80,root).
+networkServiceInfo(n53Dialt,httpd,tcp,80,root).
+networkServiceInfo(n54Dialt,httpd,tcp,80,root).
+networkServiceInfo(n55Dialt,httpd,tcp,80,root).
+networkServiceInfo(n56Dialt,httpd,tcp,80,root).
+networkServiceInfo(n57Dialt,httpd,tcp,80,root).
+networkServiceInfo(n58Dialt,httpd,tcp,80,root).
+networkServiceInfo(n59Dialt,httpd,tcp,80,root).
+networkServiceInfo(n60Dialt,httpd,tcp,80,root).
+networkServiceInfo(n61Dialt,httpd,tcp,80,root).
+networkServiceInfo(n62Dialt,httpd,tcp,80,root).
+networkServiceInfo(n63Dialt,httpd,tcp,80,root).
+networkServiceInfo(n64Dialt,httpd,tcp,80,root).
+networkServiceInfo(n65Dialt,httpd,tcp,80,root).
+networkServiceInfo(n66Dialt,httpd,tcp,80,root).
+networkServiceInfo(n67Dialt,httpd,tcp,80,root).
+networkServiceInfo(n68Dialt,httpd,tcp,80,root).
+networkServiceInfo(n69Dialt,httpd,tcp,80,root).
+networkServiceInfo(n70Dialt,httpd,tcp,80,root).
+networkServiceInfo(n71Dialt,httpd,tcp,80,root).
+networkServiceInfo(n72Dialt,httpd,tcp,80,root).
+networkServiceInfo(n73Dialt,httpd,tcp,80,root).
+networkServiceInfo(n74Dialt,httpd,tcp,80,root).
+networkServiceInfo(n75Dialt,httpd,tcp,80,root).
+networkServiceInfo(n76Dialt,httpd,tcp,80,root).
+networkServiceInfo(n77Dialt,httpd,tcp,80,root).
+networkServiceInfo(n78Dialt,httpd,tcp,80,root).
+networkServiceInfo(n79Dialt,httpd,tcp,80,root).
+networkServiceInfo(n80Dialt,httpd,tcp,80,root).
+networkServiceInfo(n81Dialt,httpd,tcp,80,root).
+networkServiceInfo(n82Dialt,httpd,tcp,80,root).
+networkServiceInfo(n83Dialt,httpd,tcp,80,root).
+networkServiceInfo(n84Dialt,httpd,tcp,80,root).
+networkServiceInfo(n85Dialt,httpd,tcp,80,root).
+networkServiceInfo(n86Dialt,httpd,tcp,80,root).
+networkServiceInfo(n87Dialt,httpd,tcp,80,root).
+networkServiceInfo(n88Dialt,httpd,tcp,80,root).
+networkServiceInfo(n89Dialt,httpd,tcp,80,root).
+networkServiceInfo(n90Dialt,httpd,tcp,80,root).
+networkServiceInfo(n91Dialt,httpd,tcp,80,root).
+networkServiceInfo(n92Dialt,httpd,tcp,80,root).
+networkServiceInfo(n93Dialt,httpd,tcp,80,root).
+networkServiceInfo(n94Dialt,httpd,tcp,80,root).
+networkServiceInfo(n95Dialt,httpd,tcp,80,root).
+networkServiceInfo(n96Dialt,httpd,tcp,80,root).
+networkServiceInfo(n97Dialt,httpd,tcp,80,root).
+networkServiceInfo(n98Dialt,httpd,tcp,80,root).
+networkServiceInfo(n99Dialt,httpd,tcp,80,root).
+networkServiceInfo(n100Dialt,httpd,tcp,80,root).
+networkServiceInfo(n101Dialt,httpd,tcp,80,root).
+networkServiceInfo(n102Dialt,httpd,tcp,80,root).
+networkServiceInfo(n103Dialt,httpd,tcp,80,root).
+networkServiceInfo(n104Dialt,httpd,tcp,80,root).
+networkServiceInfo(n105Dialt,httpd,tcp,80,root).
+networkServiceInfo(n106Dialt,httpd,tcp,80,root).
+networkServiceInfo(n107Dialt,httpd,tcp,80,root).
+networkServiceInfo(n108Dialt,httpd,tcp,80,root).
+networkServiceInfo(n109Dialt,httpd,tcp,80,root).
+networkServiceInfo(n110Dialt,httpd,tcp,80,root).
+networkServiceInfo(n111Dialt,httpd,tcp,80,root).
+networkServiceInfo(n112Dialt,httpd,tcp,80,root).
+networkServiceInfo(n113Dialt,httpd,tcp,80,root).
+networkServiceInfo(n114Dialt,httpd,tcp,80,root).
+networkServiceInfo(n115Dialt,httpd,tcp,80,root).
+networkServiceInfo(n116Dialt,httpd,tcp,80,root).
+networkServiceInfo(n117Dialt,httpd,tcp,80,root).
+networkServiceInfo(n118Dialt,httpd,tcp,80,root).
+networkServiceInfo(n119Dialt,httpd,tcp,80,root).
+networkServiceInfo(n120Dialt,httpd,tcp,80,root).
+networkServiceInfo(n121Dialt,httpd,tcp,80,root).
+networkServiceInfo(n122Dialt,httpd,tcp,80,root).
+networkServiceInfo(n123Dialt,httpd,tcp,80,root).
+networkServiceInfo(n124Dialt,httpd,tcp,80,root).
+networkServiceInfo(n125Dialt,httpd,tcp,80,root).
+networkServiceInfo(n126Dialt,httpd,tcp,80,root).
+networkServiceInfo(n127Dialt,httpd,tcp,80,root).
+networkServiceInfo(n128Dialt,httpd,tcp,80,root).
+networkServiceInfo(n129Dialt,httpd,tcp,80,root).
+networkServiceInfo(n130Dialt,httpd,tcp,80,root).
+networkServiceInfo(n131Dialt,httpd,tcp,80,root).
+networkServiceInfo(n132Dialt,httpd,tcp,80,root).
+networkServiceInfo(n133Dialt,httpd,tcp,80,root).
+networkServiceInfo(n134Dialt,httpd,tcp,80,root).
+networkServiceInfo(n135Dialt,httpd,tcp,80,root).
+networkServiceInfo(n136Dialt,httpd,tcp,80,root).
+networkServiceInfo(n137Dialt,httpd,tcp,80,root).
+networkServiceInfo(n138Dialt,httpd,tcp,80,root).
+networkServiceInfo(n139Dialt,httpd,tcp,80,root).
+networkServiceInfo(n140Dialt,httpd,tcp,80,root).
+networkServiceInfo(n141Dialt,httpd,tcp,80,root).
+networkServiceInfo(n142Dialt,httpd,tcp,80,root).
+networkServiceInfo(n143Dialt,httpd,tcp,80,root).
+networkServiceInfo(n144Dialt,httpd,tcp,80,root).
+networkServiceInfo(n145Dialt,httpd,tcp,80,root).
+networkServiceInfo(n146Dialt,httpd,tcp,80,root).
+networkServiceInfo(n147Dialt,httpd,tcp,80,root).
+networkServiceInfo(n148Dialt,httpd,tcp,80,root).
+networkServiceInfo(n149Dialt,httpd,tcp,80,root).
+networkServiceInfo(n150Dialt,httpd,tcp,80,root).
+networkServiceInfo(n151Dialt,httpd,tcp,80,root).
+networkServiceInfo(n152Dialt,httpd,tcp,80,root).
+networkServiceInfo(n153Dialt,httpd,tcp,80,root).
+networkServiceInfo(n154Dialt,httpd,tcp,80,root).
+networkServiceInfo(n155Dialt,httpd,tcp,80,root).
+networkServiceInfo(n156Dialt,httpd,tcp,80,root).
+networkServiceInfo(n157Dialt,httpd,tcp,80,root).
+networkServiceInfo(n158Dialt,httpd,tcp,80,root).
+networkServiceInfo(n159Dialt,httpd,tcp,80,root).
+networkServiceInfo(n160Dialt,httpd,tcp,80,root).
+networkServiceInfo(n161Dialt,httpd,tcp,80,root).
+networkServiceInfo(n162Dialt,httpd,tcp,80,root).
+networkServiceInfo(n163Dialt,httpd,tcp,80,root).
+networkServiceInfo(n164Dialt,httpd,tcp,80,root).
+networkServiceInfo(n165Dialt,httpd,tcp,80,root).
+networkServiceInfo(n166Dialt,httpd,tcp,80,root).
+networkServiceInfo(n167Dialt,httpd,tcp,80,root).
+networkServiceInfo(n168Dialt,httpd,tcp,80,root).
+networkServiceInfo(n169Dialt,httpd,tcp,80,root).
+networkServiceInfo(n170Dialt,httpd,tcp,80,root).
+networkServiceInfo(n171Dialt,httpd,tcp,80,root).
+networkServiceInfo(n172Dialt,httpd,tcp,80,root).
+networkServiceInfo(n173Dialt,httpd,tcp,80,root).
+networkServiceInfo(n174Dialt,httpd,tcp,80,root).
+networkServiceInfo(n175Dialt,httpd,tcp,80,root).
+networkServiceInfo(n176Dialt,httpd,tcp,80,root).
+networkServiceInfo(n177Dialt,httpd,tcp,80,root).
+networkServiceInfo(n178Dialt,httpd,tcp,80,root).
+networkServiceInfo(n179Dialt,httpd,tcp,80,root).
+networkServiceInfo(n180Dialt,httpd,tcp,80,root).
+networkServiceInfo(n181Dialt,httpd,tcp,80,root).
+networkServiceInfo(n182Dialt,httpd,tcp,80,root).
+networkServiceInfo(n183Dialt,httpd,tcp,80,root).
+networkServiceInfo(n184Dialt,httpd,tcp,80,root).
+networkServiceInfo(n185Dialt,httpd,tcp,80,root).
+networkServiceInfo(n186Dialt,httpd,tcp,80,root).
+networkServiceInfo(n187Dialt,httpd,tcp,80,root).
+networkServiceInfo(n188Dialt,httpd,tcp,80,root).
+networkServiceInfo(n189Dialt,httpd,tcp,80,root).
+networkServiceInfo(n190Dialt,httpd,tcp,80,root).
+networkServiceInfo(n191Dialt,httpd,tcp,80,root).
+networkServiceInfo(n192Dialt,httpd,tcp,80,root).
 
 vulProperty('CVE-2013-4105', remoteExploit, privEscalation).
-vulExists(n29Inter, 'CVE-2013-4105', _).
+vulExists(n0Dialt, 'CVE-2013-4105', _).
 
-vulProperty('CVE-2013-2259', remoteExploit, privEscalation).
-vulExists(n30Inter, 'CVE-2013-2259', _).
+vulProperty('CVE-2013-4593', remoteExploit, privEscalation).
+vulExists(n1Dialt, 'CVE-2013-4593', _).
 
-vulProperty('CVE-2013-0283', remoteExploit, privEscalation).
-vulExists(n31Inter, 'CVE-2013-0283', _).
+vulProperty('CVE-2013-2624', remoteExploit, privEscalation).
+vulExists(n2Dialt, 'CVE-2013-2624', _).
 
-vulProperty('CVE-2013-4410', remoteExploit, privEscalation).
-vulExists(n32Inter, 'CVE-2013-4410', _).
+vulProperty('CVE-2013-7469', remoteExploit, privEscalation).
+vulExists(n3Dialt, 'CVE-2013-7469', _).
 
-vulProperty('CVE-2013-3018', remoteExploit, privEscalation).
-vulExists(n33Inter, 'CVE-2013-3018', _).
+vulProperty('CVE-2013-3542', remoteExploit, privEscalation).
+vulExists(n4Dialt, 'CVE-2013-3542', _).
 
-vulProperty('CVE-2013-1425', remoteExploit, privEscalation).
-vulExists(n34Inter, 'CVE-2013-1425', _).
+vulProperty('CVE-2013-2093', remoteExploit, privEscalation).
+vulExists(n5Dialt, 'CVE-2013-2093', _).
 
-vulProperty('CVE-2013-5661', remoteExploit, privEscalation).
-vulExists(n35Inter, 'CVE-2013-5661', _).
+vulProperty('CVE-2013-5582', remoteExploit, privEscalation).
+vulExists(n6Dialt, 'CVE-2013-5582', _).
 
-vulProperty('CVE-2013-7449', remoteExploit, privEscalation).
-vulExists(n36Inter, 'CVE-2013-7449', _).
+vulProperty('CVE-2013-4241', remoteExploit, privEscalation).
+vulExists(n7Dialt, 'CVE-2013-4241', _).
 
-vulProperty('CVE-2013-1598', remoteExploit, privEscalation).
-vulExists(n37Inter, 'CVE-2013-1598', _).
+vulProperty('CVE-2013-4796', remoteExploit, privEscalation).
+vulExists(n8Dialt, 'CVE-2013-4796', _).
 
-vulProperty('CVE-2013-3703', remoteExploit, privEscalation).
-vulExists(n38Inter, 'CVE-2013-3703', _).
+vulProperty('CVE-2013-6364', remoteExploit, privEscalation).
+vulExists(n9Dialt, 'CVE-2013-6364', _).
 
-vulProperty('CVE-2013-2115', remoteExploit, privEscalation).
-vulExists(n39Inter, 'CVE-2013-2115', _).
+vulProperty('CVE-2013-4665', remoteExploit, privEscalation).
+vulExists(n10Dialt, 'CVE-2013-4665', _).
 
-vulProperty('CVE-2013-3718', remoteExploit, privEscalation).
-vulExists(n40Inter, 'CVE-2013-3718', _).
+vulProperty('CVE-2013-4791', remoteExploit, privEscalation).
+vulExists(n11Dialt, 'CVE-2013-4791', _).
 
-vulProperty('CVE-2013-2681', remoteExploit, privEscalation).
-vulExists(n41Inter, 'CVE-2013-2681', _).
+vulProperty('CVE-2013-4118', remoteExploit, privEscalation).
+vulExists(n12Dialt, 'CVE-2013-4118', _).
 
-vulProperty('CVE-2013-4412', remoteExploit, privEscalation).
-vulExists(n42Inter, 'CVE-2013-4412', _).
+vulProperty('CVE-2013-0163', remoteExploit, privEscalation).
+vulExists(n13Dialt, 'CVE-2013-0163', _).
 
-vulProperty('CVE-2013-1437', remoteExploit, privEscalation).
-vulExists(n43Inter, 'CVE-2013-1437', _).
+vulProperty('CVE-2013-7173', remoteExploit, privEscalation).
+vulExists(n14Dialt, 'CVE-2013-7173', _).
 
-vulProperty('CVE-2013-6647', remoteExploit, privEscalation).
-vulExists(n44Inter, 'CVE-2013-6647', _).
+vulProperty('CVE-2013-4583', remoteExploit, privEscalation).
+vulExists(n15Dialt, 'CVE-2013-4583', _).
 
-vulProperty('CVE-2013-6460', remoteExploit, privEscalation).
-vulExists(n45Inter, 'CVE-2013-6460', _).
+vulProperty('CVE-2013-7370', remoteExploit, privEscalation).
+vulExists(n16Dialt, 'CVE-2013-7370', _).
 
-vulProperty('CVE-2013-0161', remoteExploit, privEscalation).
-vulExists(n46Inter, 'CVE-2013-0161', _).
+vulProperty('CVE-2013-1607', remoteExploit, privEscalation).
+vulExists(n17Dialt, 'CVE-2013-1607', _).
 
-vulProperty('CVE-2013-6014', remoteExploit, privEscalation).
-vulExists(n47Inter, 'CVE-2013-6014', _).
+vulProperty('CVE-2013-4441', remoteExploit, privEscalation).
+vulExists(n18Dialt, 'CVE-2013-4441', _).
 
-vulProperty('CVE-2013-3946', remoteExploit, privEscalation).
-vulExists(n48Inter, 'CVE-2013-3946', _).
+vulProperty('CVE-2013-4318', remoteExploit, privEscalation).
+vulExists(n19Dialt, 'CVE-2013-4318', _).
 
-vulProperty('CVE-2013-3685', remoteExploit, privEscalation).
-vulExists(n49Inter, 'CVE-2013-3685', _).
+vulProperty('CVE-2013-7464', remoteExploit, privEscalation).
+vulExists(n20Dialt, 'CVE-2013-7464', _).
 
-vulProperty('CVE-2013-2109', remoteExploit, privEscalation).
-vulExists(n50Inter, 'CVE-2013-2109', _).
+vulProperty('CVE-2013-4166', remoteExploit, privEscalation).
+vulExists(n21Dialt, 'CVE-2013-4166', _).
 
-vulProperty('CVE-2013-1426', remoteExploit, privEscalation).
-vulExists(n51Inter, 'CVE-2013-1426', _).
+vulProperty('CVE-2013-4454', remoteExploit, privEscalation).
+vulExists(n22Dialt, 'CVE-2013-4454', _).
 
-vulProperty('CVE-2013-2682', remoteExploit, privEscalation).
-vulExists(n52Inter, 'CVE-2013-2682', _).
+vulProperty('CVE-2013-3551', remoteExploit, privEscalation).
+vulExists(n23Dialt, 'CVE-2013-3551', _).
 
-vulProperty('CVE-2013-0185', remoteExploit, privEscalation).
-vulExists(n53Inter, 'CVE-2013-0185', _).
+vulProperty('CVE-2013-4225', remoteExploit, privEscalation).
+vulExists(n24Dialt, 'CVE-2013-4225', _).
 
-vulProperty('CVE-2013-7202', remoteExploit, privEscalation).
-vulExists(n54Inter, 'CVE-2013-7202', _).
+vulProperty('CVE-2013-1793', remoteExploit, privEscalation).
+vulExists(n25Dialt, 'CVE-2013-1793', _).
 
-vulProperty('CVE-2013-4187', remoteExploit, privEscalation).
-vulExists(n55Inter, 'CVE-2013-4187', _).
+vulProperty('CVE-2013-3636', remoteExploit, privEscalation).
+vulExists(n26Dialt, 'CVE-2013-3636', _).
 
-vulProperty('CVE-2013-2057', remoteExploit, privEscalation).
-vulExists(n56Inter, 'CVE-2013-2057', _).
+vulProperty('CVE-2013-7466', remoteExploit, privEscalation).
+vulExists(n27Dialt, 'CVE-2013-7466', _).
 
-vulProperty('CVE-2013-6430', remoteExploit, privEscalation).
-vulExists(n57Inter, 'CVE-2013-6430', _).
+vulProperty('CVE-2013-0870', remoteExploit, privEscalation).
+vulExists(n28Dialt, 'CVE-2013-0870', _).
 
-vulProperty('CVE-2013-1400', remoteExploit, privEscalation).
-vulExists(n58Inter, 'CVE-2013-1400', _).
+vulProperty('CVE-2013-2972', remoteExploit, privEscalation).
+vulExists(n29Dialt, 'CVE-2013-2972', _).
 
-vulProperty('CVE-2013-1631', remoteExploit, privEscalation).
-vulExists(n59Inter, 'CVE-2013-1631', _).
+vulProperty('CVE-2013-6880', remoteExploit, privEscalation).
+vulExists(n30Dialt, 'CVE-2013-6880', _).
 
-vulProperty('CVE-2013-4868', remoteExploit, privEscalation).
-vulExists(n60Inter, 'CVE-2013-4868', _).
+vulProperty('CVE-2013-2167', remoteExploit, privEscalation).
+vulExists(n31Dialt, 'CVE-2013-2167', _).
 
-vulProperty('CVE-2013-4692', remoteExploit, privEscalation).
-vulExists(n61Inter, 'CVE-2013-4692', _).
+vulProperty('CVE-2013-5106', remoteExploit, privEscalation).
+vulExists(n32Dialt, 'CVE-2013-5106', _).
+
+vulProperty('CVE-2013-4110', remoteExploit, privEscalation).
+vulExists(n33Dialt, 'CVE-2013-4110', _).
+
+vulProperty('CVE-2013-6876', remoteExploit, privEscalation).
+vulExists(n34Dialt, 'CVE-2013-6876', _).
 
 vulProperty('CVE-2013-3568', remoteExploit, privEscalation).
-vulExists(n62Inter, 'CVE-2013-3568', _).
+vulExists(n35Dialt, 'CVE-2013-3568', _).
+
+vulProperty('CVE-2013-4335', remoteExploit, privEscalation).
+vulExists(n36Dialt, 'CVE-2013-4335', _).
+
+vulProperty('CVE-2013-1400', remoteExploit, privEscalation).
+vulExists(n37Dialt, 'CVE-2013-1400', _).
+
+vulProperty('CVE-2013-4318', remoteExploit, privEscalation).
+vulExists(n38Dialt, 'CVE-2013-4318', _).
+
+vulProperty('CVE-2013-2198', remoteExploit, privEscalation).
+vulExists(n39Dialt, 'CVE-2013-2198', _).
+
+vulProperty('CVE-2013-2678', remoteExploit, privEscalation).
+vulExists(n40Dialt, 'CVE-2013-2678', _).
+
+vulProperty('CVE-2013-0725', remoteExploit, privEscalation).
+vulExists(n41Dialt, 'CVE-2013-0725', _).
+
+vulProperty('CVE-2013-0803', remoteExploit, privEscalation).
+vulExists(n42Dialt, 'CVE-2013-0803', _).
+
+vulProperty('CVE-2013-6276', remoteExploit, privEscalation).
+vulExists(n43Dialt, 'CVE-2013-6276', _).
+
+vulProperty('CVE-2013-5594', remoteExploit, privEscalation).
+vulExists(n44Dialt, 'CVE-2013-5594', _).
+
+vulProperty('CVE-2013-1054', remoteExploit, privEscalation).
+vulExists(n45Dialt, 'CVE-2013-1054', _).
+
+vulProperty('CVE-2013-4518', remoteExploit, privEscalation).
+vulExists(n46Dialt, 'CVE-2013-4518', _).
+
+vulProperty('CVE-2013-7377', remoteExploit, privEscalation).
+vulExists(n47Dialt, 'CVE-2013-7377', _).
+
+vulProperty('CVE-2013-6773', remoteExploit, privEscalation).
+vulExists(n48Dialt, 'CVE-2013-6773', _).
+
+vulProperty('CVE-2013-4411', remoteExploit, privEscalation).
+vulExists(n49Dialt, 'CVE-2013-4411', _).
+
+vulProperty('CVE-2013-3017', remoteExploit, privEscalation).
+vulExists(n50Dialt, 'CVE-2013-3017', _).
+
+vulProperty('CVE-2013-2675', remoteExploit, privEscalation).
+vulExists(n51Dialt, 'CVE-2013-2675', _).
+
+vulProperty('CVE-2013-3629', remoteExploit, privEscalation).
+vulExists(n52Dialt, 'CVE-2013-3629', _).
+
+vulProperty('CVE-2013-4103', remoteExploit, privEscalation).
+vulExists(n53Dialt, 'CVE-2013-4103', _).
+
+vulProperty('CVE-2013-2233', remoteExploit, privEscalation).
+vulExists(n54Dialt, 'CVE-2013-2233', _).
+
+vulProperty('CVE-2013-2773', remoteExploit, privEscalation).
+vulExists(n55Dialt, 'CVE-2013-2773', _).
+
+vulProperty('CVE-2013-7381', remoteExploit, privEscalation).
+vulExists(n56Dialt, 'CVE-2013-7381', _).
+
+vulProperty('CVE-2013-20002', remoteExploit, privEscalation).
+vulExists(n57Dialt, 'CVE-2013-20002', _).
+
+vulProperty('CVE-2013-7371', remoteExploit, privEscalation).
+vulExists(n58Dialt, 'CVE-2013-7371', _).
+
+vulProperty('CVE-2013-1410', remoteExploit, privEscalation).
+vulExists(n59Dialt, 'CVE-2013-1410', _).
+
+vulProperty('CVE-2013-3636', remoteExploit, privEscalation).
+vulExists(n60Dialt, 'CVE-2013-3636', _).
+
+vulProperty('CVE-2013-3542', remoteExploit, privEscalation).
+vulExists(n61Dialt, 'CVE-2013-3542', _).
+
+vulProperty('CVE-2013-7087', remoteExploit, privEscalation).
+vulExists(n62Dialt, 'CVE-2013-7087', _).
+
+vulProperty('CVE-2013-4246', remoteExploit, privEscalation).
+vulExists(n63Dialt, 'CVE-2013-4246', _).
+
+vulProperty('CVE-2013-2573', remoteExploit, privEscalation).
+vulExists(n64Dialt, 'CVE-2013-2573', _).
+
+vulProperty('CVE-2013-7490', remoteExploit, privEscalation).
+vulExists(n65Dialt, 'CVE-2013-7490', _).
+
+vulProperty('CVE-2013-2972', remoteExploit, privEscalation).
+vulExists(n66Dialt, 'CVE-2013-2972', _).
+
+vulProperty('CVE-2013-7471', remoteExploit, privEscalation).
+vulExists(n67Dialt, 'CVE-2013-7471', _).
+
+vulProperty('CVE-2013-0507', remoteExploit, privEscalation).
+vulExists(n68Dialt, 'CVE-2013-0507', _).
+
+vulProperty('CVE-2013-5106', remoteExploit, privEscalation).
+vulExists(n69Dialt, 'CVE-2013-5106', _).
+
+vulProperty('CVE-2013-0161', remoteExploit, privEscalation).
+vulExists(n70Dialt, 'CVE-2013-0161', _).
+
+vulProperty('CVE-2013-4863', remoteExploit, privEscalation).
+vulExists(n71Dialt, 'CVE-2013-4863', _).
+
+vulProperty('CVE-2013-0342', remoteExploit, privEscalation).
+vulExists(n72Dialt, 'CVE-2013-0342', _).
+
+vulProperty('CVE-2013-4118', remoteExploit, privEscalation).
+vulExists(n73Dialt, 'CVE-2013-4118', _).
+
+vulProperty('CVE-2013-7053', remoteExploit, privEscalation).
+vulExists(n74Dialt, 'CVE-2013-7053', _).
+
+vulProperty('CVE-2013-2682', remoteExploit, privEscalation).
+vulExists(n75Dialt, 'CVE-2013-2682', _).
+
+vulProperty('CVE-2013-1603', remoteExploit, privEscalation).
+vulExists(n76Dialt, 'CVE-2013-1603', _).
+
+vulProperty('CVE-2013-2262', remoteExploit, privEscalation).
+vulExists(n77Dialt, 'CVE-2013-2262', _).
+
+vulProperty('CVE-2013-1809', remoteExploit, privEscalation).
+vulExists(n78Dialt, 'CVE-2013-1809', _).
+
+vulProperty('CVE-2013-4454', remoteExploit, privEscalation).
+vulExists(n79Dialt, 'CVE-2013-4454', _).
+
+vulProperty('CVE-2013-7203', remoteExploit, privEscalation).
+vulExists(n80Dialt, 'CVE-2013-7203', _).
+
+vulProperty('CVE-2013-6358', remoteExploit, privEscalation).
+vulExists(n81Dialt, 'CVE-2013-6358', _).
+
+vulProperty('CVE-2013-2049', remoteExploit, privEscalation).
+vulExists(n82Dialt, 'CVE-2013-2049', _).
+
+vulProperty('CVE-2013-2103', remoteExploit, privEscalation).
+vulExists(n83Dialt, 'CVE-2013-2103', _).
+
+vulProperty('CVE-2013-2106', remoteExploit, privEscalation).
+vulExists(n84Dialt, 'CVE-2013-2106', _).
+
+vulProperty('CVE-2013-5391', remoteExploit, privEscalation).
+vulExists(n85Dialt, 'CVE-2013-5391', _).
+
+vulProperty('CVE-2013-6671', remoteExploit, privEscalation).
+vulExists(n86Dialt, 'CVE-2013-6671', _).
+
+vulProperty('CVE-2013-2972', remoteExploit, privEscalation).
+vulExists(n87Dialt, 'CVE-2013-2972', _).
+
+vulProperty('CVE-2013-2631', remoteExploit, privEscalation).
+vulExists(n88Dialt, 'CVE-2013-2631', _).
+
+vulProperty('CVE-2013-7456', remoteExploit, privEscalation).
+vulExists(n89Dialt, 'CVE-2013-7456', _).
+
+vulProperty('CVE-2013-0243', remoteExploit, privEscalation).
+vulExists(n90Dialt, 'CVE-2013-0243', _).
+
+vulProperty('CVE-2013-20002', remoteExploit, privEscalation).
+vulExists(n91Dialt, 'CVE-2013-20002', _).
+
+vulProperty('CVE-2013-4201', remoteExploit, privEscalation).
+vulExists(n92Dialt, 'CVE-2013-4201', _).
+
+vulProperty('CVE-2013-5017', remoteExploit, privEscalation).
+vulExists(n93Dialt, 'CVE-2013-5017', _).
+
+vulProperty('CVE-2013-1816', remoteExploit, privEscalation).
+vulExists(n94Dialt, 'CVE-2013-1816', _).
+
+vulProperty('CVE-2013-7055', remoteExploit, privEscalation).
+vulExists(n95Dialt, 'CVE-2013-7055', _).
+
+vulProperty('CVE-2013-7202', remoteExploit, privEscalation).
+vulExists(n96Dialt, 'CVE-2013-7202', _).
+
+vulProperty('CVE-2013-5978', remoteExploit, privEscalation).
+vulExists(n97Dialt, 'CVE-2013-5978', _).
+
+vulProperty('CVE-2013-3096', remoteExploit, privEscalation).
+vulExists(n98Dialt, 'CVE-2013-3096', _).
+
+vulProperty('CVE-2013-5212', remoteExploit, privEscalation).
+vulExists(n99Dialt, 'CVE-2013-5212', _).
+
+vulProperty('CVE-2013-7491', remoteExploit, privEscalation).
+vulExists(n100Dialt, 'CVE-2013-7491', _).
+
+vulProperty('CVE-2013-7446', remoteExploit, privEscalation).
+vulExists(n101Dialt, 'CVE-2013-7446', _).
+
+vulProperty('CVE-2013-7433', remoteExploit, privEscalation).
+vulExists(n102Dialt, 'CVE-2013-7433', _).
+
+vulProperty('CVE-2013-7053', remoteExploit, privEscalation).
+vulExists(n103Dialt, 'CVE-2013-7053', _).
+
+vulProperty('CVE-2013-7449', remoteExploit, privEscalation).
+vulExists(n104Dialt, 'CVE-2013-7449', _).
+
+vulProperty('CVE-2013-3517', remoteExploit, privEscalation).
+vulExists(n105Dialt, 'CVE-2013-3517', _).
+
+vulProperty('CVE-2013-4535', remoteExploit, privEscalation).
+vulExists(n106Dialt, 'CVE-2013-4535', _).
+
+vulProperty('CVE-2013-5657', remoteExploit, privEscalation).
+vulExists(n107Dialt, 'CVE-2013-5657', _).
+
+vulProperty('CVE-2013-4752', remoteExploit, privEscalation).
+vulExists(n108Dialt, 'CVE-2013-4752', _).
+
+vulProperty('CVE-2013-5116', remoteExploit, privEscalation).
+vulExists(n109Dialt, 'CVE-2013-5116', _).
+
+vulProperty('CVE-2013-3312', remoteExploit, privEscalation).
+vulExists(n110Dialt, 'CVE-2013-3312', _).
+
+vulProperty('CVE-2013-7486', remoteExploit, privEscalation).
+vulExists(n111Dialt, 'CVE-2013-7486', _).
+
+vulProperty('CVE-2013-4335', remoteExploit, privEscalation).
+vulExists(n112Dialt, 'CVE-2013-4335', _).
+
+vulProperty('CVE-2013-3093', remoteExploit, privEscalation).
+vulExists(n113Dialt, 'CVE-2013-3093', _).
+
+vulProperty('CVE-2013-2259', remoteExploit, privEscalation).
+vulExists(n114Dialt, 'CVE-2013-2259', _).
 
 vulProperty('CVE-2013-5653', remoteExploit, privEscalation).
-vulExists(n63Inter, 'CVE-2013-5653', _).
+vulExists(n115Dialt, 'CVE-2013-5653', _).
 
-vulProperty('CVE-2013-7351', remoteExploit, privEscalation).
-vulExists(n64Inter, 'CVE-2013-7351', _).
+vulProperty('CVE-2013-1924', remoteExploit, privEscalation).
+vulExists(n116Dialt, 'CVE-2013-1924', _).
 
-vulProperty('CVE-2013-4035', remoteExploit, privEscalation).
-vulExists(n65Inter, 'CVE-2013-4035', _).
+vulProperty('CVE-2013-3070', remoteExploit, privEscalation).
+vulExists(n117Dialt, 'CVE-2013-3070', _).
+
+vulProperty('CVE-2013-3072', remoteExploit, privEscalation).
+vulExists(n118Dialt, 'CVE-2013-3072', _).
+
+vulProperty('CVE-2013-0192', remoteExploit, privEscalation).
+vulExists(n119Dialt, 'CVE-2013-0192', _).
+
+vulProperty('CVE-2013-3314', remoteExploit, privEscalation).
+vulExists(n120Dialt, 'CVE-2013-3314', _).
+
+vulProperty('CVE-2013-4410', remoteExploit, privEscalation).
+vulExists(n121Dialt, 'CVE-2013-4410', _).
+
+vulProperty('CVE-2013-4691', remoteExploit, privEscalation).
+vulExists(n122Dialt, 'CVE-2013-4691', _).
+
+vulProperty('CVE-2013-2097', remoteExploit, privEscalation).
+vulExists(n123Dialt, 'CVE-2013-2097', _).
+
+vulProperty('CVE-2013-3942', remoteExploit, privEscalation).
+vulExists(n124Dialt, 'CVE-2013-3942', _).
+
+vulProperty('CVE-2013-7380', remoteExploit, privEscalation).
+vulExists(n125Dialt, 'CVE-2013-7380', _).
+
+vulProperty('CVE-2013-1400', remoteExploit, privEscalation).
+vulExists(n126Dialt, 'CVE-2013-1400', _).
+
+vulProperty('CVE-2013-4848', remoteExploit, privEscalation).
+vulExists(n127Dialt, 'CVE-2013-4848', _).
+
+vulProperty('CVE-2013-1430', remoteExploit, privEscalation).
+vulExists(n128Dialt, 'CVE-2013-1430', _).
+
+vulProperty('CVE-2013-6225', remoteExploit, privEscalation).
+vulExists(n129Dialt, 'CVE-2013-6225', _).
+
+vulProperty('CVE-2013-1866', remoteExploit, privEscalation).
+vulExists(n130Dialt, 'CVE-2013-1866', _).
+
+vulProperty('CVE-2013-3937', remoteExploit, privEscalation).
+vulExists(n131Dialt, 'CVE-2013-3937', _).
+
+vulProperty('CVE-2013-6647', remoteExploit, privEscalation).
+vulExists(n132Dialt, 'CVE-2013-6647', _).
+
+vulProperty('CVE-2013-2128', remoteExploit, privEscalation).
+vulExists(n133Dialt, 'CVE-2013-2128', _).
+
+vulProperty('CVE-2013-1932', remoteExploit, privEscalation).
+vulExists(n134Dialt, 'CVE-2013-1932', _).
+
+vulProperty('CVE-2013-1053', remoteExploit, privEscalation).
+vulExists(n135Dialt, 'CVE-2013-1053', _).
+
+vulProperty('CVE-2013-7371', remoteExploit, privEscalation).
+vulExists(n136Dialt, 'CVE-2013-7371', _).
+
+vulProperty('CVE-2013-7371', remoteExploit, privEscalation).
+vulExists(n137Dialt, 'CVE-2013-7371', _).
+
+vulProperty('CVE-2013-4861', remoteExploit, privEscalation).
+vulExists(n138Dialt, 'CVE-2013-4861', _).
+
+vulProperty('CVE-2013-3316', remoteExploit, privEscalation).
+vulExists(n139Dialt, 'CVE-2013-3316', _).
+
+vulProperty('CVE-2013-7202', remoteExploit, privEscalation).
+vulExists(n140Dialt, 'CVE-2013-7202', _).
+
+vulProperty('CVE-2013-7088', remoteExploit, privEscalation).
+vulExists(n141Dialt, 'CVE-2013-7088', _).
+
+vulProperty('CVE-2013-5638', remoteExploit, privEscalation).
+vulExists(n142Dialt, 'CVE-2013-5638', _).
+
+vulProperty('CVE-2013-0517', remoteExploit, privEscalation).
+vulExists(n143Dialt, 'CVE-2013-0517', _).
+
+vulProperty('CVE-2013-2262', remoteExploit, privEscalation).
+vulExists(n144Dialt, 'CVE-2013-2262', _).
+
+vulProperty('CVE-2013-1430', remoteExploit, privEscalation).
+vulExists(n145Dialt, 'CVE-2013-1430', _).
+
+vulProperty('CVE-2013-3017', remoteExploit, privEscalation).
+vulExists(n146Dialt, 'CVE-2013-3017', _).
+
+vulProperty('CVE-2013-3366', remoteExploit, privEscalation).
+vulExists(n147Dialt, 'CVE-2013-3366', _).
+
+vulProperty('CVE-2013-4441', remoteExploit, privEscalation).
+vulExists(n148Dialt, 'CVE-2013-4441', _).
+
+vulProperty('CVE-2013-7070', remoteExploit, privEscalation).
+vulExists(n149Dialt, 'CVE-2013-7070', _).
+
+vulProperty('CVE-2013-4225', remoteExploit, privEscalation).
+vulExists(n150Dialt, 'CVE-2013-4225', _).
+
+vulProperty('CVE-2013-7370', remoteExploit, privEscalation).
+vulExists(n151Dialt, 'CVE-2013-7370', _).
+
+vulProperty('CVE-2013-1934', remoteExploit, privEscalation).
+vulExists(n152Dialt, 'CVE-2013-1934', _).
+
+vulProperty('CVE-2013-3314', remoteExploit, privEscalation).
+vulExists(n153Dialt, 'CVE-2013-3314', _).
+
+vulProperty('CVE-2013-4225', remoteExploit, privEscalation).
+vulExists(n154Dialt, 'CVE-2013-4225', _).
+
+vulProperty('CVE-2013-4583', remoteExploit, privEscalation).
+vulExists(n155Dialt, 'CVE-2013-4583', _).
+
+vulProperty('CVE-2013-4462', remoteExploit, privEscalation).
+vulExists(n156Dialt, 'CVE-2013-4462', _).
+
+vulProperty('CVE-2013-4225', remoteExploit, privEscalation).
+vulExists(n157Dialt, 'CVE-2013-4225', _).
+
+vulProperty('CVE-2013-4763', remoteExploit, privEscalation).
+vulExists(n158Dialt, 'CVE-2013-4763', _).
+
+vulProperty('CVE-2013-4521', remoteExploit, privEscalation).
+vulExists(n159Dialt, 'CVE-2013-4521', _).
+
+vulProperty('CVE-2013-4187', remoteExploit, privEscalation).
+vulExists(n160Dialt, 'CVE-2013-4187', _).
+
+vulProperty('CVE-2013-3722', remoteExploit, privEscalation).
+vulExists(n161Dialt, 'CVE-2013-3722', _).
+
+vulProperty('CVE-2013-4621', remoteExploit, privEscalation).
+vulExists(n162Dialt, 'CVE-2013-4621', _).
+
+vulProperty('CVE-2013-1751', remoteExploit, privEscalation).
+vulExists(n163Dialt, 'CVE-2013-1751', _).
+
+vulProperty('CVE-2013-6022', remoteExploit, privEscalation).
+vulExists(n164Dialt, 'CVE-2013-6022', _).
+
+vulProperty('CVE-2013-3591', remoteExploit, privEscalation).
+vulExists(n165Dialt, 'CVE-2013-3591', _).
+
+vulProperty('CVE-2013-5637', remoteExploit, privEscalation).
+vulExists(n166Dialt, 'CVE-2013-5637', _).
+
+vulProperty('CVE-2013-7472', remoteExploit, privEscalation).
+vulExists(n167Dialt, 'CVE-2013-7472', _).
+
+vulProperty('CVE-2013-4366', remoteExploit, privEscalation).
+vulExists(n168Dialt, 'CVE-2013-4366', _).
+
+vulProperty('CVE-2013-2738', remoteExploit, privEscalation).
+vulExists(n169Dialt, 'CVE-2013-2738', _).
+
+vulProperty('CVE-2013-0293', remoteExploit, privEscalation).
+vulExists(n170Dialt, 'CVE-2013-0293', _).
+
+vulProperty('CVE-2013-5594', remoteExploit, privEscalation).
+vulExists(n171Dialt, 'CVE-2013-5594', _).
+
+vulProperty('CVE-2013-7490', remoteExploit, privEscalation).
+vulExists(n172Dialt, 'CVE-2013-7490', _).
+
+vulProperty('CVE-2013-1599', remoteExploit, privEscalation).
+vulExists(n173Dialt, 'CVE-2013-1599', _).
+
+vulProperty('CVE-2013-7476', remoteExploit, privEscalation).
+vulExists(n174Dialt, 'CVE-2013-7476', _).
+
+vulProperty('CVE-2013-6927', remoteExploit, privEscalation).
+vulExists(n175Dialt, 'CVE-2013-6927', _).
+
+vulProperty('CVE-2013-7370', remoteExploit, privEscalation).
+vulExists(n176Dialt, 'CVE-2013-7370', _).
+
+vulProperty('CVE-2013-7482', remoteExploit, privEscalation).
+vulExists(n177Dialt, 'CVE-2013-7482', _).
+
+vulProperty('CVE-2013-3629', remoteExploit, privEscalation).
+vulExists(n178Dialt, 'CVE-2013-3629', _).
+
+vulProperty('CVE-2013-6231', remoteExploit, privEscalation).
+vulExists(n179Dialt, 'CVE-2013-6231', _).
+
+vulProperty('CVE-2013-3024', remoteExploit, privEscalation).
+vulExists(n180Dialt, 'CVE-2013-3024', _).
+
+vulProperty('CVE-2013-7202', remoteExploit, privEscalation).
+vulExists(n181Dialt, 'CVE-2013-7202', _).
+
+vulProperty('CVE-2013-7459', remoteExploit, privEscalation).
+vulExists(n182Dialt, 'CVE-2013-7459', _).
+
+vulProperty('CVE-2013-3488', remoteExploit, privEscalation).
+vulExists(n183Dialt, 'CVE-2013-3488', _).
+
+vulProperty('CVE-2013-4109', remoteExploit, privEscalation).
+vulExists(n184Dialt, 'CVE-2013-4109', _).
+
+vulProperty('CVE-2013-3942', remoteExploit, privEscalation).
+vulExists(n185Dialt, 'CVE-2013-3942', _).
+
+vulProperty('CVE-2013-6739', remoteExploit, privEscalation).
+vulExists(n186Dialt, 'CVE-2013-6739', _).
+
+vulProperty('CVE-2013-4367', remoteExploit, privEscalation).
+vulExists(n187Dialt, 'CVE-2013-4367', _).
+
+vulProperty('CVE-2013-0507', remoteExploit, privEscalation).
+vulExists(n188Dialt, 'CVE-2013-0507', _).
+
+vulProperty('CVE-2013-4968', remoteExploit, privEscalation).
+vulExists(n189Dialt, 'CVE-2013-4968', _).
+
+vulProperty('CVE-2013-1425', remoteExploit, privEscalation).
+vulExists(n190Dialt, 'CVE-2013-1425', _).
+
+vulProperty('CVE-2013-6049', remoteExploit, privEscalation).
+vulExists(n191Dialt, 'CVE-2013-6049', _).
+
+vulProperty('CVE-2013-1602', remoteExploit, privEscalation).
+vulExists(n192Dialt, 'CVE-2013-1602', _).

@@ -108,9 +108,11 @@ def calc_attack_cost(x):
         x.score = merge_attack_cost(x.score, child.score, x.shape)
         
 def calc_block_cost(x):
+    global linear_block_cost
     if(x.childnum == 0):
         if(len(x.score)>0):
             x.cut = x.score[0]
+            linear_block_cost+=x.cut
         return
     if(vis[x.id] == 1):
         return
@@ -182,7 +184,7 @@ def write_block_cost2dot():
     f = open("block_cost.dot", "w")
     S = "digraph G {\n"
     f.write(S)
-    S = '\t0 [label="Block cost:'+str(Nodes[0].cut)+'",shape=ellipse];\n'
+    S = '\t0 [label="Block cost:'+str(Nodes[0].cut)+chr(92)+'n linear block cost: '+str(linear_block_cost)+'",shape=ellipse];\n'
     f.write(S)
     for x in Nodes:
         if(x.shape == 'OR'):
@@ -262,6 +264,7 @@ load_arcs()
 vis = [0]*(len(Nodes)+1)
 calc_depth(Nodes[0])
 vis = [0]*(len(Nodes)+1)
+linear_block_cost=0
 calc_attack_cost(Nodes[0])
 
 # vis = [0]*(len(Nodes)+1)

@@ -1,288 +1,424 @@
-1,"execCode(n65Inter,root)","OR",0
+1,"execCode(n192Dialt,root)","OR",0
 2,"RULE 2 (remote exploit of a server program)","AND",0
-3,"netAccess(n65Inter,tcp,80)","OR",0
+3,"netAccess(n192Dialt,tcp,80)","OR",0
 4,"RULE 5 (multi-hop access)","AND",0
-5,"hacl(n37Inter,n65Inter,tcp,80)","LEAF",1
+5,"hacl(n10Dialt,n192Dialt,tcp,80)","LEAF",1
 4,5,-1
-6,"execCode(n37Inter,root)","OR",0
+6,"execCode(n10Dialt,root)","OR",0
 7,"RULE 2 (remote exploit of a server program)","AND",0
-8,"netAccess(n37Inter,tcp,80)","OR",0
+8,"netAccess(n10Dialt,tcp,80)","OR",0
 9,"RULE 5 (multi-hop access)","AND",0
-10,"hacl(n29Inter,n37Inter,tcp,80)","LEAF",1
+10,"hacl(n9Dialt,n10Dialt,tcp,80)","LEAF",1
 9,10,-1
-11,"execCode(n29Inter,root)","OR",0
+11,"execCode(n9Dialt,root)","OR",0
 12,"RULE 2 (remote exploit of a server program)","AND",0
-13,"netAccess(n29Inter,tcp,80)","OR",0
+13,"netAccess(n9Dialt,tcp,80)","OR",0
 14,"RULE 5 (multi-hop access)","AND",0
-15,"hacl(n13Inter,n29Inter,tcp,80)","LEAF",1
+15,"hacl(n8Dialt,n9Dialt,tcp,80)","LEAF",1
 14,15,-1
-16,"execCode(n13Inter,root)","OR",0
+16,"execCode(n8Dialt,root)","OR",0
 17,"RULE 2 (remote exploit of a server program)","AND",0
-18,"netAccess(n13Inter,tcp,80)","OR",0
+18,"netAccess(n8Dialt,tcp,80)","OR",0
 19,"RULE 5 (multi-hop access)","AND",0
-20,"hacl(n11Inter,n13Inter,tcp,80)","LEAF",1
+20,"hacl(webServer,n8Dialt,tcp,80)","LEAF",1
 19,20,-1
-21,"execCode(n11Inter,root)","OR",0
+21,"execCode(webServer,apache)","OR",0
 22,"RULE 2 (remote exploit of a server program)","AND",0
-23,"netAccess(n11Inter,tcp,80)","OR",0
-24,"RULE 5 (multi-hop access)","AND",0
-25,"hacl(n3Inter,n11Inter,tcp,80)","LEAF",1
+23,"netAccess(webServer,tcp,80)","OR",0
+24,"RULE 6 (direct network access)","AND",0
+25,"hacl(internet,webServer,tcp,80)","LEAF",1
 24,25,-1
-26,"execCode(n3Inter,root)","OR",0
-27,"RULE 2 (remote exploit of a server program)","AND",0
-28,"netAccess(n3Inter,tcp,80)","OR",0
-29,"RULE 5 (multi-hop access)","AND",0
-30,"hacl(n0Inter,n3Inter,tcp,80)","LEAF",1
-29,30,-1
-31,"execCode(n0Inter,root)","OR",0
-32,"RULE 2 (remote exploit of a server program)","AND",0
-33,"netAccess(n0Inter,tcp,80)","OR",0
-34,"RULE 5 (multi-hop access)","AND",0
-35,"hacl(fileServer,n0Inter,tcp,80)","LEAF",1
-34,35,-1
-36,"execCode(fileServer,root)","OR",0
-37,"RULE 2 (remote exploit of a server program)","AND",0
-38,"netAccess(fileServer,rpc,100005)","OR",0
-39,"RULE 5 (multi-hop access)","AND",0
-40,"hacl(webServer,fileServer,rpc,100005)","LEAF",1
-39,40,-1
-41,"execCode(webServer,apache)","OR",0
-42,"RULE 2 (remote exploit of a server program)","AND",0
-43,"netAccess(webServer,tcp,80)","OR",0
-44,"RULE 6 (direct network access)","AND",0
-45,"hacl(internet,webServer,tcp,80)","LEAF",1
-44,45,-1
-46,"attackerLocated(internet)","LEAF",1
-44,46,-1
-43,44,-1
-42,43,-1
-47,"networkServiceInfo(webServer,httpd,tcp,80,apache)","LEAF",1
-42,47,-1
-48,"vulExists(webServer,'CAN-2002-0392',httpd,remoteExploit,privEscalation)","LEAF",1
-42,48,-1
-41,42,-1
-39,41,-1
-38,39,-1
-37,38,-1
-49,"networkServiceInfo(fileServer,mountd,rpc,100005,root)","LEAF",1
-37,49,-1
-50,"vulExists(fileServer,'CVE-2013-2093',mountd,remoteExploit,privEscalation)","LEAF",1
-37,50,-1
-36,37,-1
-51,"RULE 4 (Trojan horse installation)","AND",0
-52,"accessFile(fileServer,write,'/export')","OR",0
-53,"RULE 10 (execCode implies file access)","AND",0
-54,"canAccessFile(fileServer,root,write,'/export')","LEAF",1
-53,54,-1
-53,36,-1
-52,53,-1
-55,"RULE 17 (NFS shell)","AND",0
-56,"hacl(webServer,fileServer,nfsProtocol,nfsPort)","LEAF",1
-55,56,-1
-57,"nfsExportInfo(fileServer,'/export',write,webServer)","LEAF",1
-55,57,-1
-55,41,-1
-52,55,-1
-51,52,-1
-36,51,-1
-34,36,-1
-33,34,-1
-58,"RULE 5 (multi-hop access)","AND",0
-59,"hacl(webServer,n0Inter,tcp,80)","LEAF",1
-58,59,-1
-58,41,-1
-33,58,-1
-32,33,-1
-60,"networkServiceInfo(n0Inter,httpd,tcp,80,root)","LEAF",1
-32,60,-1
-61,"vulExists(n0Inter,'CVE-2013-6648',httpd,remoteExploit,privEscalation)","LEAF",1
-32,61,-1
-31,32,-1
-62,"RULE 4 (Trojan horse installation)","AND",0
-63,"accessFile(n0Inter,write,'/usr/local/share')","OR",0
-64,"RULE 16 (NFS semantics)","AND",0
-64,52,-1
-65,"nfsMounted(n0Inter,'/usr/local/share',fileServer,'/export',read)","LEAF",1
-64,65,-1
-63,64,-1
-62,63,-1
-31,62,-1
-29,31,-1
-28,29,-1
-66,"RULE 5 (multi-hop access)","AND",0
-67,"hacl(n2Inter,n3Inter,tcp,80)","LEAF",1
-66,67,-1
-68,"execCode(n2Inter,root)","OR",0
-69,"RULE 2 (remote exploit of a server program)","AND",0
-70,"netAccess(n2Inter,tcp,80)","OR",0
-71,"RULE 5 (multi-hop access)","AND",0
-72,"hacl(n1Inter,n2Inter,tcp,80)","LEAF",1
-71,72,-1
-73,"execCode(n1Inter,root)","OR",0
-74,"RULE 2 (remote exploit of a server program)","AND",0
-75,"netAccess(n1Inter,tcp,80)","OR",0
-76,"RULE 5 (multi-hop access)","AND",0
-77,"hacl(n0Inter,n1Inter,tcp,80)","LEAF",1
-76,77,-1
-76,31,-1
-75,76,-1
-78,"RULE 5 (multi-hop access)","AND",0
-79,"hacl(webServer,n1Inter,tcp,80)","LEAF",1
-78,79,-1
-78,41,-1
-75,78,-1
-74,75,-1
-80,"networkServiceInfo(n1Inter,httpd,tcp,80,root)","LEAF",1
-74,80,-1
-81,"vulExists(n1Inter,'CVE-2013-0291',httpd,remoteExploit,privEscalation)","LEAF",1
-74,81,-1
-73,74,-1
-71,73,-1
-70,71,-1
-82,"RULE 5 (multi-hop access)","AND",0
-83,"hacl(webServer,n2Inter,tcp,80)","LEAF",1
-82,83,-1
-82,41,-1
-70,82,-1
-69,70,-1
-84,"networkServiceInfo(n2Inter,httpd,tcp,80,root)","LEAF",1
-69,84,-1
-85,"vulExists(n2Inter,'CVE-2013-4303',httpd,remoteExploit,privEscalation)","LEAF",1
-69,85,-1
-68,69,-1
-66,68,-1
-28,66,-1
-86,"RULE 5 (multi-hop access)","AND",0
-87,"hacl(webServer,n3Inter,tcp,80)","LEAF",1
-86,87,-1
-86,41,-1
-28,86,-1
-27,28,-1
-88,"networkServiceInfo(n3Inter,httpd,tcp,80,root)","LEAF",1
-27,88,-1
-89,"vulExists(n3Inter,'CVE-2013-1793',httpd,remoteExploit,privEscalation)","LEAF",1
-27,89,-1
-26,27,-1
+26,"attackerLocated(internet)","LEAF",1
 24,26,-1
 23,24,-1
-90,"RULE 5 (multi-hop access)","AND",0
-91,"hacl(webServer,n11Inter,tcp,80)","LEAF",1
-90,91,-1
-90,41,-1
-23,90,-1
 22,23,-1
-92,"networkServiceInfo(n11Inter,httpd,tcp,80,root)","LEAF",1
-22,92,-1
-93,"vulExists(n11Inter,'CVE-2013-7370',httpd,remoteExploit,privEscalation)","LEAF",1
-22,93,-1
+27,"networkServiceInfo(webServer,httpd,tcp,80,apache)","LEAF",1
+22,27,-1
+28,"vulExists(webServer,'CAN-2002-0392',httpd,remoteExploit,privEscalation)","LEAF",1
+22,28,-1
 21,22,-1
 19,21,-1
 18,19,-1
-94,"RULE 5 (multi-hop access)","AND",0
-95,"hacl(n3Inter,n13Inter,tcp,80)","LEAF",1
-94,95,-1
-94,26,-1
-18,94,-1
-96,"RULE 5 (multi-hop access)","AND",0
-97,"hacl(webServer,n13Inter,tcp,80)","LEAF",1
-96,97,-1
-96,41,-1
-18,96,-1
 17,18,-1
-98,"networkServiceInfo(n13Inter,httpd,tcp,80,root)","LEAF",1
-17,98,-1
-99,"vulExists(n13Inter,'CVE-2013-6362',httpd,remoteExploit,privEscalation)","LEAF",1
-17,99,-1
+29,"networkServiceInfo(n8Dialt,httpd,tcp,80,root)","LEAF",1
+17,29,-1
+30,"vulExists(n8Dialt,'CVE-2013-4796',httpd,remoteExploit,privEscalation)","LEAF",1
+17,30,-1
 16,17,-1
 14,16,-1
 13,14,-1
-100,"RULE 5 (multi-hop access)","AND",0
-101,"hacl(webServer,n29Inter,tcp,80)","LEAF",1
-100,101,-1
-100,41,-1
-13,100,-1
+31,"RULE 5 (multi-hop access)","AND",0
+32,"hacl(webServer,n9Dialt,tcp,80)","LEAF",1
+31,32,-1
+31,21,-1
+13,31,-1
 12,13,-1
-102,"networkServiceInfo(n29Inter,httpd,tcp,80,root)","LEAF",1
-12,102,-1
-103,"vulExists(n29Inter,'CVE-2013-4105',httpd,remoteExploit,privEscalation)","LEAF",1
-12,103,-1
+33,"networkServiceInfo(n9Dialt,httpd,tcp,80,root)","LEAF",1
+12,33,-1
+34,"vulExists(n9Dialt,'CVE-2013-6364',httpd,remoteExploit,privEscalation)","LEAF",1
+12,34,-1
 11,12,-1
 9,11,-1
 8,9,-1
-104,"RULE 5 (multi-hop access)","AND",0
-105,"hacl(n31Inter,n37Inter,tcp,80)","LEAF",1
-104,105,-1
-106,"execCode(n31Inter,root)","OR",0
-107,"RULE 2 (remote exploit of a server program)","AND",0
-108,"netAccess(n31Inter,tcp,80)","OR",0
-109,"RULE 5 (multi-hop access)","AND",0
-110,"hacl(n13Inter,n31Inter,tcp,80)","LEAF",1
-109,110,-1
-109,16,-1
-108,109,-1
-111,"RULE 5 (multi-hop access)","AND",0
-112,"hacl(n29Inter,n31Inter,tcp,80)","LEAF",1
-111,112,-1
-111,11,-1
-108,111,-1
-113,"RULE 5 (multi-hop access)","AND",0
-114,"hacl(webServer,n31Inter,tcp,80)","LEAF",1
-113,114,-1
-113,41,-1
-108,113,-1
-107,108,-1
-115,"networkServiceInfo(n31Inter,httpd,tcp,80,root)","LEAF",1
-107,115,-1
-116,"vulExists(n31Inter,'CVE-2013-0283',httpd,remoteExploit,privEscalation)","LEAF",1
-107,116,-1
-106,107,-1
-104,106,-1
-8,104,-1
-117,"RULE 5 (multi-hop access)","AND",0
-118,"hacl(n36Inter,n37Inter,tcp,80)","LEAF",1
-117,118,-1
-119,"execCode(n36Inter,root)","OR",0
-120,"RULE 2 (remote exploit of a server program)","AND",0
-121,"netAccess(n36Inter,tcp,80)","OR",0
-122,"RULE 5 (multi-hop access)","AND",0
-123,"hacl(n29Inter,n36Inter,tcp,80)","LEAF",1
-122,123,-1
-122,11,-1
-121,122,-1
-124,"RULE 5 (multi-hop access)","AND",0
-125,"hacl(webServer,n36Inter,tcp,80)","LEAF",1
-124,125,-1
-124,41,-1
-121,124,-1
-120,121,-1
-126,"networkServiceInfo(n36Inter,httpd,tcp,80,root)","LEAF",1
-120,126,-1
-127,"vulExists(n36Inter,'CVE-2013-7449',httpd,remoteExploit,privEscalation)","LEAF",1
-120,127,-1
-119,120,-1
-117,119,-1
-8,117,-1
-128,"RULE 5 (multi-hop access)","AND",0
-129,"hacl(webServer,n37Inter,tcp,80)","LEAF",1
-128,129,-1
-128,41,-1
-8,128,-1
+35,"RULE 5 (multi-hop access)","AND",0
+36,"hacl(webServer,n10Dialt,tcp,80)","LEAF",1
+35,36,-1
+35,21,-1
+8,35,-1
 7,8,-1
-130,"networkServiceInfo(n37Inter,httpd,tcp,80,root)","LEAF",1
-7,130,-1
-131,"vulExists(n37Inter,'CVE-2013-1598',httpd,remoteExploit,privEscalation)","LEAF",1
-7,131,-1
+37,"networkServiceInfo(n10Dialt,httpd,tcp,80,root)","LEAF",1
+7,37,-1
+38,"vulExists(n10Dialt,'CVE-2013-4665',httpd,remoteExploit,privEscalation)","LEAF",1
+7,38,-1
 6,7,-1
 4,6,-1
 3,4,-1
+39,"RULE 5 (multi-hop access)","AND",0
+40,"hacl(n110Dialt,n192Dialt,tcp,80)","LEAF",1
+39,40,-1
+41,"execCode(n110Dialt,root)","OR",0
+42,"RULE 2 (remote exploit of a server program)","AND",0
+43,"netAccess(n110Dialt,tcp,80)","OR",0
+44,"RULE 5 (multi-hop access)","AND",0
+45,"hacl(n108Dialt,n110Dialt,tcp,80)","LEAF",1
+44,45,-1
+46,"execCode(n108Dialt,root)","OR",0
+47,"RULE 2 (remote exploit of a server program)","AND",0
+48,"netAccess(n108Dialt,tcp,80)","OR",0
+49,"RULE 5 (multi-hop access)","AND",0
+50,"hacl(webServer,n108Dialt,tcp,80)","LEAF",1
+49,50,-1
+49,21,-1
+48,49,-1
+47,48,-1
+51,"networkServiceInfo(n108Dialt,httpd,tcp,80,root)","LEAF",1
+47,51,-1
+52,"vulExists(n108Dialt,'CVE-2013-4752',httpd,remoteExploit,privEscalation)","LEAF",1
+47,52,-1
+46,47,-1
+44,46,-1
+43,44,-1
+53,"RULE 5 (multi-hop access)","AND",0
+54,"hacl(n7Dialt,n110Dialt,tcp,80)","LEAF",1
+53,54,-1
+55,"execCode(n7Dialt,root)","OR",0
+56,"RULE 2 (remote exploit of a server program)","AND",0
+57,"netAccess(n7Dialt,tcp,80)","OR",0
+58,"RULE 5 (multi-hop access)","AND",0
+59,"hacl(n6Dialt,n7Dialt,tcp,80)","LEAF",1
+58,59,-1
+60,"execCode(n6Dialt,root)","OR",0
+61,"RULE 2 (remote exploit of a server program)","AND",0
+62,"netAccess(n6Dialt,tcp,80)","OR",0
+63,"RULE 5 (multi-hop access)","AND",0
+64,"hacl(n5Dialt,n6Dialt,tcp,80)","LEAF",1
+63,64,-1
+65,"execCode(n5Dialt,root)","OR",0
+66,"RULE 2 (remote exploit of a server program)","AND",0
+67,"netAccess(n5Dialt,tcp,80)","OR",0
+68,"RULE 5 (multi-hop access)","AND",0
+69,"hacl(n2Dialt,n5Dialt,tcp,80)","LEAF",1
+68,69,-1
+70,"execCode(n2Dialt,root)","OR",0
+71,"RULE 2 (remote exploit of a server program)","AND",0
+72,"netAccess(n2Dialt,tcp,80)","OR",0
+73,"RULE 5 (multi-hop access)","AND",0
+74,"hacl(n1Dialt,n2Dialt,tcp,80)","LEAF",1
+73,74,-1
+75,"execCode(n1Dialt,root)","OR",0
+76,"RULE 2 (remote exploit of a server program)","AND",0
+77,"netAccess(n1Dialt,tcp,80)","OR",0
+78,"RULE 5 (multi-hop access)","AND",0
+79,"hacl(webServer,n1Dialt,tcp,80)","LEAF",1
+78,79,-1
+78,21,-1
+77,78,-1
+76,77,-1
+80,"networkServiceInfo(n1Dialt,httpd,tcp,80,root)","LEAF",1
+76,80,-1
+81,"vulExists(n1Dialt,'CVE-2013-4593',httpd,remoteExploit,privEscalation)","LEAF",1
+76,81,-1
+75,76,-1
+73,75,-1
+72,73,-1
+82,"RULE 5 (multi-hop access)","AND",0
+83,"hacl(webServer,n2Dialt,tcp,80)","LEAF",1
+82,83,-1
+82,21,-1
+72,82,-1
+71,72,-1
+84,"networkServiceInfo(n2Dialt,httpd,tcp,80,root)","LEAF",1
+71,84,-1
+85,"vulExists(n2Dialt,'CVE-2013-2624',httpd,remoteExploit,privEscalation)","LEAF",1
+71,85,-1
+70,71,-1
+68,70,-1
+67,68,-1
+86,"RULE 5 (multi-hop access)","AND",0
+87,"hacl(webServer,n5Dialt,tcp,80)","LEAF",1
+86,87,-1
+86,21,-1
+67,86,-1
+66,67,-1
+88,"networkServiceInfo(n5Dialt,httpd,tcp,80,root)","LEAF",1
+66,88,-1
+89,"vulExists(n5Dialt,'CVE-2013-2093',httpd,remoteExploit,privEscalation)","LEAF",1
+66,89,-1
+65,66,-1
+63,65,-1
+62,63,-1
+90,"RULE 5 (multi-hop access)","AND",0
+91,"hacl(webServer,n6Dialt,tcp,80)","LEAF",1
+90,91,-1
+90,21,-1
+62,90,-1
+61,62,-1
+92,"networkServiceInfo(n6Dialt,httpd,tcp,80,root)","LEAF",1
+61,92,-1
+93,"vulExists(n6Dialt,'CVE-2013-5582',httpd,remoteExploit,privEscalation)","LEAF",1
+61,93,-1
+60,61,-1
+58,60,-1
+57,58,-1
+94,"RULE 5 (multi-hop access)","AND",0
+95,"hacl(webServer,n7Dialt,tcp,80)","LEAF",1
+94,95,-1
+94,21,-1
+57,94,-1
+56,57,-1
+96,"networkServiceInfo(n7Dialt,httpd,tcp,80,root)","LEAF",1
+56,96,-1
+97,"vulExists(n7Dialt,'CVE-2013-4241',httpd,remoteExploit,privEscalation)","LEAF",1
+56,97,-1
+55,56,-1
+53,55,-1
+43,53,-1
+98,"RULE 5 (multi-hop access)","AND",0
+99,"hacl(webServer,n110Dialt,tcp,80)","LEAF",1
+98,99,-1
+98,21,-1
+43,98,-1
+42,43,-1
+100,"networkServiceInfo(n110Dialt,httpd,tcp,80,root)","LEAF",1
+42,100,-1
+101,"vulExists(n110Dialt,'CVE-2013-3312',httpd,remoteExploit,privEscalation)","LEAF",1
+42,101,-1
+41,42,-1
+39,41,-1
+3,39,-1
+102,"RULE 5 (multi-hop access)","AND",0
+103,"hacl(n111Dialt,n192Dialt,tcp,80)","LEAF",1
+102,103,-1
+104,"execCode(n111Dialt,root)","OR",0
+105,"RULE 2 (remote exploit of a server program)","AND",0
+106,"netAccess(n111Dialt,tcp,80)","OR",0
+107,"RULE 5 (multi-hop access)","AND",0
+108,"hacl(n109Dialt,n111Dialt,tcp,80)","LEAF",1
+107,108,-1
+109,"execCode(n109Dialt,root)","OR",0
+110,"RULE 2 (remote exploit of a server program)","AND",0
+111,"netAccess(n109Dialt,tcp,80)","OR",0
+112,"RULE 5 (multi-hop access)","AND",0
+113,"hacl(n106Dialt,n109Dialt,tcp,80)","LEAF",1
+112,113,-1
+114,"execCode(n106Dialt,root)","OR",0
+115,"RULE 2 (remote exploit of a server program)","AND",0
+116,"netAccess(n106Dialt,tcp,80)","OR",0
+117,"RULE 5 (multi-hop access)","AND",0
+118,"hacl(n105Dialt,n106Dialt,tcp,80)","LEAF",1
+117,118,-1
+119,"execCode(n105Dialt,root)","OR",0
+120,"RULE 2 (remote exploit of a server program)","AND",0
+121,"netAccess(n105Dialt,tcp,80)","OR",0
+122,"RULE 5 (multi-hop access)","AND",0
+123,"hacl(n104Dialt,n105Dialt,tcp,80)","LEAF",1
+122,123,-1
+124,"execCode(n104Dialt,root)","OR",0
+125,"RULE 2 (remote exploit of a server program)","AND",0
+126,"netAccess(n104Dialt,tcp,80)","OR",0
+127,"RULE 5 (multi-hop access)","AND",0
+128,"hacl(n103Dialt,n104Dialt,tcp,80)","LEAF",1
+127,128,-1
+129,"execCode(n103Dialt,root)","OR",0
+130,"RULE 2 (remote exploit of a server program)","AND",0
+131,"netAccess(n103Dialt,tcp,80)","OR",0
 132,"RULE 5 (multi-hop access)","AND",0
-133,"hacl(webServer,n65Inter,tcp,80)","LEAF",1
+133,"hacl(n101Dialt,n103Dialt,tcp,80)","LEAF",1
 132,133,-1
-132,41,-1
-3,132,-1
+134,"execCode(n101Dialt,root)","OR",0
+135,"RULE 2 (remote exploit of a server program)","AND",0
+136,"netAccess(n101Dialt,tcp,80)","OR",0
+137,"RULE 5 (multi-hop access)","AND",0
+138,"hacl(n98Dialt,n101Dialt,tcp,80)","LEAF",1
+137,138,-1
+139,"execCode(n98Dialt,root)","OR",0
+140,"RULE 2 (remote exploit of a server program)","AND",0
+141,"netAccess(n98Dialt,tcp,80)","OR",0
+142,"RULE 5 (multi-hop access)","AND",0
+143,"hacl(n96Dialt,n98Dialt,tcp,80)","LEAF",1
+142,143,-1
+144,"execCode(n96Dialt,root)","OR",0
+145,"RULE 2 (remote exploit of a server program)","AND",0
+146,"netAccess(n96Dialt,tcp,80)","OR",0
+147,"RULE 5 (multi-hop access)","AND",0
+148,"hacl(n95Dialt,n96Dialt,tcp,80)","LEAF",1
+147,148,-1
+149,"execCode(n95Dialt,root)","OR",0
+150,"RULE 2 (remote exploit of a server program)","AND",0
+151,"netAccess(n95Dialt,tcp,80)","OR",0
+152,"RULE 5 (multi-hop access)","AND",0
+153,"hacl(webServer,n95Dialt,tcp,80)","LEAF",1
+152,153,-1
+152,21,-1
+151,152,-1
+150,151,-1
+154,"networkServiceInfo(n95Dialt,httpd,tcp,80,root)","LEAF",1
+150,154,-1
+155,"vulExists(n95Dialt,'CVE-2013-7055',httpd,remoteExploit,privEscalation)","LEAF",1
+150,155,-1
+149,150,-1
+147,149,-1
+146,147,-1
+156,"RULE 5 (multi-hop access)","AND",0
+157,"hacl(webServer,n96Dialt,tcp,80)","LEAF",1
+156,157,-1
+156,21,-1
+146,156,-1
+145,146,-1
+158,"networkServiceInfo(n96Dialt,httpd,tcp,80,root)","LEAF",1
+145,158,-1
+159,"vulExists(n96Dialt,'CVE-2013-7202',httpd,remoteExploit,privEscalation)","LEAF",1
+145,159,-1
+144,145,-1
+142,144,-1
+141,142,-1
+160,"RULE 5 (multi-hop access)","AND",0
+161,"hacl(webServer,n98Dialt,tcp,80)","LEAF",1
+160,161,-1
+160,21,-1
+141,160,-1
+140,141,-1
+162,"networkServiceInfo(n98Dialt,httpd,tcp,80,root)","LEAF",1
+140,162,-1
+163,"vulExists(n98Dialt,'CVE-2013-3096',httpd,remoteExploit,privEscalation)","LEAF",1
+140,163,-1
+139,140,-1
+137,139,-1
+136,137,-1
+164,"RULE 5 (multi-hop access)","AND",0
+165,"hacl(webServer,n101Dialt,tcp,80)","LEAF",1
+164,165,-1
+164,21,-1
+136,164,-1
+135,136,-1
+166,"networkServiceInfo(n101Dialt,httpd,tcp,80,root)","LEAF",1
+135,166,-1
+167,"vulExists(n101Dialt,'CVE-2013-7446',httpd,remoteExploit,privEscalation)","LEAF",1
+135,167,-1
+134,135,-1
+132,134,-1
+131,132,-1
+168,"RULE 5 (multi-hop access)","AND",0
+169,"hacl(webServer,n103Dialt,tcp,80)","LEAF",1
+168,169,-1
+168,21,-1
+131,168,-1
+130,131,-1
+170,"networkServiceInfo(n103Dialt,httpd,tcp,80,root)","LEAF",1
+130,170,-1
+171,"vulExists(n103Dialt,'CVE-2013-7053',httpd,remoteExploit,privEscalation)","LEAF",1
+130,171,-1
+129,130,-1
+127,129,-1
+126,127,-1
+172,"RULE 5 (multi-hop access)","AND",0
+173,"hacl(webServer,n104Dialt,tcp,80)","LEAF",1
+172,173,-1
+172,21,-1
+126,172,-1
+125,126,-1
+174,"networkServiceInfo(n104Dialt,httpd,tcp,80,root)","LEAF",1
+125,174,-1
+175,"vulExists(n104Dialt,'CVE-2013-7449',httpd,remoteExploit,privEscalation)","LEAF",1
+125,175,-1
+124,125,-1
+122,124,-1
+121,122,-1
+176,"RULE 5 (multi-hop access)","AND",0
+177,"hacl(webServer,n105Dialt,tcp,80)","LEAF",1
+176,177,-1
+176,21,-1
+121,176,-1
+120,121,-1
+178,"networkServiceInfo(n105Dialt,httpd,tcp,80,root)","LEAF",1
+120,178,-1
+179,"vulExists(n105Dialt,'CVE-2013-3517',httpd,remoteExploit,privEscalation)","LEAF",1
+120,179,-1
+119,120,-1
+117,119,-1
+116,117,-1
+180,"RULE 5 (multi-hop access)","AND",0
+181,"hacl(n1Dialt,n106Dialt,tcp,80)","LEAF",1
+180,181,-1
+180,75,-1
+116,180,-1
+182,"RULE 5 (multi-hop access)","AND",0
+183,"hacl(webServer,n106Dialt,tcp,80)","LEAF",1
+182,183,-1
+182,21,-1
+116,182,-1
+115,116,-1
+184,"networkServiceInfo(n106Dialt,httpd,tcp,80,root)","LEAF",1
+115,184,-1
+185,"vulExists(n106Dialt,'CVE-2013-4535',httpd,remoteExploit,privEscalation)","LEAF",1
+115,185,-1
+114,115,-1
+112,114,-1
+111,112,-1
+186,"RULE 5 (multi-hop access)","AND",0
+187,"hacl(webServer,n109Dialt,tcp,80)","LEAF",1
+186,187,-1
+186,21,-1
+111,186,-1
+110,111,-1
+188,"networkServiceInfo(n109Dialt,httpd,tcp,80,root)","LEAF",1
+110,188,-1
+189,"vulExists(n109Dialt,'CVE-2013-5116',httpd,remoteExploit,privEscalation)","LEAF",1
+110,189,-1
+109,110,-1
+107,109,-1
+106,107,-1
+190,"RULE 5 (multi-hop access)","AND",0
+191,"hacl(n110Dialt,n111Dialt,tcp,80)","LEAF",1
+190,191,-1
+190,41,-1
+106,190,-1
+192,"RULE 5 (multi-hop access)","AND",0
+193,"hacl(webServer,n111Dialt,tcp,80)","LEAF",1
+192,193,-1
+192,21,-1
+106,192,-1
+105,106,-1
+194,"networkServiceInfo(n111Dialt,httpd,tcp,80,root)","LEAF",1
+105,194,-1
+195,"vulExists(n111Dialt,'CVE-2013-7486',httpd,remoteExploit,privEscalation)","LEAF",1
+105,195,-1
+104,105,-1
+102,104,-1
+3,102,-1
+196,"RULE 5 (multi-hop access)","AND",0
+197,"hacl(n8Dialt,n192Dialt,tcp,80)","LEAF",1
+196,197,-1
+196,16,-1
+3,196,-1
+198,"RULE 5 (multi-hop access)","AND",0
+199,"hacl(webServer,n192Dialt,tcp,80)","LEAF",1
+198,199,-1
+198,21,-1
+3,198,-1
 2,3,-1
-134,"networkServiceInfo(n65Inter,httpd,tcp,80,root)","LEAF",1
-2,134,-1
-135,"vulExists(n65Inter,'CVE-2013-4035',httpd,remoteExploit,privEscalation)","LEAF",1
-2,135,-1
+200,"networkServiceInfo(n192Dialt,httpd,tcp,80,root)","LEAF",1
+2,200,-1
+201,"vulExists(n192Dialt,'CVE-2013-1602',httpd,remoteExploit,privEscalation)","LEAF",1
+2,201,-1
 1,2,-1
