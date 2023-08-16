@@ -33,7 +33,6 @@ body {
     height: auto;
     width: 100vw;
     display: flex;
-    padding-bottom: 10vh;
 }
 .sidebar {
     width: 18vw;
@@ -56,6 +55,9 @@ body {
     color: rgb(63, 72, 224, 0.75);
     text-decoration: none;
 }
+.sidebar-key-item:hover {
+    transform: translateY(-2px);
+}
 .sidebar-item {
     width: 18vw;
     height: 20vh;
@@ -68,6 +70,9 @@ body {
     font-size: 1.5vw;
     color: rgba(144, 148, 216, 0.75);
     text-decoration: none;
+}
+.sidebar-item:hover {
+    transform: translateY(-2px);
 }
 .step-key-index {
     width: 6vw;
@@ -128,6 +133,7 @@ h2 {
     align-items: center;
     flex-direction: column;
     float:left;
+    padding-bottom: 10vh;
     /* position: relative; */
 }
 
@@ -242,14 +248,14 @@ h2 {
         <div class="main-body">
             <div id="message" class="message"></div>
             <!-- <div style="margin-top: 10vh;"> -->
-                <div class="png-block">
+                <div id="min-attack" class="png-block">
                     <button id="button2" class="button">最小代价攻击路径</button>
                     <div id="image1-container" class="png-container">
                         <!-- <div  class="image-container"></div> -->
                     </div>
                     
                 </div>
-                <div class="png-block">
+                <div id="max-attack" class="png-block">
                     <button id="button3" class="button">最大代价攻击路径</button>
                     <div id="image2-container" class="png-container">
                         <!-- <div  class="image-container"></div> -->
@@ -258,14 +264,14 @@ h2 {
                 </div>
             <!-- </div> -->
             <!-- <div style="margin-top: 10vh;"> -->
-                <div class="png-block">
+                <div id="min-block" class="png-block">
                     <button id="button4" class="button">最小代价防御方案</button>
                     <div class="png-container">
                         <div id="image3-container" class="image-container"></div>
                     </div>
                     
                 </div>
-                <div class="png-block">
+                <div id="max-block" class="png-block">
                     <button id="button5" class="button">线性量化成本</button>
                     <div class="png-container">
                         <div id="image4-container" class="image-container"></div>

@@ -56,6 +56,9 @@ body {
     color: rgb(63, 72, 224, 0.75);
     text-decoration: none;
 }
+.sidebar-key-item:hover {
+    transform: translateY(-2px);
+}
 .sidebar-item {
     width: 18vw;
     height: 20vh;
@@ -68,6 +71,9 @@ body {
     font-size: 1.5vw;
     color: rgba(144, 148, 216, 0.75);
     text-decoration: none;
+}
+.sidebar-item:hover {
+    transform: translateY(-2px);
 }
 .step-key-index {
     width: 6vw;
@@ -218,6 +224,8 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1vw;
+    text-decoration: none;
+    color: black;
 }.little-block:hover {
     box-shadow: 0 2px 6px rgba(125, 130, 189, 0.4);
     background-color:rgba(251, 249, 243, 0.7);
@@ -328,26 +336,26 @@ body {
                 
             </div>
             <div class="row">
-                <div class="little-block">
+                <a href="{{ url_for('analyse') }}#min-attack" class="little-block">
                     <img src="/static/1.jpeg" alt="No img" style="width: 8vw; height: auto; opacity: 70%;">
                     <p class="little-block-red">1391.3</p>
                     <p style="font-size:1.6vw;">最小攻击代价</p>
-                </div>
-                <div class="little-block">
+                </a>
+                <a href="{{ url_for('analyse') }}#max-attack" class="little-block">
                     <img src="/static/2.jpeg" alt="No img" style="width: 8vw; height: auto; opacity: 70%;">
                     <p class="little-block-blue">2578.6</p>
                     <p style="font-size:1.6vw;">最大攻击代价</p>
-                </div>
-                <div class="little-block">
+                </a>
+                <a href="{{ url_for('analyse') }}#min-block" class="little-block">
                     <img src="/static/3.jpeg" alt="No img" style="width: 8vw; height: auto; opacity: 70%;">
                     <p class="little-block-red">286.7</p>
                     <p style="font-size:1.6vw;">最小防御成本</p>
-                </div>
-                <div class="little-block">
+                </a>
+                <a href="{{ url_for('analyse') }}#max-block" class="little-block">
                     <img src="/static/4.jpeg" alt="No img" style="width: 8vw; height: auto; opacity: 70%;">
                     <p class="little-block-blue">2788.6</p>
                     <p style="font-size:1.6vw;">线性量化成本</p>
-                </div>
+                </a>
             </div>
             <div id = "pdf-container" class="pdf-container">
                     
