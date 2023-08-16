@@ -33,7 +33,7 @@ body {
     height: auto;
     width: 100vw;
     display: flex;
-    padding-bottom: 10vh;
+    /* padding-bottom: 10vh; */
 }
 .sidebar {
     width: 18vw;
@@ -127,6 +127,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 10vh;
     /* float:left; */
     /* position: relative; */
 }
@@ -192,13 +193,13 @@ body {
     /* height: 52vh; */
     background-color: rgba(215, 241, 250, 0.396);
     padding: 5%;
-    font-size: 12px;
+    font-size: 16px;
     border: 2px dashed rgba(160, 219, 235, 0.655);
 }
 .result-analyze > h1 {
     color: rgb(47, 148, 170);
     text-align:center;
-    font-size: 18px;
+    font-size: 20px;
     /* position:sticky; */
 }
 .result-analyze > p {
@@ -208,7 +209,8 @@ body {
 .little-block {
     float:left;
     /* width:12vw; */
-    margin:2vh;
+    margin:5px;
+    padding: 10px;
     /* height: 20vh; */
     /* background-color: #9c9c9c; */
     display: flex;
@@ -216,6 +218,10 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1vw;
+}.little-block:hover {
+    box-shadow: 0 2px 6px rgba(125, 130, 189, 0.4);
+    background-color:rgba(251, 249, 243, 0.7);
+    border-radius: 5px;
 }
 .little-block-red {
     color:rgb(195, 29, 29);

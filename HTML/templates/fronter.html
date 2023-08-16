@@ -55,6 +55,9 @@ body {
     color: rgb(63, 72, 224, 0.75);
     text-decoration: none;
 }
+.sidebar-key-item:hover {
+    transform: translateY(-2px);
+}
 .sidebar-item {
     width: 18vw;
     height: 20vh;
@@ -68,10 +71,13 @@ body {
     color: rgba(144, 148, 216, 0.75);
     text-decoration: none;
 }
+.sidebar-item:hover {
+    transform: translateY(-2px);
+}
 .step-key-index {
     width: 6vw;
     height: 4vh;
-    border: 3px solid rgb(63, 72, 224, 0.75);
+    border: 3px solid rgba(63, 71, 224, 0.85);
     border-radius: 999px;
     float:left;
     display: flex;
@@ -161,6 +167,24 @@ h2 {
     text-align: center;
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.upload-button:hover {
+    box-shadow: 0 2px 6px rgba(63, 72, 204, 0.4);
+}
+.result-button {
+    padding: 1vw 3.5vw;
+    border: 2px solid rgb(63, 72, 204);
+    font-size: 1.7vw;
+    margin-top: 1vw;
+    color: rgb(63, 72, 204);
+    border-radius: calc(1vw + 10px);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.result-button:hover {
+    box-shadow: 0 2px 6px rgba(63, 72, 204, 0.4);
 }
 /* 整体盒子 */
 .drop-main {
@@ -320,7 +344,10 @@ h2 {
                 <input type="file" name="file" id="file-input" class="upload-input">
                 <label for="file-input" class="upload-button" style="margin-top: 10vh;">Select and Submit File</label>
             </form>
-            <div id="message" class="message"></div>
+            <div id="message" class="message">点击下方按钮查看结果</div>
+            <a href="{{ url_for('result') }}" class="result-button ">
+                <div style="float:left">结 果</div>
+            </a>
             
                 <!-- <div class="button-group">
                     <button id="button1" class="custom-button">Button 1</button>

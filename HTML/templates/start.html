@@ -20,7 +20,7 @@
             justify-content:center;
 			align-items: center;
             background-color: #fdfdfd;
-            background-image: linear-gradient(to top, rgba(253, 253, 253, 0.3) 0%, rgba(193, 218, 255, 0.3) 100%);
+            background-image: linear-gradient(to top, rgba(253, 253, 253, 0.3) 0%, rgba(69, 82, 225, 0.3) 100%);
         }
         .container3 {
             width: 100vw;
@@ -39,7 +39,7 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-            background-image: linear-gradient(to bottom, rgba(253, 253, 253, 0.3) 0%, rgba(193, 218, 255, 0.3) 100%);
+            background-image: linear-gradient(to bottom, rgba(253, 253, 253, 0.3) 0%, rgba(63, 72, 204, 0.3) 100%);
         }
         .left-section {
             background: linear-gradient(to right, rgb(63, 72, 204, 1), rgb(63, 72, 204, 0.8));
@@ -107,7 +107,7 @@
         }
         .title {
             width: 35vw;
-            color: #5f9bf1;
+            color: rgb(63, 72, 204,0.9);
             padding-left: 2vw;
             padding-right: 2vw;
             text-align: center;
@@ -123,6 +123,7 @@
 			left: 30px;
             transition: transform 0.2s;
             transform: translateX(0%);
+            text-shadow: 0 13px 24px rgba(255, 255, 255, 0.869);
         }
         input[type="text"], input[type="password"], input[type="submit"] {
             width: 100%;
@@ -178,12 +179,13 @@
             cursor: pointer;
             text-decoration: none;
             border-radius: 999px;
-            box-shadow: 0 13px 24px rgba(95, 155, 241, 0.45);
-            background-image: linear-gradient(to right bottom, #82b5ff 0%, #3c89f6 0%);
+            box-shadow: 0 13px 24px rgba(63, 72, 204, 0.45);
+            /* background-image: linear-gradient(to right bottom, #82b5ff 0%, #3c89f6 0%); */
+            background-color: rgb(63, 72, 204);
         }
         .button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 14px 26px rgba(95, 155, 241, 0.4);
+            box-shadow: 0 14px 26px rgba(63, 72, 204, 0.4);
         }
         .feature8-blocks {
             /* margin: 100px; */
@@ -210,7 +212,7 @@
             /* background 0.45s cubic-bezier(0.645, 0.045, 0.355, 1); */
         }
         .feature8-block-child:hover {
-        background-color: #f6f9ff;
+        background-color: #e0e2f9;
         box-shadow: 0 12px 36px rgba(100, 100, 136, 0.15);
         }
         .feature8-block-child:hover .feature8-block-content {
@@ -313,7 +315,7 @@
             </p>
         </div>
         <a href="{{ url_for('main') }}" class="button">
-                <b><p>START</p></b>
+                <b><p>开始体验</p></b>
         </a>
     </div>
     <div class="fig-sec" style="width: 40%">
